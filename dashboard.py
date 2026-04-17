@@ -982,25 +982,29 @@ with tab4:
                 show[c] = show[c].apply(brl)
         st.dataframe(show, use_container_width=True, hide_index=True, height=500)
 
-    else:  # Contas a Receber (filtrado por Data Pagamento)
-        df = receber_ano.copy()
-        fc1, fc2, fc3 = st.columns(3)
+    else:  # Contas a Receber
+        # Filtro proprio de ano/mes (independente do topo)
+        df = receber.copy()
+        fc1, fc2, fc3, fc4 = st.columns(4)
         with fc1:
-            pagador = st.text_input("Pagador contém", "")
+            ano_cr = st.selectbox("Ano", [2026, 2025, 2024], key="ano_cr_lanc")
         with fc2:
+            mes_cr = st.selectbox("Mês", meses_opts, key="mes_cr_lanc")
+        with fc3:
+            pagador = st.text_input("Pagador contém", "")
+        with fc4:
             meio = ["Todos"] + sorted(df["Meio de Pag."].dropna().unique().tolist())
             m_sel = st.selectbox("Meio de pagamento", meio)
-        with fc3:
-            status = st.selectbox("Status", ["Todos", "Recebidos", "A receber"])
 
+        # Filtro por ano/mes via Data Pagamento
+        df = df[df["Data Pagamento"].dt.year == ano_cr]
+        if mes_cr != "Todos":
+            m_num_cr = meses_opts.index(mes_cr)
+            df = df[df["Data Pagamento"].dt.month == m_num_cr]
         if pagador:
             df = df[df["Pagador"].astype(str).str.contains(pagador, case=False, na=False)]
         if m_sel != "Todos":
             df = df[df["Meio de Pag."] == m_sel]
-        if status == "Recebidos":
-            df = df[df["Data Pagamento"].notna()]
-        elif status == "A receber":
-            df = df[df["Data Pagamento"].isna()]
 
         st.markdown(f"**{len(df)} lançamentos · Valor: {brl(df['Valor'].sum())} · Pago: {brl(df['Valor Pago'].sum())}**")
 

@@ -999,7 +999,7 @@ with tab4:
         with fc2:
             mes_cr = st.selectbox("Mês", meses_opts, key="mes_cr_lanc")
         with fc3:
-            status_cr = st.selectbox("Status", ["Recebidos", "A receber", "Todos"], key="status_cr_lanc")
+            status_cr = st.selectbox("Status", ["Recebidos", "A receber", "Em atraso", "Todos"], key="status_cr_lanc")
         with fc4:
             pagador = st.text_input("Pagador contém", "")
         with fc5:
@@ -1009,17 +1009,25 @@ with tab4:
                 meio_opts = ["Todos"]
             m_sel = st.selectbox("Meio de pagamento", meio_opts)
 
-        if status_cr == "A receber":
+        if status_cr in ("A receber", "Em atraso"):
             # Parcelas em aberto (nao recebidas)
             df = nao_recebidas.copy()
-            df = df[df["Data Vencimento"].dt.year == ano_cr]
-            if mes_cr != "Todos":
-                m_num_cr = meses_opts.index(mes_cr)
-                df = df[df["Data Vencimento"].dt.month == m_num_cr]
+            _hoje_cr = pd.Timestamp.today().normalize()
+            if status_cr == "Em atraso":
+                # Vencidas e não pagas
+                df = df[df["Data Vencimento"] < _hoje_cr]
+            else:
+                # A receber (vencimento futuro)
+                df = df[df["Data Vencimento"] >= _hoje_cr]
+                df = df[df["Data Vencimento"].dt.year == ano_cr]
+                if mes_cr != "Todos":
+                    m_num_cr = meses_opts.index(mes_cr)
+                    df = df[df["Data Vencimento"].dt.month == m_num_cr]
             if pagador:
                 df = df[df["Pagador"].astype(str).str.contains(pagador, case=False, na=False)]
 
-            st.markdown(f"**{len(df)} parcelas em aberto · Valor total: {brl(df['Valor'].sum())}**")
+            label = "parcelas em atraso ⚠️" if status_cr == "Em atraso" else "parcelas em aberto"
+            st.markdown(f"**{len(df)} {label} · Valor total: {brl(df['Valor'].sum())}**")
             cols = ["Data Vencimento", "Projeto", "Nome", "Pagador", "Valor", "Meio de Pag."]
             cols = [c for c in cols if c in df.columns]
             show = df[cols].copy().sort_values("Data Vencimento", ascending=True)

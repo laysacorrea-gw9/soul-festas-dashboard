@@ -1185,7 +1185,7 @@ with tab_futuro:
     # ============ Saídas VARIÁVEIS por evento ============
     # Usa Saída Prevista se confiavel (>10% da Entrada), senão estima com % custo
     saidas_variaveis_mes = {m: 0.0 for m in meses_fut_pr}
-    for _, r in projetos_proj.iterrows():
+    for _, r in pa_proj.iterrows():
         saida_prev = r.get("Saída Prevista", 0) or 0
         saida_real = r.get("Saída Realizada", 0) or 0
         entrada_prev = r.get("Entrada Prevista", 0) or 0

@@ -718,8 +718,9 @@ with tab2:
     with sc3:
         cod_filtro = st.text_input("Nº Projeto", placeholder="ex: 0031", key="cod_proj_filtro")
     with sc4:
-        pct_custo = st.slider("% Custo estimado do evento", 0, 100, 55,
-                              help="Percentual médio de custo sobre Entrada Prevista") / 100
+        pct_custo = st.number_input("% Custo estimado", min_value=0, max_value=100, value=55, step=5,
+                                    help="Percentual médio de custo sobre Entrada Prevista",
+                                    key="pct_custo_proj_tab") / 100
 
     hoje = pd.Timestamp.today().normalize()
 
@@ -1088,9 +1089,9 @@ with tab_futuro:
     with _pr1:
         st.markdown("**Receita:** 100% do saldo pendente entra no mês do evento (Agenda SGE)")
     with _pr2:
-        pct_custo_proj = st.slider("% Custo estimado dos eventos futuros", 0, 100, 55,
-                                    key="pct_custo_proj",
-                                    help="Usado pra estimar saídas variáveis dos eventos sem despesa cadastrada") / 100
+        pct_custo_proj = st.number_input("% Custo estimado", min_value=0, max_value=100, value=55, step=5,
+                                        key="pct_custo_proj",
+                                        help="Usado pra estimar saídas variáveis dos eventos sem despesa cadastrada") / 100
 
     projetos_ignorados = 0
     projetos_fora_horizonte = 0

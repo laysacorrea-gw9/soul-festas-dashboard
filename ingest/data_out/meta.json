@@ -1,0 +1,21 @@
+{
+  "gerado_em": "2026-04-16T19:28:52.688858",
+  "fontes": {
+    "pagar_xlsx": "Contas_a_Pagar_20260416_190007_10463.xlsx",
+    "receber_xlsx": "Contas a Receber_20260416_190709_10463_1311.xlsx",
+    "projetos_xlsx": "ProjetoComValoresResumido_20260415_122608_10463_1311.xlsx"
+  },
+  "contagens": {
+    "contas_pagar": 3984,
+    "contas_receber": 5943,
+    "projetos": 259,
+    "cobertura_classificacao_pct": 100.0,
+    "nao_classificados": 0
+  },
+  "totais_2026": {
+    "despesas": 1070129.61,
+    "faturamento": 1365395.53,
+    "despesa_casa": 717734.51,
+    "despesa_eventos": 352395.10000000003
+  }
+}

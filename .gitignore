@@ -1,0 +1,14 @@
+.env
+.env.local
+ingest/data_raw/
+ingest/data_out/*.csv.bak
+ingest/data_out/classificacoes_*.csv
+ingest/data_out/contas_pagar_classificado.csv
+ingest/data_out/contas_receber.csv
+ingest/data_out/projetos.csv
+ingest/data_out/dre_*.csv
+__pycache__/
+*.pyc
+node_modules/
+.next/
+.vercel/

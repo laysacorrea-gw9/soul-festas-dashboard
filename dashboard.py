@@ -274,19 +274,17 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-hdr_l, hdr_c, hdr_r = st.columns([0.1, 3, 1.2])
+hdr_l, hdr_c, hdr_r = st.columns([0.1, 2, 1.2])
 with hdr_l:
     pass
 with hdr_c:
-    sub_a, sub_b, sub_c = st.columns(3)
+    sub_a, sub_b = st.columns(2)
     with sub_a:
         ano = st.selectbox("Ano", [2026, 2025, 2024], index=0)
     with sub_b:
         meses_opts = ["Todos", "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
                       "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
         mes_sel = st.selectbox("Mês", meses_opts, index=0)
-    with sub_c:
-        filtro_projeto_global = st.text_input("Nº Projeto", placeholder="ex: 0023", key="filtro_proj_global")
 with hdr_r:
     _meta = load_meta()
     _geradoem = _meta.get("gerado_em", "")
@@ -308,12 +306,6 @@ st.markdown("<hr/>", unsafe_allow_html=True)
 
 pagar_ano = pagar[pagar["data_ref"].dt.year == ano].copy()
 receber_ano = receber[receber["Data Pagamento"].dt.year == ano].copy()
-
-# Filtro global por numero de projeto
-if filtro_projeto_global.strip():
-    _fp = filtro_projeto_global.strip()
-    pagar_ano = pagar_ano[pagar_ano["Projeto"].astype(str).str.contains(_fp, case=False, na=False)]
-    receber_ano = receber_ano[receber_ano["Projeto"].astype(str).str.contains(_fp, case=False, na=False)]
 
 if mes_sel != "Todos":
     m_num = meses_opts.index(mes_sel)  # 1..12
@@ -720,8 +712,11 @@ with tab1:
 with tab2:
     st.markdown("### 🎪 Projetos — detalhe por evento")
 
-    # Filtros
-    sc1, sc2, sc3, sc4 = st.columns([1, 1, 1, 2])
+    # Filtro por projeto (acima, independente de data)
+    cod_filtro = st.text_input("🔍 Buscar por Nº Projeto", placeholder="ex: 0196/2025", key="cod_proj_filtro")
+
+    # Filtros de período + custo
+    sc1, sc2, sc3 = st.columns([1, 1, 2])
     with sc1:
         mes_ev = st.selectbox("Mês", list(range(0, 13)),
                                index=pd.Timestamp.today().month,
@@ -730,26 +725,23 @@ with tab2:
     with sc2:
         ano_ev = st.selectbox("Ano", [2026, 2027, 2025], key="ano_proj_tab")
     with sc3:
-        cod_filtro = st.text_input("Nº Projeto", placeholder="ex: 0031", key="cod_proj_filtro")
-    with sc4:
-        pct_custo = st.number_input("% Custo estimado", min_value=0, max_value=100, value=55, step=5,
-                                    help="Percentual médio de custo sobre Entrada Prevista",
-                                    key="pct_custo_proj_tab") / 100
+        pct_custo = st.slider("% Custo estimado do evento", 0, 100, 55,
+                              key="pct_custo_proj_slider",
+                              help="Percentual médio de custo sobre Entrada Prevista") / 100
 
     hoje = pd.Timestamp.today().normalize()
 
-    # Filtro base: projetos com data de evento (ou sem, se Todos)
+    # Filtro: se tem nº projeto, busca independente de data
     eventos_mes = pa_proj[pa_proj["Entrada Prevista"] > 0].copy()
-    if mes_ev == 0:
-        # Todos os meses do ano selecionado
+    if cod_filtro.strip():
+        eventos_mes = eventos_mes[eventos_mes["Projeto"].astype(str).str.contains(cod_filtro.strip(), case=False, na=False)]
+    elif mes_ev == 0:
         eventos_mes = eventos_mes[eventos_mes["data_evento"].dt.year == ano_ev]
     else:
         eventos_mes = eventos_mes[
             (eventos_mes["data_evento"].dt.year == ano_ev)
             & (eventos_mes["data_evento"].dt.month == mes_ev)
         ]
-    if cod_filtro.strip():
-        eventos_mes = eventos_mes[eventos_mes["Projeto"].astype(str).str.contains(cod_filtro.strip(), case=False, na=False)]
     eventos_mes = eventos_mes.sort_values("data_evento")
 
     if len(eventos_mes) == 0:

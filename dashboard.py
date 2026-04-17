@@ -1260,7 +1260,7 @@ with tab_futuro:
 
     # Tabela HTML (alinhamento perfeito, sem quebra)
     _th = "<table class='dre-table'><thead><tr>"
-    for h in ["Mês", "Saldo inicial", "Entradas", "Saída Casa", "Saída Eventos", "Saída Total", "Saldo final", "Status"]:
+    for h in ["Mês", "Saldo inicial", "Entradas", "Saída Casa", "Saída Eventos", "Saída Total", "Resultado", "Saldo final", "Status"]:
         _th += f"<th>{h}</th>"
     _th += "</tr></thead><tbody>"
     for row in projecao:
@@ -1278,6 +1278,9 @@ with tab_futuro:
         _th += f"<td style='color:#e74c3c'>{brl(row['Saídas fixas'])}</td>"
         _th += f"<td style='color:#f97316'>{brl(row['Saídas variáveis (eventos)'])}</td>"
         _th += f"<td style='color:#e74c3c;font-weight:600'>{brl(row['Saídas previstas'])}</td>"
+        resultado_mes = row['Entradas previstas'] - row['Saídas previstas']
+        cor_res = "#2ecc71" if resultado_mes >= 0 else "#e74c3c"
+        _th += f"<td style='color:{cor_res};font-weight:700'>{brl(resultado_mes)}</td>"
         _th += f"<td style='color:{cor};font-weight:700;font-size:15px'>{brl(row['Saldo final'])}</td>"
         _th += f"<td>{status}</td>"
         _th += "</tr>"

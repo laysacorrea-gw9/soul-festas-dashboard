@@ -1154,7 +1154,8 @@ with tab_futuro:
         creditos_futuros = len(cr_futuro)
         valor_creditos = cr_futuro["Valor Pago"].sum()
 
-    # Parcelas em atraso (vencidas e não pagas)
+    # Parcelas em atraso (vencidas e não pagas) — NÃO entra na projeção de entradas
+    # São inadimplência — mostrar como alerta, não como receita esperada
     parcelas_atraso = 0
     valor_atraso = 0.0
     if not nao_recebidas.empty:
@@ -1164,7 +1165,6 @@ with tab_futuro:
         ]
         parcelas_atraso = len(atraso)
         valor_atraso = atraso["Valor"].sum()
-        entradas_por_mes[meses_fut_pr[0]] += valor_atraso
 
     entradas_futuras = pd.Series(entradas_por_mes)
 

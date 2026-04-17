@@ -229,6 +229,10 @@ def load_data():
     receber = pd.read_csv(OUT / "contas_receber_final.csv")
     projetos = pd.read_csv(OUT / "projetos_final.csv")
 
+    # Contas nao recebidas (parcelas em aberto)
+    nr_path = OUT / "contas_nao_recebidas_final.csv"
+    nao_recebidas = pd.read_csv(nr_path) if nr_path.exists() else pd.DataFrame()
+
     # Parse de datas
     for c in ("Compet.", "Pagamento", "Vencimento", "data_ref"):
         if c in pagar.columns:
@@ -236,6 +240,8 @@ def load_data():
     for c in ("Data Vencimento", "Data Pagamento", "Data Crédito"):
         if c in receber.columns:
             receber[c] = pd.to_datetime(receber[c], errors="coerce")
+        if c in nao_recebidas.columns:
+            nao_recebidas[c] = pd.to_datetime(nao_recebidas[c], errors="coerce")
     if "data_evento" in projetos.columns:
         projetos["data_evento"] = pd.to_datetime(projetos["data_evento"], errors="coerce")
 
@@ -243,7 +249,7 @@ def load_data():
     if "data_evento" in projetos.columns and "data_evento_agenda" not in projetos.columns:
         projetos["data_evento_agenda"] = projetos["data_evento"]
 
-    return pagar, receber, projetos
+    return pagar, receber, projetos, nao_recebidas
 
 
 @st.cache_data
@@ -256,7 +262,7 @@ def load_meta():
     return {}
 
 
-pagar, receber, projetos = load_data()
+pagar, receber, projetos, nao_recebidas = load_data()
 
 # Header profissional
 st.markdown("""
@@ -982,43 +988,67 @@ with tab4:
                 show[c] = show[c].apply(brl)
         st.dataframe(show, use_container_width=True, hide_index=True, height=500)
 
-    else:  # Contas a Receber
-        # Filtro proprio de ano/mes (independente do topo)
-        df = receber.copy()
-        fc1, fc2, fc3, fc4 = st.columns(4)
+    else:  # Contas a Receber (recebidas + em aberto)
+        fc1, fc2, fc3, fc4, fc5 = st.columns(5)
         with fc1:
             ano_cr = st.selectbox("Ano", [2026, 2025, 2024], key="ano_cr_lanc")
         with fc2:
             mes_cr = st.selectbox("Mês", meses_opts, key="mes_cr_lanc")
         with fc3:
-            pagador = st.text_input("Pagador contém", "")
+            status_cr = st.selectbox("Status", ["Recebidos", "A receber", "Todos"], key="status_cr_lanc")
         with fc4:
-            meio = ["Todos"] + sorted(df["Meio de Pag."].dropna().unique().tolist())
-            m_sel = st.selectbox("Meio de pagamento", meio)
+            pagador = st.text_input("Pagador contém", "")
+        with fc5:
+            if status_cr == "Recebidos":
+                meio_opts = ["Todos"] + sorted(receber["Meio de Pag."].dropna().unique().tolist())
+            else:
+                meio_opts = ["Todos"]
+            m_sel = st.selectbox("Meio de pagamento", meio_opts)
 
-        # Filtro por ano/mes via Data Pagamento
-        df = df[df["Data Pagamento"].dt.year == ano_cr]
-        if mes_cr != "Todos":
-            m_num_cr = meses_opts.index(mes_cr)
-            df = df[df["Data Pagamento"].dt.month == m_num_cr]
-        if pagador:
-            df = df[df["Pagador"].astype(str).str.contains(pagador, case=False, na=False)]
-        if m_sel != "Todos":
-            df = df[df["Meio de Pag."] == m_sel]
+        if status_cr == "A receber":
+            # Parcelas em aberto (nao recebidas)
+            df = nao_recebidas.copy()
+            df = df[df["Data Vencimento"].dt.year == ano_cr]
+            if mes_cr != "Todos":
+                m_num_cr = meses_opts.index(mes_cr)
+                df = df[df["Data Vencimento"].dt.month == m_num_cr]
+            if pagador:
+                df = df[df["Pagador"].astype(str).str.contains(pagador, case=False, na=False)]
 
-        st.markdown(f"**{len(df)} lançamentos · Valor: {brl(df['Valor'].sum())} · Pago: {brl(df['Valor Pago'].sum())}**")
+            st.markdown(f"**{len(df)} parcelas em aberto · Valor total: {brl(df['Valor'].sum())}**")
+            cols = ["Data Vencimento", "Projeto", "Nome", "Pagador", "Valor", "Meio de Pag."]
+            cols = [c for c in cols if c in df.columns]
+            show = df[cols].copy().sort_values("Data Vencimento", ascending=True)
+            if "Data Vencimento" in show.columns:
+                show["Data Vencimento"] = show["Data Vencimento"].dt.strftime("%d/%m/%Y").fillna("-")
+            if "Valor" in show.columns:
+                show["Valor"] = show["Valor"].apply(brl)
+            st.dataframe(show, use_container_width=True, hide_index=True, height=500)
 
-        cols = ["Data Vencimento", "Data Pagamento", "Projeto", "Nome", "Pagador",
-                "Valor", "Valor Pago", "Meio de Pag."]
-        cols = [c for c in cols if c in df.columns]
-        show = df[cols].copy().sort_values("Data Pagamento", ascending=False)
-        for c in ("Data Vencimento", "Data Pagamento"):
-            if c in show.columns:
-                show[c] = show[c].dt.strftime("%d/%m/%Y").fillna("-")
-        for c in ("Valor", "Valor Pago"):
-            if c in show.columns:
-                show[c] = show[c].apply(brl)
-        st.dataframe(show, use_container_width=True, hide_index=True, height=500)
+        else:
+            # Recebidos (ou Todos = recebidos, já que não mescla com em aberto)
+            df = receber.copy()
+            df = df[df["Data Pagamento"].dt.year == ano_cr]
+            if mes_cr != "Todos":
+                m_num_cr = meses_opts.index(mes_cr)
+                df = df[df["Data Pagamento"].dt.month == m_num_cr]
+            if pagador:
+                df = df[df["Pagador"].astype(str).str.contains(pagador, case=False, na=False)]
+            if m_sel != "Todos":
+                df = df[df["Meio de Pag."] == m_sel]
+
+            st.markdown(f"**{len(df)} lançamentos · Valor: {brl(df['Valor'].sum())} · Pago: {brl(df['Valor Pago'].sum())}**")
+            cols = ["Data Vencimento", "Data Pagamento", "Data Crédito", "Projeto", "Nome", "Pagador",
+                    "Valor", "Valor Pago", "Meio de Pag."]
+            cols = [c for c in cols if c in df.columns]
+            show = df[cols].copy().sort_values("Data Pagamento", ascending=False)
+            for c in ("Data Vencimento", "Data Pagamento", "Data Crédito"):
+                if c in show.columns:
+                    show[c] = show[c].dt.strftime("%d/%m/%Y").fillna("-")
+            for c in ("Valor", "Valor Pago"):
+                if c in show.columns:
+                    show[c] = show[c].apply(brl)
+            st.dataframe(show, use_container_width=True, hide_index=True, height=500)
 
 # ========================================================================
 # TAB FUTURO: 3 sub-abas consolidadas
@@ -1068,61 +1098,69 @@ with tab_futuro:
 
     st.markdown("---")
 
-    # ============ Entradas Previstas (A Vencer dos Projetos, distribuido linear) ============
+    # ============ Entradas Previstas (PIPELINE REAL: parcelas em aberto por vencimento + Data Crédito futura) ============
     hoje = pd.Timestamp.today().normalize()
-    # Projeção até o final do ano (mês atual até dezembro)
     _meses_restantes = 12 - hoje.month + 1
     fim_horizonte = pd.Timestamp(hoje.year, 12, 31)
     meses_fut_pr = pd.period_range(hoje, periods=_meses_restantes, freq="M").astype(str).tolist()
-
-    # Usa "A Vencer (D)" dos projetos, distribuido entre hoje e data do evento
-    # (SGE so exportou Contas a Receber ja recebidas, nao em aberto)
-    entradas_por_mes = {m: 0.0 for m in meses_fut_pr}
-
-    # data_evento: prioriza Agenda oficial, fallback pras colunas Data * do projeto
-    date_cols = [c for c in projetos.columns if c.startswith("Data ")]
-    projetos_proj = projetos.copy()
-    projetos_proj["data_evento"] = pd.to_datetime(projetos_proj["data_evento_agenda"], errors="coerce")
-    for c in date_cols:
-        d = pd.to_datetime(projetos_proj[c], errors="coerce", dayfirst=True)
-        projetos_proj["data_evento"] = projetos_proj["data_evento"].fillna(d)
 
     # Premissas
     st.markdown("#### ⚙️ Premissas da projeção")
     _pr1, _pr2 = st.columns(2)
     with _pr1:
-        st.markdown("**Receita:** 100% do saldo pendente entra no mês do evento (Agenda SGE)")
+        st.markdown("**Receita:** parcelas em aberto agrupadas por vencimento + créditos futuros de cartão")
     with _pr2:
         pct_custo_proj = st.number_input("% Custo estimado", min_value=0, max_value=100, value=55, step=5,
                                         key="pct_custo_proj",
                                         help="Usado pra estimar saídas variáveis dos eventos sem despesa cadastrada") / 100
 
-    projetos_ignorados = 0
-    projetos_fora_horizonte = 0
-    projetos_atrasados = 0
-    for _, r in projetos_proj.iterrows():
-        # A Receber = Entrada Prevista - Entrada Realizada (do BalancoPorProjeto)
-        entrada_prev = r.get("Entrada Prevista", 0) or 0
-        entrada_real = r.get("Entrada Realizada", 0) or 0
-        a_receber = entrada_prev - entrada_real
-        if a_receber <= 0:
-            continue
-        data_ev = r.get("data_evento")
-        if pd.isna(data_ev):
-            projetos_ignorados += 1
-            continue
-        if data_ev < hoje:
-            # evento ja aconteceu e ainda tem saldo: inadimplencia, 1o mes
-            entradas_por_mes[meses_fut_pr[0]] += a_receber
-            projetos_atrasados += 1
-            continue
-        if data_ev > fim_horizonte:
-            projetos_fora_horizonte += 1
-            continue
-        # mes do evento dentro do horizonte
-        mes_ev = data_ev.strftime("%Y-%m")
-        if mes_ev in entradas_por_mes:
-            entradas_por_mes[mes_ev] += a_receber
+    entradas_por_mes = {m: 0.0 for m in meses_fut_pr}
+
+    # FONTE 1: Contas NÃO Recebidas (parcelas em aberto, por Data Vencimento)
+    parcelas_aberto = 0
+    valor_aberto = 0.0
+    if not nao_recebidas.empty:
+        nr = nao_recebidas[
+            nao_recebidas["Data Vencimento"].notna()
+            & (nao_recebidas["Data Vencimento"] >= hoje)
+            & (nao_recebidas["Data Vencimento"] <= fim_horizonte)
+        ].copy()
+        nr["mes"] = nr["Data Vencimento"].dt.to_period("M").astype(str)
+        nr_por_mes = nr.groupby("mes")["Valor"].sum()
+        for m, v in nr_por_mes.items():
+            if m in entradas_por_mes:
+                entradas_por_mes[m] += v
+        parcelas_aberto = len(nr)
+        valor_aberto = nr["Valor"].sum()
+
+    # FONTE 2: Data Crédito futura (parcelas JÁ PAGAS pelo cliente, crédito pendente no banco)
+    creditos_futuros = 0
+    valor_creditos = 0.0
+    cr_futuro = receber[
+        receber["Data Crédito"].notna()
+        & (receber["Data Crédito"] > hoje)
+        & (receber["Data Crédito"] <= fim_horizonte)
+    ].copy()
+    if len(cr_futuro):
+        cr_futuro["mes"] = cr_futuro["Data Crédito"].dt.to_period("M").astype(str)
+        cr_por_mes = cr_futuro.groupby("mes")["Valor Pago"].sum()
+        for m, v in cr_por_mes.items():
+            if m in entradas_por_mes:
+                entradas_por_mes[m] += v
+        creditos_futuros = len(cr_futuro)
+        valor_creditos = cr_futuro["Valor Pago"].sum()
+
+    # Parcelas em atraso (vencidas e não pagas)
+    parcelas_atraso = 0
+    valor_atraso = 0.0
+    if not nao_recebidas.empty:
+        atraso = nao_recebidas[
+            nao_recebidas["Data Vencimento"].notna()
+            & (nao_recebidas["Data Vencimento"] < hoje)
+        ]
+        parcelas_atraso = len(atraso)
+        valor_atraso = atraso["Valor"].sum()
+        entradas_por_mes[meses_fut_pr[0]] += valor_atraso
 
     entradas_futuras = pd.Series(entradas_por_mes)
 
@@ -1176,10 +1214,12 @@ with tab_futuro:
 
     st.markdown(f"**🎯 Saída fixa mensal (Casa):** {brl(saida_fixa_mensal)} *(média 3 meses)*")
     st.markdown(f"**🎯 Custo estimado dos eventos:** {int(pct_custo_proj*100)}% *(usado quando SGE não tem Saída Prevista)*")
-    c_info = st.columns(3)
-    c_info[0].metric("Projetos inadimplentes (evento passado c/ saldo)", projetos_atrasados)
-    c_info[1].metric("Projetos fora do horizonte 6m", projetos_fora_horizonte)
-    c_info[2].metric("Projetos sem data na Agenda", projetos_ignorados)
+
+    c_info = st.columns(4)
+    c_info[0].metric("📋 Parcelas em aberto", f"{parcelas_aberto}", f"{brl(valor_aberto)}")
+    c_info[1].metric("💳 Créditos futuros (cartão)", f"{creditos_futuros}", f"{brl(valor_creditos)}")
+    c_info[2].metric("⚠️ Parcelas em atraso", f"{parcelas_atraso}", f"{brl(valor_atraso)}")
+    c_info[3].metric("💰 Total entradas previstas", brl(entradas_futuras.sum()))
 
     st.markdown("---")
 

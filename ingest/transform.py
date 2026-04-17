@@ -146,6 +146,18 @@ def load_contas_receber() -> pd.DataFrame:
     return df
 
 
+def load_contas_nao_recebidas() -> pd.DataFrame:
+    """Parcelas em aberto (não pagas). Export SGE: Status = Não Pagas."""
+    files = list(RAW.glob("Contas nao recebida*"))
+    if not files:
+        return pd.DataFrame()
+    df = pd.read_excel(files[0])
+    for c in ("Data Vencimento", "Data Pagamento", "Data Crédito"):
+        if c in df.columns:
+            df[c] = pd.to_datetime(df[c], errors="coerce")
+    return df
+
+
 def load_projetos() -> pd.DataFrame:
     files = list(RAW.glob("ProjetoComValoresResumido_*.xlsx"))
     assert files, "ProjetoComValoresResumido nao encontrado"
@@ -259,8 +271,11 @@ def main():
     balanco = load_balanco_projeto()
     mapa_desc = load_custo_projeto()
 
+    nao_recebidas = load_contas_nao_recebidas()
+
     print(f"   • Contas a Pagar:           {len(pagar)} lanc")
     print(f"   • Contas a Receber:         {len(receber)} lanc")
+    print(f"   • Contas NÃO Recebidas:     {len(nao_recebidas)} lanc")
     print(f"   • Projetos:                 {len(projetos)}")
     print(f"   • Agenda (proj c/ data):    {len(mapa_agenda)}")
     print(f"   • Balanco projeto:          {len(balanco)}")
@@ -289,6 +304,8 @@ def main():
     print("\n[4/4] Salvando CSVs finais...")
     pagar_final.to_csv(OUT / "contas_pagar_final.csv", index=False, encoding="utf-8")
     receber.to_csv(OUT / "contas_receber_final.csv", index=False, encoding="utf-8")
+    if not nao_recebidas.empty:
+        nao_recebidas.to_csv(OUT / "contas_nao_recebidas_final.csv", index=False, encoding="utf-8")
     projetos_final.to_csv(OUT / "projetos_final.csv", index=False, encoding="utf-8")
     nao_class.to_csv(OUT / "log_nao_classificado.csv", index=False, encoding="utf-8")
 

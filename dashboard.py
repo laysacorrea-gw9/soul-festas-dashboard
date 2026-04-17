@@ -1114,9 +1114,9 @@ with tab_futuro:
     with _pr1:
         st.markdown("**Receita:** parcelas em aberto agrupadas por vencimento + créditos futuros de cartão")
     with _pr2:
-        pct_custo_proj = st.number_input("% Custo estimado", min_value=0, max_value=100, value=55, step=5,
-                                        key="pct_custo_proj",
-                                        help="Usado pra estimar saídas variáveis dos eventos sem despesa cadastrada") / 100
+        pct_custo_proj = st.slider("% Custo estimado do evento", 0, 100, 55,
+                                   key="pct_custo_proj",
+                                   help="Usado pra estimar saídas variáveis dos eventos sem despesa cadastrada") / 100
 
     entradas_por_mes = {m: 0.0 for m in meses_fut_pr}
 

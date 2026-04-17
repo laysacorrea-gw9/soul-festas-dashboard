@@ -179,7 +179,11 @@ st.markdown("""
     background: hsl(45, 93%, 47%) !important; color: hsl(222, 47%, 11%) !important;
   }
 
-  .stSlider [data-baseweb="slider"] > div { background: hsl(45, 93%, 47%) !important; }
+  /* Slider refinado */
+  .stSlider [data-baseweb="slider"] > div { background: hsl(217, 33%, 22%) !important; height: 6px !important; border-radius: 3px !important; }
+  .stSlider [data-baseweb="slider"] > div > div { background: hsl(45, 93%, 47%) !important; height: 6px !important; border-radius: 3px !important; }
+  .stSlider [role="slider"] { background: hsl(45, 93%, 47%) !important; border: 2px solid hsl(222, 47%, 11%) !important; width: 18px !important; height: 18px !important; box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important; }
+  .stSlider [data-baseweb="slider"] { padding: 8px 0 !important; }
 
   /* ===== DATAFRAMES ===== */
   .stDataFrame, [data-testid="stDataFrame"] {

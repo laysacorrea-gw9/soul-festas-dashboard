@@ -274,17 +274,19 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-hdr_l, hdr_c, hdr_r = st.columns([0.1, 2, 1.2])
+hdr_l, hdr_c, hdr_r = st.columns([0.1, 3, 1.2])
 with hdr_l:
     pass
 with hdr_c:
-    sub_a, sub_b = st.columns(2)
+    sub_a, sub_b, sub_c = st.columns(3)
     with sub_a:
         ano = st.selectbox("Ano", [2026, 2025, 2024], index=0)
     with sub_b:
         meses_opts = ["Todos", "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
                       "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
         mes_sel = st.selectbox("Mês", meses_opts, index=0)
+    with sub_c:
+        filtro_projeto_global = st.text_input("Nº Projeto", placeholder="ex: 0023", key="filtro_proj_global")
 with hdr_r:
     _meta = load_meta()
     _geradoem = _meta.get("gerado_em", "")
@@ -306,6 +308,12 @@ st.markdown("<hr/>", unsafe_allow_html=True)
 
 pagar_ano = pagar[pagar["data_ref"].dt.year == ano].copy()
 receber_ano = receber[receber["Data Pagamento"].dt.year == ano].copy()
+
+# Filtro global por numero de projeto
+if filtro_projeto_global.strip():
+    _fp = filtro_projeto_global.strip()
+    pagar_ano = pagar_ano[pagar_ano["Projeto"].astype(str).str.contains(_fp, case=False, na=False)]
+    receber_ano = receber_ano[receber_ano["Projeto"].astype(str).str.contains(_fp, case=False, na=False)]
 
 if mes_sel != "Todos":
     m_num = meses_opts.index(mes_sel)  # 1..12

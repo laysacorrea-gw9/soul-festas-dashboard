@@ -1079,10 +1079,11 @@ with tab_futuro:
     s_sgp = sc[4].number_input("SGP", value=13360.32, step=1000.0, key="s_sgp", format="%.2f")
     saldo_bancos = s_rede + s_brad + s_itau + s_val + s_sgp
 
-    st.markdown("#### 💼 Saldo Conta Investimentos atual (edite se precisar)")
-    ic = st.columns(1)
-    s_xp = ic[0].number_input("XP Investimentos", value=1224591.96, step=1000.0, key="s_xp", format="%.2f")
-    saldo_investimentos = s_xp
+    st.markdown("#### 💼 Saldo Conta Investimentos XP atual (edite se precisar)")
+    ic = st.columns(2)
+    s_xp_route = ic[0].number_input("XP — Conta ROUTE", value=1166489.38, step=1000.0, key="s_xp_route", format="%.2f")
+    s_xp_soul = ic[1].number_input("XP — Conta SOUL", value=303344.87, step=1000.0, key="s_xp_soul", format="%.2f")
+    saldo_investimentos = s_xp_route + s_xp_soul
 
     saldo_inicial = saldo_bancos + saldo_investimentos
 

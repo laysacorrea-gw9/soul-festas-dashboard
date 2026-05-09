@@ -1,14 +1,14 @@
 {
-  "gerado_em": "2026-05-08T16:53:53.863714",
+  "gerado_em": "2026-05-08T21:36:19.939234",
   "fontes": {
     "pagar_xlsx": "Contas_a_Pagar_20260508_combined.xlsx",
     "receber_xlsx": "Contas a Receber_20260508_160653_10463_1311.xlsx",
-    "projetos_xlsx": "ProjetoComValoresResumido_20260415_122608_10463_1311.xlsx"
+    "projetos_xlsx": "BalancoPorProjetoResumido20260508_162522_10463.xlsx"
   },
   "contagens": {
     "contas_pagar": 4284,
     "contas_receber": 6321,
-    "projetos": 259,
+    "projetos": 260,
     "cobertura_classificacao_pct": 100.0,
     "nao_classificados": 9
   },

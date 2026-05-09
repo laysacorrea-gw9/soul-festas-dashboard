@@ -158,10 +158,18 @@ def load_contas_nao_recebidas() -> pd.DataFrame:
     return df
 
 
-def load_projetos() -> pd.DataFrame:
-    files = list(RAW.glob("ProjetoComValoresResumido_*.xlsx"))
-    assert files, "ProjetoComValoresResumido nao encontrado"
-    return pd.read_excel(files[0])
+def load_projetos_from_balanco() -> pd.DataFrame:
+    """Constroi a tabela de projetos a partir do BalançoPorProjeto + Agenda.
+
+    O ProjetoComValoresResumido foi descontinuado da pipeline porque ficava
+    desatualizado entre semanas (precisava re-export manual). Agora derivamos
+    tudo do Balanço (atualizado a cada export do SGE) + Agenda (data + tipo)."""
+    bal_files = list(RAW.glob("BalancoPorProjetoResumido*.xlsx"))
+    assert bal_files, "BalancoPorProjetoResumido nao encontrado"
+    bal = pd.read_excel(bal_files[0])
+    bal["Projeto"] = bal["Projeto"].astype(str).str.strip()
+    bal = bal[bal["Projeto"].notna() & (bal["Projeto"] != "nan") & (bal["Projeto"] != "")]
+    return bal[["Projeto", "Instituição", "Curso"]].rename(columns={"Curso": "Cursos"})
 
 
 # =====================================================================
@@ -216,37 +224,50 @@ def processar_contas_pagar(pagar: pd.DataFrame, dp_sub: pd.DataFrame,
 
 
 def processar_projetos(projetos: pd.DataFrame, mapa_agenda: dict,
-                       balanco: pd.DataFrame, mapa_descricao: dict) -> pd.DataFrame:
-    """Cruza projetos com Agenda + BalancoPorProjeto + Descricao."""
+                       balanco: pd.DataFrame, mapa_descricao: dict,
+                       agenda_df: pd.DataFrame = None) -> pd.DataFrame:
+    """Cruza projetos com Agenda + BalancoPorProjeto + Descricao.
+
+    Fonte primária = BalancoPorProjeto (sempre atualizado).
+    Agenda = data + tipo do evento.
+    CustoDoProjeto = descrição."""
     df = projetos.copy()
     df["Projeto_str"] = df["Projeto"].astype(str).str.strip()
     df["data_evento"] = df["Projeto_str"].map(mapa_agenda)
     df["data_evento"] = pd.to_datetime(df["data_evento"], errors="coerce")
 
-    # fallback: primeira "Data *" nao nula
-    date_cols = [c for c in df.columns if c.startswith("Data ")]
-    for c in date_cols:
-        d = pd.to_datetime(df[c], errors="coerce", dayfirst=True)
-        df["data_evento"] = df["data_evento"].fillna(d)
+    # tipo_evento: vem da Agenda (coluna "Evento")
+    if agenda_df is not None and "Evento" in agenda_df.columns:
+        ag = agenda_df.dropna(subset=["Projeto", "Evento"]).copy()
+        ag["Projeto"] = ag["Projeto"].astype(str).str.strip()
+        mapa_tipo = ag.groupby("Projeto")["Evento"].first().to_dict()
+        df["tipo_evento"] = df["Projeto_str"].map(mapa_tipo)
+    else:
+        df["tipo_evento"] = None
 
-    # tipo_evento: qual coluna "Data *" estava populada (primeira)
-    def _tipo_ev(row):
-        for c in date_cols:
-            if pd.notna(row.get(c)):
-                return c.replace("Data ", "")
-        return None
-    df["tipo_evento"] = df.apply(_tipo_ev, axis=1)
-
-    # Merge balanco
+    # Merge com balanço pra trazer Entrada/Saída Prevista/Realizada
     if not balanco.empty:
-        df = df.merge(balanco, left_on="Projeto_str", right_on="Projeto",
-                      how="left", suffixes=("", "_bal"))
+        df = df.merge(
+            balanco[["Projeto", "Entrada Prevista", "Entrada Realizada",
+                     "Saída Prevista", "Saída Realizada", "Saldo Previsto", "Saldo Realizado"]],
+            left_on="Projeto_str", right_on="Projeto", how="left", suffixes=("", "_bal"),
+        )
         if "Projeto_bal" in df.columns:
             df = df.drop(columns=["Projeto_bal"])
 
     # Descricao do projeto (do CustoDoProjeto)
     df["Descrição Projeto"] = df["Projeto_str"].map(mapa_descricao)
 
+    return df
+
+
+def load_agenda_df() -> pd.DataFrame:
+    """Carrega a Agenda completa (não só o mapa) pra extrair tipo_evento."""
+    files = list(RAW.glob("AgendaResumida_*.xlsx"))
+    if not files:
+        return pd.DataFrame()
+    df = pd.read_excel(files[0])
+    df["Data"] = pd.to_datetime(df["Data"], errors="coerce", dayfirst=True)
     return df
 
 
@@ -266,8 +287,9 @@ def main():
     dp_forn = load_de_para_fornecedor()
     pagar = load_contas_pagar()
     receber = load_contas_receber()
-    projetos = load_projetos()
+    projetos = load_projetos_from_balanco()  # Fonte: BalancoPorProjeto (atualizado)
     mapa_agenda = load_agenda()
+    agenda_df = load_agenda_df()
     balanco = load_balanco_projeto()
     mapa_desc = load_custo_projeto()
 
@@ -294,7 +316,7 @@ def main():
         print(f"       {sub:<30s} {qtd:>5d}")
 
     print("\n[3/4] Cruzando Projetos com Agenda + Balanco + Descricao...")
-    projetos_final = processar_projetos(projetos, mapa_agenda, balanco, mapa_desc)
+    projetos_final = processar_projetos(projetos, mapa_agenda, balanco, mapa_desc, agenda_df)
     tem_data = projetos_final["data_evento"].notna().sum()
     tem_desc = projetos_final["Descrição Projeto"].notna().sum()
     print(f"   • Projetos com data_evento: {tem_data}/{len(projetos_final)}")
@@ -315,7 +337,7 @@ def main():
         "fontes": {
             "pagar_xlsx": str(next(RAW.glob("Contas_a_Pagar_*.xlsx")).name),
             "receber_xlsx": str(next(RAW.glob("Contas a Receber_*.xlsx")).name),
-            "projetos_xlsx": str(next(RAW.glob("ProjetoComValoresResumido_*.xlsx")).name),
+            "projetos_xlsx": str(next(RAW.glob("BalancoPorProjetoResumido*.xlsx")).name),
         },
         "contagens": {
             "contas_pagar": len(pagar_final),

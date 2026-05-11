@@ -339,9 +339,11 @@ if mes_sel != "Todos":
 else:
     vendas_filt = projetos[projetos["_data_ev"].dt.year == ano]
 
-val_vendas = vendas_filt["Arrecad. Prevista (A)"].sum()
+_ep = pd.to_numeric(vendas_filt.get("Entrada Prevista"), errors="coerce").fillna(0)
+_er = pd.to_numeric(vendas_filt.get("Entrada Realizada"), errors="coerce").fillna(0)
+val_vendas = _ep.sum()
 qtd_vendas = len(vendas_filt)
-pipeline = vendas_filt["A Receber (C+D)"].sum()
+pipeline = (_ep - _er).clip(lower=0).sum()
 
 periodo_lbl = f"{mes_sel}/{ano}" if mes_sel != "Todos" else str(ano)
 margem = (lucro_real / faturamento * 100) if faturamento else 0

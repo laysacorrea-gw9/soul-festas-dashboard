@@ -158,6 +158,82 @@ def load_contas_nao_recebidas() -> pd.DataFrame:
     return df
 
 
+def load_planilha_inadimplentes() -> pd.DataFrame:
+    """Planilha SGE de inadimplentes (base já limpa pela equipe Soul).
+
+    Diferente de Contas Não Recebidas (que tem TODAS as parcelas em aberto,
+    inclusive de clientes cancelados), essa planilha vem com a base limpa —
+    apenas inadimplentes que precisam ser cobrados.
+
+    Procura recursivo porque a Laysa salva em subpastas datadas (ex: 08.05.2026/).
+    Pega o arquivo mais recente por mtime.
+    """
+    files = list(RAW.rglob("PlanilhaClientesInadimplentes*.xlsx"))
+    if not files:
+        return pd.DataFrame()
+    files.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+    df = pd.read_excel(files[0])
+    for c in ("Vencimento", "Data Emissão", "Data Compra"):
+        if c in df.columns:
+            df[c] = pd.to_datetime(df[c], errors="coerce", dayfirst=True)
+    return df
+
+
+def faixa_atraso(dias: int) -> str:
+    """Classifica dias de atraso em faixas pra dashboard."""
+    if dias <= 15:
+        return "01-15 dias"
+    if dias <= 30:
+        return "16-30 dias"
+    if dias <= 60:
+        return "31-60 dias"
+    if dias <= 90:
+        return "61-90 dias"
+    if dias <= 180:
+        return "91-180 dias"
+    return "180+ dias"
+
+
+def processar_inadimplentes(df: pd.DataFrame) -> pd.DataFrame:
+    """Limpa e classifica a planilha de inadimplentes do SGE."""
+    if df.empty:
+        return df
+    df = df.copy()
+    df["Dias Atraso"] = pd.to_numeric(df["Dias Atraso"], errors="coerce").fillna(0).astype(int)
+    df["Valor Nominal"] = pd.to_numeric(df["Valor Nominal"], errors="coerce").fillna(0)
+    df["Valor Atualizado"] = pd.to_numeric(df["Valor Atualizado"], errors="coerce").fillna(0)
+    df["Multa"] = pd.to_numeric(df.get("Multa"), errors="coerce").fillna(0)
+    df["Juros"] = pd.to_numeric(df.get("Juros"), errors="coerce").fillna(0)
+
+    df["faixa_atraso"] = df["Dias Atraso"].apply(faixa_atraso)
+
+    # Telefone consolidado (prefere Celular, depois Tel Pagador)
+    df["telefone"] = (
+        df.get("Celular Cliente").astype(str).where(df.get("Celular Cliente").notna(), "")
+        .replace("nan", "")
+    )
+    df.loc[df["telefone"] == "", "telefone"] = (
+        df.get("Tel Pagador").astype(str).where(df.get("Tel Pagador").notna(), "").replace("nan", "")
+    )
+
+    # Categoria de acao: critico (>R$3k OU Corporativo) = Letícia; resto = régua SGE
+    df["categoria_cobranca"] = "Régua SGE (automática)"
+    df.loc[df["Valor Atualizado"] >= 3000, "categoria_cobranca"] = "Crítico — Letícia"
+    df.loc[df["Tipo Projeto"] == "Corporativo", "categoria_cobranca"] = "Crítico — Letícia"
+
+    return df
+
+
+def salvar_snapshot_inadimplentes(df: pd.DataFrame) -> None:
+    """Salva snapshot diário em data_out/historico/ pra evolução temporal."""
+    if df.empty:
+        return
+    hist_dir = OUT / "historico"
+    hist_dir.mkdir(exist_ok=True)
+    snap_path = hist_dir / f"inadimplentes_{datetime.now().strftime('%Y-%m-%d')}.csv"
+    df.to_csv(snap_path, index=False, encoding="utf-8")
+
+
 def load_projetos_from_balanco() -> pd.DataFrame:
     """Constroi a tabela de projetos a partir do BalançoPorProjeto + Agenda.
 
@@ -294,10 +370,12 @@ def main():
     mapa_desc = load_custo_projeto()
 
     nao_recebidas = load_contas_nao_recebidas()
+    inadimplentes_raw = load_planilha_inadimplentes()
 
     print(f"   • Contas a Pagar:           {len(pagar)} lanc")
     print(f"   • Contas a Receber:         {len(receber)} lanc")
     print(f"   • Contas NÃO Recebidas:     {len(nao_recebidas)} lanc")
+    print(f"   • Inadimplentes (base limpa):{len(inadimplentes_raw)} parcelas")
     print(f"   • Projetos:                 {len(projetos)}")
     print(f"   • Agenda (proj c/ data):    {len(mapa_agenda)}")
     print(f"   • Balanco projeto:          {len(balanco)}")
@@ -322,6 +400,9 @@ def main():
     print(f"   • Projetos com data_evento: {tem_data}/{len(projetos_final)}")
     print(f"   • Projetos com descricao:   {tem_desc}/{len(projetos_final)}")
 
+    # Inadimplentes (base limpa SGE)
+    inadimplentes = processar_inadimplentes(inadimplentes_raw)
+
     # 3. SALVAR
     print("\n[4/4] Salvando CSVs finais...")
     pagar_final.to_csv(OUT / "contas_pagar_final.csv", index=False, encoding="utf-8")
@@ -330,6 +411,9 @@ def main():
         nao_recebidas.to_csv(OUT / "contas_nao_recebidas_final.csv", index=False, encoding="utf-8")
     projetos_final.to_csv(OUT / "projetos_final.csv", index=False, encoding="utf-8")
     nao_class.to_csv(OUT / "log_nao_classificado.csv", index=False, encoding="utf-8")
+    if not inadimplentes.empty:
+        inadimplentes.to_csv(OUT / "inadimplentes_final.csv", index=False, encoding="utf-8")
+        salvar_snapshot_inadimplentes(inadimplentes)
 
     # Meta
     meta = {
@@ -356,6 +440,13 @@ def main():
         "despesa_casa": float(pg_2026[pg_2026["C. Custo"].isin(CC_CASA)]["valor_ref"].sum()),
         "despesa_eventos": float(pg_2026[pg_2026["C. Custo"].isin(CC_EVENTOS)]["valor_ref"].sum()),
     }
+    if not inadimplentes.empty:
+        meta["inadimplencia"] = {
+            "parcelas": int(len(inadimplentes)),
+            "pagadores_unicos": int(inadimplentes["Pagador"].nunique()),
+            "valor_nominal": float(inadimplentes["Valor Nominal"].sum()),
+            "valor_atualizado": float(inadimplentes["Valor Atualizado"].sum()),
+        }
     with open(OUT / "meta.json", "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2, ensure_ascii=False)
 

@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-08T21:36:19.939234",
+  "gerado_em": "2026-05-13T13:45:12.062141",
   "fontes": {
     "pagar_xlsx": "Contas_a_Pagar_20260508_combined.xlsx",
     "receber_xlsx": "Contas a Receber_20260508_160653_10463_1311.xlsx",
@@ -17,5 +17,11 @@
     "faturamento": 1713715.19,
     "despesa_casa": 853011.6299999999,
     "despesa_eventos": 460323.33999999997
+  },
+  "inadimplencia": {
+    "parcelas": 751,
+    "pagadores_unicos": 234,
+    "valor_nominal": 197735.59,
+    "valor_atualizado": 211506.07
   }
 }

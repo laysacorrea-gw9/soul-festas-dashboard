@@ -257,6 +257,41 @@ def load_data():
 
 
 @st.cache_data
+def load_inadimplentes():
+    """Le inadimplentes_final.csv + snapshots historicos pra evolucao temporal."""
+    path = OUT / "inadimplentes_final.csv"
+    if not path.exists():
+        return pd.DataFrame(), pd.DataFrame()
+    df = pd.read_csv(path)
+    df["Vencimento"] = pd.to_datetime(df["Vencimento"], errors="coerce")
+    df["Dias Atraso"] = pd.to_numeric(df["Dias Atraso"], errors="coerce").fillna(0).astype(int)
+    df["Valor Atualizado"] = pd.to_numeric(df["Valor Atualizado"], errors="coerce").fillna(0)
+    df["Valor Nominal"] = pd.to_numeric(df["Valor Nominal"], errors="coerce").fillna(0)
+
+    # Historico (todos os snapshots em data_out/historico/)
+    hist_dir = OUT / "historico"
+    historico = pd.DataFrame()
+    if hist_dir.exists():
+        snaps = []
+        for f in sorted(hist_dir.glob("inadimplentes_*.csv")):
+            data_str = f.stem.replace("inadimplentes_", "")
+            try:
+                snap = pd.read_csv(f)
+                snap["valor_total"] = pd.to_numeric(snap["Valor Atualizado"], errors="coerce").fillna(0).sum()
+                snaps.append({
+                    "data": pd.to_datetime(data_str),
+                    "parcelas": len(snap),
+                    "pagadores": snap["Pagador"].nunique(),
+                    "valor": float(pd.to_numeric(snap["Valor Atualizado"], errors="coerce").fillna(0).sum()),
+                })
+            except Exception:
+                continue
+        if snaps:
+            historico = pd.DataFrame(snaps).sort_values("data")
+    return df, historico
+
+
+@st.cache_data
 def load_meta():
     """Le meta.json com info da ultima atualizacao."""
     import json
@@ -267,6 +302,7 @@ def load_meta():
 
 
 pagar, receber, projetos, nao_recebidas = load_data()
+inadimplentes, inad_historico = load_inadimplentes()
 
 # Header profissional
 st.markdown("""
@@ -373,7 +409,7 @@ v3.metric("Pipeline a receber", brl(pipeline))
 
 st.divider()
 
-tab1, tab2, tab4, tab_futuro = st.tabs(["📊 Painel", "🎪 Projetos", "📋 Lançamentos", "🔮 Futuro"])
+tab1, tab2, tab4, tab_inad, tab_futuro = st.tabs(["📊 Painel", "🎪 Projetos", "📋 Lançamentos", "💸 Inadimplência", "🔮 Futuro"])
 # Variavel compartilhada entre abas: preparar pa_proj antes pra uso em tab2 e no sub_ano
 pa_proj = projetos.copy()
 pa_proj["data_evento"] = pd.to_datetime(pa_proj["data_evento_agenda"], errors="coerce")
@@ -1063,6 +1099,203 @@ with tab4:
                 if c in show.columns:
                     show[c] = show[c].apply(brl)
             st.dataframe(show, use_container_width=True, hide_index=True, height=500)
+
+# ========================================================================
+# TAB INADIMPLÊNCIA: visão executiva com drill-down + evolução
+# ========================================================================
+with tab_inad:
+    if inadimplentes.empty:
+        st.warning("Planilha de inadimplentes não encontrada. Exporte do SGE e salve em `ingest/data_raw/`.")
+    else:
+        st.markdown("### 💸 Acompanhamento de Inadimplência")
+        st.caption("Base limpa do SGE (clientes cancelados já removidos) · atualizada semanalmente")
+
+        # ====== NÍVEL 1: KPIs grandes ======
+        total_valor = float(inadimplentes["Valor Atualizado"].sum())
+        total_parcelas = int(len(inadimplentes))
+        total_pagadores = int(inadimplentes["Pagador"].nunique())
+        ticket_medio = total_valor / total_parcelas if total_parcelas else 0
+
+        # % do faturamento médio mensal 2026
+        rc_2026 = receber[receber["Data Pagamento"].dt.year == 2026].dropna(subset=["Data Pagamento"]).copy()
+        if not rc_2026.empty:
+            rc_2026["mes"] = rc_2026["Data Pagamento"].dt.to_period("M")
+            fat_medio_mensal = rc_2026.groupby("mes")["Valor Pago"].sum().mean()
+            pct_fat = (total_valor / fat_medio_mensal * 100) if fat_medio_mensal else 0
+        else:
+            pct_fat = 0
+
+        # Variação vs último snapshot
+        delta_txt = "—"
+        if len(inad_historico) >= 2:
+            prev = inad_historico.iloc[-2]
+            cur = inad_historico.iloc[-1]
+            delta_pct = ((cur["valor"] - prev["valor"]) / prev["valor"] * 100) if prev["valor"] else 0
+            delta_txt = f"{delta_pct:+.1f}% vs {prev['data'].strftime('%d/%m')}"
+
+        k1, k2, k3, k4 = st.columns(4)
+        k1.metric("💰 Total atrasado", brl(total_valor), delta_txt if delta_txt != "—" else None)
+        k2.metric("👥 Devedores únicos", f"{total_pagadores}")
+        k3.metric("📋 Parcelas em atraso", f"{total_parcelas}")
+        k4.metric("📊 % faturamento mensal", f"{pct_fat:.1f}%")
+
+        st.divider()
+
+        # ====== NÍVEL 2: Análise (donut + barras) ======
+        col_a, col_b = st.columns(2)
+
+        with col_a:
+            st.markdown("#### 🎪 Por tipo de evento")
+            por_tipo = inadimplentes.groupby("Tipo Projeto").agg(
+                valor=("Valor Atualizado", "sum"),
+                qtd=("Valor Atualizado", "count"),
+            ).reset_index().sort_values("valor", ascending=False)
+
+            fig = go.Figure(data=[go.Pie(
+                labels=por_tipo["Tipo Projeto"],
+                values=por_tipo["valor"],
+                hole=0.55,
+                marker=dict(colors=["#f59e0b", "#10b981", "#3b82f6", "#ec4899", "#8b5cf6"]),
+                textinfo="label+percent",
+                textfont=dict(size=14, color="white"),
+                hovertemplate="<b>%{label}</b><br>R$ %{value:,.2f}<br>%{percent}<extra></extra>",
+            )])
+            fig.update_layout(
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                font=dict(color="white", size=14),
+                showlegend=False,
+                margin=dict(t=10, b=10, l=10, r=10),
+                height=320,
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        with col_b:
+            st.markdown("#### ⏱️ Por faixa de atraso")
+            ordem = ["01-15 dias", "16-30 dias", "31-60 dias", "61-90 dias", "91-180 dias", "180+ dias"]
+            por_faixa = inadimplentes.groupby("faixa_atraso").agg(
+                valor=("Valor Atualizado", "sum"),
+                qtd=("Valor Atualizado", "count"),
+            ).reindex(ordem).fillna(0).reset_index()
+
+            # Cor escalonada por urgência
+            cores = ["#10b981", "#84cc16", "#facc15", "#f59e0b", "#f97316", "#ef4444"]
+
+            fig2 = go.Figure(data=[go.Bar(
+                x=por_faixa["faixa_atraso"],
+                y=por_faixa["valor"],
+                marker=dict(color=cores),
+                text=[f"R$ {v/1000:.0f}k<br>{int(q)} parc" for v, q in zip(por_faixa["valor"], por_faixa["qtd"])],
+                textposition="outside",
+                textfont=dict(size=13, color="white"),
+                hovertemplate="<b>%{x}</b><br>R$ %{y:,.2f}<br>%{text}<extra></extra>",
+            )])
+            fig2.update_layout(
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                font=dict(color="white", size=13),
+                xaxis=dict(tickangle=-20, color="white"),
+                yaxis=dict(visible=False),
+                margin=dict(t=30, b=10, l=10, r=10),
+                height=320,
+                showlegend=False,
+            )
+            st.plotly_chart(fig2, use_container_width=True)
+
+        st.divider()
+
+        # ====== Top 20 devedores ======
+        st.markdown("#### 🔝 Top 20 Devedores")
+        st.caption("Clique numa linha pra ver as parcelas em detalhe abaixo")
+
+        top20 = inadimplentes.groupby("Pagador").agg(
+            valor=("Valor Atualizado", "sum"),
+            qtd_parcelas=("Valor Atualizado", "count"),
+            dias_max=("Dias Atraso", "max"),
+            tipo=("Tipo Projeto", "first"),
+            telefone=("telefone", "first"),
+            projeto=("Projeto", "first"),
+        ).reset_index().sort_values("valor", ascending=False).head(20)
+        top20["valor"] = top20["valor"].round(2)
+
+        top20_show = top20.rename(columns={
+            "Pagador": "Cliente",
+            "valor": "Valor Total",
+            "qtd_parcelas": "Parcelas",
+            "dias_max": "Dias Atraso (máx)",
+            "tipo": "Tipo Evento",
+            "telefone": "Telefone",
+            "projeto": "Projeto",
+        }).copy()
+        top20_show["Valor Total"] = top20_show["Valor Total"].apply(brl)
+        st.dataframe(top20_show, use_container_width=True, hide_index=True, height=520)
+
+        # ====== NÍVEL 3: Drill-down por devedor ======
+        st.divider()
+        st.markdown("#### 🔍 Ver detalhe de um devedor")
+        pagador_sel = st.selectbox(
+            "Selecione o cliente",
+            options=[""] + sorted(inadimplentes["Pagador"].dropna().unique().tolist()),
+            label_visibility="collapsed",
+        )
+        if pagador_sel:
+            det = inadimplentes[inadimplentes["Pagador"] == pagador_sel].copy()
+            det = det.sort_values("Dias Atraso", ascending=False)
+            cliente = det["Cliente"].iloc[0] if "Cliente" in det.columns else "—"
+            tel = det["telefone"].iloc[0] if "telefone" in det.columns else "—"
+            email = det["Email Pagador"].iloc[0] if "Email Pagador" in det.columns else "—"
+            total_dev = det["Valor Atualizado"].sum()
+
+            i1, i2, i3, i4 = st.columns(4)
+            i1.metric("Total devido", brl(total_dev))
+            i2.metric("Parcelas", f"{len(det)}")
+            i3.metric("Atraso máx", f"{int(det['Dias Atraso'].max())} dias")
+            i4.metric("Tipo", det["Tipo Projeto"].iloc[0] if not det.empty else "—")
+
+            st.markdown(f"**📞 Contato:** {tel} · **✉️ Email:** {email if str(email) != 'nan' else '—'}")
+            st.markdown(f"**🎉 Cliente do evento:** {cliente} · **Projeto:** {det['Projeto'].iloc[0]}")
+
+            det_show = det[["Vencimento", "Valor Nominal", "Multa", "Juros", "Valor Atualizado",
+                           "Dias Atraso", "faixa_atraso", "categoria_cobranca"]].copy()
+            det_show["Vencimento"] = pd.to_datetime(det_show["Vencimento"], errors="coerce").dt.strftime("%d/%m/%Y")
+            for c in ("Valor Nominal", "Multa", "Juros", "Valor Atualizado"):
+                det_show[c] = det_show[c].apply(brl)
+            st.dataframe(det_show, use_container_width=True, hide_index=True)
+
+        # ====== NÍVEL 4: Evolução temporal ======
+        st.divider()
+        st.markdown("#### 📈 Evolução da Inadimplência")
+
+        if len(inad_historico) < 2:
+            st.info(f"📊 Coletando dados — evolução temporal disponível após algumas semanas de atualização. "
+                    f"Histórico atual: {len(inad_historico)} snapshot(s).")
+        else:
+            inad_historico["data_label"] = inad_historico["data"].dt.strftime("%d/%m")
+            figev = go.Figure()
+            figev.add_trace(go.Scatter(
+                x=inad_historico["data_label"],
+                y=inad_historico["valor"],
+                mode="lines+markers+text",
+                line=dict(color="#f59e0b", width=3),
+                marker=dict(size=10, color="#f59e0b"),
+                text=[f"R$ {v/1000:.0f}k" for v in inad_historico["valor"]],
+                textposition="top center",
+                textfont=dict(color="white", size=12),
+                hovertemplate="<b>%{x}</b><br>R$ %{y:,.2f}<extra></extra>",
+                name="Total atrasado",
+            ))
+            figev.update_layout(
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                font=dict(color="white", size=13),
+                xaxis=dict(color="white"),
+                yaxis=dict(visible=False),
+                margin=dict(t=20, b=30, l=10, r=10),
+                height=320,
+                showlegend=False,
+            )
+            st.plotly_chart(figev, use_container_width=True)
+
 
 # ========================================================================
 # TAB FUTURO: 3 sub-abas consolidadas

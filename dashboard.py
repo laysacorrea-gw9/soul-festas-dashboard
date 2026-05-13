@@ -1146,16 +1146,16 @@ with tab_inad:
             with fc1:
                 valor_min = st.number_input(
                     "Valor mínimo da dívida (R$)",
-                    min_value=0, max_value=50000, value=500, step=100,
-                    help="Soma das parcelas em atraso do cliente",
+                    min_value=0, max_value=50000, value=800, step=100,
+                    help="Soma das parcelas em atraso por cliente. Acima desse valor vai pra Letícia (ligação humana); abaixo vai pro SGE automatizado.",
                 )
             with fc2:
-                faixas_disponiveis = ["16-30 dias", "31-60 dias", "61-90 dias", "91-180 dias", "180+ dias"]
+                faixas_disponiveis = ["01-15 dias", "16-30 dias", "31-60 dias", "61-90 dias", "91-180 dias", "180+ dias"]
                 faixas_sel = st.multiselect(
                     "Faixas de atraso",
                     options=faixas_disponiveis,
-                    default=["16-30 dias", "31-60 dias", "61-90 dias"],
-                    help="Letícia geralmente foca em atraso recente/médio. >180 dias normalmente vai pra empresa de cobrança.",
+                    default=["16-30 dias", "31-60 dias", "61-90 dias", "91-180 dias", "180+ dias"],
+                    help="Todas as faixas com atraso real. 1-15 dias geralmente é fluxo normal de pagamento.",
                 )
             with fc3:
                 tipos_disp = sorted(inadimplentes["Tipo Projeto"].dropna().unique().tolist())

@@ -1107,13 +1107,69 @@ with tab_inad:
     if inadimplentes.empty:
         st.warning("Planilha de inadimplentes não encontrada. Exporte do SGE e salve em `ingest/data_raw/`.")
     else:
+        # Query param: ?leticia=1 abre direto no modo Letícia
+        qp = st.query_params
+        modo_leticia_default = qp.get("leticia") in ("1", "true", "yes")
+
         st.markdown("### 💸 Acompanhamento de Inadimplência")
         st.caption("Base limpa do SGE (clientes cancelados já removidos) · atualizada semanalmente")
 
+        # ====== TOGGLE Modo Letícia ======
+        col_t1, col_t2 = st.columns([1, 3])
+        with col_t1:
+            modo_leticia = st.toggle(
+                "🎯 Lista da Letícia",
+                value=modo_leticia_default,
+                help="Filtra só os clientes que precisam ser cobrados manualmente pela Letícia"
+            )
+        with col_t2:
+            if modo_leticia:
+                st.caption("📲 **Modo cobrança ativo** · use os filtros abaixo pra refinar quem entra na lista")
+            else:
+                st.caption("👀 Visão executiva completa · ative o toggle pra filtrar pra Letícia")
+
+        # ====== FILTROS (visíveis só no modo Letícia) ======
+        df_view = inadimplentes.copy()
+        if modo_leticia:
+            st.markdown("##### ⚙️ Critérios da lista de cobrança")
+            fc1, fc2, fc3 = st.columns(3)
+            with fc1:
+                valor_min = st.number_input(
+                    "Valor mínimo da dívida (R$)",
+                    min_value=0, max_value=50000, value=500, step=100,
+                    help="Soma das parcelas em atraso do cliente",
+                )
+            with fc2:
+                faixas_disponiveis = ["16-30 dias", "31-60 dias", "61-90 dias", "91-180 dias", "180+ dias"]
+                faixas_sel = st.multiselect(
+                    "Faixas de atraso",
+                    options=faixas_disponiveis,
+                    default=["16-30 dias", "31-60 dias", "61-90 dias"],
+                    help="Letícia geralmente foca em atraso recente/médio. >180 dias normalmente vai pra empresa de cobrança.",
+                )
+            with fc3:
+                tipos_disp = sorted(inadimplentes["Tipo Projeto"].dropna().unique().tolist())
+                tipos_sel = st.multiselect(
+                    "Tipos de evento",
+                    options=tipos_disp,
+                    default=tipos_disp,
+                )
+
+            # Filtra parcelas e depois agrupa por pagador
+            df_view = inadimplentes[
+                inadimplentes["faixa_atraso"].isin(faixas_sel) &
+                inadimplentes["Tipo Projeto"].isin(tipos_sel)
+            ].copy()
+            # Filtro de valor mínimo é por PAGADOR (soma total)
+            pagador_total = df_view.groupby("Pagador")["Valor Atualizado"].sum()
+            pagadores_validos = pagador_total[pagador_total >= valor_min].index
+            df_view = df_view[df_view["Pagador"].isin(pagadores_validos)]
+            st.divider()
+
         # ====== NÍVEL 1: KPIs grandes ======
-        total_valor = float(inadimplentes["Valor Atualizado"].sum())
-        total_parcelas = int(len(inadimplentes))
-        total_pagadores = int(inadimplentes["Pagador"].nunique())
+        total_valor = float(df_view["Valor Atualizado"].sum())
+        total_parcelas = int(len(df_view))
+        total_pagadores = int(df_view["Pagador"].nunique())
         ticket_medio = total_valor / total_parcelas if total_parcelas else 0
 
         # % do faturamento médio mensal 2026
@@ -1141,105 +1197,142 @@ with tab_inad:
 
         st.divider()
 
-        # ====== NÍVEL 2: Análise (donut + barras) ======
-        col_a, col_b = st.columns(2)
+        # ====== NÍVEL 2: Análise (donut + barras) — só no modo executivo ======
+        if not modo_leticia:
+            col_a, col_b = st.columns(2)
+            with col_a:
+                st.markdown("#### 🎪 Por tipo de evento")
+                por_tipo = df_view.groupby("Tipo Projeto").agg(
+                    valor=("Valor Atualizado", "sum"),
+                    qtd=("Valor Atualizado", "count"),
+                ).reset_index().sort_values("valor", ascending=False)
+                fig = go.Figure(data=[go.Pie(
+                    labels=por_tipo["Tipo Projeto"],
+                    values=por_tipo["valor"],
+                    hole=0.55,
+                    marker=dict(colors=["#f59e0b", "#10b981", "#3b82f6", "#ec4899", "#8b5cf6"]),
+                    textinfo="label+percent",
+                    textfont=dict(size=14, color="white"),
+                    hovertemplate="<b>%{label}</b><br>R$ %{value:,.2f}<br>%{percent}<extra></extra>",
+                )])
+                fig.update_layout(
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    font=dict(color="white", size=14),
+                    showlegend=False,
+                    margin=dict(t=10, b=10, l=10, r=10),
+                    height=320,
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            with col_b:
+                st.markdown("#### ⏱️ Por faixa de atraso")
+                ordem = ["01-15 dias", "16-30 dias", "31-60 dias", "61-90 dias", "91-180 dias", "180+ dias"]
+                por_faixa = df_view.groupby("faixa_atraso").agg(
+                    valor=("Valor Atualizado", "sum"),
+                    qtd=("Valor Atualizado", "count"),
+                ).reindex(ordem).fillna(0).reset_index()
+                cores = ["#10b981", "#84cc16", "#facc15", "#f59e0b", "#f97316", "#ef4444"]
+                fig2 = go.Figure(data=[go.Bar(
+                    x=por_faixa["faixa_atraso"],
+                    y=por_faixa["valor"],
+                    marker=dict(color=cores),
+                    text=[f"R$ {v/1000:.0f}k<br>{int(q)} parc" for v, q in zip(por_faixa["valor"], por_faixa["qtd"])],
+                    textposition="outside",
+                    textfont=dict(size=13, color="white"),
+                    hovertemplate="<b>%{x}</b><br>R$ %{y:,.2f}<br>%{text}<extra></extra>",
+                )])
+                fig2.update_layout(
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    font=dict(color="white", size=13),
+                    xaxis=dict(tickangle=-20, color="white"),
+                    yaxis=dict(visible=False),
+                    margin=dict(t=30, b=10, l=10, r=10),
+                    height=320,
+                    showlegend=False,
+                )
+                st.plotly_chart(fig2, use_container_width=True)
+            st.divider()
 
-        with col_a:
-            st.markdown("#### 🎪 Por tipo de evento")
-            por_tipo = inadimplentes.groupby("Tipo Projeto").agg(
+        # ====== Tabela de devedores ======
+        if modo_leticia:
+            st.markdown(f"#### 📲 Lista de cobrança — {total_pagadores} clientes · {brl(total_valor)}")
+            limite_tabela = total_pagadores  # mostra tudo
+        else:
+            st.markdown("#### 🔝 Top 20 Devedores")
+            st.caption("Selecione um cliente abaixo pra ver as parcelas em detalhe")
+            limite_tabela = 20
+
+        if total_pagadores == 0:
+            st.info("Nenhum cliente atende aos critérios atuais. Ajuste os filtros acima.")
+        else:
+            tabela = df_view.groupby("Pagador").agg(
                 valor=("Valor Atualizado", "sum"),
-                qtd=("Valor Atualizado", "count"),
-            ).reset_index().sort_values("valor", ascending=False)
+                qtd_parcelas=("Valor Atualizado", "count"),
+                dias_max=("Dias Atraso", "max"),
+                tipo=("Tipo Projeto", "first"),
+                telefone=("telefone", "first"),
+                projeto=("Projeto", "first"),
+            ).reset_index().sort_values("valor", ascending=False).head(limite_tabela)
+            tabela["valor"] = tabela["valor"].round(2)
 
-            fig = go.Figure(data=[go.Pie(
-                labels=por_tipo["Tipo Projeto"],
-                values=por_tipo["valor"],
-                hole=0.55,
-                marker=dict(colors=["#f59e0b", "#10b981", "#3b82f6", "#ec4899", "#8b5cf6"]),
-                textinfo="label+percent",
-                textfont=dict(size=14, color="white"),
-                hovertemplate="<b>%{label}</b><br>R$ %{value:,.2f}<br>%{percent}<extra></extra>",
-            )])
-            fig.update_layout(
-                paper_bgcolor="rgba(0,0,0,0)",
-                plot_bgcolor="rgba(0,0,0,0)",
-                font=dict(color="white", size=14),
-                showlegend=False,
-                margin=dict(t=10, b=10, l=10, r=10),
-                height=320,
-            )
-            st.plotly_chart(fig, use_container_width=True)
+            tabela_show = tabela.rename(columns={
+                "Pagador": "Cliente",
+                "valor": "Valor Total",
+                "qtd_parcelas": "Parcelas",
+                "dias_max": "Dias Atraso (máx)",
+                "tipo": "Tipo Evento",
+                "telefone": "Telefone",
+                "projeto": "Projeto",
+            }).copy()
+            tabela_show["Valor Total"] = tabela_show["Valor Total"].apply(brl)
+            st.dataframe(tabela_show, use_container_width=True, hide_index=True, height=520)
 
-        with col_b:
-            st.markdown("#### ⏱️ Por faixa de atraso")
-            ordem = ["01-15 dias", "16-30 dias", "31-60 dias", "61-90 dias", "91-180 dias", "180+ dias"]
-            por_faixa = inadimplentes.groupby("faixa_atraso").agg(
-                valor=("Valor Atualizado", "sum"),
-                qtd=("Valor Atualizado", "count"),
-            ).reindex(ordem).fillna(0).reset_index()
+            # Botão de download CSV no modo Letícia
+            if modo_leticia:
+                csv_export = tabela.rename(columns={
+                    "Pagador": "Cliente",
+                    "valor": "Valor Total (R$)",
+                    "qtd_parcelas": "Qtd Parcelas",
+                    "dias_max": "Dias Atraso Máximo",
+                    "tipo": "Tipo Evento",
+                    "telefone": "Telefone",
+                    "projeto": "Projeto",
+                }).to_csv(index=False, encoding="utf-8-sig").encode("utf-8-sig")
 
-            # Cor escalonada por urgência
-            cores = ["#10b981", "#84cc16", "#facc15", "#f59e0b", "#f97316", "#ef4444"]
+                from datetime import datetime as _dt
+                fname = f"lista_cobranca_leticia_{_dt.now().strftime('%Y-%m-%d')}.csv"
+                col_dl1, col_dl2 = st.columns([1, 3])
+                with col_dl1:
+                    st.download_button(
+                        label="📥 Baixar lista (CSV)",
+                        data=csv_export,
+                        file_name=fname,
+                        mime="text/csv",
+                        use_container_width=True,
+                    )
+                with col_dl2:
+                    st.caption(f"Arquivo: `{fname}` · Abre no Excel · Pronto pra mandar pra Letícia")
 
-            fig2 = go.Figure(data=[go.Bar(
-                x=por_faixa["faixa_atraso"],
-                y=por_faixa["valor"],
-                marker=dict(color=cores),
-                text=[f"R$ {v/1000:.0f}k<br>{int(q)} parc" for v, q in zip(por_faixa["valor"], por_faixa["qtd"])],
-                textposition="outside",
-                textfont=dict(size=13, color="white"),
-                hovertemplate="<b>%{x}</b><br>R$ %{y:,.2f}<br>%{text}<extra></extra>",
-            )])
-            fig2.update_layout(
-                paper_bgcolor="rgba(0,0,0,0)",
-                plot_bgcolor="rgba(0,0,0,0)",
-                font=dict(color="white", size=13),
-                xaxis=dict(tickangle=-20, color="white"),
-                yaxis=dict(visible=False),
-                margin=dict(t=30, b=10, l=10, r=10),
-                height=320,
-                showlegend=False,
-            )
-            st.plotly_chart(fig2, use_container_width=True)
+                with st.expander("🔗 Compartilhar visão direta com a Letícia"):
+                    st.markdown("""
+                    Mande este link pra Letícia abrir direto na aba de inadimplência **em modo cobrança**:
 
-        st.divider()
+                    👉 **https://soul-finance.streamlit.app/?leticia=1**
 
-        # ====== Top 20 devedores ======
-        st.markdown("#### 🔝 Top 20 Devedores")
-        st.caption("Clique numa linha pra ver as parcelas em detalhe abaixo")
-
-        top20 = inadimplentes.groupby("Pagador").agg(
-            valor=("Valor Atualizado", "sum"),
-            qtd_parcelas=("Valor Atualizado", "count"),
-            dias_max=("Dias Atraso", "max"),
-            tipo=("Tipo Projeto", "first"),
-            telefone=("telefone", "first"),
-            projeto=("Projeto", "first"),
-        ).reset_index().sort_values("valor", ascending=False).head(20)
-        top20["valor"] = top20["valor"].round(2)
-
-        top20_show = top20.rename(columns={
-            "Pagador": "Cliente",
-            "valor": "Valor Total",
-            "qtd_parcelas": "Parcelas",
-            "dias_max": "Dias Atraso (máx)",
-            "tipo": "Tipo Evento",
-            "telefone": "Telefone",
-            "projeto": "Projeto",
-        }).copy()
-        top20_show["Valor Total"] = top20_show["Valor Total"].apply(brl)
-        st.dataframe(top20_show, use_container_width=True, hide_index=True, height=520)
+                    Ela vai abrir o dashboard já no modo cobrança com os filtros ativos. As outras abas continuam visíveis, mas o foco é nesta.
+                    """)
 
         # ====== NÍVEL 3: Drill-down por devedor ======
         st.divider()
         st.markdown("#### 🔍 Ver detalhe de um devedor")
         pagador_sel = st.selectbox(
             "Selecione o cliente",
-            options=[""] + sorted(inadimplentes["Pagador"].dropna().unique().tolist()),
+            options=[""] + sorted(df_view["Pagador"].dropna().unique().tolist()),
             label_visibility="collapsed",
         )
         if pagador_sel:
-            det = inadimplentes[inadimplentes["Pagador"] == pagador_sel].copy()
+            det = df_view[df_view["Pagador"] == pagador_sel].copy()
             det = det.sort_values("Dias Atraso", ascending=False)
             cliente = det["Cliente"].iloc[0] if "Cliente" in det.columns else "—"
             tel = det["telefone"].iloc[0] if "telefone" in det.columns else "—"
@@ -1262,39 +1355,40 @@ with tab_inad:
                 det_show[c] = det_show[c].apply(brl)
             st.dataframe(det_show, use_container_width=True, hide_index=True)
 
-        # ====== NÍVEL 4: Evolução temporal ======
-        st.divider()
-        st.markdown("#### 📈 Evolução da Inadimplência")
+        # ====== NÍVEL 4: Evolução temporal (só no modo executivo) ======
+        if not modo_leticia:
+            st.divider()
+            st.markdown("#### 📈 Evolução da Inadimplência")
 
-        if len(inad_historico) < 2:
-            st.info(f"📊 Coletando dados — evolução temporal disponível após algumas semanas de atualização. "
-                    f"Histórico atual: {len(inad_historico)} snapshot(s).")
-        else:
-            inad_historico["data_label"] = inad_historico["data"].dt.strftime("%d/%m")
-            figev = go.Figure()
-            figev.add_trace(go.Scatter(
-                x=inad_historico["data_label"],
-                y=inad_historico["valor"],
-                mode="lines+markers+text",
-                line=dict(color="#f59e0b", width=3),
-                marker=dict(size=10, color="#f59e0b"),
-                text=[f"R$ {v/1000:.0f}k" for v in inad_historico["valor"]],
-                textposition="top center",
-                textfont=dict(color="white", size=12),
-                hovertemplate="<b>%{x}</b><br>R$ %{y:,.2f}<extra></extra>",
-                name="Total atrasado",
-            ))
-            figev.update_layout(
-                paper_bgcolor="rgba(0,0,0,0)",
-                plot_bgcolor="rgba(0,0,0,0)",
-                font=dict(color="white", size=13),
-                xaxis=dict(color="white"),
-                yaxis=dict(visible=False),
-                margin=dict(t=20, b=30, l=10, r=10),
-                height=320,
-                showlegend=False,
-            )
-            st.plotly_chart(figev, use_container_width=True)
+            if len(inad_historico) < 2:
+                st.info(f"📊 Coletando dados — evolução temporal disponível após algumas semanas de atualização. "
+                        f"Histórico atual: {len(inad_historico)} snapshot(s).")
+            else:
+                inad_historico["data_label"] = inad_historico["data"].dt.strftime("%d/%m")
+                figev = go.Figure()
+                figev.add_trace(go.Scatter(
+                    x=inad_historico["data_label"],
+                    y=inad_historico["valor"],
+                    mode="lines+markers+text",
+                    line=dict(color="#f59e0b", width=3),
+                    marker=dict(size=10, color="#f59e0b"),
+                    text=[f"R$ {v/1000:.0f}k" for v in inad_historico["valor"]],
+                    textposition="top center",
+                    textfont=dict(color="white", size=12),
+                    hovertemplate="<b>%{x}</b><br>R$ %{y:,.2f}<extra></extra>",
+                    name="Total atrasado",
+                ))
+                figev.update_layout(
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    font=dict(color="white", size=13),
+                    xaxis=dict(color="white"),
+                    yaxis=dict(visible=False),
+                    margin=dict(t=20, b=30, l=10, r=10),
+                    height=320,
+                    showlegend=False,
+                )
+                st.plotly_chart(figev, use_container_width=True)
 
 
 # ========================================================================

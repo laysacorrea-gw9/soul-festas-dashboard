@@ -387,7 +387,17 @@ pct_soul = (desp_soul / despesas_total * 100) if despesas_total else 0
 pct_ev = (desp_eventos / despesas_total * 100) if despesas_total else 0
 label_per = f"{mes_sel}/{ano}" if mes_sel != "Todos" else str(ano)
 
-tab1, tab2, tab4, tab_inad, tab_futuro = st.tabs(["📊 Painel", "🎪 Projetos", "📋 Lançamentos", "💸 Inadimplência", "🔮 Futuro"])
+# Se vier ?leticia=1 na URL, abre direto na aba Inadimplência (primeira posição)
+_modo_leticia_url = st.query_params.get("leticia") in ("1", "true", "yes")
+if _modo_leticia_url:
+    st.info("📲 **Modo cobrança ativo** — visão otimizada pra Letícia. As outras abas continuam disponíveis ao lado.")
+    tab_inad, tab1, tab2, tab4, tab_futuro = st.tabs(
+        ["💸 Inadimplência", "📊 Painel", "🎪 Projetos", "📋 Lançamentos", "🔮 Futuro"]
+    )
+else:
+    tab1, tab2, tab4, tab_inad, tab_futuro = st.tabs(
+        ["📊 Painel", "🎪 Projetos", "📋 Lançamentos", "💸 Inadimplência", "🔮 Futuro"]
+    )
 # Variavel compartilhada entre abas: preparar pa_proj antes pra uso em tab2 e no sub_ano
 pa_proj = projetos.copy()
 pa_proj["data_evento"] = pd.to_datetime(pa_proj["data_evento_agenda"], errors="coerce")

@@ -387,28 +387,6 @@ pct_soul = (desp_soul / despesas_total * 100) if despesas_total else 0
 pct_ev = (desp_eventos / despesas_total * 100) if despesas_total else 0
 label_per = f"{mes_sel}/{ano}" if mes_sel != "Todos" else str(ano)
 
-# ====== BLOCO 1: PERFORMANCE (caixa) ======
-st.markdown(f"#### 💰 Performance — {periodo_lbl}")
-c1, c2, c3 = st.columns(3)
-c1.metric("Faturamento (caixa)", brl(faturamento))
-c2.metric("Despesas totais", brl(despesas_total))
-c3.metric("Lucro Real", brl(lucro_real), f"{margem:.1f}% margem")
-
-# ====== BLOCO 2: BREAKDOWN DESPESAS ======
-st.markdown(f"#### 📂 Breakdown de Despesas — {periodo_lbl}")
-d1, d2 = st.columns(2)
-d1.metric("🏢 Operacional (Casa)", brl(desp_soul), f"{pct_soul:.1f}% do total")
-d2.metric("🎪 Eventos", brl(desp_eventos), f"{pct_ev:.1f}% do total")
-
-# ====== BLOCO 3: COMERCIAL ======
-st.markdown(f"#### 📅 Pipeline Comercial — {label_per}")
-v1, v2, v3 = st.columns(3)
-v1.metric("Vendas", f"{qtd_vendas} eventos")
-v2.metric("Valor contratado", brl(val_vendas))
-v3.metric("Pipeline a receber", brl(pipeline))
-
-st.divider()
-
 tab1, tab2, tab4, tab_inad, tab_futuro = st.tabs(["📊 Painel", "🎪 Projetos", "📋 Lançamentos", "💸 Inadimplência", "🔮 Futuro"])
 # Variavel compartilhada entre abas: preparar pa_proj antes pra uso em tab2 e no sub_ano
 pa_proj = projetos.copy()
@@ -419,6 +397,28 @@ pa_proj["Saída Realizada"] = pd.to_numeric(pa_proj.get("Saída Realizada"), err
 pa_proj["Saída Prevista"] = pd.to_numeric(pa_proj.get("Saída Prevista"), errors="coerce").fillna(0)
 
 with tab1:
+    # ====== BLOCO 1: PERFORMANCE (caixa) ======
+    st.markdown(f"#### 💰 Performance — {periodo_lbl}")
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Faturamento (caixa)", brl(faturamento))
+    c2.metric("Despesas totais", brl(despesas_total))
+    c3.metric("Lucro Real", brl(lucro_real), f"{margem:.1f}% margem")
+
+    # ====== BLOCO 2: BREAKDOWN DESPESAS ======
+    st.markdown(f"#### 📂 Breakdown de Despesas — {periodo_lbl}")
+    d1, d2 = st.columns(2)
+    d1.metric("🏢 Operacional (Casa)", brl(desp_soul), f"{pct_soul:.1f}% do total")
+    d2.metric("🎪 Eventos", brl(desp_eventos), f"{pct_ev:.1f}% do total")
+
+    # ====== BLOCO 3: COMERCIAL ======
+    st.markdown(f"#### 📅 Pipeline Comercial — {label_per}")
+    v1, v2, v3 = st.columns(3)
+    v1.metric("Vendas", f"{qtd_vendas} eventos")
+    v2.metric("Valor contratado", brl(val_vendas))
+    v3.metric("Pipeline a receber", brl(pipeline))
+
+    st.divider()
+
     # ====== FLUXO MENSAL (gráfico dark moderno) ======
     st.markdown(f"### 💹 Fluxo de Caixa Mensal — {ano}")
     st.caption("Entradas (faturamento) vs Saídas (despesas pagas) · saldo acumulado")

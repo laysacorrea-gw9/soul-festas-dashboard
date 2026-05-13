@@ -1146,8 +1146,8 @@ with tab_inad:
             with fc1:
                 valor_min = st.number_input(
                     "Valor mínimo da dívida (R$)",
-                    min_value=0, max_value=50000, value=800, step=100,
-                    help="Soma das parcelas em atraso por cliente. Acima desse valor vai pra Letícia (ligação humana); abaixo vai pro SGE automatizado.",
+                    min_value=0, max_value=50000, value=2000, step=100,
+                    help="Soma das parcelas em atraso por cliente. Acima vai pra Letícia (ligação humana); abaixo vai pro SGE automatizado.",
                 )
             with fc2:
                 faixas_disponiveis = ["01-15 dias", "16-30 dias", "31-60 dias", "61-90 dias", "91-180 dias", "180+ dias"]

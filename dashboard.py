@@ -1122,7 +1122,14 @@ with tab_inad:
         modo_leticia_default = qp.get("leticia") in ("1", "true", "yes")
 
         st.markdown("### 💸 Acompanhamento de Inadimplência")
-        st.caption("Base limpa do SGE (clientes cancelados já removidos) · atualizada semanalmente")
+
+        # Aviso quando a fonte é fallback (gerado de Contas Não Recebidas, não da Planilha SGE limpa)
+        _meta_inad = load_meta().get("inadimplencia", {})
+        _fonte = _meta_inad.get("fonte", "planilha_sge")
+        if _fonte == "fallback_contas_nao_recebidas":
+            st.caption("⚠️ Fonte: parcelas vencidas de Contas Não Recebidas (PlanilhaInadimplentes desatualizada) · pode incluir clientes cancelados · valores sem multa/juros")
+        else:
+            st.caption("Base limpa do SGE (clientes cancelados já removidos) · atualizada semanalmente")
 
         # ====== TOGGLE Modo Letícia ======
         col_t1, col_t2 = st.columns([1, 3])

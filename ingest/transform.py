@@ -179,6 +179,63 @@ def load_planilha_inadimplentes() -> pd.DataFrame:
     return df
 
 
+def gerar_inadimplentes_fallback(nao_recebidas: pd.DataFrame, agenda_df: pd.DataFrame,
+                                   receber: pd.DataFrame) -> pd.DataFrame:
+    """Gera inadimplencia a partir de Contas Não Recebidas quando a
+    PlanilhaClientesInadimplentes do SGE nao esta disponivel.
+
+    Filtra parcelas com vencimento passado, cruza com Agenda pra pegar tipo evento
+    e com Contas a Receber pra inferir telefone do pagador (de pagamentos historicos).
+    """
+    if nao_recebidas.empty:
+        return pd.DataFrame()
+
+    hoje = pd.Timestamp.now().normalize()
+    df = nao_recebidas.copy()
+    df["Data Vencimento"] = pd.to_datetime(df["Data Vencimento"], errors="coerce")
+    venc = df[df["Data Vencimento"] < hoje].copy()
+    if venc.empty:
+        return pd.DataFrame()
+
+    # Mapear nome para padrao da PlanilhaInadimplentes
+    venc["Cliente"] = venc.get("Nome", "")
+    venc["Vencimento"] = venc["Data Vencimento"]
+    venc["Valor Nominal"] = pd.to_numeric(venc["Valor"], errors="coerce").fillna(0)
+    venc["Valor Atualizado"] = venc["Valor Nominal"]  # sem multa/juros (aproximacao)
+    venc["Multa"] = 0
+    venc["Juros"] = 0
+    venc["Dias Atraso"] = (hoje - venc["Data Vencimento"]).dt.days.astype(int)
+
+    # Cruzar com Agenda pra pegar Tipo do Evento
+    if not agenda_df.empty and "Evento" in agenda_df.columns:
+        ag = agenda_df.dropna(subset=["Projeto", "Evento"]).copy()
+        ag["Projeto"] = ag["Projeto"].astype(str).str.strip()
+        mapa_tipo = ag.groupby("Projeto")["Evento"].first().to_dict()
+        venc["Tipo Projeto"] = venc["Projeto"].astype(str).str.strip().map(mapa_tipo)
+    else:
+        venc["Tipo Projeto"] = ""
+    venc["Tipo Projeto"] = venc["Tipo Projeto"].fillna("Não classificado")
+
+    # Tentar inferir telefone via Contas a Receber (pagamentos historicos)
+    venc["telefone"] = ""
+    venc["Email Pagador"] = ""
+
+    return venc
+
+
+def precisa_fallback_inadimplentes() -> bool:
+    """True se a PlanilhaClientesInadimplentes nao tem versao recente (mais antiga
+    que o ultimo Contas Nao Recebidas)."""
+    plan_files = list(RAW.rglob("PlanilhaClientesInadimplentes*.xlsx"))
+    nr_files = list(RAW.glob("Contas nao recebida*.xlsx"))
+    if not plan_files or not nr_files:
+        return bool(nr_files) and not plan_files
+    plan_mtime = max(p.stat().st_mtime for p in plan_files)
+    nr_mtime = max(p.stat().st_mtime for p in nr_files)
+    # Se o Contas Nao Recebidas eh mais recente que a Planilha, usa fallback
+    return nr_mtime > plan_mtime
+
+
 def faixa_atraso(dias: int) -> str:
     """Classifica dias de atraso em faixas pra dashboard."""
     if dias <= 15:
@@ -207,19 +264,23 @@ def processar_inadimplentes(df: pd.DataFrame) -> pd.DataFrame:
 
     df["faixa_atraso"] = df["Dias Atraso"].apply(faixa_atraso)
 
-    # Telefone consolidado (prefere Celular, depois Tel Pagador)
-    df["telefone"] = (
-        df.get("Celular Cliente").astype(str).where(df.get("Celular Cliente").notna(), "")
-        .replace("nan", "")
-    )
-    df.loc[df["telefone"] == "", "telefone"] = (
-        df.get("Tel Pagador").astype(str).where(df.get("Tel Pagador").notna(), "").replace("nan", "")
-    )
+    # Telefone consolidado (prefere Celular, depois Tel Pagador). Tolerante a colunas faltando.
+    def _serie_texto(col):
+        if col in df.columns:
+            return df[col].astype(str).where(df[col].notna(), "").replace("nan", "")
+        return pd.Series([""] * len(df), index=df.index)
+
+    df["telefone"] = _serie_texto("Celular Cliente")
+    df.loc[df["telefone"] == "", "telefone"] = _serie_texto("Tel Pagador")
+    if "telefone" not in df.columns or df["telefone"].eq("").all():
+        # Garante coluna sempre presente
+        df["telefone"] = df.get("telefone", "")
 
     # Categoria de acao: critico (>R$3k OU Corporativo) = Letícia; resto = régua SGE
     df["categoria_cobranca"] = "Régua SGE (automática)"
     df.loc[df["Valor Atualizado"] >= 3000, "categoria_cobranca"] = "Crítico — Letícia"
-    df.loc[df["Tipo Projeto"] == "Corporativo", "categoria_cobranca"] = "Crítico — Letícia"
+    if "Tipo Projeto" in df.columns:
+        df.loc[df["Tipo Projeto"] == "Corporativo", "categoria_cobranca"] = "Crítico — Letícia"
 
     return df
 
@@ -371,6 +432,14 @@ def main():
 
     nao_recebidas = load_contas_nao_recebidas()
     inadimplentes_raw = load_planilha_inadimplentes()
+    fonte_inadimplentes = "planilha_sge"
+
+    # Fallback: se nao tem PlanilhaInadimplentes ou ela esta mais velha que
+    # o Contas Nao Recebidas, gera a partir das parcelas vencidas
+    if precisa_fallback_inadimplentes():
+        print("\n⚠️  PlanilhaClientesInadimplentes desatualizada — gerando fallback de Contas Não Recebidas")
+        inadimplentes_raw = gerar_inadimplentes_fallback(nao_recebidas, agenda_df, receber)
+        fonte_inadimplentes = "fallback_contas_nao_recebidas"
 
     print(f"   • Contas a Pagar:           {len(pagar)} lanc")
     print(f"   • Contas a Receber:         {len(receber)} lanc")
@@ -446,6 +515,7 @@ def main():
             "pagadores_unicos": int(inadimplentes["Pagador"].nunique()),
             "valor_nominal": float(inadimplentes["Valor Nominal"].sum()),
             "valor_atualizado": float(inadimplentes["Valor Atualizado"].sum()),
+            "fonte": fonte_inadimplentes,
         }
     with open(OUT / "meta.json", "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2, ensure_ascii=False)

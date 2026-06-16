@@ -501,10 +501,15 @@ def main():
         },
         "totais_2026": {},
     }
-    pg_2026 = pagar_final[pagar_final["data_ref"].dt.year == 2026]
+    # Despesas REALIZADAS (caixa): só parcelas com Pagamento preenchido.
+    # O export vem por VENCIMENTO (ano todo), então traz parcelas futuras em aberto
+    # que NÃO são saída de caixa — ficam de fora do total realizado.
+    pg_2026 = pagar_final[(pagar_final["data_ref"].dt.year == 2026) & (pagar_final["Pagamento"].notna())]
+    pg_2026_aberto = pagar_final[(pagar_final["data_ref"].dt.year == 2026) & (pagar_final["Pagamento"].isna())]
     rc_2026 = receber[receber["Data Pagamento"].dt.year == 2026]
     meta["totais_2026"] = {
         "despesas": float(pg_2026["valor_ref"].sum()),
+        "despesas_em_aberto": float(pg_2026_aberto["valor_ref"].sum()),
         "faturamento": float(rc_2026["Valor Pago"].sum()),
         "despesa_casa": float(pg_2026[pg_2026["C. Custo"].isin(CC_CASA)]["valor_ref"].sum()),
         "despesa_eventos": float(pg_2026[pg_2026["C. Custo"].isin(CC_EVENTOS)]["valor_ref"].sum()),

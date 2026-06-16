@@ -353,11 +353,16 @@ if mes_sel != "Todos":
     receber_ano = receber_ano[receber_ano["Data Pagamento"].dt.month == m_num]
 
 faturamento = receber_ano["Valor Pago"].sum()
-despesas_total = pagar_ano["valor_ref"].dropna().sum()
+# Despesas REALIZADAS (caixa): só o que foi efetivamente PAGO.
+# O Contas a Pagar é exportado do SGE por VENCIMENTO (ano inteiro), então o
+# arquivo traz parcelas futuras ainda EM ABERTO. Essas não são saída de caixa
+# e não podem entrar no Lucro Real — ficam nas abas Lançamentos (em aberto) e Futuro.
+pagar_ano_pago = pagar_ano[pagar_ano["Pagamento"].notna()]
+despesas_total = pagar_ano_pago["valor_ref"].dropna().sum()
 
-# Despesa Casa vs Evento via GRUPO (mesmo criterio do DRE)
-desp_eventos = pagar_ano[pagar_ano["grupo"] == "DESPESAS COM EVENTOS"]["valor_ref"].dropna().sum()
-desp_soul = pagar_ano[pagar_ano["grupo"] == "DESPESAS OPERACIONAIS"]["valor_ref"].dropna().sum()
+# Despesa Casa vs Evento via GRUPO (mesmo criterio do DRE) — só pago
+desp_eventos = pagar_ano_pago[pagar_ano_pago["grupo"] == "DESPESAS COM EVENTOS"]["valor_ref"].dropna().sum()
+desp_soul = pagar_ano_pago[pagar_ano_pago["grupo"] == "DESPESAS OPERACIONAIS"]["valor_ref"].dropna().sum()
 
 lucro_real = faturamento - despesas_total
 

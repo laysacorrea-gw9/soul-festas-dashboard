@@ -27,6 +27,7 @@ HEADERS = {"Authorization": f"Bearer {PAT}", "Content-Type": "application/json"}
 
 DATA_OUT = ROOT / "ingest" / "data_out"
 DATA_RAW = ROOT / "ingest" / "data_raw"
+DATA_SEED = ROOT / "ingest" / "data_seed"
 
 
 def run_sql(sql: str) -> list:
@@ -247,6 +248,29 @@ def upload_contas_pagar():
     insert_batches("soul.contas_pagar", cols, rows, batch_size=150)
 
 
+def upload_investimentos():
+    """Espelha os CSVs manuais de investimentos (data_seed/) para o Supabase."""
+    mov_path = DATA_SEED / "investimentos_movimentos.csv"
+    cart_path = DATA_SEED / "investimentos_carteira.csv"
+
+    if mov_path.exists():
+        print("=> investimentos_movimentos...")
+        df = pd.read_csv(mov_path)
+        cols = ["data", "mes", "conta", "tipo", "valor", "ativo", "obs"]
+        rows = [[r.get(c) for c in cols] for _, r in df.iterrows()]
+        run_sql("TRUNCATE soul.investimentos_movimentos;")
+        insert_batches("soul.investimentos_movimentos", cols, rows, batch_size=200)
+
+    if cart_path.exists():
+        print("=> investimentos_carteira...")
+        df = pd.read_csv(cart_path)
+        cols = ["data_referencia", "conta", "titular", "classe", "ativo",
+                "valor_aplicado", "vencimento", "posicao_atual", "liquido"]
+        rows = [[r.get(c) for c in cols] for _, r in df.iterrows()]
+        run_sql("TRUNCATE soul.investimentos_carteira;")
+        insert_batches("soul.investimentos_carteira", cols, rows, batch_size=200)
+
+
 def contagem_final():
     print("\n=> Contagem final:")
     res = run_sql("""
@@ -268,6 +292,7 @@ def main():
     upload_projetos(data_venda_map)
     upload_contas_receber()
     upload_contas_pagar()
+    upload_investimentos()
     contagem_final()
 
 

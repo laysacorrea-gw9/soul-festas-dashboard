@@ -214,6 +214,7 @@ def brl(v):
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "ingest" / "data_out"
+SEED = ROOT / "ingest" / "data_seed"
 
 
 def fmt(v):
@@ -301,8 +302,71 @@ def load_meta():
     return {}
 
 
+@st.cache_data
+def load_investimentos():
+    """Le os CSVs manuais de investimentos (XP Soul + Route) de data_seed/.
+
+    Sao mantidos a mao (vem do extrato da XP, nao do SGE). Retorna DataFrames
+    vazios se ainda nao existirem.
+    """
+    mov_path = SEED / "investimentos_movimentos.csv"
+    cart_path = SEED / "investimentos_carteira.csv"
+    movimentos = pd.read_csv(mov_path) if mov_path.exists() else pd.DataFrame()
+    carteira = pd.read_csv(cart_path) if cart_path.exists() else pd.DataFrame()
+    if not movimentos.empty:
+        movimentos["data"] = pd.to_datetime(movimentos["data"], errors="coerce")
+        movimentos["valor"] = pd.to_numeric(movimentos["valor"], errors="coerce").fillna(0)
+        movimentos["mes"] = movimentos["mes"].astype(str).str.strip().replace("nan", "")
+    if not carteira.empty:
+        carteira["data_referencia"] = pd.to_datetime(carteira["data_referencia"], errors="coerce")
+        for c in ("valor_aplicado", "posicao_atual", "liquido"):
+            if c in carteira.columns:
+                carteira[c] = pd.to_numeric(carteira[c], errors="coerce").fillna(0)
+    return movimentos, carteira
+
+
+# Tipos de movimentacao que contam como APORTE LIQUIDO (dinheiro novo investido).
+# Migracao (XP Soul <-> Route), Rentabilidade e Saldo inicial NAO sao aporte.
+TIPOS_APORTE = ("Aporte", "Resgate", "Perda movimentacao")
+
+
+def aportes_por_mes(movimentos: pd.DataFrame, meses: list) -> dict:
+    """Para cada mes (MM/YYYY) retorna aporte/resgate/perda/aporte_liq.
+
+    Retorna dict com Series indexadas por mes + total nao alocado (sem mes)."""
+    base = {
+        "aporte": pd.Series(0.0, index=meses),
+        "resgate": pd.Series(0.0, index=meses),
+        "perda": pd.Series(0.0, index=meses),
+        "liquido": pd.Series(0.0, index=meses),
+        "nao_alocado": 0.0,
+    }
+    if movimentos.empty:
+        return base
+    m = movimentos[movimentos["tipo"].isin(TIPOS_APORTE)].copy()
+    # Aportes sem mes definido (ex: R$380k Route a alocar)
+    base["nao_alocado"] = float(m[m["mes"] == ""]["valor"].sum())
+    m = m[m["mes"].isin(meses)]
+    for mes in meses:
+        sub = m[m["mes"] == mes]
+        base["aporte"][mes] = sub[sub["tipo"] == "Aporte"]["valor"].sum()
+        base["resgate"][mes] = sub[sub["tipo"] == "Resgate"]["valor"].sum()
+        base["perda"][mes] = sub[sub["tipo"] == "Perda movimentacao"]["valor"].sum()
+        base["liquido"][mes] = sub["valor"].sum()
+    return base
+
+
+def saldo_por_conta(movimentos: pd.DataFrame) -> pd.DataFrame:
+    """Saldo acumulado por conta (soma de TODOS os tipos de movimentacao)."""
+    if movimentos.empty:
+        return pd.DataFrame(columns=["conta", "saldo"])
+    s = movimentos.groupby("conta")["valor"].sum().reset_index().rename(columns={"valor": "saldo"})
+    return s
+
+
 pagar, receber, projetos, nao_recebidas = load_data()
 inadimplentes, inad_historico = load_inadimplentes()
+inv_movimentos, inv_carteira = load_investimentos()
 
 # Header profissional
 st.markdown("""
@@ -396,12 +460,12 @@ label_per = f"{mes_sel}/{ano}" if mes_sel != "Todos" else str(ano)
 _modo_leticia_url = st.query_params.get("leticia") in ("1", "true", "yes")
 if _modo_leticia_url:
     st.info("📲 **Modo cobrança ativo** — visão otimizada pra Letícia. As outras abas continuam disponíveis ao lado.")
-    tab_inad, tab1, tab2, tab4, tab_futuro = st.tabs(
-        ["💸 Inadimplência", "📊 Painel", "🎪 Projetos", "📋 Lançamentos", "🔮 Futuro"]
+    tab_inad, tab1, tab2, tab4, tab_xp, tab_futuro = st.tabs(
+        ["💸 Inadimplência", "📊 Painel", "🎪 Projetos", "📋 Lançamentos", "💼 Ativos XP", "🔮 Futuro"]
     )
 else:
-    tab1, tab2, tab4, tab_inad, tab_futuro = st.tabs(
-        ["📊 Painel", "🎪 Projetos", "📋 Lançamentos", "💸 Inadimplência", "🔮 Futuro"]
+    tab1, tab2, tab4, tab_inad, tab_xp, tab_futuro = st.tabs(
+        ["📊 Painel", "🎪 Projetos", "📋 Lançamentos", "💸 Inadimplência", "💼 Ativos XP", "🔮 Futuro"]
     )
 # Variavel compartilhada entre abas: preparar pa_proj antes pra uso em tab2 e no sub_ano
 pa_proj = projetos.copy()
@@ -563,6 +627,60 @@ with tab1:
 
     _h += "</tbody></table>"
     st.markdown(_h, unsafe_allow_html=True)
+
+    # ====== Aportes para investimento (XP/Route) — % do faturamento ======
+    if not inv_movimentos.empty:
+        st.markdown("##### 💼 Aportes para investimento (XP/Route) — % do faturamento")
+        ap = aportes_por_mes(inv_movimentos, meses)
+        ap_aporte_tot = ap["aporte"].sum()
+        ap_resg_tot = ap["resgate"].sum()
+        ap_perda_tot = ap["perda"].sum()
+        ap_liq_tot = ap["liquido"].sum()
+
+        _a = "<table class='dre-table'><thead><tr><th style='text-align:left'>LINHA</th>"
+        for m in meses:
+            _a += f"<th>{m}</th>"
+        _a += "<th>TOTAL</th></tr></thead><tbody>"
+
+        # Aportes (dinheiro novo)
+        _a += "<tr><td style='text-align:left;font-weight:700'>🟢 Aportes (dinheiro novo)</td>"
+        for m in meses:
+            _a += f"<td style='color:#2ecc71;font-weight:600'>{brl(ap['aporte'][m])}</td>"
+        _a += f"<td style='color:#2ecc71;font-weight:700'>{brl(ap_aporte_tot)}</td></tr>"
+
+        # Resgates
+        _a += "<tr><td style='text-align:left;font-weight:700'>🔴 Resgates</td>"
+        for m in meses:
+            _a += f"<td style='color:#e74c3c;font-weight:600'>{brl(ap['resgate'][m])}</td>"
+        _a += f"<td style='color:#e74c3c;font-weight:700'>{brl(ap_resg_tot)}</td></tr>"
+
+        # Perdas de movimentacao
+        _a += "<tr><td style='text-align:left;font-weight:700'>🔴 Perdas de movimentação</td>"
+        for m in meses:
+            _a += f"<td style='color:#e74c3c;font-weight:600'>{brl(ap['perda'][m])}</td>"
+        _a += f"<td style='color:#e74c3c;font-weight:700'>{brl(ap_perda_tot)}</td></tr>"
+
+        # Aporte liquido
+        _a += "<tr style='border-top:2px solid hsl(217,33%,30%)'><td style='text-align:left;font-weight:700'>💙 Aporte líquido</td>"
+        for m in meses:
+            cor = "#2980b9" if ap['liquido'][m] >= 0 else "#c0392b"
+            _a += f"<td style='color:{cor};font-weight:700;font-size:15px'>{brl(ap['liquido'][m])}</td>"
+        cor = "#2980b9" if ap_liq_tot >= 0 else "#c0392b"
+        _a += f"<td style='color:{cor};font-weight:700;font-size:15px'>{brl(ap_liq_tot)}</td></tr>"
+
+        # % do faturamento (aporte bruto / faturamento do mes)
+        pct_ap_tot = (ap_aporte_tot / rec_total * 100) if rec_total else 0
+        _a += "<tr><td style='text-align:left;font-weight:600'>% do faturamento (aporte)</td>"
+        for m in meses:
+            pct = (ap['aporte'][m] / rec_mes[m] * 100) if rec_mes[m] else 0
+            _a += f"<td>{pct:.1f}%</td>"
+        _a += f"<td style='font-weight:700'>{pct_ap_tot:.1f}%</td></tr>"
+
+        _a += "</tbody></table>"
+        st.markdown(_a, unsafe_allow_html=True)
+        if ap["nao_alocado"]:
+            st.caption(f"➕ Há {brl(ap['nao_alocado'])} de aportes diretos na Route ainda sem mês definido (a alocar conforme extrato). Detalhe completo na aba **Ativos XP**.")
+        st.caption("Migração entre contas (XP Soul → Route) não conta como aporte — é o mesmo dinheiro mudando de conta.")
 
     st.markdown("---")
     st.markdown("#### Detalhamento das Despesas")
@@ -1414,6 +1532,131 @@ with tab_inad:
 
 
 # ========================================================================
+# TAB ATIVOS XP: aportes mes a mes + carteira da Soul (XP Soul + Route)
+# ========================================================================
+with tab_xp:
+    st.markdown("### 💼 Ativos da Soul na XP / Route")
+    st.caption("Aportes, resgates e carteira de investimentos da Soul. Fonte: extratos XP (atualização manual mensal via /soul aportes).")
+
+    if inv_movimentos.empty and inv_carteira.empty:
+        st.info("Ainda não há dados de investimentos cadastrados.")
+    else:
+        cart_soul = inv_carteira[inv_carteira["titular"] == "Soul"].copy() if not inv_carteira.empty else pd.DataFrame()
+        patrimonio_soul = float(cart_soul["liquido"].sum()) if not cart_soul.empty else 0.0
+
+        # Meses do ano selecionado (faturamento + movimentos)
+        rec_xp = receber[receber["Data Pagamento"].dt.year == ano].dropna(subset=["Data Pagamento"]).copy()
+        rec_xp["mes"] = rec_xp["Data Pagamento"].dt.strftime("%m/%Y")
+        mov_ano = inv_movimentos[inv_movimentos["data"].dt.year == ano].copy() if not inv_movimentos.empty else pd.DataFrame()
+        _meses_mov = [m for m in (mov_ano["mes"].unique() if not mov_ano.empty else []) if m]
+        meses_xp = sorted(set(rec_xp["mes"].dropna().unique()) | set(_meses_mov))
+        rec_mes_xp = rec_xp.groupby("mes")["Valor Pago"].sum().reindex(meses_xp, fill_value=0)
+        apx = aportes_por_mes(inv_movimentos, meses_xp)
+        aporte_liq_ano = float(apx["liquido"].sum()) + apx["nao_alocado"]
+        rentab_ano = float(mov_ano[mov_ano["tipo"] == "Rentabilidade"]["valor"].sum()) if not mov_ano.empty else 0.0
+        fat_ano_xp = float(rec_mes_xp.sum())
+        pct_med = (apx["aporte"].sum() / fat_ano_xp * 100) if fat_ano_xp else 0
+
+        # ---- Cards de resumo ----
+        st.markdown(
+            f"""
+            <div style='display:flex; gap:16px; margin:16px 0; flex-wrap:wrap;'>
+                <div style='flex:1; min-width:200px; background:linear-gradient(135deg,hsl(222,47%,14%),hsl(222,47%,17%)); border:1px solid hsl(45,93%,47%); border-radius:12px; padding:16px 20px;'>
+                    <div style='color:hsl(215,20%,65%); font-size:13px;'>💰 Patrimônio Soul (XP/Route)</div>
+                    <div style='color:hsl(45,93%,47%); font-size:28px; font-weight:800; margin-top:4px;'>{brl(patrimonio_soul)}</div>
+                </div>
+                <div style='flex:1; min-width:200px; background:hsl(222,47%,14%); border:1px solid hsl(217,33%,22%); border-radius:12px; padding:16px 20px;'>
+                    <div style='color:hsl(215,20%,65%); font-size:13px;'>🟢 Aporte líquido {ano}</div>
+                    <div style='color:hsl(210,40%,98%); font-size:24px; font-weight:700; margin-top:4px;'>{brl(aporte_liq_ano)}</div>
+                </div>
+                <div style='flex:1; min-width:200px; background:hsl(222,47%,14%); border:1px solid hsl(217,33%,22%); border-radius:12px; padding:16px 20px;'>
+                    <div style='color:hsl(215,20%,65%); font-size:13px;'>📈 Rentabilidade {ano}</div>
+                    <div style='color:hsl(210,40%,98%); font-size:24px; font-weight:700; margin-top:4px;'>{brl(rentab_ano)}</div>
+                </div>
+                <div style='flex:1; min-width:200px; background:hsl(222,47%,14%); border:1px solid hsl(217,33%,22%); border-radius:12px; padding:16px 20px;'>
+                    <div style='color:hsl(215,20%,65%); font-size:13px;'>📊 % faturamento aportado</div>
+                    <div style='color:hsl(210,40%,98%); font-size:24px; font-weight:700; margin-top:4px;'>{pct_med:.1f}%</div>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        # ---- Aportes mes a mes ----
+        st.markdown(f"#### Aportes mês a mês — {ano}")
+        _x = "<table class='dre-table'><thead><tr><th style='text-align:left'>LINHA</th>"
+        for m in meses_xp:
+            _x += f"<th>{m}</th>"
+        _x += "<th>TOTAL</th></tr></thead><tbody>"
+        _linhas = [
+            ("🟢 Aportes (dinheiro novo)", apx["aporte"], "#2ecc71"),
+            ("🔴 Resgates", apx["resgate"], "#e74c3c"),
+            ("🔴 Perdas de movimentação", apx["perda"], "#e74c3c"),
+        ]
+        for lbl, serie, cor in _linhas:
+            _x += f"<tr><td style='text-align:left;font-weight:700'>{lbl}</td>"
+            for m in meses_xp:
+                _x += f"<td style='color:{cor};font-weight:600'>{brl(serie[m])}</td>"
+            _x += f"<td style='color:{cor};font-weight:700'>{brl(serie.sum())}</td></tr>"
+        # Aporte liquido
+        _x += "<tr style='border-top:2px solid hsl(217,33%,30%)'><td style='text-align:left;font-weight:700'>💙 Aporte líquido</td>"
+        for m in meses_xp:
+            cor = "#2980b9" if apx["liquido"][m] >= 0 else "#c0392b"
+            _x += f"<td style='color:{cor};font-weight:700;font-size:15px'>{brl(apx['liquido'][m])}</td>"
+        _liq_tot = apx["liquido"].sum()
+        cor = "#2980b9" if _liq_tot >= 0 else "#c0392b"
+        _x += f"<td style='color:{cor};font-weight:700;font-size:15px'>{brl(_liq_tot)}</td></tr>"
+        # % faturamento
+        _ap_tot = apx["aporte"].sum()
+        pct_tot = (_ap_tot / fat_ano_xp * 100) if fat_ano_xp else 0
+        _x += "<tr><td style='text-align:left;font-weight:600'>% do faturamento (aporte)</td>"
+        for m in meses_xp:
+            pct = (apx["aporte"][m] / rec_mes_xp[m] * 100) if rec_mes_xp[m] else 0
+            _x += f"<td>{pct:.1f}%</td>"
+        _x += f"<td style='font-weight:700'>{pct_tot:.1f}%</td></tr>"
+        _x += "</tbody></table>"
+        st.markdown(_x, unsafe_allow_html=True)
+        if apx["nao_alocado"]:
+            st.caption(f"➕ {brl(apx['nao_alocado'])} de aportes diretos na Route ainda sem mês definido (a alocar conforme extrato).")
+
+        # ---- Saldo por conta ----
+        sld = saldo_por_conta(inv_movimentos)
+        if not sld.empty:
+            st.markdown("#### Saldo por conta (movimentações registradas)")
+            cols_s = st.columns(len(sld) + 1)
+            for i, row in sld.reset_index(drop=True).iterrows():
+                cols_s[i].metric(row["conta"], brl(row["saldo"]))
+            cols_s[len(sld)].metric("Carteira Soul (foto atual)", brl(patrimonio_soul))
+            st.caption("Diferença entre saldo das movimentações e foto da carteira = rentabilidade/ajustes a conciliar com o extrato.")
+
+        # ---- Carteira detalhada ----
+        if not cart_soul.empty:
+            st.markdown("#### Carteira detalhada da Soul")
+            _c = "<table class='dre-table'><thead><tr><th style='text-align:left'>ATIVO</th><th style='text-align:left'>CLASSE</th><th>VALOR APLICADO</th><th>VENCIMENTO</th><th>POSIÇÃO ATUAL</th><th>LÍQUIDO</th></tr></thead><tbody>"
+            for classe in ["CDB", "Fundo", "Ação"]:
+                grp = cart_soul[cart_soul["classe"] == classe]
+                if grp.empty:
+                    continue
+                for _, r in grp.iterrows():
+                    venc = r["vencimento"] if isinstance(r["vencimento"], str) and r["vencimento"] not in ("", "nan") else "—"
+                    _c += (f"<tr><td style='text-align:left'>{r['ativo']}</td>"
+                           f"<td style='text-align:left'>{r['classe']}</td>"
+                           f"<td>{brl(r['valor_aplicado'])}</td><td>{venc}</td>"
+                           f"<td>{brl(r['posicao_atual'])}</td><td style='font-weight:600'>{brl(r['liquido'])}</td></tr>")
+                _c += (f"<tr style='border-top:1px solid hsl(217,33%,30%)'><td style='text-align:left;font-weight:700'>Subtotal {classe}</td><td></td>"
+                       f"<td style='font-weight:700'>{brl(grp['valor_aplicado'].sum())}</td><td></td>"
+                       f"<td></td><td style='font-weight:700'>{brl(grp['liquido'].sum())}</td></tr>")
+            _c += (f"<tr style='border-top:2px solid hsl(45,93%,47%)'><td style='text-align:left;font-weight:800'>TOTAL SOUL</td><td></td>"
+                   f"<td style='font-weight:800'>{brl(cart_soul['valor_aplicado'].sum())}</td><td></td>"
+                   f"<td></td><td style='color:hsl(45,93%,47%);font-weight:800'>{brl(cart_soul['liquido'].sum())}</td></tr>")
+            _c += "</tbody></table>"
+            st.markdown(_c, unsafe_allow_html=True)
+            _dt = cart_soul["data_referencia"].dropna().max()
+            if pd.notna(_dt):
+                st.caption(f"Posição em {_dt.strftime('%d/%m/%Y')}. Inclui ativos na holding Route (parte da Soul).")
+
+
+# ========================================================================
 # TAB FUTURO: 3 sub-abas consolidadas
 # ========================================================================
 with tab_futuro:
@@ -1431,9 +1674,12 @@ with tab_futuro:
     saldo_bancos = s_rede + s_brad + s_itau + s_val + s_sgp
 
     st.markdown("#### 💼 Saldo Conta Investimentos XP atual (edite se precisar)")
+    st.caption("Padrão vem da carteira cadastrada na aba **Ativos XP** (XP Soul foi esvaziada e migrou pra Route).")
     ic = st.columns(2)
-    s_xp_route = ic[0].number_input("XP — Conta ROUTE", value=1166489.38, step=1000.0, key="s_xp_route", format="%.2f")
-    s_xp_soul = ic[1].number_input("XP — Conta SOUL", value=303344.87, step=1000.0, key="s_xp_soul", format="%.2f")
+    # Padrao derivado da carteira (parte Soul, hoje na Route). Editavel como override.
+    _xp_route_default = float(inv_carteira[inv_carteira["titular"] == "Soul"]["liquido"].sum()) if not inv_carteira.empty else 1166489.38
+    s_xp_route = ic[0].number_input("XP — Conta ROUTE", value=_xp_route_default, step=1000.0, key="s_xp_route", format="%.2f")
+    s_xp_soul = ic[1].number_input("XP — Conta SOUL", value=0.0, step=1000.0, key="s_xp_soul", format="%.2f")
     saldo_investimentos = s_xp_route + s_xp_soul
 
     saldo_inicial = saldo_bancos + saldo_investimentos

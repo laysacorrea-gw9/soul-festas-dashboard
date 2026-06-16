@@ -1,0 +1,21 @@
+data,mes,conta,tipo,valor,ativo,obs
+2025-12-31,,XP Soul,Saldo inicial,1138391.86,,Saldo fim 2025 (extrato XP Soul)
+2026-01-14,01/2026,XP Soul,Aporte,132000.00,,Aporte Jan (12/01 R$79k + 14/01 R$53k) - extrato XP Soul
+2026-02-06,02/2026,XP Soul,Resgate,-60000.00,,Resgate 06/02 - extrato XP Soul
+2026-03-20,03/2026,XP Soul,Aporte,105000.00,,Aporte 20/03 - extrato XP Soul
+2026-03-31,03/2026,XP Soul,Rentabilidade,33444.00,,Rentab. Jan-Mar antes da migracao - extrato XP Soul
+2026-04-02,04/2026,XP Soul,Aporte,70000.00,,Aporte novo 02/04 - extrato XP Soul
+2026-04-10,04/2026,XP Soul,Migracao,-830409.08,,Saida p/ Route 10/04 - extrato XP Soul (nao e aporte)
+2026-04-13,04/2026,XP Soul,Migracao,-156035.91,,Saida p/ Route 13/04 - extrato XP Soul (nao e aporte)
+2026-04-15,04/2026,XP Soul,Migracao,-83822.25,,Saida p/ Route 15/04 - extrato XP Soul (nao e aporte)
+2026-04-30,04/2026,XP Soul,Perda movimentacao,-42425.46,,Perda Abr na liquidacao p/ migrar (rend neg + IR + IOF) - extrato XP Soul
+2026-05-15,05/2026,XP Soul,Migracao,-302421.04,,Saida p/ Route 15/05 - Daycoval - extrato XP Soul (nao e aporte)
+2026-05-31,05/2026,XP Soul,Perda movimentacao,-1912.45,,Perda/IR Mai residual - extrato XP Soul
+2026-06-30,06/2026,XP Soul,Resgate,-89.93,,Saida residual Jun - extrato XP Soul
+2026-04-13,04/2026,Route,Migracao,917389.00,,Entrada vinda da XP Soul 13/04 (transferencia - NAO e aporte) - extrato Route
+2026-04-20,04/2026,Route,Aporte,100000.00,,Aporte novo Soul 20/04 - extrato Route
+2026-04-22,04/2026,Route,Migracao,83822.25,,Entrada vinda da XP Soul (bate retirada 15/04) - transferencia - extrato Route
+2026-04-24,04/2026,Route,Aporte,65000.00,,Aporte novo Soul 24/04 - extrato Route
+2026-05-12,05/2026,Route,Aporte,40000.00,,Aporte novo Soul 12/05 - extrato Route
+2026-05-19,05/2026,Route,Migracao,302421.04,,Entrada vinda da XP Soul 19/05 - Daycoval (transferencia - NAO e aporte) - extrato Route
+2026-06-08,06/2026,Route,Resgate,-1677.30,,Saida 08/06 - extrato Route

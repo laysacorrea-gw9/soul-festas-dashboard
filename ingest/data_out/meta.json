@@ -1,22 +1,22 @@
 {
-  "gerado_em": "2026-06-16T12:59:37.869865",
+  "gerado_em": "2026-06-16T13:08:06.964951",
   "fontes": {
     "pagar_xlsx": "Contas_a_Pagar_20260616_combined.xlsx",
     "receber_xlsx": "Contas a Receber_20260616_combined.xlsx",
     "projetos_xlsx": "BalancoPorProjetoResumido20260612_163020_10463.xlsx"
   },
   "contagens": {
-    "contas_pagar": 5377,
+    "contas_pagar": 5342,
     "contas_receber": 12600,
     "projetos": 285,
     "cobertura_classificacao_pct": 100.0,
     "nao_classificados": 42
   },
   "totais_2026": {
-    "despesas": 1909353.99,
-    "despesas_em_aberto": 908606.9199999999,
+    "despesas": 1906314.71,
+    "despesas_em_aberto": 903061.5800000001,
     "faturamento": 2311655.0599999996,
-    "despesa_casa": 1349246.12,
+    "despesa_casa": 1346206.8399999999,
     "despesa_eventos": 560107.8700000001
   },
   "inadimplencia": {

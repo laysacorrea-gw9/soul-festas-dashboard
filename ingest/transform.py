@@ -131,6 +131,12 @@ def load_contas_pagar() -> pd.DataFrame:
     files = list(RAW.glob("Contas_a_Pagar_*.xlsx"))
     assert files, "Contas_a_Pagar nao encontrado"
     df = pd.read_excel(files[0])
+    # O export do SGE traz linhas 100% duplicadas (mesma parcela repetida no
+    # arquivo). Remove duplicatas exatas antes de classificar pra nao inflar despesa.
+    antes = len(df)
+    df = df.drop_duplicates()
+    if antes != len(df):
+        print(f"   ⚠️  Contas a Pagar: removidas {antes - len(df)} linhas duplicadas do export SGE")
     df["Serviço_norm"] = df["Serviço"].astype(str).str.strip().str.upper()
     for c in ("Compet.", "Pagamento", "Vencimento"):
         df[c] = pd.to_datetime(df[c], errors="coerce")
@@ -141,6 +147,10 @@ def load_contas_receber() -> pd.DataFrame:
     files = list(RAW.glob("Contas a Receber_*.xlsx"))
     assert files, "Contas a Receber nao encontrado"
     df = pd.read_excel(files[0])
+    antes = len(df)
+    df = df.drop_duplicates()
+    if antes != len(df):
+        print(f"   ⚠️  Contas a Receber: removidas {antes - len(df)} linhas duplicadas do export SGE")
     for c in ("Data Vencimento", "Data Pagamento", "Data Crédito"):
         df[c] = pd.to_datetime(df[c], errors="coerce")
     return df

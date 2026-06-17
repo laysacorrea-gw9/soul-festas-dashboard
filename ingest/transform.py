@@ -84,6 +84,20 @@ def load_de_para_subgrupo() -> pd.DataFrame:
     return df
 
 
+def load_natureza() -> dict:
+    """SERVICO (upper) -> 'EVENTO' | 'CASA'. Define se a despesa e do evento ou da casa.
+
+    Classifica pela NATUREZA do servico (nao pela presenca de projeto). Gerado por
+    gerar_natureza.py e ajustado a mao. Servico ausente => CASA (linha conservadora)."""
+    path = ROOT / "de_para_natureza_servico.csv"
+    if not path.exists():
+        return {}
+    df = pd.read_csv(path)
+    df["servico"] = df["servico"].astype(str).str.strip().str.upper()
+    df["natureza"] = df["natureza"].astype(str).str.strip().str.upper()
+    return dict(zip(df["servico"], df["natureza"]))
+
+
 def load_de_para_fornecedor() -> pd.DataFrame:
     df = pd.read_excel(RAW / "modelo_nibo_pagas.xlsx", sheet_name="FORNECEDOR_FUNCIONARIO", header=None)
     df = df.dropna(how="all").copy()
@@ -324,8 +338,13 @@ def load_projetos_from_balanco() -> pd.DataFrame:
 # =====================================================================
 
 def processar_contas_pagar(pagar: pd.DataFrame, dp_sub: pd.DataFrame,
-                            dp_forn: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Aplica TODAS as regras de classificacao em Contas a Pagar."""
+                            dp_forn: pd.DataFrame, natureza_map: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Aplica TODAS as regras de classificacao em Contas a Pagar.
+
+    REGRA PRINCIPAL (16/06/2026): a separacao Evento x Casa segue a NATUREZA do
+    servico (tabela de_para_natureza_servico.csv), NAO a presenca de projeto. Isso
+    porque lancamentos vinham com projeto/centro de custo errados, distorcendo o DRE
+    (ex: despesa fixa caindo em eventos, decoracao/equipe caindo na casa)."""
     df = pagar.merge(
         dp_sub[["servico", "subgrupo", "grupo"]],
         left_on="Serviço_norm", right_on="servico", how="left",
@@ -346,17 +365,29 @@ def processar_contas_pagar(pagar: pd.DataFrame, dp_sub: pd.DataFrame,
     # === REGRA 2: Remap para 4 subgrupos Nibo ===
     df["subgrupo"] = df["subgrupo"].map(SUBGRUPO_NIBO).fillna(df["subgrupo"])
 
-    # === REGRA 3: Se tem projeto -> DESPESAS COM EVENTOS ===
-    tem_proj = df["Projeto"].notna() & (df["Projeto"].astype(str).str.strip() != "") & (df["Projeto"].astype(str) != "nan")
-    df.loc[tem_proj, "subgrupo"] = "DESPESAS COM EVENTOS"
+    # === REGRA 3 (NOVA): natureza do servico (EVENTO x CASA) ===
+    natureza = df["Serviço_norm"].map(natureza_map).fillna("CASA")
+    is_evento = natureza == "EVENTO"
 
-    # === REGRA 4: Sem projeto + CC casa + cat fixa -> FIXAS; demais CC casa -> VARIAVEIS ===
-    mask_err = (~tem_proj) & (df["subgrupo"] == "DESPESAS COM EVENTOS")
+    # Excecao: itens "estocaveis" (decoracao) so contam como evento se houver projeto
+    # vinculado. Sem projeto sao compras genericas (cartao) -> Casa.
+    # Decisao Laysa+Leticia 16/06/2026.
+    tem_proj = df["Projeto"].notna() & (df["Projeto"].astype(str).str.strip() != "") & (df["Projeto"].astype(str) != "nan")
+    ESPECIAL_SE_PROJETO = ("DECORAÇÃO", "EXTRAS DE DECORAÇÃO")
+    is_especial = df["Serviço_norm"].isin(ESPECIAL_SE_PROJETO)
+    is_evento = is_evento.where(~is_especial, tem_proj)
+
+    # Evento -> subgrupo DESPESAS COM EVENTOS
+    df.loc[is_evento, "subgrupo"] = "DESPESAS COM EVENTOS"
+
+    # === REGRA 4: Casa -> subgrupo de casa (FIXAS / VARIAVEIS / TERCEIROS) ===
+    # Servico de casa nunca pode ficar como "DESPESAS COM EVENTOS".
     cat_str = df["Categoria"].astype(str).fillna("")
     is_fixa = cat_str.str.startswith(CATEGORIA_FIXA_PREFIXES)
-    cc_adm = df["C. Custo"].isin(CC_CASA)
-    df.loc[mask_err & cc_adm & is_fixa, "subgrupo"] = "DESPESAS FIXAS"
-    df.loc[mask_err & cc_adm & ~is_fixa, "subgrupo"] = "DESPESAS VARIÁVEIS"
+    subgrupos_casa = ["DESPESAS FIXAS", "DESPESAS VARIÁVEIS", "DESPESAS TERCEIROS"]
+    precisa_sub = (~is_evento) & (~df["subgrupo"].isin(subgrupos_casa))
+    df.loc[precisa_sub & is_fixa, "subgrupo"] = "DESPESAS FIXAS"
+    df.loc[precisa_sub & ~is_fixa, "subgrupo"] = "DESPESAS VARIÁVEIS"
 
     # === REGRA 5: Grupos de nivel 1 (EVENTOS vs OPERACIONAIS) ===
     df["grupo"] = df["subgrupo"].apply(
@@ -432,6 +463,7 @@ def main():
     print("\n[1/4] Carregando arquivos...")
     dp_sub = load_de_para_subgrupo()
     dp_forn = load_de_para_fornecedor()
+    natureza_map = load_natureza()
     pagar = load_contas_pagar()
     receber = load_contas_receber()
     projetos = load_projetos_from_balanco()  # Fonte: BalancoPorProjeto (atualizado)
@@ -464,7 +496,7 @@ def main():
 
     # 2. PROCESSAR
     print("\n[2/4] Aplicando regras de negocio em Contas a Pagar...")
-    pagar_final, nao_class = processar_contas_pagar(pagar, dp_sub, dp_forn)
+    pagar_final, nao_class = processar_contas_pagar(pagar, dp_sub, dp_forn, natureza_map)
     cobertura = (pagar_final["grupo"].notna().sum() / len(pagar_final)) * 100
     print(f"   • Cobertura classificacao:  {cobertura:.1f}%")
     print(f"   • Nao classificados:        {len(nao_class)} lanc")

@@ -1633,7 +1633,9 @@ with tab_xp:
         if not cart_soul.empty:
             st.markdown("#### Carteira detalhada da Soul")
             _c = "<table class='dre-table'><thead><tr><th style='text-align:left'>ATIVO</th><th style='text-align:left'>CLASSE</th><th>VALOR APLICADO</th><th>VENCIMENTO</th><th>POSIÇÃO ATUAL</th><th>LÍQUIDO</th></tr></thead><tbody>"
-            for classe in ["CDB", "Fundo", "Ação"]:
+            _ordem_classe = ["CDB", "Fundo", "Ação", "Caixa"]
+            _classes = _ordem_classe + [c for c in cart_soul["classe"].unique() if c not in _ordem_classe]
+            for classe in _classes:
                 grp = cart_soul[cart_soul["classe"] == classe]
                 if grp.empty:
                     continue

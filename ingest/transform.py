@@ -394,6 +394,19 @@ def processar_contas_pagar(pagar: pd.DataFrame, dp_sub: pd.DataFrame,
         lambda s: "DESPESAS COM EVENTOS" if s == "DESPESAS COM EVENTOS" else "DESPESAS OPERACIONAIS"
     )
 
+    # === REGRA 6: RETIRADA da socia (MAB2 HOLDING) ===
+    # No SGE aparece disfarcada como "Locacao de Imoveis" (para os funcionarios
+    # nao verem quanto a Monique retira). No dashboard dos donos vira a rubrica
+    # RETIRADA, dentro de Despesas Fixas; fornecedor/servico/descricao sao
+    # mascarados para "RETIRADA" para nao expor a MAB2/holding ao abrir o detalhe.
+    is_retirada = df["Fornecedor"].astype(str).str.upper().str.contains("MAB2", na=False)
+    df.loc[is_retirada, "grupo"] = "DESPESAS OPERACIONAIS"
+    df.loc[is_retirada, "subgrupo"] = "DESPESAS FIXAS"
+    df.loc[is_retirada, "Categoria"] = "RETIRADA"
+    for _col in ("Fornecedor", "Descrição", "Serviço", "Serviço_norm"):
+        if _col in df.columns:
+            df.loc[is_retirada, _col] = "RETIRADA"
+
     # === Campos calculados para o dashboard ===
     df["data_ref"] = df["Pagamento"].fillna(df["Vencimento"]).fillna(df["Compet."])
     df["valor_ref"] = df["Valor Pagamento"].fillna(df["Valor Parcela"])

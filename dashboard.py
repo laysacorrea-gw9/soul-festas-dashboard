@@ -681,6 +681,7 @@ with tab1:
         if ap["nao_alocado"]:
             st.caption(f"➕ Há {brl(ap['nao_alocado'])} de aportes diretos na Route ainda sem mês definido (a alocar conforme extrato). Detalhe completo na aba **Ativos XP**.")
         st.caption("Migração entre contas (XP Soul → Route) não conta como aporte — é o mesmo dinheiro mudando de conta.")
+        st.caption("📄 Investimentos conferidos com os extratos XP de 08/07/2026 (contas Soul 18124178 + Route 15276248).")
 
     st.markdown("---")
     st.markdown("#### Detalhamento das Despesas")

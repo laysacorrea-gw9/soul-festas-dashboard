@@ -18,4 +18,7 @@ data,mes,conta,tipo,valor,ativo,obs
 2026-04-24,04/2026,Route,Aporte,65000.00,,Aporte novo Soul 24/04 - extrato Route
 2026-05-12,05/2026,Route,Aporte,40000.00,,Aporte novo Soul 12/05 - extrato Route
 2026-05-19,05/2026,Route,Migracao,302421.04,,Entrada vinda da XP Soul 19/05 - Daycoval (transferencia - NAO e aporte) - extrato Route
-2026-06-08,06/2026,Route,Resgate,-1677.30,,Saida 08/06 - extrato Route
+2026-06-08,06/2026,Route,Resgate,-1677.30,,Taxa FEE FIXO conta Route 08/06 - extrato Route
+2026-06-12,06/2026,Route,Aporte,70000.00,,Aporte novo Soul 12/06 (2o Daycoval) - extrato Route XPerformance 08/07
+2026-07-07,07/2026,Route,Resgate,-1943.99,,Taxa FEE FIXO ref Jun26 07/07 - extrato Route
+2026-07-08,07/2026,Route,Aporte,100000.00,,Aporte novo Soul 08/07 via TED (em caixa aguardando aplicacao) - extrato Route

@@ -12,3 +12,4 @@ __pycache__/
 node_modules/
 .next/
 .vercel/
+sge_auth.json

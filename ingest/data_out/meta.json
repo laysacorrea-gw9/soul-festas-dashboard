@@ -1,13 +1,13 @@
 {
-  "gerado_em": "2026-08-06T15:59:09.866728",
+  "gerado_em": "2026-08-20T16:54:29.269938",
   "fontes": {
     "pagar_xlsx": "Contas_a_Pagar_20260806_combined.xlsx",
-    "receber_xlsx": "Contas a Receber_20260806_combined.xlsx",
+    "receber_xlsx": "Contas a Receber_20260820_combined.xlsx",
     "projetos_xlsx": "BalancoPorProjetoResumido_20260806.xlsx"
   },
   "contagens": {
     "contas_pagar": 6052,
-    "contas_receber": 7903,
+    "contas_receber": 8130,
     "projetos": 305,
     "cobertura_classificacao_pct": 100.0,
     "nao_classificados": 78
@@ -20,10 +20,10 @@
     "despesa_eventos": 749790.55
   },
   "inadimplencia": {
-    "parcelas": 1202,
-    "pagadores_unicos": 300,
-    "valor_nominal": 409824.92,
-    "valor_atualizado": 409824.92,
+    "parcelas": 1612,
+    "pagadores_unicos": 567,
+    "valor_nominal": 550722.57,
+    "valor_atualizado": 550722.57,
     "fonte": "fallback_contas_nao_recebidas"
   }
 }

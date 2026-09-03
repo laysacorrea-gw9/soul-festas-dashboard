@@ -1824,7 +1824,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0075/2025,296,Sophia Alves De Melo,Luciana Alves da Silva,188.0,188.0,Boleto,2025-08-10,2025-08-04 00:00:00.000,2025-08-05 00:00:00.000
 0075/2025,297,Leticia Balbino De Oliveira,Juçara Balbino Dos Santos,193.5,193.5,Boleto,2025-08-10,2025-09-08 00:00:00.000,2025-09-09 00:00:00.000
 0075/2025,294,Maria Eduarda Montezano De Souza,Shara Francine Montezano de Souza,188.0,188.0,Boleto,2025-08-10,2025-06-23 00:00:00.000,2025-06-24 00:00:00.000
-0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,141.28,141.28,PIX SGPay,2025-08-10,2025-12-03 20:48:10.000,2025-12-04 00:00:00.000
 0075/2025,293,Maria Eduarda Almeida Silva,Fabio Silva,188.0,188.0,PIX SGPay,2025-08-10,2025-08-08 15:33:16.000,2025-08-08 15:33:16.000
 0075/2025,280,Joyce Evelyn Da Silva Alves,Maria José da Silva,188.0,188.0,Boleto,2025-08-10,2025-07-28 00:00:00.000,2025-07-29 00:00:00.000
 0075/2025,282,Cauã Camelo da Silva,Carlos Augusto Camelo,188.0,188.0,PIX SGPay,2025-08-10,2025-08-06 16:33:12.000,2025-08-06 16:33:12.000
@@ -2204,7 +2203,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0075/2025,279,Anna Victória dos Santos de Oliveira,Tamirys Alves de Oliveira,196.38,196.38,PIX SGPay,2025-09-10,2025-11-26 11:12:00.000,2025-11-27 00:00:00.000
 0075/2025,294,Maria Eduarda Montezano De Souza,Shara Francine Montezano de Souza,188.0,188.0,Boleto,2025-09-10,2025-07-07 00:00:00.000,2025-07-08 00:00:00.000
 0075/2025,293,Maria Eduarda Almeida Silva,Fabio Silva,192.36,192.36,PIX SGPay,2025-09-10,2025-09-20 04:52:02.000,2025-09-22 00:00:00.000
-0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,140.04,140.04,PIX SGPay,2025-09-10,2025-12-03 20:49:40.000,2025-12-04 00:00:00.000
 0075/2025,297,Leticia Balbino De Oliveira,Juçara Balbino Dos Santos,193.56,193.56,Boleto,2025-09-10,2025-10-10 00:00:00.000,2025-10-13 00:00:00.000
 0075/2025,296,Sophia Alves De Melo,Luciana Alves da Silva,195.12,195.12,PIX,2025-09-10,2025-11-05 21:33:58.330,2025-11-05 21:33:58.330
 0075/2025,289,Alexia Dos Santos Lessa Freire,Alexandre Lessa Freire,134.0,134.0,Boleto,2025-09-10,2025-09-10 00:00:00.000,2025-09-11 00:00:00.000
@@ -2342,7 +2340,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0134/2025,553,Débora Werneck,Débora Werneck,1000.0,1000.0,PIX,2025-09-15,2025-09-15 00:00:00.000,2025-09-15 00:00:00.000
 0127/2025,546,Luana Roberta de Jesus Machado Ribeiro,Luana Roberta de Jesus Machado Ribeiro,500.0,500.0,Boleto,2025-09-15,2025-09-09 00:00:00.000,2025-09-10 00:00:00.000
 0107/2025,530,Myllena Braz Sendra,Myllena Braz Sendra,106.01,106.01,Boleto,2025-09-15,2025-10-17 00:00:00.000,2025-10-20 00:00:00.000
-0120/2025,543,Pedro Ivo Ferreira Ribeiro,Tatiana Marins Ferreira,193.9,193.9,Boleto,2025-09-15,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
 0120/2025,540,Caio Gonçalves de Azevedo,Daniele Carvalho Gonçalves,189.53,189.53,Boleto,2025-09-15,2025-09-29 00:00:00.000,2025-09-30 00:00:00.000
 0120/2025,538,Ana Julia Bacellar Sargentini,Barbara dos Reis Bacellar Sargentini,262.0,262.0,Boleto,2025-09-15,2025-09-15 00:00:00.000,2025-09-16 00:00:00.000
 0120/2025,539,Natalia Campos Quintanilha De Souza,Luiz Claudio Quintanilha De Souza,262.0,262.0,Boleto,2025-09-15,2025-09-04 00:00:00.000,2025-09-05 00:00:00.000
@@ -2446,7 +2443,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0053/2025,99,Felipe Alves Sinquini Pereira,Mirian Alves Sinquini,216.0,216.0,PIX SGPay,2025-09-20,2025-09-02 16:21:58.000,2025-09-03 00:00:00.000
 0049/2025,98,Luiz Phelipe Moraes Da Silva,Marcos Luiz da Silva,169.78,169.78,Boleto,2025-09-20,2025-09-22 00:00:00.000,2025-09-23 00:00:00.000
 0053/2025,92,Pedro Henrique Martins Lopes,Patrícia Martins Lopes,216.0,216.0,Boleto,2025-09-20,2025-09-22 00:00:00.000,2025-09-23 00:00:00.000
-0049/2025,93,Flávia Da Silva Chagas,Bruno Leonardo Figueiredo das Chagas,139.57,139.57,Boleto,2025-09-20,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0049/2025,95,Marcelo da Silva Lima,Luciene Farias Da Silva,161.37,161.37,Boleto,2025-09-20,2025-09-22 00:00:00.000,2025-09-23 00:00:00.000
 0052/2025,84,Lyvia Dutra dos Santos Bonifácio,Alessandra Dutra dos Santos Bonifácio,255.0,255.0,Boleto,2025-09-20,2025-09-22 00:00:00.000,2025-09-23 00:00:00.000
 0053/2025,79,Ana Clara Gomes Cunha,Isabelle exposto Gomes Cunha,221.22,221.22,Boleto,2025-09-20,2025-10-03 00:00:00.000,2025-10-06 00:00:00.000
@@ -2535,7 +2531,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0065/2025,327,Marcus Vinícius Lima Da Cunha,Marcus Vinícius Lima Da Cunha,109.71,109.71,Boleto,2025-09-20,2025-09-05 00:00:00.000,2025-09-08 00:00:00.000
 0075/2025,326,João Eduardo Costa Sousa,Lucia Maria da Silva Costa,226.0,226.0,Boleto,2025-09-20,2025-09-16 00:00:00.000,2025-09-17 00:00:00.000
 0065/2025,337,Patricia Dos Santos Silva Soares,Patricia Dos Santos Silva Soares,112.09,112.09,Boleto,2025-09-20,2025-09-25 00:00:00.000,2025-09-26 00:00:00.000
-0049/2025,354,Gustavo Freitas Teixeira Da Silva,Andrea Freitas da Silva,256.45,256.45,Boleto,2025-09-20,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0065/2025,360,Maria Eduarda Santos Do Nascimento Araujo,Maria Eduarda Santos Do Nascimento Araujo,112.53,112.53,Boleto,2025-09-20,2025-10-06 00:00:00.000,2025-10-07 00:00:00.000
 0052/2025,150,Luiz Claudio Marques Dos Santos,Alessandra Marques da Silva,327.86,327.86,Boleto,2025-09-20,2025-09-12 00:00:00.000,2025-09-15 00:00:00.000
 0053/2025,142,Yuri Tulchinski Dias,Natasha Tulchinski,325.72,325.72,Boleto,2025-09-20,2025-10-24 00:00:00.000,2025-10-27 00:00:00.000
@@ -2641,9 +2636,7 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0052/2025,100,Anna Julia Almeida Machado,Yllka Almeida Cristine,255.0,255.0,PIX SGPay,2025-10-10,2025-10-04 11:33:44.000,2025-10-06 00:00:00.000
 0049/2025,63,Karine Rodrigues Fernandes Pacheco,Karine Rodrigues Fernandes Pacheco,70.82,70.82,Boleto,2025-10-10,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
 0099/2025,473,Luiz Carlos Martins,Luiz Carlos Martins,750.0,750.0,Boleto,2025-10-10,2025-10-08 00:00:00.000,2025-10-09 00:00:00.000
-0075/2025,279,Anna Victória dos Santos de Oliveira,Tamirys Alves de Oliveira,195.54,195.54,PIX SGPay,2025-10-10,2025-12-12 07:36:05.000,2025-12-15 00:00:00.000
 0075/2025,294,Maria Eduarda Montezano De Souza,Shara Francine Montezano de Souza,188.0,188.0,Boleto,2025-10-10,2025-08-04 00:00:00.000,2025-08-05 00:00:00.000
-0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,139.12,139.12,PIX SGPay,2025-10-10,2025-12-10 07:39:08.000,2025-12-11 00:00:00.000
 0075/2025,293,Maria Eduarda Almeida Silva,Fabio Silva,188.0,188.0,PIX SGPay,2025-10-10,2025-10-10 21:46:21.000,2025-10-13 00:00:00.000
 0075/2025,296,Sophia Alves De Melo,Luciana Alves da Silva,193.32,193.32,PIX,2025-10-10,2025-11-05 21:33:58.330,2025-11-05 21:33:58.330
 0075/2025,297,Leticia Balbino De Oliveira,Juçara Balbino Dos Santos,193.8,193.8,Boleto,2025-10-10,2025-11-13 00:00:00.000,2025-11-14 00:00:00.000
@@ -2734,7 +2727,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0120/2025,539,Natalia Campos Quintanilha De Souza,Luiz Claudio Quintanilha De Souza,262.0,262.0,Boleto,2025-10-15,2025-10-02 00:00:00.000,2025-10-03 00:00:00.000
 0120/2025,538,Ana Julia Bacellar Sargentini,Barbara dos Reis Bacellar Sargentini,267.41,267.41,Boleto,2025-10-15,2025-10-17 00:00:00.000,2025-10-20 00:00:00.000
 0127/2025,546,Luana Roberta de Jesus Machado Ribeiro,Luana Roberta de Jesus Machado Ribeiro,500.0,500.0,Boleto,2025-10-15,2025-10-08 00:00:00.000,2025-10-09 00:00:00.000
-0120/2025,543,Pedro Ivo Ferreira Ribeiro,Tatiana Marins Ferreira,192.58,192.58,Boleto,2025-10-15,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
 0107/2025,530,Myllena Braz Sendra,Myllena Braz Sendra,105.11,105.11,Boleto,2025-10-15,2025-10-17 00:00:00.000,2025-10-20 00:00:00.000
 0120/2025,527,Laura De Souza Santos Roque,Camile de Souza Santos,185.0,185.0,Boleto,2025-10-15,2025-10-15 00:00:00.000,2025-10-16 00:00:00.000
 0120/2025,526,Ariana Da Silva Sodré,Wagner Alves Sodré,262.0,262.0,PIX SGPay,2025-10-15,2025-10-14 21:46:16.000,2025-10-15 00:00:00.000
@@ -2757,7 +2749,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0150/2025,587,Nathalia Cristina Ribeiro Da Silva,Nathalia Cristina Ribeiro Da Silva,299.0,299.0,Boleto,2025-10-15,2025-10-14 00:00:00.000,2025-10-15 00:00:00.000
 0150/2025,578,Ana Beatriz Tupini Boaretto,Ana Beatriz Tupini Boaretto,462.09,462.09,Boleto,2025-10-15,2025-10-15 00:00:00.000,2025-10-16 00:00:00.000
 0150/2025,579,Gabriela Costa De Souza Silva,Rogério Vieira da Silva,299.0,299.0,Boleto,2025-10-15,2025-10-13 00:00:00.000,2025-10-14 00:00:00.000
-0150/2025,581,MATHEUS BRAGA MAYRINCK SILVEIRA,MATHEUS BRAGA MAYRINCK SILVEIRA,261.2,261.2,Boleto,2025-10-15,2025-12-04 00:00:00.000,2025-12-05 00:00:00.000
 0150/2025,584,Priscilla Batista de Carvalho Bittencourt,Priscilla Batista de Carvalho Bittencourt,215.71,215.71,PIX SGPay,2025-10-15,2025-10-22 12:42:16.000,2025-10-23 00:00:00.000
 0150/2025,586,Matheus Lopes Pereira Gomes,Matheus Lopes Pereira Gomes,299.0,299.0,Boleto,2025-10-15,2025-10-15 00:00:00.000,2025-10-16 00:00:00.000
 0059/2025,188,Davi Pluvie Silva,Cynthia Pluvie Sant Anna de Mello,214.33,214.33,Boleto,2025-10-15,2025-10-17 00:00:00.000,2025-10-20 00:00:00.000
@@ -2870,13 +2861,11 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0101/2025,485,Stephanny Ferreira Bulhoes,Stephanny Ferreira Bulhoes,200.0,200.0,Boleto,2025-10-20,2025-10-07 00:00:00.000,2025-10-08 00:00:00.000
 0101/2025,478,Michelle Felici de Andrade,Michelle Felici de Andrade,200.0,200.0,PIX SGPay,2025-10-20,2025-10-08 21:56:17.000,2025-10-09 00:00:00.000
 0101/2025,479,Matheus Ribeiro Santos Sales,Matheus Ribeiro Santos Sales,200.0,200.0,PIX SGPay,2025-10-20,2025-10-01 19:17:50.000,2025-10-02 00:00:00.000
-0101/2025,480,Anna Beatriz Faria De Assunção,Anna Beatriz Faria De Assunção,208.41,208.41,Boleto,2025-10-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
 0065/2025,376,Deisimar de Oliveira Faria,Deisimar de Oliveira Faria,167.31,167.31,PIX SGPay,2025-10-20,2025-10-20 14:35:20.000,2025-10-21 00:00:00.000
 0079/2025,373,Caroline Rangel dos Santos,Caroline Rangel dos Santos,500.0,500.0,Boleto,2025-10-20,2025-10-23 00:00:00.000,2025-10-24 00:00:00.000
 0075/2025,326,João Eduardo Costa Sousa,Lucia Maria da Silva Costa,226.0,226.0,Boleto,2025-10-20,2025-10-08 00:00:00.000,2025-10-09 00:00:00.000
 0065/2025,327,Marcus Vinícius Lima Da Cunha,Marcus Vinícius Lima Da Cunha,109.71,109.71,Boleto,2025-10-20,2025-10-06 00:00:00.000,2025-10-07 00:00:00.000
 0065/2025,337,Patricia Dos Santos Silva Soares,Patricia Dos Santos Silva Soares,109.71,109.71,Boleto,2025-10-20,2025-10-06 00:00:00.000,2025-10-07 00:00:00.000
-0049/2025,354,Gustavo Freitas Teixeira Da Silva,Andrea Freitas da Silva,254.04,254.04,Boleto,2025-10-20,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0065/2025,360,Maria Eduarda Santos Do Nascimento Araujo,Maria Eduarda Santos Do Nascimento Araujo,112.17,112.17,Boleto,2025-10-20,2025-10-27 00:00:00.000,2025-10-28 00:00:00.000
 0053/2025,143,Bernardo Rangel França Santos,Milla Tathiana Rangel França,51.22,51.22,Boleto,2025-10-20,2025-10-31 00:00:00.000,2025-11-03 00:00:00.000
 0053/2025,142,Yuri Tulchinski Dias,Natasha Tulchinski,322.72,322.72,Boleto,2025-10-20,2025-10-24 00:00:00.000,2025-10-27 00:00:00.000
@@ -2931,14 +2920,12 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0049/2025,65,Ana Carolina Reis Araujo,Viviane Reis,169.78,169.78,Boleto,2025-10-20,2025-10-07 00:00:00.000,2025-10-08 00:00:00.000
 0065/2025,263,Eduarda De Souza Pereira,Eduarda De Souza Pereira,170.84,170.84,PIX SGPay,2025-10-20,2025-10-23 10:53:15.000,2025-10-24 00:00:00.000
 0065/2025,264,Sabrina De Carvalho Jardim,Sabrina De Carvalho Jardim,167.31,167.31,Boleto,2025-10-20,2025-10-10 00:00:00.000,2025-10-13 00:00:00.000
-0065/2025,257,Cleber de Campos Passos,Cleber de Campos Passos,174.14,174.14,PIX SGPay,2025-10-20,2025-12-17 12:14:25.000,2025-12-18 00:00:00.000
 0053/2025,265,Felipe & Cauã  Rubens Carvalho,Danusa Rubens,296.22,296.22,Boleto,2025-10-20,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
 0053/2025,99,Felipe Alves Sinquini Pereira,Mirian Alves Sinquini,76.65,76.65,Boleto,2025-10-20,2025-10-28 00:00:00.000,2025-10-29 00:00:00.000
 0049/2025,98,Luiz Phelipe Moraes Da Silva,Marcos Luiz da Silva,169.78,169.78,Boleto,2025-10-20,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
 0053/2025,99,Felipe Alves Sinquini Pereira,Mirian Alves Sinquini,220.88,220.88,PIX SGPay,2025-10-20,2025-10-28 11:23:37.000,2025-10-29 00:00:00.000
 0053/2025,92,Pedro Henrique Martins Lopes,Patrícia Martins Lopes,216.0,216.0,Boleto,2025-10-20,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
 0049/2025,95,Marcelo da Silva Lima,Luciene Farias Da Silva,161.37,161.37,Boleto,2025-10-20,2025-10-07 00:00:00.000,2025-10-08 00:00:00.000
-0049/2025,93,Flávia Da Silva Chagas,Bruno Leonardo Figueiredo das Chagas,138.36,138.36,Boleto,2025-10-20,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0052/2025,84,Lyvia Dutra dos Santos Bonifácio,Alessandra Dutra dos Santos Bonifácio,255.0,255.0,Boleto,2025-10-20,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
 0052/2025,84,Lyvia Dutra dos Santos Bonifácio,Alessandra Dutra dos Santos Bonifácio,67.5,67.5,Boleto,2025-10-20,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
 0053/2025,83,Luiz Carlos Cezar Neto,Alessandra Rodrigues da Silva,200.0,200.0,Boleto,2025-10-20,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
@@ -2972,7 +2959,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0053/2025,107,Gabriel Balbi Muniz,Kênia Balbi El Jaick,216.0,216.0,Boleto,2025-10-20,2025-10-13 00:00:00.000,2025-10-14 00:00:00.000
 0053/2025,105,João Vitor Seixas Hatischvili,Simone Marques Seixas,50.0,50.0,Boleto,2025-10-20,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
 0053/2025,105,João Vitor Seixas Hatischvili,Simone Marques Seixas,216.0,216.0,Boleto,2025-10-20,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
-0065/2025,295,Flávia De Souza Mayerhofer Costa,Flávia De Souza Mayerhofer Costa,227.54,227.54,Boleto,2025-10-20,2025-12-04 00:00:00.000,2025-12-05 00:00:00.000
 0053/2025,126,Davi Silva Diniz,Fabiana Mororó da Silva,143.2,143.2,Boleto,2025-10-20,2025-09-02 00:00:00.000,2025-09-03 00:00:00.000
 0053/2025,125,Cauã Leandro de Sá,Walter Felipe Correa de Sá,100.0,100.0,Boleto,2025-10-20,2025-10-17 00:00:00.000,2025-10-20 00:00:00.000
 0053/2025,122,Isabella De Mattos Palacio,Claudia Eliza De Mattos Palacio,216.0,216.0,Boleto,2025-10-20,2025-10-10 00:00:00.000,2025-10-13 00:00:00.000
@@ -3017,7 +3003,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0156/2025,616,Giovanna de Araújo Costa,Giovanna de Araújo Costa,118.0,118.0,PIX SGPay,2025-10-25,2025-10-09 07:06:24.000,2025-10-10 00:00:00.000
 0156/2025,617,Tais Monara Da Silva Barbosa,Tais Monara Da Silva Barbosa,164.16,164.16,Boleto,2025-10-25,2025-10-27 00:00:00.000,2025-10-28 00:00:00.000
 0162/2025,621,Renata Faria Alves,Renata Faria Alves,479.5,479.5,Boleto,2025-10-25,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
-0023/2025,25,CRISTIANE SANTOS MORAES,CRISTIANE SANTOS MORAES,2916.0,2916.0,PIX,2025-10-25,2025-12-02 00:00:00.000,2025-12-02 00:00:00.000
 0156/2025,738,Fabiana Carvalho Soares,Fabiana Carvalho Soares,129.58,129.58,Boleto,2025-10-25,2025-10-24 00:00:00.000,2025-10-27 00:00:00.000
 0162/2025,651,CAMILLA IVENS REBELLO GOMES,CAMILLA IVENS REBELLO GOMES,140.23,140.23,Boleto,2025-10-25,2025-11-04 00:00:00.000,2025-11-05 00:00:00.000
 0162/2025,647,Bernardo Corrêa Lima Dos Santos,Wagner VILS Ribeiro dos Santos,274.0,274.0,Boleto,2025-10-25,2025-10-17 00:00:00.000,2025-10-20 00:00:00.000
@@ -3116,7 +3101,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0049/2025,63,Karine Rodrigues Fernandes Pacheco,Karine Rodrigues Fernandes Pacheco,70.2,70.2,Boleto,2025-11-10,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
 0052/2025,61,Larah Campos Gonçalves,José Carlos Gonçalves da Silva,255.0,255.0,PIX SGPay,2025-11-10,2025-11-05 18:09:42.000,2025-11-06 00:00:00.000
 0099/2025,473,Luiz Carlos Martins,Luiz Carlos Martins,750.0,750.0,Boleto,2025-11-10,2025-11-04 00:00:00.000,2025-11-05 00:00:00.000
-0075/2025,279,Anna Victória dos Santos de Oliveira,Tamirys Alves de Oliveira,193.68,193.68,PIX SGPay,2025-11-10,2025-12-12 07:37:58.000,2025-12-15 00:00:00.000
 0075/2025,278,João Vitor Rosa Santos,João Vitor Rosa Santos,188.0,188.0,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0075/2025,285,Elisa Karyn Gama de Almeida,Marieta Carla Lessa Gama,192.72,192.72,Boleto,2025-11-10,2025-11-26 00:00:00.000,2025-11-27 00:00:00.000
 0075/2025,287,Giovana Chaves Reis,Edson De Carvalho Reis,188.0,188.0,Boleto,2025-11-10,2025-11-06 00:00:00.000,2025-11-07 00:00:00.000
@@ -3128,14 +3112,12 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0075/2025,280,Joyce Evelyn Da Silva Alves,Maria José da Silva,188.0,188.0,Boleto,2025-11-10,2025-11-04 00:00:00.000,2025-11-05 00:00:00.000
 0075/2025,294,Maria Eduarda Montezano De Souza,Shara Francine Montezano de Souza,188.0,188.0,Boleto,2025-11-10,2025-09-29 00:00:00.000,2025-09-30 00:00:00.000
 0075/2025,293,Maria Eduarda Almeida Silva,Fabio Silva,192.12,192.12,PIX SGPay,2025-11-10,2025-11-16 11:16:37.000,2025-11-17 00:00:00.000
-0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,137.88,137.88,PIX SGPay,2025-11-10,2025-12-10 07:40:03.000,2025-12-11 00:00:00.000
 0075/2025,297,Leticia Balbino De Oliveira,Juçara Balbino Dos Santos,191.94,191.94,Boleto,2025-11-10,2025-11-13 00:00:00.000,2025-11-14 00:00:00.000
 0167/2025,686,Fernanda Costa Cruz de Almeida,Fernanda Costa Cruz de Almeida,1500.0,1500.0,PIX,2025-11-10,2025-11-10 00:00:00.000,2025-11-10 00:00:00.000
 0075/2025,273,Roberta Garcia Rodrigues Carriço,Roberta Garcia Rodrigues Carriço,188.0,188.0,Boleto,2025-11-10,2025-11-06 00:00:00.000,2025-11-07 00:00:00.000
 0075/2025,275,Luís Roberto Freitas Da Silva Labier Nolasco,Rosa e Freitas da Silva Labier Nolasco,188.0,188.0,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0182/2025,779,MARCELO ALVES DA COSTA,MARCELO ALVES DA COSTA,4500.0,4500.0,PIX,2025-11-10,2025-11-10 00:00:00.000,2025-11-10 00:00:00.000
 0049/2025,54,Thays Paixão Da Silva,Luciene Paixão da Silva,169.78,169.78,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
-0050/2025,50,Luma Pereira Xavier Pedro,Luciana Jacintho Pereira,500.0,500.0,PIX,2025-11-10,2025-12-12 00:00:00.000,2025-12-12 00:00:00.000
 0037/2025,39,DIOGO DA SILVA AURHEIMER,DIOGO DA SILVA AURHEIMER,6305.0,6305.0,Cartão SGPay,2025-11-10,2025-11-10 14:46:01.370,2025-12-11 14:46:01.370
 0036/2025,38,CRISTIANE GOMES DE SOUZA CUNTO,CRISTIANE GOMES DE SOUZA CUNTO,1237.5,1237.5,PIX,2025-11-10,2025-11-10 00:00:00.000,2025-11-10 00:00:00.000
 0052/2025,128,Lucas Andrade Faria,Cassio Vilela Faria,392.49,392.49,Boleto,2025-11-10,2025-11-28 00:00:00.000,2025-12-01 00:00:00.000
@@ -3144,9 +3126,7 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0049/2025,56,Thais da Silva Souza Ventura,Regina Beiral Ventura,137.24,137.24,Boleto,2025-11-10,2025-11-24 00:00:00.000,2025-11-25 00:00:00.000
 0049/2025,54,Thays Paixão Da Silva,Luciene Paixão da Silva,136.87,136.87,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0056/2025,141,Maria Eduarda Lima Martins,Tatiane Lima Eduardo,145.64,145.64,Boleto,2025-11-10,2025-11-07 00:00:00.000,2025-11-10 00:00:00.000
-0056/2025,137,Letícia Mendes Tavares De Moura,Lívila Mendes Tavares,149.58,149.58,Boleto,2025-11-10,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0056/2025,132,Emanuelle Fonseca Da Silva Pereira,Eliel Pereira,23.2,23.2,Boleto,2025-11-10,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
-0075/2025,322,Letícia Torres Ferreira,Rosângela dos Santos Torres Ferreira,193.14,193.14,Boleto,2025-11-10,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
 0075/2025,328,Kaiky José Areias Ribeiro,Jaqueline francelino areias ribeiro,136.8,136.8,Boleto,2025-11-10,2025-11-13 00:00:00.000,2025-11-14 00:00:00.000
 0075/2025,335,Mylena Marques Candido,Ana Paula Jose Marques Miranda,192.0,192.0,PIX SGPay,2025-11-10,2025-11-14 16:55:26.000,2025-11-17 00:00:00.000
 0075/2025,333,Anna Clara Lima Rodrigues,Fernanda Lima,188.0,188.0,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
@@ -3154,14 +3134,11 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0075/2025,339,Daniela Maria Rocha Valença,Fabiana Rocha da Silva,188.0,188.0,Boleto,2025-11-10,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
 0075/2025,338,Laís Sabina De Sousa Passeri,Bruna Sabina Braga de sousa,188.0,188.0,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0075/2025,358,Ana Clara Teixeira De Lima,Daiane Kelly Teixeira de Lima,188.0,188.0,Boleto,2025-11-10,2025-11-07 00:00:00.000,2025-11-10 00:00:00.000
-0075/2025,363,Ana Carolina Da Silva Santos,Wagno Souza Santos,193.14,193.14,Boleto,2025-11-10,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
-0075/2025,355,Livia Ribeiro da Silva,Leandro Machado da Silva,193.14,193.14,Boleto,2025-11-10,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
 0075/2025,357,Kamilly Vitória Gomes De Mendonça,Karla Conceição Azevedo Gomes Ribeiro,188.0,188.0,Boleto,2025-11-10,2025-10-27 00:00:00.000,2025-10-28 00:00:00.000
 0075/2025,351,Manuela Rodrigues,Verônica da motta rodrigues,188.0,188.0,PIX SGPay,2025-11-10,2025-11-04 07:15:10.000,2025-11-05 00:00:00.000
 0075/2025,350,João Pedro Gomes Ventura Silva,Flávia dos Santos Ferreira Gomes Silva,192.84,192.84,Boleto,2025-11-10,2025-11-28 00:00:00.000,2025-12-01 00:00:00.000
 0075/2025,348,Rebeca Buiati De Abreu,Carlos Augusto Antunes de Abreu,134.0,134.0,PIX SGPay,2025-11-10,2025-11-10 09:38:21.000,2025-11-11 00:00:00.000
 0075/2025,347,Nicolly Cintra da Silva,Jéssica Barros Cintra,188.0,188.0,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
-0075/2025,346,Júlia Contildes Crisóstomo,Márcio Carvalho Crisóstomo,193.26,193.26,PIX SGPay,2025-11-10,2025-12-05 14:19:48.000,2025-12-08 00:00:00.000
 0075/2025,345,Laryssa Da Silva Wyatt Rodrigues,Dayane christine correia da silva,188.0,188.0,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0075/2025,344,Kamilli Teodoro Marques,Lucilene Gama Teodoro,192.0,192.0,PIX SGPay,2025-11-10,2025-11-14 17:07:28.000,2025-11-17 00:00:00.000
 0075/2025,343,Ellieny Souza Da Silva,Alcirlene Francisca da Silva Souza,192.3,192.3,Boleto,2025-11-10,2025-11-19 00:00:00.000,2025-11-21 00:00:00.000
@@ -3171,7 +3148,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0075/2025,368,Ana Clara Pereira Dias,Rebeca Mello Pereira,188.0,188.0,PIX SGPay,2025-11-10,2025-11-10 23:36:50.000,2025-11-11 00:00:00.000
 0075/2025,367,Pamella Correia do Nascimento,Teresa Correia de Melo,188.0,188.0,PIX SGPay,2025-11-10,2025-11-10 21:24:26.000,2025-11-11 00:00:00.000
 0075/2025,365,Myllena Sarah Barros Feitoza,Leandro Luiz Coutinho Feitoza,188.0,188.0,Boleto,2025-11-10,2025-11-03 00:00:00.000,2025-11-04 00:00:00.000
-0075/2025,364,Ana Victoria Ferreira Campos Da Silva,Aline ferreira Maria,193.68,193.68,C. Débito,2025-11-10,2025-12-12 12:46:54.200,2025-12-12 00:00:00.000
 0053/2025,142,Yuri Tulchinski Dias,Natasha Tulchinski,1400.0,1400.0,PIX,2025-11-10,2025-11-10 17:03:00.517,2025-11-10 17:03:00.517
 0056/2025,147,Mayara Moura do Nascimento,Maria de Fatima de Moura Silva,160.2,160.2,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0058/2025,144,Geane Luz Alves de Souza,Geane Luz Alves de Souza,500.0,500.0,PIX,2025-11-10,2025-11-03 00:00:00.000,2025-11-03 00:00:00.000
@@ -3182,7 +3158,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0056/2025,153,Analua Poubel Morse,Luana Alves Costa Poubel,22.72,22.72,Boleto,2025-11-10,2025-11-05 00:00:00.000,2025-11-06 00:00:00.000
 0056/2025,153,Analua Poubel Morse,Luana Alves Costa Poubel,178.0,178.0,Boleto,2025-11-10,2025-11-05 00:00:00.000,2025-11-06 00:00:00.000
 0059/2025,183,Theo Fernandes Barrozo,Daniel Gomes Barrozo,163.4,163.4,Boleto,2025-11-10,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
-0056/2025,164,Marianna Povoas Trugilho Gomes,Tatiane Povoas Trugilho,173.83,173.83,Boleto,2025-11-10,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
 0056/2025,155,Douglas Aguiar Nunes Lima,Roberta Aguiar Nunes Lima,148.59,148.59,Boleto,2025-11-10,2025-11-11 00:00:00.000,2025-11-12 00:00:00.000
 0056/2025,172,Débora Cristina Abrantes Serpa,Sônia Cristina de Sousa Abrantes,194.97,194.97,Boleto,2025-11-10,2025-11-11 00:00:00.000,2025-11-12 00:00:00.000
 0059/2025,165,Mateus Galvão Gallo Sodre Pereira,Roberta Galvão Gallo de Freitas,160.0,160.0,Boleto,2025-11-10,2025-11-07 00:00:00.000,2025-11-10 00:00:00.000
@@ -3190,16 +3165,10 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0056/2025,199,Maria Clara Corrêa Aguirre Da Silva,Rose Lúcia Corrêa Aguirre da Silva,145.64,145.64,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0059/2025,203,Thiago Paulino Santos,Sandra Paulino Gonçalves Santos,163.3,163.3,Boleto,2025-11-10,2025-11-12 00:00:00.000,2025-11-13 00:00:00.000
 0056/2025,187,Arthur Miguel Garcia Baeta,Eudna Maria de Abreu Garcia,218.16,218.16,Boleto,2025-11-10,2025-11-11 00:00:00.000,2025-11-12 00:00:00.000
-0075/2025,299,Brenda Alice Ribeiro Teodorio,Brenda Alice Ribeiro Teodorio,193.44,193.44,Boleto,2025-11-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0075/2025,308,Nicolas Da Silveira Barbosa Knuppe De Azevedo,Deiselane da Silveira Barbosa,137.68,137.68,Boleto,2025-11-10,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
 0075/2025,307,Julia Anastácio Da Silva,Hosana Anastácio da silva,192.18,192.18,PIX SGPay,2025-11-10,2025-11-17 10:12:43.000,2025-11-18 00:00:00.000
 0075/2025,298,Maria Luiza Conceição Lima,Genair da Conceição,188.0,188.0,PIX SGPay,2025-11-10,2025-11-10 19:45:51.000,2025-11-11 00:00:00.000
 0075/2025,300,Júlia Machado Braga Barcelos,Lígia Machado Braga Barcelos,188.0,188.0,Boleto,2025-11-10,2025-10-31 00:00:00.000,2025-11-03 00:00:00.000
-0075/2025,302,Alice Dos Santos Pimentel,Bruna cavalcante dos santos pimentel,193.02,193.02,Boleto,2025-11-10,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0075/2025,301,Leandro Frazão Bernardino,Munique Frazão de Lima Vidal,193.68,193.68,PIX SGPay,2025-11-10,2025-12-12 23:18:56.000,2025-12-15 00:00:00.000
 0075/2025,313,Bárbara Núbya Candoso Barbosa,Patrícia Madureira Candoso,188.0,188.0,Boleto,2025-11-10,2025-11-03 00:00:00.000,2025-11-04 00:00:00.000
-0075/2025,312,Emanuelle Soares Balbino,Hellen Naan Santos Soares,193.44,193.44,Boleto,2025-11-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0075/2025,309,Isabelle Avilez Nogueira,Alice Avilez Ferreira Nogueira,193.02,193.02,Boleto,2025-11-10,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0075/2025,320,Bhrenda Ferreira Coelho dos Anjos Santos,Michele Ferreira Coelho dos Anjos Santos,134.0,134.0,Boleto,2025-11-10,2025-10-03 00:00:00.000,2025-10-06 00:00:00.000
 0075/2025,319,Sarah de Jesus Souza,Maria Alice Santos de Jesus,188.0,188.0,Boleto,2025-11-10,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0075/2025,317,Laura Kauany Guimarães Silva,Valdilea da rosa Guimarães Silva,188.0,188.0,PIX SGPay,2025-11-10,2025-11-10 12:56:09.000,2025-11-11 00:00:00.000
@@ -3207,7 +3176,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0133/2025,552,Fabio Oliveira da Silva,Fabio Oliveira da Silva,500.0,500.0,PIX SGPay,2025-11-10,2025-11-10 09:37:17.000,2025-11-11 00:00:00.000
 0126/2025,545,Nathália da Cruz Kale dos Santos,Nathália da Cruz Kale dos Santos,5000.0,5000.0,Boleto,2025-11-10,2025-11-06 00:00:00.000,2025-11-07 00:00:00.000
 0148/2025,569,Kelly Borges Dias Pitta Neves,Kelly Borges Dias Pitta Neves,648.6,648.6,Boleto,2025-11-10,2025-11-06 00:00:00.000,2025-11-07 00:00:00.000
-0144/2025,563,Rodrigo Werberg de Oliveira,Rodrigo Werberg de Oliveira,869.4,869.4,Boleto,2025-11-10,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
 0145/2025,565,Aline Goulart Colodette Lopes,Aline Goulart Colodette Lopes,2625.0,2625.0,Boleto,2025-11-10,2025-11-12 00:00:00.000,2025-11-13 00:00:00.000
 0052/2025,595,julia julianelli moron serruya,Isabela Ribeiro Moron,2295.0,2295.0,Boleto,2025-11-10,2025-11-03 00:00:00.000,2025-11-04 00:00:00.000
 0157/2025,596,REINALDO DANTAS HENRIQUE,REINALDO DANTAS HENRIQUE,2162.0,2162.0,Boleto,2025-11-10,2025-11-07 00:00:00.000,2025-11-10 00:00:00.000
@@ -3253,8 +3221,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0061/2025,377,Thaysa Gabriella Ribeiro Barbosa,Ana Gabriela Ribeiro Duarte,90.0,90.0,Boleto,2025-11-15,2025-11-12 00:00:00.000,2025-11-13 00:00:00.000
 0061/2025,377,Thaysa Gabriella Ribeiro Barbosa,Ana Gabriela Ribeiro Duarte,133.0,133.0,PIX SGPay,2025-11-15,2025-11-12 11:29:10.000,2025-11-13 00:00:00.000
 0082/2025,379,Monique Batista Lopes De Miranda,Monique Batista Lopes De Miranda,210.0,210.0,Boleto,2025-11-15,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
-0082/2025,380,Yasmim Condeixa Nogueira,Yasmim Condeixa Nogueira,200.09,200.09,Boleto,2025-11-15,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0082/2025,381,Patrícia Christina Gomes Silva,Patrícia Christina Gomes Silva,138.9,138.9,Boleto,2025-11-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
 0064/2025,334,Yasmin Reguengo Muniz,Thiago Moraes Muniz,351.0,351.0,PIX SGPay,2025-11-15,2025-11-15 13:35:27.000,2025-11-17 00:00:00.000
 0064/2025,332,Miguel Martinez Lima,Milena Rodrigues Martinez,220.0,220.0,Boleto,2025-11-15,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0064/2025,324,Victor Hugo Nogueira Rodrigues,Maria Ester Nogueira Da Silva,220.0,220.0,Boleto,2025-11-15,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
@@ -3263,7 +3229,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0059/2025,161,Alice Sousa Do Vale,Manoel Messias de Sousa,163.65,163.65,Boleto,2025-11-15,2025-11-24 00:00:00.000,2025-11-25 00:00:00.000
 0059/2025,159,Manuela Almeida Cardoso,Thaís Cardoso da Silva,242.0,242.0,Boleto,2025-11-15,2025-06-23 00:00:00.000,2025-06-24 00:00:00.000
 0059/2025,186,Davi Figueiredo da Horta,Adriana Mesquita de Figueiredo Cordeiro,160.0,160.0,Boleto,2025-11-15,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
-0061/2025,175,ana clara almeida silva,michelle almeida de andrade,229.06,229.06,Boleto,2025-11-15,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
 0059/2025,188,Davi Pluvie Silva,Cynthia Pluvie Sant Anna de Mello,214.41,214.41,Boleto,2025-11-15,2025-11-18 00:00:00.000,2025-11-19 00:00:00.000
 0059/2025,191,Giovana Carvalho Derossi,Altayr Montan Derossi,160.0,160.0,Boleto,2025-11-15,2025-11-07 00:00:00.000,2025-11-10 00:00:00.000
 0059/2025,190,Gabriela Pereira Monteiro,Helio Márcio Gomes Monteiro,160.0,160.0,Boleto,2025-11-15,2025-11-04 00:00:00.000,2025-11-05 00:00:00.000
@@ -3281,7 +3246,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0150/2025,587,Nathalia Cristina Ribeiro Da Silva,Nathalia Cristina Ribeiro Da Silva,299.0,299.0,Boleto,2025-11-15,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0150/2025,580,Ivine Santos Perazoli,Ivine Santos Perazoli,299.0,299.0,Boleto,2025-11-15,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0150/2025,586,Matheus Lopes Pereira Gomes,Matheus Lopes Pereira Gomes,299.0,299.0,Boleto,2025-11-15,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
-0150/2025,579,Gabriela Costa De Souza Silva,Rogério Vieira da Silva,307.97,307.97,Boleto,2025-11-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
 0150/2025,578,Ana Beatriz Tupini Boaretto,Ana Beatriz Tupini Boaretto,471.77,471.77,Boleto,2025-11-15,2025-11-18 00:00:00.000,2025-11-19 00:00:00.000
 0150/2025,573,Júlia De Oliveira Navega,Júlia De Oliveira Navega,299.0,299.0,Boleto,2025-11-15,2025-11-11 00:00:00.000,2025-11-12 00:00:00.000
 0150/2025,572,Viviane Nogueira Werneck Rodrigues,Viviane Nogueira Werneck Rodrigues,299.0,299.0,Boleto,2025-11-15,2025-11-11 00:00:00.000,2025-11-12 00:00:00.000
@@ -3289,7 +3253,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0150/2025,576,Vanessa Gomes Ramos Sanches,Vanessa Gomes Ramos Sanches,198.34,198.34,Boleto,2025-11-15,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
 0127/2025,546,Luana Roberta de Jesus Machado Ribeiro,Luana Roberta de Jesus Machado Ribeiro,500.0,500.0,Boleto,2025-11-15,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
 0120/2025,538,Ana Julia Bacellar Sargentini,Barbara dos Reis Bacellar Sargentini,262.0,262.0,Boleto,2025-11-15,2025-11-11 00:00:00.000,2025-11-12 00:00:00.000
-0120/2025,539,Natalia Campos Quintanilha De Souza,Luiz Claudio Quintanilha De Souza,269.66,269.66,Boleto,2025-11-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
 0120/2025,526,Ariana Da Silva Sodré,Wagner Alves Sodré,262.0,262.0,PIX SGPay,2025-11-15,2025-11-09 18:03:04.000,2025-11-10 00:00:00.000
 0120/2025,527,Laura De Souza Santos Roque,Camile de Souza Santos,185.0,185.0,Boleto,2025-11-15,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0120/2025,528,Samara Trindade Santos,Hugo de Castro Santos,185.0,185.0,Cartão SGPay,2025-11-15,2025-07-15 00:00:00.000,2025-12-17 00:00:00.000
@@ -3355,14 +3318,12 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0163/2025,673,Gessica Santos Pinheiro,Gessica Santos Pinheiro,60.0,60.0,Boleto,2025-11-15,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
 0082/2025,415,PRISCILA ALEXANDRE MELO,PRISCILA ALEXANDRE MELO,135.0,135.0,Boleto,2025-11-15,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
 0082/2025,413,Caroline Santos Curi Gomes e Souza,Caroline Santos Curi Gomes e Souza,150.0,150.0,Boleto,2025-11-15,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
-0082/2025,402,Giseli Azeredo Mataruna de Figueiredo,Giseli Azeredo Mataruna de Figueiredo,262.57,262.57,Boleto,2025-11-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
 0082/2025,403,Keflem Bruna Pires Da Fonseca,Keflem Bruna Pires Da Fonseca,135.0,135.0,Boleto,2025-11-15,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
 0087/2025,408,Alace Luiz Saraiva,Alace Luiz Saraiva,500.0,500.0,Boleto,2025-11-15,2025-10-30 00:00:00.000,2025-10-31 00:00:00.000
 0082/2025,409,Larissa Quintino De Lima,Larissa Quintino De Lima,135.0,135.0,Boleto,2025-11-15,2025-11-11 00:00:00.000,2025-11-12 00:00:00.000
 0082/2025,412,Laís Fidelis Gabriel,Laís Fidelis Gabriel,138.05,138.05,Boleto,2025-11-15,2025-11-24 00:00:00.000,2025-11-25 00:00:00.000
 0082/2025,385,Leonardo Sodré Da Costa,Leonardo Sodré Da Costa,135.0,135.0,Boleto,2025-11-15,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
 0082/2025,386,Suellen De Oliveira Pereira Caetano,Suellen De Oliveira Pereira Caetano,135.0,135.0,Boleto,2025-11-15,2025-11-06 00:00:00.000,2025-11-07 00:00:00.000
-0082/2025,400,Geísa Rocha Dos Anjos Baptista,Geísa Rocha Dos Anjos Baptista,138.89,138.89,Boleto,2025-11-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
 0082/2025,397,Juliana Moura De Oliveira,Juliana Moura De Oliveira,275.94,275.94,Boleto,2025-11-15,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
 0082/2025,393,Beatriz Cordeiro Borges,Beatriz Cordeiro Borges,135.0,135.0,PIX SGPay,2025-11-15,2025-11-17 14:30:17.000,2025-11-18 00:00:00.000
 0082/2025,395,Isabel Donna Silva Dos Santos,Isabel Donna Silva Dos Santos,229.7,229.7,Boleto,2025-11-15,2025-11-18 00:00:00.000,2025-11-19 00:00:00.000
@@ -3383,7 +3344,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0070/2025,242,Juliana Arca Miranda,Juliana Arca Miranda,1960.0,1960.0,Boleto,2025-11-15,2025-11-06 00:00:00.000,2025-11-07 00:00:00.000
 0064/2025,235,Beatriz Miranda Costa,Sandro da Silva Costa,351.0,351.0,PIX SGPay,2025-11-15,2025-11-15 20:09:57.000,2025-11-17 00:00:00.000
 0071/2025,244,Marcos Francisco Linhares,Marcos Francisco Linhares,500.0,500.0,Boleto,2025-11-15,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
-0064/2025,248,CHRISTHYANN DE OLIVEIRA SOARES MATIELO,EDSON JUNIOR MATIELO,257.81,257.81,Boleto,2025-11-15,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
 0082/2025,387,Stephany Conceição Dos Santos,Stephany Conceição Dos Santos,279.45,279.45,Cartão SGPay,2025-11-16,2025-04-16 00:00:00.000,2025-12-22 00:00:00.000
 0150/2025,574,Júlia de Carvalho Gondim,Júlia de Carvalho Gondim,299.0,299.0,CARTÃO DE CRÉDITO,2025-11-16,2025-09-16 11:54:01.663,2025-12-15 00:00:00.000
 0059/2025,163,Matheus Guimarães Oliveira,Daniele Guimarães  de Oliveira,1332.59,1332.59,Boleto,2025-11-17,2025-11-24 00:00:00.000,2025-11-25 00:00:00.000
@@ -3423,7 +3383,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0101/2025,490,Arlete Suzana Florentino Sarzedas,Arlete Suzana Florentino Sarzedas,200.0,200.0,Boleto,2025-11-20,2025-11-19 00:00:00.000,2025-11-21 00:00:00.000
 0101/2025,486,Luciana Francisca De Araujo,Luciana Francisca De Araujo,200.0,200.0,Boleto,2025-11-20,2025-11-06 00:00:00.000,2025-11-07 00:00:00.000
 0101/2025,485,Stephanny Ferreira Bulhoes,Stephanny Ferreira Bulhoes,200.0,200.0,Boleto,2025-11-20,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
-0101/2025,484,Thaís Da Silva Costa,Thaís Da Silva Costa,349.54,349.54,Boleto,2025-11-20,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
 0101/2025,482,Lilian Mendonça Moura Vitorino,Lilian Mendonça Moura Vitorino,226.67,226.67,Boleto,2025-11-20,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0101/2025,481,Lyvia Ignacio de Lima Peçanha,Lyvia Ignacio de Lima Peçanha,200.0,200.0,Boleto,2025-11-20,2025-11-07 00:00:00.000,2025-11-10 00:00:00.000
 0101/2025,479,Matheus Ribeiro Santos Sales,Matheus Ribeiro Santos Sales,200.0,200.0,PIX SGPay,2025-11-20,2025-11-03 18:32:35.000,2025-11-04 00:00:00.000
@@ -3433,8 +3392,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0065/2025,327,Marcus Vinícius Lima Da Cunha,Marcus Vinícius Lima Da Cunha,109.71,109.71,Boleto,2025-11-20,2025-11-05 00:00:00.000,2025-11-06 00:00:00.000
 0075/2025,326,João Eduardo Costa Sousa,Lucia Maria da Silva Costa,226.0,226.0,Boleto,2025-11-20,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0065/2025,337,Patricia Dos Santos Silva Soares,Patricia Dos Santos Silva Soares,109.71,109.71,Boleto,2025-11-20,2025-11-04 00:00:00.000,2025-11-05 00:00:00.000
-0049/2025,354,Gustavo Freitas Teixeira Da Silva,Andrea Freitas da Silva,251.55,251.55,Boleto,2025-11-20,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0065/2025,360,Maria Eduarda Santos Do Nascimento Araujo,Maria Eduarda Santos Do Nascimento Araujo,112.45,112.45,Boleto,2025-11-20,2025-12-04 00:00:00.000,2025-12-05 00:00:00.000
 0063/2025,176,Andréia Rosa França do Valle,Andréia Rosa França do Valle,1500.0,1500.0,Boleto,2025-11-20,2025-11-06 00:00:00.000,2025-11-07 00:00:00.000
 0065/2025,321,Ester Freitas Costa,Ester Freitas Costa,167.31,167.31,Boleto,2025-11-20,2025-11-19 00:00:00.000,2025-11-21 00:00:00.000
 0065/2025,315,Quêila Ventura Marques,Quêila Ventura Marques,109.71,109.71,Boleto,2025-11-20,2025-11-05 00:00:00.000,2025-11-06 00:00:00.000
@@ -3462,33 +3419,24 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0173/2025,734,Larissa Galdino Ferreira Coutinho,Larissa Galdino Ferreira Coutinho,95.0,95.0,PIX SGPay,2025-11-20,2025-11-18 09:10:41.000,2025-11-19 00:00:00.000
 0065/2025,276,Flávio De Assis Nogueira Junior,Flávio De Assis Nogueira Junior,167.31,167.31,Boleto,2025-11-20,2025-10-13 00:00:00.000,2025-10-14 00:00:00.000
 0065/2025,274,Silvia Leticia Da Silva Rodrigues Coelho De Faria,Silvia Leticia Da Silva Rodrigues Coelho De Faria,130.8,130.8,Boleto,2025-11-20,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
-0065/2025,266,Renata Pinheiro da Silva do Nascimento,Renata Pinheiro da Silva do Nascimento,123.26,123.26,Boleto,2025-11-20,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
 0085/2025,406,Andréa Vidal Luciano,Andréa Vidal Luciano,500.0,500.0,Boleto,2025-11-20,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
-0090/2025,419,Antonio Carlos Gomes da Silva,Antonio Carlos Gomes da Silva,500.0,500.0,PIX,2025-11-20,2025-12-23 00:00:00.000,2025-12-23 00:00:00.000
-0066/2025,423,Matheus De Oliveira Brito,Regina Almeida de Oliveira Brito,229.4,229.4,PIX SGPay,2025-11-20,2025-12-25 14:25:58.000,2025-12-26 00:00:00.000
 0093/2025,422,Ricardo Ferreira Boucinhas,Ricardo Ferreira Boucinhas,500.0,500.0,Boleto,2025-11-20,2025-11-19 00:00:00.000,2025-11-21 00:00:00.000
 0043/2025,44,Elenice Martins da Silva Bom,Elenice Martins da Silva Bom,350.0,350.0,PIX SGPay,2025-11-20,2025-11-14 14:46:49.000,2025-11-17 00:00:00.000
 0173/2025,792,Jayne Braga De Souza,Jayne Braga De Souza,95.0,95.0,PIX SGPay,2025-11-20,2025-11-20 13:34:24.000,2025-11-21 00:00:00.000
 0173/2025,795,Fernanda De Souza Da Silva,Fernanda De Souza Da Silva,95.0,95.0,Boleto,2025-11-20,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
-0173/2025,750,Michele Magalhães Da Motta,Michele Magalhães Da Motta,128.78,128.78,Boleto,2025-11-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
 0173/2025,752,Perla De Andrade Farias,Perla De Andrade Farias,122.14,122.14,Boleto,2025-11-20,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
-0173/2025,735,Juliana Santos Mazula Da Costa,Juliana Santos Mazula Da Costa,97.44,97.44,Boleto,2025-11-20,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
 0173/2025,784,Renata Leonardo Gomes,Renata Leonardo Gomes,95.0,95.0,Boleto,2025-11-20,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
-0173/2025,774,Andreia Cristiane Da Silva Conceição,Andreia Cristiane Da Silva Conceição,97.29,97.29,Boleto,2025-11-20,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
 0049/2025,65,Ana Carolina Reis Araujo,Viviane Reis,169.78,169.78,Boleto,2025-11-20,2025-11-05 00:00:00.000,2025-11-06 00:00:00.000
 0065/2025,264,Sabrina De Carvalho Jardim,Sabrina De Carvalho Jardim,167.31,167.31,Boleto,2025-11-20,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0065/2025,263,Eduarda De Souza Pereira,Eduarda De Souza Pereira,167.31,167.31,PIX SGPay,2025-11-20,2025-11-20 08:14:12.000,2025-11-21 00:00:00.000
-0066/2025,246,Gabrielly Gomes Leite,Uilian Jeime Lopes Leite,202.78,202.78,Boleto,2025-11-20,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
 0065/2025,252,Michael Da Silva Barreto,Michael Da Silva Barreto,109.71,109.71,Boleto,2025-11-20,2025-11-07 00:00:00.000,2025-11-10 00:00:00.000
 0066/2025,251,João Gabriel Cruz Rodrigues,Ana Luisa Souza Cruz Rodrigues,338.6,338.6,Boleto,2025-11-20,2025-11-28 00:00:00.000,2025-12-01 00:00:00.000
-0066/2025,234,Emmanuel Philadelpho De Araújo,Rosimeri Lisboa Philadelpho,202.64,202.64,Boleto,2025-11-20,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
 0066/2025,237,João Victor De Souza Alonso,Andrea Batista De Souza,264.44,264.44,Boleto,2025-11-20,2025-11-10 00:00:00.000,2025-11-11 00:00:00.000
 0066/2025,236,Jennifer Laís Leite Alexandrino,Tayse Fernanda leite silva,264.44,264.44,Boleto,2025-11-20,2025-11-19 00:00:00.000,2025-11-21 00:00:00.000
 0065/2025,243,Isabella Fernandes Madeira,Isabella Fernandes Madeira,141.34,141.34,Boleto,2025-11-20,2025-11-07 00:00:00.000,2025-11-10 00:00:00.000
 0065/2025,238,Leonardo Da Silva Andrade,Leonardo Da Silva Andrade,109.71,109.71,PIX SGPay,2025-11-20,2025-11-18 13:44:53.000,2025-11-19 00:00:00.000
 0066/2025,231,Jayme Costa De Oliveira,Jair Soares de Oliveira,231.1,231.1,Boleto,2025-11-20,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
 0066/2025,233,Agatha Vitoria De Souza Da Silva,Vanessa de Souza Silva Baltazar,197.78,197.78,Boleto,2025-11-20,2025-11-11 00:00:00.000,2025-11-12 00:00:00.000
-0065/2025,225,Vaneska Dos Reis Vasconcelos,Vaneska Dos Reis Vasconcelos,113.01,113.01,Boleto,2025-11-20,2025-12-18 00:00:00.000,2025-12-19 00:00:00.000
 0066/2025,228,José David Prudente Escudeiro Paixão,Mirian Prudente Escudeiro,364.44,364.44,Boleto,2025-11-20,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
 0098/2025,460,Lisliane Paixão Macedo,Lisliane Paixão Macedo,510.64,510.64,Boleto,2025-11-20,2025-11-24 00:00:00.000,2025-11-25 00:00:00.000
 0094/2025,461,Eduarda Pereira de Vargas,Marcelle de Barros Pereira Vargas,199.0,199.0,Boleto,2025-11-20,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
@@ -3502,7 +3450,6 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0065/2025,262,Camila Macedo Nascimento,Maria Cristina Conceição de Macedo Nascimento,167.31,167.31,Boleto,2025-11-20,2025-11-19 00:00:00.000,2025-11-21 00:00:00.000
 0065/2025,261,Roberta Lopes Marchetti Tavares,Roberta Lopes Marchetti Tavares,167.31,167.31,Boleto,2025-11-20,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
 0066/2025,253,RUAN CARLOS BONAFÉ COSTA,Grasielly Teixeira bonafé Costa,231.1,231.1,Boleto,2025-11-20,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
-0185/2025,797,Maria Aline Araujo do Monte Monteiro,Maria Aline Araujo do Monte Monteiro,1195.0,1195.0,PIX,2025-11-21,2025-12-21 00:00:00.000,2025-12-21 00:00:00.000
 0034/2025,36,JOSIANE COSTA DA SILVA,JOSIANE COSTA DA SILVA,1000.0,1000.0,PIX,2025-11-21,2025-11-21 00:00:00.000,2025-11-21 00:00:00.000
 0044/2025,45,Lohrane Machado Reis Barros,Lohrane Machado Reis Barros,375.0,375.0,CARTÃO DE CRÉDITO,2025-11-21,2025-11-21 16:58:21.953,2025-12-21 00:00:00.000
 0049/2025,53,Leonardo Lemos De Oliveira,Leonardo Lemos De Oliveira,219.0,219.0,PIX,2025-11-21,2025-11-21 10:19:19.770,2025-11-21 10:19:19.770
@@ -3511,23 +3458,18 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0176/2025,736,José Luiz Trindade Viana,José Luiz Trindade Viana,6000.0,6000.0,PIX,2025-11-21,2025-11-21 00:00:00.000,2025-11-21 00:00:00.000
 0187/2025,802,Rafaela Sant’ana Vassou,Rafaela Sant’ana Vassou,1350.0,1350.0,PIX,2025-11-22,2025-11-22 00:00:00.000,2025-11-22 00:00:00.000
 0188/2025,804,Amanda Santos Carvalhal,Amanda Santos Carvalhal,5990.0,5990.0,Dinheiro,2025-11-22,2025-11-22 00:00:00.000,2025-11-22 00:00:00.000
-0059/2025,183,Theo Fernandes Barrozo,Daniel Gomes Barrozo,172.3,172.3,Boleto,2025-11-22,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0135/2025,554,Igreja Verbo da Vida,Igreja Verbo da Vida,3087.5,3087.5,Boleto,2025-11-22,2025-10-22 00:00:00.000,2025-10-23 00:00:00.000
 0158/2025,597,. Fênix Plataforma de Crédito,. Fênix Plataforma de Crédito,6370.38,6370.38,Boleto,2025-11-23,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
 0022/2025,145,RAQUEL BATISTA FERRARI,RAQUEL BATISTA FERRARI,45760.0,45760.0,PIX,2025-11-24,2025-11-24 00:00:00.000,2025-11-24 00:00:00.000
 0189/2025,805,Andyara Passos Rocha,Andyara Passos Rocha,200.0,200.0,PIX,2025-11-24,2025-11-24 00:00:00.000,2025-11-24 00:00:00.000
 0176/2025,736,José Luiz Trindade Viana,José Luiz Trindade Viana,3000.0,3000.0,PIX,2025-11-24,2025-11-24 00:00:00.000,2025-11-24 00:00:00.000
 0073/2025,250,Viviane Fernandes Lima,Viviane Fernandes Lima,3000.0,3000.0,PIX,2025-11-24,2025-11-24 00:00:00.000,2025-11-24 00:00:00.000
-0049/2025,70,Kauan Souza Brum,Rafaela Souza dos Santos,1156.49,1156.49,Boleto,2025-11-24,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0102/2025,475,Kátia Lúcia Teixeira Miranda Gomes,Kátia Lúcia Teixeira Miranda Gomes,2500.0,2500.0,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
-0162/2025,651,CAMILLA IVENS REBELLO GOMES,CAMILLA IVENS REBELLO GOMES,140.58,140.58,Boleto,2025-11-25,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
 0162/2025,650,Rebeca Cabral Tavares Pontes,José Maria Rodrigues Tavares Pontes,137.0,137.0,Boleto,2025-11-25,2025-11-24 00:00:00.000,2025-11-25 00:00:00.000
 0162/2025,649,Pedro Ivo Valença Pereira,Luiz Claudio Pereira,139.78,139.78,Boleto,2025-11-25,2025-11-26 00:00:00.000,2025-11-27 00:00:00.000
 0162/2025,648,Barbara De Sá Ribeiro Kossatz,Barbara De Sá Ribeiro Kossatz,209.0,209.0,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0162/2025,647,Bernardo Corrêa Lima Dos Santos,Wagner VILS Ribeiro dos Santos,274.0,274.0,Boleto,2025-11-25,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
-0162/2025,646,Luiz Eduardo Cerveira Santos,Luiz Eduardo Cerveira Santos,249.5,249.5,Boleto,2025-11-25,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
 0161/2025,644,Ana Lorena Lins de Sousa,Ana Lorena Lins de Sousa,139.78,139.78,Boleto,2025-11-25,2025-11-26 00:00:00.000,2025-11-27 00:00:00.000
-0161/2025,643,Nykkole Victoria Bartolette Paes,Nykkole Victoria Bartolette Paes,199.06,199.06,Boleto,2025-11-25,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
 0161/2025,642,Larissa dos Santos Rangel Ferrete,Larissa dos Santos Rangel Ferrete,228.6,228.6,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0162/2025,641,Clarice Dos Santos Souza Class,Clarice Dos Santos Souza Class,137.0,137.0,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0161/2025,640,Amanda Franco Barbosa Da Silva,Amanda Franco Barbosa Da Silva,209.8,209.8,Boleto,2025-11-25,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
@@ -3536,26 +3478,21 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0162/2025,637,Yasmin Cristina Da Silva Pereira,Teresa cristina da Silva,274.0,274.0,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0162/2025,635,Cristiana Gama Cardoso,Cristiana Gama Cardoso,274.0,274.0,Boleto,2025-11-25,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
 0161/2025,630,LETICIA DA COSTA MOREIRA,EDMILSON MOREIRA DA SILVA,341.07,341.07,Boleto,2025-11-25,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
-0161/2025,631,Maria Luiza Peral Andrade,Maria Luiza Peral Andrade,140.18,140.18,Boleto,2025-11-25,2025-12-04 00:00:00.000,2025-12-05 00:00:00.000
 0161/2025,629,Carlos Ottavio Coupey Cardoso,Carlos Ottavio Coupey Cardoso,349.67,349.67,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0059/2025,787,Bryan Perdomo de Silveira,Celeste Regina de Souza Perdomo,1280.0,1280.0,PIX SGPay,2025-11-25,2025-11-25 11:45:14.000,2025-11-26 00:00:00.000
 0193/2025,822,SIMONE PAZ OLIVEIRA GARCIA,SIMONE PAZ OLIVEIRA GARCIA,1400.0,1400.0,PIX,2025-11-25,2025-11-25 00:00:00.000,2025-11-25 00:00:00.000
 0190/2025,806,Mônica da Silva Guedes,Mônica da Silva Guedes,1275.0,1275.0,PIX,2025-11-25,2025-11-25 00:00:00.000,2025-11-25 00:00:00.000
-0023/2025,25,CRISTIANE SANTOS MORAES,CRISTIANE SANTOS MORAES,2916.0,2916.0,PIX,2025-11-25,2025-12-21 00:00:00.000,2025-12-21 00:00:00.000
 0156/2025,602,Danielle Regina Chagas Soares,Danielle Regina Chagas Soares,118.0,118.0,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0156/2025,601,Alessandra Coelho Gomes Da Fonseca,Alessandra Coelho Gomes Da Fonseca,152.58,152.58,PIX SGPay,2025-11-25,2025-11-25 16:28:44.000,2025-11-26 00:00:00.000
 0137/2025,556,Cássia de Andrade Soares Caldas,Cássia de Andrade Soares Caldas,9400.0,9400.0,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0132/2025,551,Eliana Miranda Leripio,Eliana Miranda Leripio,510.32,510.32,Boleto,2025-11-25,2025-11-27 00:00:00.000,2025-11-28 00:00:00.000
 0134/2025,553,Débora Werneck,Débora Werneck,1500.0,1500.0,PIX,2025-11-25,2025-11-25 00:00:00.000,2025-11-25 00:00:00.000
-0162/2025,622,Talita Oliveira Rodrigues,Talita Oliveira Rodrigues,281.28,281.28,Boleto,2025-11-25,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
 0162/2025,623,Paula da Rocha Vaz Dos Santos Duarte,Paula da Rocha Vaz Dos Santos Duarte,158.43,158.43,Boleto,2025-11-25,2025-11-12 00:00:00.000,2025-11-13 00:00:00.000
 0161/2025,626,Giovana Pinto Martins,Giovana Pinto Martins,191.0,191.0,PIX SGPay,2025-11-25,2025-11-24 11:13:37.000,2025-11-25 00:00:00.000
 0162/2025,625,Luciana Bittencourt,Luciana Bittencourt,316.86,316.86,Boleto,2025-11-25,2025-11-24 00:00:00.000,2025-11-25 00:00:00.000
 0162/2025,621,Renata Faria Alves,Renata Faria Alves,479.5,479.5,Boleto,2025-11-25,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
-0156/2025,617,Tais Monara Da Silva Barbosa,Tais Monara Da Silva Barbosa,168.28,168.28,Boleto,2025-11-25,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
 0156/2025,616,Giovanna de Araújo Costa,Giovanna de Araújo Costa,118.0,118.0,PIX SGPay,2025-11-25,2025-11-19 15:19:29.000,2025-11-21 00:00:00.000
 0156/2025,615,Júlia Pinto Martins,Júlia Pinto Martins,174.0,174.0,PIX SGPay,2025-11-25,2025-11-24 11:17:34.000,2025-11-25 00:00:00.000
-0156/2025,612,Kariny Rodrigues Parreira Nascimento,Ricardo Nascimento,178.43,178.43,Boleto,2025-11-25,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
 0156/2025,610,Gabrielly Da Silva Conceição,Gabrielly Da Silva Conceição,177.53,177.53,Boleto,2025-11-25,2025-11-26 00:00:00.000,2025-11-27 00:00:00.000
 0161/2025,606,Evelyn de Castro Silveira da Silva,Evelyn de Castro Silveira da Silva,274.0,274.0,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0161/2025,605,Natália Freitas de Barros,Natália Freitas de Barros,191.0,191.0,Boleto,2025-11-25,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
@@ -3570,459 +3507,65 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0052/2025,59,Sophia Amorim Franco Ferreira,Deborah amorim,270.0,270.0,C. Crédito,2025-11-28,2025-11-28 13:45:24.220,2025-11-28 00:00:00.000
 0052/2025,128,Lucas Andrade Faria,Cassio Vilela Faria,810.33,810.33,CARTÃO DE CRÉDITO,2025-11-28,2025-11-28 13:53:23.573,2025-12-28 00:00:00.000
 0052/2025,61,Larah Campos Gonçalves,Larah Campos Gonçalves,270.0,270.0,PIX SGPay,2025-11-28,2025-11-28 17:20:36.000,2025-12-01 00:00:00.000
-0072/2025,245,Maria Eduarda Gomes Pereira Maia,Maria Eduarda Gomes Pereira Maia,3000.0,3000.0,PIX SGPay,2025-11-28,2025-12-03 14:19:32.000,2025-12-04 00:00:00.000
 0134/2025,553,Débora Werneck,Débora Werneck,1000.0,1000.0,PIX,2025-11-28,2025-11-28 00:00:00.000,2025-11-28 00:00:00.000
 0146/2025,566,Isabelle Rangel de Oliveira,Isabelle Rangel de Oliveira,10046.25,10046.25,Boleto,2025-11-30,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0038/2025,40,Maria candida pereira da costa,Maria candida pereira da costa,600.0,600.0,PIX SGPay,2025-11-30,2025-11-28 16:18:10.000,2025-12-01 00:00:00.000
 0031/2025,33,IAGO TORRES CUNHA,IAGO TORRES CUNHA,1000.0,1000.0,PIX,2025-11-30,2025-11-30 00:00:00.000,2025-11-30 00:00:00.000
-0189/2025,805,Andyara Passos Rocha,Andyara Passos Rocha,1795.0,1795.0,PIX,2025-12-01,2025-12-05 00:00:00.000,2025-12-05 00:00:00.000
-0073/2025,250,Viviane Fernandes Lima,Viviane Fernandes Lima,5000.0,5000.0,PIX,2025-12-01,2025-12-01 00:00:00.000,2025-12-01 00:00:00.000
-0052/2025,61,Larah Campos Gonçalves,Larah Campos Gonçalves,540.0,540.0,PIX SGPay,2025-12-01,2025-12-01 16:57:39.000,2025-12-02 00:00:00.000
-0137/2025,556,Cássia de Andrade Soares Caldas,Cássia de Andrade Soares Caldas,850.0,850.0,PIX,2025-12-01,2025-12-01 00:00:00.000,2025-12-01 00:00:00.000
-0049/2025,354,Gustavo Freitas Teixeira Da Silva,Andrea Freitas da Silva,258.91,258.91,Boleto,2025-12-01,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0058/2025,144,Geane Luz Alves de Souza,Geane Luz Alves de Souza,500.0,500.0,PIX,2025-12-02,2025-12-02 00:00:00.000,2025-12-02 00:00:00.000
-0059/2025,165,Mateus Galvão Gallo Sodre Pereira,Roberta Galvão Gallo de Freitas,173.5,173.5,Boleto,2025-12-02,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
-0059/2025,163,Matheus Guimarães Oliveira,Daniele Guimarães  de Oliveira,600.0,600.0,PIX SGPay,2025-12-02,2025-12-02 09:16:30.000,2025-12-03 00:00:00.000
-0059/2025,194,Isaac Leonardo Nogueira,Leonardo Nogueira,200.0,200.0,C. Débito,2025-12-02,2025-12-02 09:36:21.737,2025-12-02 00:00:00.000
-0059/2025,190,Gabriela Pereira Monteiro,Paula da Silva Pereira,400.0,400.0,C. Crédito,2025-12-02,2025-12-02 09:44:06.583,2025-12-02 00:00:00.000
-0059/2025,188,Davi Pluvie Silva,Cynthia Pluvie Sant Anna de Mello,209.94,209.94,C. Crédito,2025-12-02,2025-12-02 13:50:02.517,2025-12-02 00:00:00.000
-0116/2025,522,Ana Paula Oliveira Sá Motta,Ana Paula Oliveira Sá Motta,1000.0,1000.0,Boleto,2025-12-02,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0049/2025,70,Kauan Souza Brum,Kauan Souza Brum,219.0,219.0,PIX SGPay,2025-12-02,2025-12-02 11:40:20.000,2025-12-03 00:00:00.000
-0049/2025,64,ERIC MATEUS CLEMENTINO DA SILVA,ERIC MATEUS CLEMENTINO DA SILVA,219.0,219.0,C. Débito,2025-12-02,2025-12-02 11:46:14.457,2025-12-02 00:00:00.000
-0049/2025,93,Flávia Da Silva Chagas,Bruno Leonardo Figueiredo das Chagas,863.4,863.4,PIX SGPay,2025-12-02,2025-12-02 09:50:46.000,2025-12-03 00:00:00.000
-0049/2025,93,Flávia Da Silva Chagas,Flávia Da Silva Chagas,219.0,219.0,PIX SGPay,2025-12-02,2025-12-02 09:58:52.000,2025-12-03 00:00:00.000
-0193/2025,822,SIMONE PAZ OLIVEIRA GARCIA,SIMONE PAZ OLIVEIRA GARCIA,250.0,250.0,PIX,2025-12-02,2025-12-03 00:00:00.000,2025-12-03 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,4640.0,4640.0,PIX,2025-12-02,2025-12-02 00:00:00.000,2025-12-02 00:00:00.000
-0028/2025,30,NADJA SIMONE SANTOS DE PAULA,NADJA SIMONE SANTOS DE PAULA,1000.0,1000.0,PIX,2025-12-02,2025-12-02 00:00:00.000,2025-12-02 00:00:00.000
-0049/2025,52,Maria Victoria Peixoto Dos Santos,Odilia Peixoto pinheiro,597.67,597.67,C. Crédito,2025-12-02,2025-12-02 11:11:13.203,2025-12-02 00:00:00.000
-0024/2025,26,PAULA DIAS AZEVEDO,PAULA DIAS AZEVEDO,1500.0,1500.0,PIX,2025-12-03,2025-12-03 00:00:00.000,2025-12-03 00:00:00.000
-0049/2025,98,Luiz Phelipe Moraes Da Silva,Marcos Luiz da Silva,800.0,800.0,PIX,2025-12-03,2025-12-03 00:00:00.000,2025-12-03 00:00:00.000
-0049/2025,98,Luiz Phelipe Moraes Da Silva,Marcos Luiz da Silva,300.0,300.0,PIX,2025-12-03,2025-12-03 00:00:00.000,2025-12-03 00:00:00.000
-0064/2025,226,Davi Melo Amaral Gonçalves Pinto,Davi Melo Amaral Gonçalves Pinto,270.0,270.0,PIX SGPay,2025-12-03,2025-12-03 14:57:33.000,2025-12-04 00:00:00.000
-0064/2025,226,Davi Melo Amaral Gonçalves Pinto,Davi Melo Amaral Gonçalves Pinto,270.0,270.0,PIX SGPay,2025-12-03,2025-12-03 15:07:25.000,2025-12-04 00:00:00.000
-0094/2025,469,Anna Clara Campos,Adriana dos Santos Campos,232.17,232.17,C. Crédito,2025-12-03,2025-12-03 15:28:04.430,2025-12-03 00:00:00.000
-0094/2025,464,Ana Carolina Lopes de Souza,Julio César Fonseca de Souza,250.0,250.0,C. Débito,2025-12-03,2025-12-03 15:34:58.287,2025-12-03 00:00:00.000
-0094/2025,462,Miguel Borges Da Mota Corrêa Lima,Rafaelle Borges da Mota Corrêa,250.0,250.0,C. Débito,2025-12-03,2025-12-03 17:21:25.003,2025-12-03 00:00:00.000
-0094/2025,462,Miguel Borges Da Mota Corrêa Lima,Rafaelle Borges da Mota Corrêa,250.0,250.0,C. Crédito,2025-12-03,2025-12-03 17:23:00.950,2025-12-03 00:00:00.000
-0059/2025,186,Davi Figueiredo da Horta,Adriana Mesquita de Figueiredo Cordeiro,200.0,200.0,C. Débito,2025-12-03,2025-12-03 15:52:26.173,2025-12-03 00:00:00.000
-0059/2025,182,Mateus De Freitas Gouvêa,Aline Rocha de Freitas,600.0,600.0,PIX SGPay,2025-12-03,2025-12-03 09:23:57.000,2025-12-04 00:00:00.000
-0064/2025,334,Yasmin Reguengo Muniz,Yasmin Reguengo Muniz,1080.0,1080.0,PIX SGPay,2025-12-03,2025-12-03 14:51:02.000,2025-12-04 00:00:00.000
-0064/2025,332,Miguel Martinez Lima,Milena Rodrigues Martinez,1080.0,1080.0,C. Crédito,2025-12-03,2025-12-03 10:30:41.407,2025-12-03 00:00:00.000
-0064/2025,332,Miguel Martinez Lima,Milena Rodrigues Martinez,810.0,810.0,PIX,2025-12-03,2025-12-03 10:41:16.030,2025-12-03 10:41:16.030
 0053/2025,108,BEATRIZ LADEWIG MARQUES,RENATA LADEWIG DE ARAUJO MARQUES,333.33,333.33,C. Crédito,2025-12-04,2025-11-04 15:57:12.983,2025-11-04 00:00:00.000
-0064/2025,235,Beatriz Miranda Costa,Beatriz Miranda Costa,540.0,540.0,PIX SGPay,2025-12-04,2025-12-04 13:35:29.000,2025-12-05 00:00:00.000
-0064/2025,235,Beatriz Miranda Costa,Beatriz Miranda Costa,540.0,540.0,C. Crédito,2025-12-04,2025-12-04 13:45:09.447,2025-12-04 00:00:00.000
 0053/2025,82,Yasmim Bourlier Carestiato,Yasmim Bourlier Carestiato,700.0,700.0,C. Crédito,2025-12-04,2025-11-04 14:25:48.193,2025-11-04 00:00:00.000
-0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,3000.0,3000.0,PIX,2025-12-04,2025-12-04 00:00:00.000,2025-12-04 00:00:00.000
-0182/2025,779,MARCELO ALVES DA COSTA,MARCELO ALVES DA COSTA,1960.0,1960.0,Boleto,2025-12-04,2025-12-04 00:00:00.000,2025-12-05 00:00:00.000
-0094/2025,428,Ana Clara Rodrigues Vieira Lyra,Glauce Rodrigues vieira,250.0,250.0,PIX SGPay,2025-12-05,2025-12-05 10:34:29.000,2025-12-08 00:00:00.000
-0094/2025,428,Ana Clara Rodrigues Vieira Lyra,Glauce Rodrigues vieira,133.16,133.16,C. Crédito,2025-12-05,2025-12-05 13:47:21.693,2025-12-05 00:00:00.000
-0064/2025,229,Maria Eduarda Costa Das Neves,Maria Eduarda Costa Das Neves,810.0,810.0,C. Débito,2025-12-05,2025-12-05 13:56:10.777,2025-12-05 00:00:00.000
 0103/2025,487,Avelino Henrique de Paiva,Avelino Henrique de Paiva,1500.0,1500.0,Boleto,2025-12-05,2025-08-04 00:00:00.000,2025-08-05 00:00:00.000
-0059/2025,183,Theo Fernandes Barrozo,Daniel Gomes Barrozo,600.0,600.0,PIX,2025-12-05,2025-12-05 10:53:36.093,2025-12-05 10:53:36.093
-0059/2025,184,Alicia Stellet Marques Barbosa,Amanda Stellet Marques,400.0,400.0,PIX SGPay,2025-12-05,2025-12-05 13:58:44.000,2025-12-08 00:00:00.000
-0155/2025,594,Vânia de Almeida Fragoso,Vânia de Almeida Fragoso,530.0,530.0,Boleto,2025-12-05,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0059/2025,182,Mateus De Freitas Gouvêa,Júlio Cesar Pereira da Silva Gouvêa,200.0,200.0,Dinheiro,2025-12-08,2025-12-08 17:01:32.633,2025-12-08 17:01:32.663
-0075/2025,310,Maria Eduarda De Souza Aguiar,Aretha de Souza Aguiar,595.67,595.67,C. Crédito,2025-12-08,2025-12-08 16:05:43.887,2025-12-08 00:00:00.000
-0059/2025,213,Mariana De Souza Moreira,Ismael de Almeida Moreira,600.0,600.0,PIX SGPay,2025-12-08,2025-12-08 13:46:27.000,2025-12-09 00:00:00.000
-0070/2025,242,Juliana Arca Miranda,Juliana Arca Miranda,1500.0,1500.0,Boleto,2025-12-08,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0059/2025,249,Davi Machado Carvalho,Debora machado,200.0,200.0,C. Crédito,2025-12-08,2025-12-08 14:53:27.740,2025-12-08 00:00:00.000
-0094/2025,435,Laura De Oliveira Dias,Elaine de Oliveira Barbosa,250.0,250.0,Dinheiro,2025-12-08,2025-12-08 10:01:10.560,2025-12-08 10:01:10.600
-0094/2025,452,Pietro Ferreira Mota,Kelly Ferreira R. Mota,250.0,250.0,PIX SGPay,2025-12-08,2025-12-08 15:39:57.000,2025-12-09 00:00:00.000
-0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,5000.0,5000.0,PIX,2025-12-08,2025-12-08 00:00:00.000,2025-12-08 00:00:00.000
-0094/2025,448,Nicolas Rodrigues Almeida,Jacqueline Rodrigues Almeida,250.0,250.0,PIX SGPay,2025-12-09,2025-12-09 14:27:48.000,2025-12-10 00:00:00.000
-0094/2025,456,Marcos Paulo Antunes De Oliveira Júnior,Fabiana Constantino de Carvalho,250.0,250.0,PIX SGPay,2025-12-09,2025-12-09 15:01:42.000,2025-12-10 00:00:00.000
-0075/2025,297,Leticia Balbino De Oliveira,Juçara Balbino Dos Santos,188.0,188.0,Boleto,2025-12-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,134.0,134.0,PIX SGPay,2025-12-10,2025-12-10 07:40:51.000,2025-12-11 00:00:00.000
-0075/2025,293,Maria Eduarda Almeida Silva,Fabio Silva,191.82,191.82,C. Débito,2025-12-10,2025-12-11 15:03:04.057,2025-12-11 00:00:00.000
 0075/2025,294,Maria Eduarda Montezano De Souza,Shara Francine Montezano de Souza,188.0,188.0,Boleto,2025-12-10,2025-10-20 00:00:00.000,2025-10-21 00:00:00.000
 0075/2025,280,Joyce Evelyn Da Silva Alves,Maria José da Silva,188.0,188.0,Boleto,2025-12-10,2025-11-26 00:00:00.000,2025-11-27 00:00:00.000
-0075/2025,282,Cauã Camelo da Silva,Carlos Augusto Camelo,188.0,188.0,PIX SGPay,2025-12-10,2025-12-01 15:19:22.000,2025-12-02 00:00:00.000
-0075/2025,283,Maria Eduarda Martins Da Silva,Ruth Martins dos Santos Cobra,134.0,134.0,PIX SGPay,2025-12-10,2025-12-04 20:08:14.000,2025-12-05 00:00:00.000
-0075/2025,284,Giovanna da Silva Raso,Maria Gabriela da Silva Ferreira Raso,188.0,188.0,Boleto,2025-12-10,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
 0075/2025,288,Geovanna Ângelo De Souza,Tathiane Regina Rodrigues,134.0,134.0,PIX SGPay,2025-12-10,2025-11-10 19:39:47.000,2025-11-11 00:00:00.000
-0075/2025,289,Alexia Dos Santos Lessa Freire,Alexandre Lessa Freire,134.0,134.0,Boleto,2025-12-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0075/2025,287,Giovana Chaves Reis,Edson De Carvalho Reis,188.0,188.0,Boleto,2025-12-10,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0075/2025,285,Elisa Karyn Gama de Almeida,Marieta Carla Lessa Gama,188.0,188.0,Boleto,2025-12-10,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0075/2025,278,João Vitor Rosa Santos,João Vitor Rosa Santos,188.0,188.0,PIX SGPay,2025-12-10,2025-12-10 11:11:58.000,2025-12-11 00:00:00.000
-0075/2025,279,Anna Victória dos Santos de Oliveira,Tamirys Alves de Oliveira,191.88,191.88,PIX SGPay,2025-12-10,2025-12-12 07:38:42.000,2025-12-15 00:00:00.000
-0073/2025,250,Viviane Fernandes Lima,Viviane Fernandes Lima,5576.0,5576.0,PIX,2025-12-10,2025-12-10 00:00:00.000,2025-12-10 00:00:00.000
-0075/2025,273,Roberta Garcia Rodrigues Carriço,Roberta Garcia Rodrigues Carriço,188.0,188.0,Boleto,2025-12-10,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
-0075/2025,275,Luís Roberto Freitas Da Silva Labier Nolasco,Rosa e Freitas da Silva Labier Nolasco,188.0,188.0,PIX SGPay,2025-12-10,2025-12-10 11:08:53.000,2025-12-11 00:00:00.000
-0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,2500.0,2500.0,PIX,2025-12-10,2025-12-10 00:00:00.000,2025-12-10 00:00:00.000
-0056/2025,141,Maria Eduarda Lima Martins,Tatiane Lima Eduardo,145.64,145.64,Boleto,2025-12-10,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0033/2025,35,JAYME SAUL EPELBOIM,JAYME SAUL EPELBOIM,4500.0,4500.0,PIX,2025-12-10,2025-12-10 00:00:00.000,2025-12-10 00:00:00.000
-0036/2025,38,CRISTIANE GOMES DE SOUZA CUNTO,CRISTIANE GOMES DE SOUZA CUNTO,1237.5,1237.5,PIX,2025-12-10,2025-12-07 00:00:00.000,2025-12-07 00:00:00.000
 0049/2025,54,Thays Paixão Da Silva,Luciene Paixão da Silva,169.78,169.78,Boleto,2025-12-10,2025-11-24 00:00:00.000,2025-11-25 00:00:00.000
-0075/2025,351,Manuela Rodrigues,Verônica da motta rodrigues,188.0,188.0,PIX SGPay,2025-12-10,2025-12-06 02:58:23.000,2025-12-08 00:00:00.000
 0075/2025,349,João victor ferreira ximenes,Renata ferreira ximenes,1560.52,1560.52,Boleto,2025-12-10,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
 0075/2025,357,Kamilly Vitória Gomes De Mendonça,Karla Conceição Azevedo Gomes Ribeiro,188.0,188.0,Boleto,2025-12-10,2025-11-18 00:00:00.000,2025-11-19 00:00:00.000
-0075/2025,358,Ana Clara Teixeira De Lima,Daiane Kelly Teixeira de Lima,188.0,188.0,Boleto,2025-12-10,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0075/2025,363,Ana Carolina Da Silva Santos,Wagno Souza Santos,188.0,188.0,Boleto,2025-12-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0075/2025,342,Lairyane Berçot Chermauth Cardoso,Carine Berçot Chermauth Cardoso,188.0,188.0,Boleto,2025-12-10,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
-0075/2025,343,Ellieny Souza Da Silva,Alcirlene Francisca da Silva Souza,188.0,188.0,Boleto,2025-12-10,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0075/2025,344,Kamilli Teodoro Marques,Lucilene Gama Teodoro,188.0,188.0,PIX SGPay,2025-12-10,2025-12-08 18:32:52.000,2025-12-09 00:00:00.000
-0075/2025,345,Laryssa Da Silva Wyatt Rodrigues,Dayane christine correia da silva,188.0,188.0,Boleto,2025-12-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0075/2025,346,Júlia Contildes Crisóstomo,Márcio Carvalho Crisóstomo,188.0,188.0,PIX SGPay,2025-12-10,2025-12-07 09:44:14.000,2025-12-08 00:00:00.000
-0075/2025,347,Nicolly Cintra da Silva,Jéssica Barros Cintra,188.0,188.0,Boleto,2025-12-10,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0075/2025,348,Rebeca Buiati De Abreu,Carlos Augusto Antunes de Abreu,134.0,134.0,PIX SGPay,2025-12-10,2025-12-04 11:37:18.000,2025-12-05 00:00:00.000
 0075/2025,350,João Pedro Gomes Ventura Silva,Flávia dos Santos Ferreira Gomes Silva,188.0,188.0,Boleto,2025-12-10,2025-11-28 00:00:00.000,2025-12-01 00:00:00.000
-0075/2025,328,Kaiky José Areias Ribeiro,Jaqueline francelino areias ribeiro,136.72,136.72,Boleto,2025-12-10,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
-0075/2025,322,Letícia Torres Ferreira,Rosângela dos Santos Torres Ferreira,188.0,188.0,Boleto,2025-12-10,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
-0075/2025,333,Anna Clara Lima Rodrigues,Fernanda Lima,188.0,188.0,Boleto,2025-12-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0075/2025,335,Mylena Marques Candido,Ana Paula Jose Marques Miranda,188.0,188.0,PIX SGPay,2025-12-10,2025-12-02 18:05:23.000,2025-12-03 00:00:00.000
-0075/2025,338,Laís Sabina De Sousa Passeri,Bruna Sabina Braga de sousa,188.0,188.0,Boleto,2025-12-10,2025-12-04 00:00:00.000,2025-12-05 00:00:00.000
-0075/2025,339,Daniela Maria Rocha Valença,Fabiana Rocha da Silva,188.0,188.0,Boleto,2025-12-10,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
-0075/2025,341,Guilherme Ferreira Gomes da Silva,Guilherme Ferreira Gomes da Silva,134.0,134.0,PIX SGPay,2025-12-10,2025-12-09 08:54:09.000,2025-12-10 00:00:00.000
 0104/2025,488,Paula Cristina Mansur da Conceição,Paula Cristina Mansur da Conceição,500.0,500.0,Boleto,2025-12-10,2025-11-28 00:00:00.000,2025-12-01 00:00:00.000
-0075/2025,364,Ana Victoria Ferreira Campos Da Silva,Aline ferreira Maria,191.88,191.88,C. Débito,2025-12-10,2025-12-12 12:46:54.200,2025-12-12 00:00:00.000
-0075/2025,365,Myllena Sarah Barros Feitoza,Leandro Luiz Coutinho Feitoza,188.0,188.0,Boleto,2025-12-10,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
-0075/2025,367,Pamella Correia do Nascimento,Teresa Correia de Melo,188.0,188.0,PIX SGPay,2025-12-10,2025-12-04 11:40:20.000,2025-12-05 00:00:00.000
-0075/2025,368,Ana Clara Pereira Dias,Rebeca Mello Pereira,191.82,191.82,PIX SGPay,2025-12-10,2025-12-11 16:18:09.000,2025-12-12 00:00:00.000
-0056/2025,170,Júlia De Lima Silva,Achilles Theodoro da Silva Júnior,168.36,168.36,Boleto,2025-12-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0056/2025,172,Débora Cristina Abrantes Serpa,Sônia Cristina de Sousa Abrantes,194.97,194.97,Boleto,2025-12-10,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
-0056/2025,147,Mayara Moura do Nascimento,Maria de Fatima de Moura Silva,163.5,163.5,Boleto,2025-12-10,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0056/2025,154,Gabriela Erthal Fernandes,Patricia Erthal Vianna da Silva,145.64,145.64,PIX SGPay,2025-12-10,2025-12-03 07:28:47.000,2025-12-04 00:00:00.000
-0056/2025,153,Analua Poubel Morse,Luana Alves Costa Poubel,23.21,23.21,Boleto,2025-12-10,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0056/2025,187,Arthur Miguel Garcia Baeta,Eudna Maria de Abreu Garcia,218.44,218.44,Boleto,2025-12-10,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0059/2025,197,Júlia Silveira Malheiros,Luis Felipe Mesquita Malheiros,400.0,400.0,PIX,2025-12-10,2025-12-10 16:06:28.717,2025-12-10 16:06:28.717
-0056/2025,199,Maria Clara Corrêa Aguirre Da Silva,Rose Lúcia Corrêa Aguirre da Silva,145.64,145.64,Boleto,2025-12-10,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0059/2025,203,Thiago Paulino Santos,Thiago Paulino Santos,600.0,600.0,PIX SGPay,2025-12-10,2025-12-10 09:53:30.000,2025-12-11 00:00:00.000
-0059/2025,201,THEO ROBERTO AZEREDO SANTOS,TATIANA DE SIQUEIRA AZEREDO,400.0,400.0,C. Débito,2025-12-10,2025-12-10 16:02:45.020,2025-12-10 00:00:00.000
-0075/2025,299,Brenda Alice Ribeiro Teodorio,Brenda Alice Ribeiro Teodorio,188.0,188.0,Boleto,2025-12-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0075/2025,307,Julia Anastácio Da Silva,Hosana Anastácio da silva,188.0,188.0,PIX SGPay,2025-12-10,2025-12-02 19:29:56.000,2025-12-03 00:00:00.000
-0075/2025,308,Nicolas Da Silveira Barbosa Knuppe De Azevedo,Deiselane da Silveira Barbosa,134.0,134.0,C. Débito,2025-12-10,2025-12-09 14:07:49.817,2025-12-09 00:00:00.000
-0075/2025,301,Leandro Frazão Bernardino,Munique Frazão de Lima Vidal,191.94,191.94,PIX SGPay,2025-12-10,2025-12-13 14:10:08.000,2025-12-15 00:00:00.000
-0075/2025,302,Alice Dos Santos Pimentel,Bruna cavalcante dos santos pimentel,188.0,188.0,Boleto,2025-12-10,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0075/2025,300,Júlia Machado Braga Barcelos,Lígia Machado Braga Barcelos,188.0,188.0,Boleto,2025-12-10,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0075/2025,298,Maria Luiza Conceição Lima,Genair da Conceição,188.0,188.0,PIX SGPay,2025-12-10,2025-11-30 16:12:40.000,2025-12-01 00:00:00.000
 0075/2025,313,Bárbara Núbya Candoso Barbosa,Patrícia Madureira Candoso,188.0,188.0,Boleto,2025-12-10,2025-11-27 00:00:00.000,2025-11-28 00:00:00.000
-0075/2025,309,Isabelle Avilez Nogueira,Alice Avilez Ferreira Nogueira,188.0,188.0,Boleto,2025-12-10,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0075/2025,312,Emanuelle Soares Balbino,Hellen Naan Santos Soares,188.0,188.0,Boleto,2025-12-10,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
 0075/2025,320,Bhrenda Ferreira Coelho dos Anjos Santos,Michele Ferreira Coelho dos Anjos Santos,134.0,134.0,Boleto,2025-12-10,2025-10-03 00:00:00.000,2025-10-06 00:00:00.000
-0075/2025,317,Laura Kauany Guimarães Silva,Valdilea da rosa Guimarães Silva,188.0,188.0,PIX SGPay,2025-12-10,2025-12-04 10:51:21.000,2025-12-05 00:00:00.000
-0075/2025,319,Sarah de Jesus Souza,Maria Alice Santos de Jesus,188.0,188.0,Boleto,2025-12-10,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0157/2025,596,REINALDO DANTAS HENRIQUE,REINALDO DANTAS HENRIQUE,2162.0,2162.0,Boleto,2025-12-10,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0145/2025,565,Aline Goulart Colodette Lopes,Aline Goulart Colodette Lopes,2350.0,2350.0,Boleto,2025-12-10,2025-12-04 00:00:00.000,2025-12-05 00:00:00.000
-0148/2025,569,Kelly Borges Dias Pitta Neves,Kelly Borges Dias Pitta Neves,648.6,648.6,Boleto,2025-12-10,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0133/2025,552,Fabio Oliveira da Silva,Fabio Oliveira da Silva,500.0,500.0,PIX SGPay,2025-12-10,2025-12-10 11:18:53.000,2025-12-11 00:00:00.000
-0112/2025,513,Anna Beatriz Nunes Barroso,Natalia Ferraz Simoes Nunes,3000.0,3000.0,PIX,2025-12-11,2025-12-11 00:00:00.000,2025-12-11 00:00:00.000
 0053/2025,143,Bernardo Rangel França Santos,Milla Tathiana Rangel França,200.0,200.0,C. Crédito,2025-12-11,2025-11-11 17:27:46.247,2025-11-11 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2025-12-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
-0059/2025,414,Eloá Da Cunha Cândido,Sylvana Kimberly da Silva Cândido,1748.04,1748.04,PIX SGPay,2025-12-11,2025-12-11 13:54:50.000,2025-12-12 00:00:00.000
-0059/2025,414,Eloá Da Cunha Cândido,Sylvana Kimberly da Silva Cândido,200.0,200.0,PIX SGPay,2025-12-11,2025-12-11 13:56:02.000,2025-12-12 00:00:00.000
-0059/2025,222,Manuela Martins Terra,Luisa de Siqueira Martins,1000.0,1000.0,PIX SGPay,2025-12-11,2025-12-11 16:09:41.000,2025-12-12 00:00:00.000
 0053/2025,107,Gabriel Balbi Muniz,Kênia Balbi El Jaick,300.0,300.0,C. Crédito,2025-12-11,2025-11-11 17:24:10.790,2025-11-11 00:00:00.000
-0097/2025,459,Anna Clara Monteiro Ghellere,Anna Clara Monteiro Ghellere,1159.0,1159.0,PIX,2025-12-11,2025-12-11 00:00:00.000,2025-12-11 00:00:00.000
-0075/2025,296,Sophia Alves De Melo,Luciana Alves da Silva,385.56,385.56,PIX SGPay,2025-12-12,2025-12-12 09:17:22.000,2025-12-15 00:00:00.000
-0167/2025,686,Fernanda Costa Cruz de Almeida,Fernanda Costa Cruz de Almeida,1500.0,1500.0,PIX,2025-12-12,2025-12-12 00:00:00.000,2025-12-12 00:00:00.000
-0188/2025,804,Amanda Santos Carvalhal,Amanda Santos Carvalhal,7700.0,7700.0,Dinheiro,2025-12-12,2025-12-12 00:00:00.000,2025-12-12 00:00:00.000
-0024/2025,26,PAULA DIAS AZEVEDO,PAULA DIAS AZEVEDO,1890.0,1890.0,PIX,2025-12-12,2025-12-12 00:00:00.000,2025-12-12 00:00:00.000
-0075/2025,359,Caio Barcellos Tavares,Suellen da C Barcellos,786.28,786.28,PIX SGPay,2025-12-12,2025-12-12 15:08:45.000,2025-12-15 00:00:00.000
-0075/2025,359,Caio Barcellos Tavares,Suellen da C Barcellos,100.0,100.0,Dinheiro,2025-12-12,2025-12-12 00:00:00.000,2025-12-12 00:00:00.000
-0126/2025,545,Nathália da Cruz Kale dos Santos,Nathália da Cruz Kale dos Santos,5000.0,5000.0,Boleto,2025-12-12,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
 0113/2025,519,Beatriz Bueno Marques,Daniele Bueno Martins Marques,204.74,204.74,C. Crédito,2025-12-14,2025-11-14 17:08:14.387,2025-11-14 00:00:00.000
-0084/2025,405,José Luciano Macedo Soares,José Luciano Macedo Soares,1000.0,1000.0,PIX,2025-12-14,2025-12-14 00:00:00.000,2025-12-14 00:00:00.000
-0082/2025,403,Keflem Bruna Pires Da Fonseca,Keflem Bruna Pires Da Fonseca,137.74,137.74,Boleto,2025-12-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
 0082/2025,402,Giseli Azeredo Mataruna de Figueiredo,Giseli Azeredo Mataruna de Figueiredo,255.0,255.0,Boleto,2025-12-15,2025-11-17 00:00:00.000,2025-11-18 00:00:00.000
 0087/2025,408,Alace Luiz Saraiva,Alace Luiz Saraiva,500.0,500.0,Boleto,2025-12-15,2025-11-28 00:00:00.000,2025-12-01 00:00:00.000
-0082/2025,412,Laís Fidelis Gabriel,Laís Fidelis Gabriel,138.14,138.14,Boleto,2025-12-15,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0082/2025,409,Larissa Quintino De Lima,Larissa Quintino De Lima,135.0,135.0,Boleto,2025-12-15,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0082/2025,413,Caroline Santos Curi Gomes e Souza,Caroline Santos Curi Gomes e Souza,153.09,153.09,Boleto,2025-12-15,2025-12-17 00:00:00.000,2025-12-18 00:00:00.000
-0082/2025,415,PRISCILA ALEXANDRE MELO,PRISCILA ALEXANDRE MELO,135.0,135.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0082/2025,385,Leonardo Sodré Da Costa,Leonardo Sodré Da Costa,135.0,135.0,Boleto,2025-12-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0082/2025,386,Suellen De Oliveira Pereira Caetano,Suellen De Oliveira Pereira Caetano,135.0,135.0,Boleto,2025-12-15,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0082/2025,391,Estephani Leal De Andrade,Estephani Leal De Andrade,137.74,137.74,PIX SGPay,2025-12-15,2025-12-16 04:43:06.000,2025-12-17 00:00:00.000
-0082/2025,390,Alciene Andrade da Silva Vieira,Alciene Andrade da Silva Vieira,180.0,180.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0082/2025,389,Amanda Chaves Da Costa,Amanda Chaves Da Costa,183.83,183.83,Boleto,2025-12-15,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
-0082/2025,388,Priscila Silva Das Neves Frotté,Priscila Silva Das Neves Frotté,158.82,158.82,Boleto,2025-12-15,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
-0082/2025,395,Isabel Donna Silva Dos Santos,Isabel Donna Silva Dos Santos,225.0,225.0,Boleto,2025-12-15,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0082/2025,393,Beatriz Cordeiro Borges,Beatriz Cordeiro Borges,137.78,137.78,PIX SGPay,2025-12-15,2025-12-17 00:32:07.000,2025-12-18 00:00:00.000
-0163/2025,681,Isaque Meirelles Matta,Isaque Meirelles Matta,119.0,119.0,PIX SGPay,2025-12-15,2025-12-06 19:31:49.000,2025-12-08 00:00:00.000
-0163/2025,680,Thaina Macedo Almeida,Thaina Macedo Almeida,60.0,60.0,Boleto,2025-12-15,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0163/2025,679,Haiana De Carvalho Rodrigues,Haiana De Carvalho Rodrigues,60.0,60.0,Boleto,2025-12-15,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0163/2025,678,Mariana Rosa Quintanilha,Mariana Rosa Quintanilha,119.0,119.0,Boleto,2025-12-15,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0163/2025,675,Jorge Luiz Almeida De Souza,Jorge Luiz Almeida De Souza,76.52,76.52,Boleto,2025-12-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0169/2025,704,Miguel Matsumoto Costa,Luana matsumoto costa,255.0,255.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0169/2025,708,Miguel Freires dos Reis,Débora Gonçalves Freires dos Reis,367.0,367.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0169/2025,706,Thalyta Ferreira Braga,Josiane Ferreira Braga,190.0,190.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0169/2025,691,Ana Clara Oliveira Do Nascimento,Ana Célia Carvalho de Oliveira,190.0,190.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0169/2025,695,Lanna Castro De Farias,Mario Rafael Pinto de Farias,190.0,190.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0169/2025,692,Lara Martins Dos Santos Garcia,Denise Martins dos Santos garcia,190.0,190.0,PIX SGPay,2025-12-15,2025-12-15 14:33:50.000,2025-12-16 00:00:00.000
-0172/2025,744,Luciane Alves Dos Santos Carvalho,Luciane Alves Dos Santos Carvalho,148.0,148.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0172/2025,741,Maria Isabel Santos Amaral,Maria Isabel Santos Amaral,148.0,148.0,Boleto,2025-12-15,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0175/2025,722,Renato Contreiras de Oliveira Vinagre,Renato Contreiras de Oliveira Vinagre,1001.1,1001.1,Boleto,2025-12-15,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0169/2025,711,Pedro Santos Fernandes,Pedro Santos Fernandes,190.0,190.0,PIX SGPay,2025-12-15,2025-12-06 11:56:58.000,2025-12-08 00:00:00.000
-0169/2025,709,Miguel Soares Barros,Alexandre da Silva barros,190.0,190.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0172/2025,728,Elaine Cruz da Silva Conrado,Elaine Cruz da Silva Conrado,222.0,222.0,Boleto,2025-12-15,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0172/2025,727,Silvia Costa Silva Bayer,Silvia Costa Silva Bayer,148.0,148.0,Boleto,2025-12-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0172/2025,725,Priscilla Barboza De Sousa Morais,Priscilla Barboza De Sousa Morais,151.05,151.05,Boleto,2025-12-15,2025-12-17 00:00:00.000,2025-12-18 00:00:00.000
-0171/2025,723,Cláudia Nazaré Manhães Ferreira,Cláudia Nazaré Manhães Ferreira,148.0,148.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0163/2025,654,Ane Vitória De Oliveira Alcântara,Marley de oliveira marinho Alcântara,71.43,71.43,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0163/2025,673,Gessica Santos Pinheiro,Gessica Santos Pinheiro,61.47,61.47,Boleto,2025-12-15,2025-12-29 00:00:00.000,2025-12-30 00:00:00.000
-0163/2025,672,Melanni Felicio Soares,Jorge Do Nascimento Soares,100.0,100.0,Boleto,2025-12-15,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0163/2025,671,Jennifer Jhully Da Rocha Nunes,Jennifer Jhully Da Rocha Nunes,98.97,98.97,Boleto,2025-12-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0163/2025,669,Tamiris Rodrigues Ferreira Ribeiro,Tamiris Rodrigues Ferreira Ribeiro,121.5,121.5,Boleto,2025-12-15,2025-12-18 00:00:00.000,2025-12-19 00:00:00.000
-0163/2025,668,Marcos Vinicius Da Silva Muniz,Marcos Vinicius Da Silva Muniz,61.21,61.21,Boleto,2025-12-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0163/2025,667,André Luiz Ramos De Farias,André Luiz Ramos De Farias,75.0,75.0,Boleto,2025-12-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0163/2025,665,ANNY HELLEN SOUZA DOS SANTOS,ANNY HELLEN SOUZA DOS SANTOS,200.0,200.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0163/2025,664,Bárbara Fernandes Vieira Pires,Bárbara Fernandes Vieira Pires,60.0,60.0,PIX SGPay,2025-12-15,2025-12-15 19:54:11.000,2025-12-16 00:00:00.000
-0163/2025,663,Rafaelle Cristina Silva Ferreira,Rafaelle Cristina Silva Ferreira,61.22,61.22,Boleto,2025-12-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0163/2025,662,Rafaela Sant' Ana Batista da Silva,Nilza da Dilava Santana,119.0,119.0,PIX SGPay,2025-12-15,2025-12-04 10:32:26.000,2025-12-05 00:00:00.000
-0163/2025,661,Davi da Silva Paulo,Davi da Silva Paulo,70.42,70.42,Boleto,2025-12-15,2025-12-17 00:00:00.000,2025-12-18 00:00:00.000
-0163/2025,660,Maria Clara Nobre Schneeweiss,Adriana da Silva Nobre Schneeweiss,97.0,97.0,PIX SGPay,2025-12-15,2025-12-14 12:47:29.000,2025-12-15 00:00:00.000
-0163/2025,659,Luana da Silva Vianna,Ana Paula Barbosa da Silva,60.0,60.0,Boleto,2025-12-15,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
-0163/2025,658,Manuelly Dos Santos Alves,Gracieli Ferreira Gomes dos Santos,129.35,129.35,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0163/2025,656,Ana Cristina Sales Gonçalves,Ana Cristina Sales Gonçalves,60.0,60.0,Boleto,2025-12-15,2025-12-04 00:00:00.000,2025-12-05 00:00:00.000
-0163/2025,655,Isabela Lampes Ramos Lopes,Isabela Lampes Ramos Lopes,60.0,60.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
 0163/2025,633,Ana Júlia De Lima Fernandes,Ana Júlia De Lima Fernandes,106.0,106.0,Boleto,2025-12-15,2025-11-14 00:00:00.000,2025-11-17 00:00:00.000
-0169/2025,790,Sarah De Souza Oliveira,Marcus Vinicius Lima de Oliveira,190.0,190.0,PIX SGPay,2025-12-15,2025-12-08 15:33:56.000,2025-12-09 00:00:00.000
-0179/2025,791,Vitória Barbosa de Azevedo,Vitória Barbosa de Azevedo,115.0,115.0,Boleto,2025-12-15,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0184/2025,793,LEONARDO TELLES SILVA,LEONARDO TELLES SILVA,2940.0,2940.0,Boleto,2025-12-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0179/2025,815,Antônio Cesar Araújo Dos Santos,Antônio Cesar Araújo Dos Santos,155.5,155.5,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0179/2025,816,André Victor do Prado Araújo,André Victor do Prado Araújo,124.4,124.4,PIX SGPay,2025-12-15,2025-12-14 21:25:20.000,2025-12-15 00:00:00.000
-0179/2025,817,Caua Henriques Amorim,Caua Henriques Amorim,115.0,115.0,Boleto,2025-12-15,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0179/2025,818,Sergio Augusto Pereira Dos Santos,Sergio Augusto Pereira Dos Santos,90.0,90.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0179/2025,821,Alex Sandro Da Costa,Alex Sandro Da Costa,99.4,99.4,Boleto,2025-12-15,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
-0179/2025,799,Gabriel Fernandes Brito De Abreu,Sidnei Monteiro de Abreu,422.72,422.72,Boleto,2025-12-15,2025-12-17 00:00:00.000,2025-12-18 00:00:00.000
-0179/2025,808,ALEXANDRE RODRIGUES MELONI,ALEXANDRE RODRIGUES MELONI,151.0,151.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0179/2025,810,Diego Azeredo Fernandes,Diego Azeredo Fernandes,117.34,117.34,PIX SGPay,2025-12-15,2025-12-16 07:48:09.000,2025-12-17 00:00:00.000
-0179/2025,812,Bruno Cesar Leite Koch,Bruno Cesar Leite Koch,151.0,151.0,Boleto,2025-12-15,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0179/2025,782,Lívia Ferreira Pinho De Almeida,Lívia Ferreira Pinho De Almeida,90.0,90.0,Boleto,2025-12-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0172/2025,788,Rosiléa Marinho Madureira Martins,Rosiléa Marinho Madureira Martins,148.0,148.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0172/2025,778,Renata De Jesus Alves Pinho,Renata De Jesus Alves Pinho,148.0,148.0,Boleto,2025-12-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0179/2025,763,Vivian Damasio Araujo,Vivian Damasio Araujo,90.0,90.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0179/2025,754,Bruna Santos Pereira,Bruna Santos Pereira,90.0,90.0,Boleto,2025-12-15,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
-0172/2025,747,Cintia Carioly Gomes,Cintia Carioly Gomes,164.73,164.73,Boleto,2025-12-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0172/2025,745,Roberta Cristina Silva Januário,Roberta Cristina Silva Januário,151.1,151.1,Boleto,2025-12-15,2025-12-18 00:00:00.000,2025-12-19 00:00:00.000
 0179/2025,767,Camilli Vitória da Fonseca Ferraz,Camilli Vitória da Fonseca Ferraz,115.0,115.0,PIX SGPay,2025-12-15,2025-11-16 19:23:13.000,2025-11-17 00:00:00.000
-0179/2025,769,Rafaelle Peres Fonseca,Rafaelle Peres Fonseca,115.0,115.0,Boleto,2025-12-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0179/2025,770,Paulo Victor Freire Da Silva,Paulo Victor Freire Da Silva,151.0,151.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0179/2025,771,Luiz Eduardo da Silva Dias de Almeida,Luiz Eduardo da Silva Dias de Almeida,151.0,151.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
 0179/2025,772,Gabriel Delgado Ribeiro,Gabriel Delgado Ribeiro,90.0,90.0,PIX SGPay,2025-12-15,2025-11-27 16:48:05.000,2025-11-28 00:00:00.000
-0179/2025,773,Lindomar Costa Antunes,Lindomar Costa Antunes,117.41,117.41,Boleto,2025-12-15,2025-12-18 00:00:00.000,2025-12-19 00:00:00.000
-0172/2025,756,PRISCILLA DE JESUS ALVES SANTOS,PRISCILLA DE JESUS ALVES SANTOS,148.0,148.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0179/2025,757,Alessandro De Abreu Teixeira,Alessandro De Abreu Teixeira,115.0,115.0,Boleto,2025-12-15,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
-0179/2025,760,Maria Eduarda Domingos de Carvalho,Maria Eduarda Domingos de Carvalho,90.0,90.0,Boleto,2025-12-15,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
 0045/2025,46,Adeliane Guimarães Abrão,Adeliane Guimarães Abrão,3180.0,3180.0,C. Crédito,2025-12-15,2025-03-13 08:35:48.367,2025-03-17 00:00:00.000
 0045/2025,46,Adeliane Guimarães Abrão,Adeliane Guimarães Abrão,1000.0,1000.0,C. Crédito,2025-12-15,2025-03-13 08:36:44.817,2025-03-17 00:00:00.000
-0082/2025,471,Sonia Da Silva Pereira,Sonia Da Silva Pereira,135.0,135.0,Boleto,2025-12-15,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0094/2025,470,CHRISTIAN COUTINHO FERREIRA,Liana Ferreira,250.0,250.0,PIX SGPay,2025-12-15,2025-12-15 08:58:34.000,2025-12-16 00:00:00.000
-0094/2025,470,CHRISTIAN COUTINHO FERREIRA,Liana Ferreira,500.0,500.0,PIX SGPay,2025-12-15,2025-12-15 09:04:04.000,2025-12-16 00:00:00.000
-0061/2025,218,Guilherme Soares Cardoso,Solange Pereira Soares,133.0,133.0,PIX SGPay,2025-12-15,2025-12-12 12:28:00.000,2025-12-15 00:00:00.000
-0061/2025,215,Maria Clara Bastos Batista Raposo,Aline bastos batista,258.22,258.22,Boleto,2025-12-15,2025-12-17 00:00:00.000,2025-12-18 00:00:00.000
-0061/2025,214,Ana Julia Moreira De Carvalho,Nathalie Mendes Moreira,135.74,135.74,PIX SGPay,2025-12-15,2025-12-17 09:22:20.000,2025-12-18 00:00:00.000
-0061/2025,211,Sabriny Araujo Dos santos,Severina araújo de lima santos,223.0,223.0,Boleto,2025-12-15,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0071/2025,244,Marcos Francisco Linhares,Marcos Francisco Linhares,500.0,500.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0070/2025,242,Juliana Arca Miranda,Juliana Arca Miranda,1960.0,1960.0,Boleto,2025-12-15,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0107/2025,517,Karynne Muniz de Carvalho,Karynne Muniz de Carvalho,160.0,160.0,Boleto,2025-12-15,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0107/2025,515,Alexia Mota Vieira,Alexia Mota Vieira,160.0,160.0,PIX SGPay,2025-12-15,2025-12-05 15:51:25.000,2025-12-08 00:00:00.000
 0107/2025,500,Larissa Correia Da Silva,Larissa Correia Da Silva,103.0,103.0,PIX SGPay,2025-12-15,2025-11-29 11:56:49.000,2025-12-01 00:00:00.000
-0107/2025,501,Dayane Santos Cavalcante,Dayane Santos Cavalcante,131.12,131.12,Boleto,2025-12-15,2025-12-11 00:00:00.000,2025-12-12 00:00:00.000
-0107/2025,503,Amanda Reis Packness,Amanda Reis Packness,160.0,160.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0107/2025,504,Mayrla D'Awila Fernandes dos Santos,Mayrla D'Awila Fernandes dos Santos,158.3,158.3,PIX SGPay,2025-12-15,2025-12-19 21:34:48.000,2025-12-22 00:00:00.000
-0107/2025,506,Ester Neves Rodrigues,Ester Neves Rodrigues,155.0,155.0,Boleto,2025-12-15,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0107/2025,499,Beatriz dos Santos Vila de Andrade,Carlos Henrique de Andrade,158.35,158.35,PIX SGPay,2025-12-15,2025-12-20 17:24:07.000,2025-12-22 00:00:00.000
-0082/2025,383,Priscila De Paula Marcante,Priscila De Paula Marcante,135.0,135.0,Boleto,2025-12-15,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
-0082/2025,382,Elisangela Fausto Dorighetti,Elisangela Fausto Dorighetti,150.0,150.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0082/2025,379,Monique Batista Lopes De Miranda,Monique Batista Lopes De Miranda,214.26,214.26,Boleto,2025-12-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0061/2025,377,Thaysa Gabriella Ribeiro Barbosa,Ana Gabriela Ribeiro Duarte,133.0,133.0,PIX SGPay,2025-12-15,2025-12-12 12:30:16.000,2025-12-15 00:00:00.000
-0061/2025,377,Thaysa Gabriella Ribeiro Barbosa,Ana Gabriela Ribeiro Duarte,90.0,90.0,Boleto,2025-12-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0075/2025,359,Caio Barcellos Tavares,Suellen da C Barcellos,700.0,700.0,PIX SGPay,2025-12-15,2025-12-15 17:00:36.000,2025-12-16 00:00:00.000
-0179/2025,824,Yuri Henrici Da Silveira,Yuri Henrici Da Silveira,154.06,154.06,Boleto,2025-12-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0061/2025,210,Cecília Dos Santos Da Costa,Rosilene dos Santos do Nascimento,133.0,133.0,PIX SGPay,2025-12-15,2025-12-15 15:02:43.000,2025-12-16 00:00:00.000
-0061/2025,208,Giovanna de Martins Teverao,Juliana Barbosa de Martins,133.0,133.0,Boleto,2025-12-15,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0061/2025,208,Giovanna de Martins Teverao,Juliana Barbosa de Martins,30.0,30.0,Boleto,2025-12-15,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
-0061/2025,192,Maria Clara Abreu Ramos,ubiraci azevedo ramos,133.0,133.0,PIX SGPay,2025-12-15,2025-12-15 19:29:29.000,2025-12-16 00:00:00.000
-0061/2025,195,Caroline Carvalho Cabral Da Silva,Géssica Carvalho da Silva,433.0,433.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0126/2025,545,Nathália da Cruz Kale dos Santos,Nathália da Cruz Kale dos Santos,1040.0,1040.0,PIX,2025-12-15,2025-12-15 00:00:00.000,2025-12-15 00:00:00.000
-0127/2025,546,Luana Roberta de Jesus Machado Ribeiro,Luana Roberta de Jesus Machado Ribeiro,500.0,500.0,Boleto,2025-12-15,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
-0120/2025,538,Ana Julia Bacellar Sargentini,Barbara dos Reis Bacellar Sargentini,262.0,262.0,Boleto,2025-12-15,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0120/2025,527,Laura De Souza Santos Roque,Camile de Souza Santos,185.0,185.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0120/2025,526,Ariana Da Silva Sodré,Wagner Alves Sodré,267.33,267.33,PIX SGPay,2025-12-15,2025-12-16 13:06:02.000,2025-12-17 00:00:00.000
-0120/2025,532,Estevão Isaías de Oliveira,Vania Ferreira Isaías,393.12,393.12,PIX SGPay,2025-12-15,2025-12-07 07:29:15.000,2025-12-08 00:00:00.000
-0120/2025,531,Luiza Santos de Souza Oliveira,Karina Santos de Souza,185.0,185.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0120/2025,534,Karina Jeronimo Rodrigues,Eliane Jeronimo Rodrigues,204.41,204.41,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0120/2025,533,Ana Luiza Soares de Oliveira,Marcelo Costa de Oliveira,262.0,262.0,Boleto,2025-12-15,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0120/2025,537,Joaquim Da Costa Gonçalves Gouvea,Ana Andrea da Silva Gonçalves Gouvea,185.0,185.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0120/2025,536,Iago Da Silva Souza,João Luiza Da Silva Junior,185.0,185.0,PIX SGPay,2025-12-15,2025-12-15 18:35:59.000,2025-12-16 00:00:00.000
-0107/2025,567,Talita Araújo Dos Santos,Talita Araújo Dos Santos,248.0,248.0,PIX SGPay,2025-12-15,2025-12-15 19:30:13.000,2025-12-16 00:00:00.000
-0140/2025,559,Patricia Cristina de Castro,Patricia Cristina de Castro,470.0,470.0,Boleto,2025-12-15,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
 0160/2025,599,Bianca Machado Cardoso,Bianca Machado Cardoso,940.0,940.0,Boleto,2025-12-15,2025-11-12 00:00:00.000,2025-11-13 00:00:00.000
-0150/2025,588,Caio Jotha Drumond,Rubia Cristina Santos Jotha Drumond,198.34,198.34,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0150/2025,580,Ivine Santos Perazoli,Ivine Santos Perazoli,299.0,299.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0150/2025,587,Nathalia Cristina Ribeiro Da Silva,Nathalia Cristina Ribeiro Da Silva,305.07,305.07,Boleto,2025-12-15,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0150/2025,578,Ana Beatriz Tupini Boaretto,Ana Beatriz Tupini Boaretto,471.77,471.77,Boleto,2025-12-15,2025-12-18 00:00:00.000,2025-12-19 00:00:00.000
-0150/2025,586,Matheus Lopes Pereira Gomes,Matheus Lopes Pereira Gomes,299.0,299.0,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0150/2025,576,Vanessa Gomes Ramos Sanches,Vanessa Gomes Ramos Sanches,198.34,198.34,Boleto,2025-12-15,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0150/2025,577,Amanda Ferreirinha Couto,Amanda Ferreirinha Couto,317.69,317.69,Boleto,2025-12-15,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0150/2025,572,Viviane Nogueira Werneck Rodrigues,Viviane Nogueira Werneck Rodrigues,299.0,299.0,Boleto,2025-12-15,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
-0150/2025,573,Júlia De Oliveira Navega,Júlia De Oliveira Navega,299.0,299.0,Boleto,2025-12-15,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0075/2025,355,Livia Ribeiro da Silva,Leandro Machado da Silva,590.96,590.96,PIX,2025-12-16,2025-12-04 00:00:00.000,2025-12-04 00:00:00.000
-0099/2025,473,Luiz Carlos Martins,Luiz Carlos Martins,11250.0,11250.0,PIX,2025-12-19,2025-12-18 00:00:00.000,2025-12-18 00:00:00.000
-0099/2025,473,Luiz Carlos Martins,Luiz Carlos Martins,1500.0,1500.0,PIX,2025-12-19,2025-12-18 00:00:00.000,2025-12-18 00:00:00.000
-0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,10000.0,10000.0,PIX,2025-12-19,2025-12-19 00:00:00.000,2025-12-19 00:00:00.000
-0173/2025,752,Perla De Andrade Farias,Perla De Andrade Farias,122.14,122.14,Boleto,2025-12-20,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
 0182/2025,779,MARCELO ALVES DA COSTA,MARCELO ALVES DA COSTA,1470.0,1470.0,Boleto,2025-12-20,2025-11-18 00:00:00.000,2025-11-19 00:00:00.000
-0173/2025,784,Renata Leonardo Gomes,Renata Leonardo Gomes,95.0,95.0,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0065/2025,781,Cristiana Barbosa Lopes,Cristiana Barbosa Lopes,334.24,334.24,Boleto,2025-12-20,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
 0173/2025,794,Sarah De Araújo Ribeiro,Sarah De Araújo Ribeiro,107.78,107.78,PIX SGPay,2025-12-20,2025-11-21 14:37:26.000,2025-11-24 00:00:00.000
-0173/2025,792,Jayne Braga De Souza,Jayne Braga De Souza,95.0,95.0,PIX SGPay,2025-12-20,2025-12-20 20:17:34.000,2025-12-22 00:00:00.000
-0173/2025,795,Fernanda De Souza Da Silva,Fernanda De Souza Da Silva,97.02,97.02,Boleto,2025-12-20,2025-12-24 00:00:00.000,2025-12-26 00:00:00.000
-0043/2025,44,Elenice Martins da Silva Bom,Elenice Martins da Silva Bom,350.0,350.0,PIX SGPay,2025-12-20,2025-12-08 10:50:07.000,2025-12-09 00:00:00.000
-0174/2025,721,Carolina Ribeiro Cosendey,Carolina Ribeiro Cosendey,648.6,648.6,Boleto,2025-12-20,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0173/2025,734,Larissa Galdino Ferreira Coutinho,Larissa Galdino Ferreira Coutinho,95.0,95.0,PIX SGPay,2025-12-20,2025-12-20 04:50:58.000,2025-12-22 00:00:00.000
-0173/2025,733,Vitor Ferreira Dos Reis,Vitor Ferreira Dos Reis,96.99,96.99,Boleto,2025-12-20,2025-12-23 00:00:00.000,2025-12-24 00:00:00.000
 0173/2025,732,Gabriella Caputo Da Costa Moreira De Souza,Gabriella Caputo Da Costa Moreira De Souza,178.0,178.0,Boleto,2025-12-20,2025-11-28 00:00:00.000,2025-12-01 00:00:00.000
-0173/2025,731,Sabrina Evellyn Ramos Ferreira,Sabrina Evellyn Ramos Ferreira,95.0,95.0,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0065/2025,276,Flávio De Assis Nogueira Junior,Flávio De Assis Nogueira Junior,167.31,167.31,Boleto,2025-12-20,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
-0065/2025,274,Silvia Leticia Da Silva Rodrigues Coelho De Faria,Silvia Leticia Da Silva Rodrigues Coelho De Faria,130.8,130.8,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0093/2025,422,Ricardo Ferreira Boucinhas,Ricardo Ferreira Boucinhas,500.0,500.0,Boleto,2025-12-20,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
-0066/2025,423,Matheus De Oliveira Brito,Regina Almeida de Oliveira Brito,227.3,227.3,PIX SGPay,2025-12-20,2025-12-25 14:27:13.000,2025-12-26 00:00:00.000
-0085/2025,406,Andréa Vidal Luciano,Andréa Vidal Luciano,500.0,500.0,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0100/2025,474,IGHOR DANIEL DE MELLO PINHO,IGHOR DANIEL DE MELLO PINHO,500.0,500.0,Boleto,2025-12-20,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0101/2025,477,Morgana Bruna Rodrigues Tenório,Morgana Bruna Rodrigues Tenório,200.0,200.0,Boleto,2025-12-20,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0098/2025,460,Lisliane Paixão Macedo,Lisliane Paixão Macedo,500.0,500.0,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0066/2025,253,RUAN CARLOS BONAFÉ COSTA,Grasielly Teixeira bonafé Costa,231.1,231.1,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0065/2025,254,Maria Eduarda Bernardo De Souza,Maria Eduarda Bernardo De Souza,167.31,167.31,Boleto,2025-12-20,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
-0065/2025,243,Isabella Fernandes Madeira,Isabella Fernandes Madeira,141.34,141.34,Boleto,2025-12-20,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0065/2025,238,Leonardo Da Silva Andrade,Leonardo Da Silva Andrade,109.71,109.71,PIX SGPay,2025-12-20,2025-12-18 21:19:02.000,2025-12-19 00:00:00.000
-0066/2025,236,Jennifer Laís Leite Alexandrino,Tayse Fernanda leite silva,264.44,264.44,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0066/2025,237,João Victor De Souza Alonso,Andrea Batista De Souza,264.44,264.44,Boleto,2025-12-20,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
-0066/2025,246,Gabrielly Gomes Leite,Uilian Jeime Lopes Leite,197.78,197.78,Boleto,2025-12-20,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0066/2025,251,João Gabriel Cruz Rodrigues,Ana Luisa Souza Cruz Rodrigues,338.38,338.38,Boleto,2025-12-20,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0065/2025,252,Michael Da Silva Barreto,Michael Da Silva Barreto,109.71,109.71,Boleto,2025-12-20,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0066/2025,233,Agatha Vitoria De Souza Da Silva,Vanessa de Souza Silva Baltazar,197.78,197.78,Boleto,2025-12-20,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0066/2025,231,Jayme Costa De Oliveira,Jair Soares de Oliveira,231.1,231.1,Boleto,2025-12-20,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
 0065/2025,225,Vaneska Dos Reis Vasconcelos,Vaneska Dos Reis Vasconcelos,109.71,109.71,Boleto,2025-12-20,2025-11-21 00:00:00.000,2025-11-24 00:00:00.000
-0066/2025,228,José David Prudente Escudeiro Paixão,Mirian Prudente Escudeiro,364.44,364.44,Boleto,2025-12-20,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0065/2025,263,Eduarda De Souza Pereira,Eduarda De Souza Pereira,171.02,171.02,PIX SGPay,2025-12-20,2025-12-26 10:04:28.000,2025-12-29 00:00:00.000
-0065/2025,264,Sabrina De Carvalho Jardim,Sabrina De Carvalho Jardim,167.31,167.31,Boleto,2025-12-20,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0065/2025,337,Patricia Dos Santos Silva Soares,Patricia Dos Santos Silva Soares,109.71,109.71,Boleto,2025-12-20,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0075/2025,326,João Eduardo Costa Sousa,Lucia Maria da Silva Costa,226.0,226.0,Boleto,2025-12-20,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0065/2025,327,Marcus Vinícius Lima Da Cunha,Marcus Vinícius Lima Da Cunha,109.71,109.71,Boleto,2025-12-20,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0101/2025,478,Michelle Felici de Andrade,Michelle Felici de Andrade,200.0,200.0,PIX SGPay,2025-12-20,2025-12-10 17:03:54.000,2025-12-11 00:00:00.000
-0101/2025,479,Matheus Ribeiro Santos Sales,Matheus Ribeiro Santos Sales,200.0,200.0,PIX SGPay,2025-12-20,2025-12-01 14:45:30.000,2025-12-02 00:00:00.000
-0079/2025,373,Caroline Rangel dos Santos,Caroline Rangel dos Santos,500.0,500.0,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0101/2025,496,Caroline De Oliveira Dos Anjos Vargas,Caroline De Oliveira Dos Anjos Vargas,200.0,200.0,PIX SGPay,2025-12-20,2025-12-03 19:38:14.000,2025-12-04 00:00:00.000
-0101/2025,493,Juliana Toledo de Mesquita,Juliana Toledo de Mesquita,200.0,200.0,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0101/2025,490,Arlete Suzana Florentino Sarzedas,Arlete Suzana Florentino Sarzedas,200.0,200.0,Boleto,2025-12-20,2025-12-18 00:00:00.000,2025-12-19 00:00:00.000
-0101/2025,492,Rodrigo Silveira Xavier,Rodrigo Silveira Xavier,200.0,200.0,Boleto,2025-12-20,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0101/2025,486,Luciana Francisca De Araujo,Luciana Francisca De Araujo,200.0,200.0,Boleto,2025-12-20,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
-0101/2025,481,Lyvia Ignacio de Lima Peçanha,Lyvia Ignacio de Lima Peçanha,200.0,200.0,Boleto,2025-12-20,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
-0101/2025,482,Lilian Mendonça Moura Vitorino,Lilian Mendonça Moura Vitorino,226.67,226.67,Boleto,2025-12-20,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0065/2025,321,Ester Freitas Costa,Ester Freitas Costa,167.31,167.31,Boleto,2025-12-20,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
-0066/2025,305,Rafaela Alexandra Macedo Pereira,Luciene Macedo Ferreira Pereira,476.0,476.0,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0066/2025,306,Nathaly Gama da Fonseca,Gisele de Araujo Gama da Fonseca,197.78,197.78,Boleto,2025-12-20,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0063/2025,176,Andréia Rosa França do Valle,Andréia Rosa França do Valle,1500.0,1500.0,Boleto,2025-12-20,2025-12-03 00:00:00.000,2025-12-04 00:00:00.000
-0152/2025,591,Matheus de Vargas Felipe da Silva,Matheus de Vargas Felipe da Silva,658.0,658.0,Boleto,2025-12-20,2025-12-17 00:00:00.000,2025-12-18 00:00:00.000
-0153/2025,592,Fernanda Meirim Pessurno Xavier,Fernanda Meirim Pessurno Xavier,470.0,470.0,Boleto,2025-12-20,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0154/2025,593,Mariana Barros Machado da Silva,Mariana Barros Machado da Silva,658.0,658.0,Boleto,2025-12-20,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0139/2025,558,Luana Salgado de Menezes Viturino,Luana Salgado de Menezes Viturino,648.6,648.6,Boleto,2025-12-20,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0138/2025,557,Doris da Silva Machado,Doris da Silva Machado,470.0,470.0,Boleto,2025-12-20,2025-12-16 00:00:00.000,2025-12-17 00:00:00.000
-0142/2025,561,Gustavo Fernandes de Carvalho,Gustavo Fernandes de Carvalho,648.6,648.6,Boleto,2025-12-20,2025-12-02 00:00:00.000,2025-12-03 00:00:00.000
-0122/2025,529,Andréa de Melo Basilio,Andréa de Melo Basilio,500.0,500.0,Boleto,2025-12-20,2025-12-05 00:00:00.000,2025-12-08 00:00:00.000
-0125/2025,544,Gessika Dias,Gessika Dias,500.0,500.0,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0131/2025,550,Viviane Machado Monteiro Fernandes,Viviane Machado Monteiro Fernandes,500.0,500.0,Boleto,2025-12-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0126/2025,545,Nathália da Cruz Kale dos Santos,Nathália da Cruz Kale dos Santos,300.0,300.0,PIX,2025-12-21,2025-12-21 00:00:00.000,2025-12-21 00:00:00.000
-0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,2150.0,2150.0,PIX,2025-12-21,2025-12-21 00:00:00.000,2025-12-21 00:00:00.000
-0112/2025,513,Anna Beatriz Nunes Barroso,Natalia Ferraz Simoes Nunes,3000.0,3000.0,PIX,2025-12-22,2025-12-22 00:00:00.000,2025-12-22 00:00:00.000
-0158/2025,597,. Fênix Plataforma de Crédito,. Fênix Plataforma de Crédito,6369.44,6369.44,Boleto,2025-12-23,2025-12-23 00:00:00.000,2025-12-24 00:00:00.000
-0126/2025,545,Nathália da Cruz Kale dos Santos,Nathália da Cruz Kale dos Santos,12775.0,12775.0,Boleto,2025-12-24,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
-0132/2025,551,Eliana Miranda Leripio,Eliana Miranda Leripio,500.0,500.0,Boleto,2025-12-25,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0156/2025,601,Alessandra Coelho Gomes Da Fonseca,Alessandra Coelho Gomes Da Fonseca,155.83,155.83,PIX SGPay,2025-12-25,2025-12-29 14:35:46.000,2025-12-30 00:00:00.000
-0161/2025,605,Natália Freitas de Barros,Natália Freitas de Barros,191.0,191.0,Boleto,2025-12-25,2025-12-24 00:00:00.000,2025-12-26 00:00:00.000
-0161/2025,606,Evelyn de Castro Silveira da Silva,Evelyn de Castro Silveira da Silva,279.84,279.84,Boleto,2025-12-25,2025-12-29 00:00:00.000,2025-12-30 00:00:00.000
-0156/2025,616,Giovanna de Araújo Costa,Giovanna de Araújo Costa,118.0,118.0,PIX SGPay,2025-12-25,2025-12-13 11:09:02.000,2025-12-15 00:00:00.000
-0162/2025,621,Renata Faria Alves,Renata Faria Alves,479.5,479.5,Boleto,2025-12-25,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0161/2025,626,Giovana Pinto Martins,Giovana Pinto Martins,191.0,191.0,PIX SGPay,2025-12-25,2025-12-17 11:56:14.000,2025-12-18 00:00:00.000
-0162/2025,623,Paula da Rocha Vaz Dos Santos Duarte,Paula da Rocha Vaz Dos Santos Duarte,158.43,158.43,Boleto,2025-12-25,2025-12-08 00:00:00.000,2025-12-09 00:00:00.000
-0162/2025,622,Talita Oliveira Rodrigues,Talita Oliveira Rodrigues,274.0,274.0,Boleto,2025-12-25,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0023/2025,25,CRISTIANE SANTOS MORAES,CRISTIANE SANTOS MORAES,2924.0,2924.0,PIX,2025-12-25,2025-12-23 00:00:00.000,2025-12-23 00:00:00.000
-0185/2025,797,Maria Aline Araujo do Monte Monteiro,Maria Aline Araujo do Monte Monteiro,686.0,686.0,Boleto,2025-12-25,2025-12-10 00:00:00.000,2025-12-11 00:00:00.000
-0162/2025,647,Bernardo Corrêa Lima Dos Santos,Wagner VILS Ribeiro dos Santos,274.0,274.0,Boleto,2025-12-25,2025-12-17 00:00:00.000,2025-12-18 00:00:00.000
-0161/2025,639,Maria Eduarda Duarte Fraga,Welder Silva Fraga,274.0,274.0,Boleto,2025-12-25,2025-12-24 00:00:00.000,2025-12-26 00:00:00.000
-0161/2025,640,Amanda Franco Barbosa Da Silva,Amanda Franco Barbosa Da Silva,209.8,209.8,Boleto,2025-12-25,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0162/2025,641,Clarice Dos Santos Souza Class,Clarice Dos Santos Souza Class,137.0,137.0,Boleto,2025-12-25,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0161/2025,642,Larissa dos Santos Rangel Ferrete,Larissa dos Santos Rangel Ferrete,233.49,233.49,PIX SGPay,2025-12-25,2025-12-29 10:14:57.000,2025-12-30 00:00:00.000
-0161/2025,644,Ana Lorena Lins de Sousa,Ana Lorena Lins de Sousa,139.93,139.93,Boleto,2025-12-25,2025-12-29 00:00:00.000,2025-12-30 00:00:00.000
-0161/2025,634,Maria Eduarda Braga Alves,Maria Eduarda Braga Alves,685.0,685.0,Boleto,2025-12-25,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0162/2025,635,Cristiana Gama Cardoso,Cristiana Gama Cardoso,274.0,274.0,Boleto,2025-12-25,2025-12-18 00:00:00.000,2025-12-19 00:00:00.000
-0162/2025,637,Yasmin Cristina Da Silva Pereira,Teresa cristina da Silva,279.84,279.84,Boleto,2025-12-25,2025-12-29 00:00:00.000,2025-12-30 00:00:00.000
-0161/2025,630,LETICIA DA COSTA MOREIRA,EDMILSON MOREIRA DA SILVA,341.07,341.07,Boleto,2025-12-25,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0072/2025,245,Maria Eduarda Gomes Pereira Maia,Maria Eduarda Gomes Pereira Maia,5000.0,5000.0,PIX SGPay,2025-12-26,2025-12-26 14:34:01.000,2025-12-29 00:00:00.000
-0137/2025,556,Cássia de Andrade Soares Caldas,Cássia de Andrade Soares Caldas,837.4,837.4,Boleto,2025-12-26,2025-12-29 00:00:00.000,2025-12-30 00:00:00.000
 0052/2025,150,Luiz Claudio Marques Dos Santos,Alessandra Marques da Silva,360.0,360.0,C. Crédito,2025-12-27,2025-11-27 16:17:42.797,2025-11-27 00:00:00.000
-0099/2025,473,Luiz Carlos Martins,Luiz Carlos Martins,300.0,300.0,PIX,2025-12-28,2025-12-28 00:00:00.000,2025-12-28 00:00:00.000
-0028/2025,30,NADJA SIMONE SANTOS DE PAULA,NADJA SIMONE SANTOS DE PAULA,1000.0,1000.0,PIX,2025-12-30,2025-12-30 00:00:00.000,2025-12-30 00:00:00.000
-0038/2025,40,Maria candida pereira da costa,Maria candida pereira da costa,600.0,600.0,PIX SGPay,2025-12-30,2025-12-29 09:25:57.000,2025-12-30 00:00:00.000
-0146/2025,566,Isabelle Rangel de Oliveira,Isabelle Rangel de Oliveira,10046.25,10046.25,Boleto,2025-12-30,2025-12-23 00:00:00.000,2025-12-24 00:00:00.000
-0116/2025,522,Ana Paula Oliveira Sá Motta,Ana Paula Oliveira Sá Motta,2000.0,2000.0,Boleto,2025-12-30,2025-12-30 00:00:00.000,2025-12-31 00:00:00.000
-0032/2025,34,MILENA ALVES CRESPO AZEVEDO,MILENA ALVES CRESPO AZEVEDO,5000.0,5000.0,PIX,2025-12-31,2025-12-31 00:00:00.000,2025-12-31 00:00:00.000
-0059/2025,188,Davi Pluvie Silva,Cynthia Pluvie Sant Anna de Mello,210.06,210.06,C. Crédito,2026-01-02,2025-12-02 13:50:02.517,2025-12-02 00:00:00.000
-0094/2025,469,Anna Clara Campos,Adriana dos Santos Campos,232.17,232.17,C. Crédito,2026-01-03,2025-12-03 15:28:04.430,2025-12-03 00:00:00.000
 0053/2025,108,BEATRIZ LADEWIG MARQUES,RENATA LADEWIG DE ARAUJO MARQUES,333.34,333.34,C. Crédito,2026-01-04,2025-11-04 15:57:12.983,2025-11-04 00:00:00.000
-0094/2025,428,Ana Clara Rodrigues Vieira Lyra,Glauce Rodrigues vieira,132.84,132.84,C. Crédito,2026-01-05,2025-12-05 13:47:21.693,2025-12-05 00:00:00.000
 0103/2025,487,Avelino Henrique de Paiva,Avelino Henrique de Paiva,1500.0,1500.0,Boleto,2026-01-05,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
-0155/2025,594,Vânia de Almeida Fragoso,Vânia de Almeida Fragoso,470.0,470.0,Boleto,2026-01-05,2025-12-30 00:00:00.000,2025-12-31 00:00:00.000
 0076/2025,269,CVB Colégio Vital Brasil,CVB Colégio Vital Brasil,9762.82,9762.82,PIX,2026-01-06,2025-01-06 00:00:00.000,2025-01-06 00:00:00.000
-0059/2025,249,Davi Machado Carvalho,Debora machado,200.0,200.0,C. Crédito,2026-01-08,2025-12-08 14:53:27.740,2025-12-08 00:00:00.000
-0075/2025,310,Maria Eduarda De Souza Aguiar,Aretha de Souza Aguiar,595.66,595.66,C. Crédito,2026-01-08,2025-12-08 16:05:43.887,2025-12-08 00:00:00.000
 0058/2025,144,Geane Luz Alves de Souza,Geane Luz Alves de Souza,500.0,500.0,PIX,2026-01-10,2025-01-09 00:00:00.000,2025-01-09 00:00:00.000
-0056/2025,153,Analua Poubel Morse,Luana Alves Costa Poubel,22.72,22.72,Boleto,2026-01-10,2025-12-15 00:00:00.000,2025-12-16 00:00:00.000
-0056/2025,151,Victor Reis Porto,Elizabeth Gadelha Reis,25.0,25.0,Boleto,2026-01-10,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0056/2025,170,Júlia De Lima Silva,Achilles Theodoro da Silva Júnior,168.36,168.36,Boleto,2026-01-10,2025-12-09 00:00:00.000,2025-12-10 00:00:00.000
 0084/2025,405,José Luciano Macedo Soares,José Luciano Macedo Soares,500.0,500.0,PIX,2026-01-10,2025-07-25 00:00:00.000,2025-07-25 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-01-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
 0053/2025,143,Bernardo Rangel França Santos,Milla Tathiana Rangel França,200.0,200.0,C. Crédito,2026-01-11,2025-11-11 17:27:46.247,2025-11-11 00:00:00.000
 0113/2025,519,Beatriz Bueno Marques,Daniele Bueno Martins Marques,204.74,204.74,C. Crédito,2026-01-14,2025-11-14 17:08:14.387,2025-11-14 00:00:00.000
-0160/2025,599,Bianca Machado Cardoso,Bianca Machado Cardoso,940.0,940.0,Boleto,2026-01-15,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0087/2025,408,Alace Luiz Saraiva,Alace Luiz Saraiva,500.0,500.0,Boleto,2026-01-15,2025-12-30 00:00:00.000,2025-12-31 00:00:00.000
-0163/2025,633,Ana Júlia De Lima Fernandes,Ana Júlia De Lima Fernandes,106.0,106.0,Boleto,2026-01-15,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0163/2025,679,Haiana De Carvalho Rodrigues,Haiana De Carvalho Rodrigues,60.0,60.0,Boleto,2026-01-15,2025-12-30 00:00:00.000,2025-12-31 00:00:00.000
-0173/2025,732,Gabriella Caputo Da Costa Moreira De Souza,Gabriella Caputo Da Costa Moreira De Souza,178.0,178.0,Boleto,2026-01-20,2025-12-30 00:00:00.000,2025-12-31 00:00:00.000
-0093/2025,422,Ricardo Ferreira Boucinhas,Ricardo Ferreira Boucinhas,500.0,500.0,Boleto,2026-01-20,2025-12-29 00:00:00.000,2025-12-30 00:00:00.000
-0182/2025,779,MARCELO ALVES DA COSTA,MARCELO ALVES DA COSTA,1470.0,1470.0,Boleto,2026-01-20,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
-0065/2025,262,Camila Macedo Nascimento,Maria Cristina Conceição de Macedo Nascimento,167.31,167.31,Boleto,2026-01-20,2025-12-22 00:00:00.000,2025-12-23 00:00:00.000
-0162/2025,648,Barbara De Sá Ribeiro Kossatz,Barbara De Sá Ribeiro Kossatz,209.0,209.0,Boleto,2026-01-25,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0162/2025,649,Pedro Ivo Valença Pereira,Luiz Claudio Pereira,137.0,137.0,Boleto,2026-01-25,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0162/2025,650,Rebeca Cabral Tavares Pontes,José Maria Rodrigues Tavares Pontes,137.0,137.0,Boleto,2026-01-25,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
-0162/2025,623,Paula da Rocha Vaz Dos Santos Duarte,Paula da Rocha Vaz Dos Santos Duarte,158.43,158.43,Boleto,2026-01-25,2025-12-29 00:00:00.000,2025-12-30 00:00:00.000
-0156/2025,617,Tais Monara Da Silva Barbosa,Tais Monara Da Silva Barbosa,164.16,164.16,Boleto,2026-01-25,2025-12-26 00:00:00.000,2025-12-29 00:00:00.000
 0052/2025,150,Luiz Claudio Marques Dos Santos,Alessandra Marques da Silva,360.0,360.0,C. Crédito,2026-01-27,2025-11-27 16:17:42.797,2025-11-27 00:00:00.000
-0094/2025,469,Anna Clara Campos,Adriana dos Santos Campos,232.17,232.17,C. Crédito,2026-02-03,2025-12-03 15:28:04.430,2025-12-03 00:00:00.000
 0103/2025,487,Avelino Henrique de Paiva,Avelino Henrique de Paiva,1500.0,1500.0,Boleto,2026-02-05,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
-0075/2025,310,Maria Eduarda De Souza Aguiar,Aretha de Souza Aguiar,595.67,595.67,C. Crédito,2026-02-08,2025-12-08 16:05:43.887,2025-12-08 00:00:00.000
-0059/2025,249,Davi Machado Carvalho,Debora machado,200.0,200.0,C. Crédito,2026-02-08,2025-12-08 14:53:27.740,2025-12-08 00:00:00.000
 0084/2025,405,José Luciano Macedo Soares,José Luciano Macedo Soares,500.0,500.0,PIX,2026-02-10,2025-07-25 00:00:00.000,2025-07-25 00:00:00.000
 0056/2025,160,Gabriela Lima Souza,Manoel Souza Pequeno,1500.0,1500.0,PIX SGPay,2026-02-10,2025-09-22 18:06:44.000,2025-09-23 00:00:00.000
-0056/2025,170,Júlia De Lima Silva,Achilles Theodoro da Silva Júnior,168.36,168.36,Boleto,2026-02-10,2025-12-12 00:00:00.000,2025-12-15 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-02-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
 0113/2025,519,Beatriz Bueno Marques,Daniele Bueno Martins Marques,204.73,204.73,C. Crédito,2026-02-14,2025-11-14 17:08:14.387,2025-11-14 00:00:00.000
-0160/2025,599,Bianca Machado Cardoso,Bianca Machado Cardoso,940.0,940.0,Boleto,2026-02-15,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
-0182/2025,779,MARCELO ALVES DA COSTA,MARCELO ALVES DA COSTA,1470.0,1470.0,Boleto,2026-02-20,2025-12-24 00:00:00.000,2025-12-26 00:00:00.000
-0093/2025,422,Ricardo Ferreira Boucinhas,Ricardo Ferreira Boucinhas,500.0,500.0,Boleto,2026-02-20,2025-12-29 00:00:00.000,2025-12-30 00:00:00.000
 0103/2025,487,Avelino Henrique de Paiva,Avelino Henrique de Paiva,1500.0,1500.0,Boleto,2026-03-05,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
 0084/2025,405,José Luciano Macedo Soares,José Luciano Macedo Soares,500.0,500.0,PIX,2026-03-10,2025-07-25 00:00:00.000,2025-07-25 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-03-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
 0030/2025,32,Isabella Rodrigues Vieira Menezes Dutra,Isabella Rodrigues Vieira Menezes Dutra,700.0,700.0,PIX,2026-03-11,2025-08-15 00:00:00.000,2025-08-15 00:00:00.000
 0113/2025,519,Beatriz Bueno Marques,Daniele Bueno Martins Marques,204.74,204.74,C. Crédito,2026-03-14,2025-11-14 17:08:14.387,2025-11-14 00:00:00.000
-0160/2025,599,Bianca Machado Cardoso,Bianca Machado Cardoso,940.0,940.0,Boleto,2026-03-15,2025-12-01 00:00:00.000,2025-12-02 00:00:00.000
 0103/2025,487,Avelino Henrique de Paiva,Avelino Henrique de Paiva,1500.0,1500.0,Boleto,2026-04-05,2025-11-25 00:00:00.000,2025-11-26 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-04-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
 0113/2025,519,Beatriz Bueno Marques,Daniele Bueno Martins Marques,204.73,204.73,C. Crédito,2026-04-14,2025-11-14 17:08:14.387,2025-11-14 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-05-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
 0113/2025,519,Beatriz Bueno Marques,Daniele Bueno Martins Marques,204.74,204.74,C. Crédito,2026-05-14,2025-11-14 17:08:14.387,2025-11-14 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-06-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
 0113/2025,519,Beatriz Bueno Marques,Daniele Bueno Martins Marques,204.73,204.73,C. Crédito,2026-06-14,2025-11-14 17:08:14.387,2025-11-14 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-07-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
 0113/2025,519,Beatriz Bueno Marques,Daniele Bueno Martins Marques,204.74,204.74,C. Crédito,2026-07-14,2025-11-14 17:08:14.387,2025-11-14 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-08-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
 0113/2025,519,Beatriz Bueno Marques,Daniele Bueno Martins Marques,204.73,204.73,C. Crédito,2026-08-14,2025-11-14 17:08:14.387,2025-11-14 00:00:00.000
-0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-09-11,2025-12-11 15:35:21.710,2025-12-11 00:00:00.000
 0101/2025,491,Jaqueline Guerra De Lima,Jaqueline Guerra De Lima,200.0,200.0,Boleto,2026-10-20,2025-10-01 00:00:00.000,2025-10-02 00:00:00.000
 0134/2025,553,Débora Werneck,Débora Werneck,1000.0,1000.0,PIX,2026-10-31,2025-10-31 00:00:00.000,2025-10-31 00:00:00.000
-0102/2025,475,Kátia Lúcia Teixeira Miranda Gomes,Kátia Lúcia Teixeira Miranda Gomes,2500.0,2500.0,Boleto,2026-12-20,2025-12-19 00:00:00.000,2025-12-22 00:00:00.000
 0161/2025,631,Maria Luiza Peral Andrade,Maria Luiza Peral Andrade,137.0,137.0,Boleto,2027-08-25,2025-10-06 00:00:00.000,2025-10-07 00:00:00.000
 0107/2025,516,Luma Da Silveira Alvarez De Almeida,Luma Da Silveira Alvarez De Almeida,162.2,162.2,PIX SGPay,2025-10-15,2026-01-05 21:23:36.000,2026-01-06 00:00:00.000
 0101/2025,476,Roberta Aguiar Nunes Lima,Roberta Aguiar Nunes Lima,214.5,214.5,PIX SGPay,2025-10-20,2026-03-19 16:00:12.000,2026-03-20 00:00:00.000
@@ -8129,3 +7672,471 @@ Projeto,Cód.,Nome,Pagador,Valor,Valor Pago,Meio de Pag.,Data Vencimento,Data Pa
 0131/2025,550,Viviane Machado Monteiro Fernandes,Viviane Machado Monteiro Fernandes,765.66,765.66,CARTÃO DE CRÉDITO,2028-01-27,2026-07-27 13:35:05.823,2028-02-17 00:00:00.000
 0131/2025,550,Viviane Machado Monteiro Fernandes,Viviane Machado Monteiro Fernandes,765.66,765.66,CARTÃO DE CRÉDITO,2028-02-27,2026-07-27 13:35:05.823,2028-03-18 00:00:00.000
 0131/2025,550,Viviane Machado Monteiro Fernandes,Viviane Machado Monteiro Fernandes,75.2,75.2,C. Crédito,2028-02-27,2026-07-27 13:37:17.420,2026-07-27 00:00:00.000
+0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,141.28,141.28,PIX SGPay,2025-08-10 00:00:00,2025-12-03 20:48:10.000,2025-12-04 00:00:00
+0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,140.04,140.04,PIX SGPay,2025-09-10 00:00:00,2025-12-03 20:49:40.000,2025-12-04 00:00:00
+0120/2025,543,Pedro Ivo Ferreira Ribeiro,Tatiana Marins Ferreira,193.9,193.9,Boleto,2025-09-15 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0049/2025,354,Gustavo Freitas Teixeira Da Silva,Andrea Freitas da Silva,256.45,256.45,Boleto,2025-09-20 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0049/2025,93,Flávia Da Silva Chagas,Bruno Leonardo Figueiredo das Chagas,139.57,139.57,Boleto,2025-09-20 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,139.12,139.12,PIX SGPay,2025-10-10 00:00:00,2025-12-10 07:39:08.000,2025-12-11 00:00:00
+0075/2025,279,Anna Victória dos Santos de Oliveira,Tamirys Alves de Oliveira,195.54,195.54,PIX SGPay,2025-10-10 00:00:00,2025-12-12 07:36:05.000,2025-12-15 00:00:00
+0120/2025,543,Pedro Ivo Ferreira Ribeiro,Tatiana Marins Ferreira,192.58,192.58,Boleto,2025-10-15 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00
+0150/2025,581,MATHEUS BRAGA MAYRINCK SILVEIRA,MATHEUS BRAGA MAYRINCK SILVEIRA,261.2,261.2,Boleto,2025-10-15 00:00:00,2025-12-04 00:00:00.000,2025-12-05 00:00:00
+0101/2025,480,Anna Beatriz Faria De Assunção,Anna Beatriz Faria De Assunção,208.41,208.41,Boleto,2025-10-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0049/2025,354,Gustavo Freitas Teixeira Da Silva,Andrea Freitas da Silva,254.04,254.04,Boleto,2025-10-20 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0065/2025,257,Cleber de Campos Passos,Cleber de Campos Passos,174.14,174.14,PIX SGPay,2025-10-20 00:00:00,2025-12-17 12:14:25.000,2025-12-18 00:00:00
+0065/2025,295,Flávia De Souza Mayerhofer Costa,Flávia De Souza Mayerhofer Costa,227.54,227.54,Boleto,2025-10-20 00:00:00,2025-12-04 00:00:00.000,2025-12-05 00:00:00
+0049/2025,93,Flávia Da Silva Chagas,Bruno Leonardo Figueiredo das Chagas,138.36,138.36,Boleto,2025-10-20 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0023/2025,25,CRISTIANE SANTOS MORAES,CRISTIANE SANTOS MORAES,2916.0,2916.0,PIX,2025-10-25 00:00:00,2025-12-02 00:00:00.000,2025-12-02 00:00:00
+0056/2025,137,Letícia Mendes Tavares De Moura,Lívila Mendes Tavares,149.58,149.58,Boleto,2025-11-10 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0050/2025,50,Luma Pereira Xavier Pedro,Luciana Jacintho Pereira,500.0,500.0,PIX,2025-11-10 00:00:00,2025-12-12 00:00:00.000,2025-12-12 00:00:00
+0056/2025,164,Marianna Povoas Trugilho Gomes,Tatiane Povoas Trugilho,173.83,173.83,Boleto,2025-11-10 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,137.88,137.88,PIX SGPay,2025-11-10 00:00:00,2025-12-10 07:40:03.000,2025-12-11 00:00:00
+0075/2025,299,Brenda Alice Ribeiro Teodorio,Brenda Alice Ribeiro Teodorio,193.44,193.44,Boleto,2025-11-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0075/2025,301,Leandro Frazão Bernardino,Munique Frazão de Lima Vidal,193.68,193.68,PIX SGPay,2025-11-10 00:00:00,2025-12-12 23:18:56.000,2025-12-15 00:00:00
+0075/2025,302,Alice Dos Santos Pimentel,Bruna cavalcante dos santos pimentel,193.02,193.02,Boleto,2025-11-10 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0075/2025,279,Anna Victória dos Santos de Oliveira,Tamirys Alves de Oliveira,193.68,193.68,PIX SGPay,2025-11-10 00:00:00,2025-12-12 07:37:58.000,2025-12-15 00:00:00
+0075/2025,355,Livia Ribeiro da Silva,Leandro Machado da Silva,193.14,193.14,Boleto,2025-11-10 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0075/2025,346,Júlia Contildes Crisóstomo,Márcio Carvalho Crisóstomo,193.26,193.26,PIX SGPay,2025-11-10 00:00:00,2025-12-05 14:19:48.000,2025-12-08 00:00:00
+0075/2025,308,Nicolas Da Silveira Barbosa Knuppe De Azevedo,Deiselane da Silveira Barbosa,137.68,137.68,Boleto,2025-11-10 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0075/2025,309,Isabelle Avilez Nogueira,Alice Avilez Ferreira Nogueira,193.02,193.02,Boleto,2025-11-10 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0075/2025,312,Emanuelle Soares Balbino,Hellen Naan Santos Soares,193.44,193.44,Boleto,2025-11-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0075/2025,322,Letícia Torres Ferreira,Rosângela dos Santos Torres Ferreira,193.14,193.14,Boleto,2025-11-10 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0075/2025,364,Ana Victoria Ferreira Campos Da Silva,Aline ferreira Maria,193.68,193.68,C. Débito,2025-11-10 00:00:00,2025-12-12 12:46:54.200,2025-12-12 00:00:00
+0075/2025,363,Ana Carolina Da Silva Santos,Wagno Souza Santos,193.14,193.14,Boleto,2025-11-10 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0144/2025,563,Rodrigo Werberg de Oliveira,Rodrigo Werberg de Oliveira,869.4,869.4,Boleto,2025-11-10 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0150/2025,579,Gabriela Costa De Souza Silva,Rogério Vieira da Silva,307.97,307.97,Boleto,2025-11-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0082/2025,400,Geísa Rocha Dos Anjos Baptista,Geísa Rocha Dos Anjos Baptista,138.89,138.89,Boleto,2025-11-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0082/2025,402,Giseli Azeredo Mataruna de Figueiredo,Giseli Azeredo Mataruna de Figueiredo,262.57,262.57,Boleto,2025-11-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0082/2025,380,Yasmim Condeixa Nogueira,Yasmim Condeixa Nogueira,200.09,200.09,Boleto,2025-11-15 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0082/2025,381,Patrícia Christina Gomes Silva,Patrícia Christina Gomes Silva,138.9,138.9,Boleto,2025-11-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0120/2025,539,Natalia Campos Quintanilha De Souza,Luiz Claudio Quintanilha De Souza,269.66,269.66,Boleto,2025-11-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0064/2025,248,CHRISTHYANN DE OLIVEIRA SOARES MATIELO,EDSON JUNIOR MATIELO,257.81,257.81,Boleto,2025-11-15 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0061/2025,175,ana clara almeida silva,michelle almeida de andrade,229.06,229.06,Boleto,2025-11-15 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0066/2025,246,Gabrielly Gomes Leite,Uilian Jeime Lopes Leite,202.78,202.78,Boleto,2025-11-20 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0065/2025,225,Vaneska Dos Reis Vasconcelos,Vaneska Dos Reis Vasconcelos,113.01,113.01,Boleto,2025-11-20 00:00:00,2025-12-18 00:00:00.000,2025-12-19 00:00:00
+0066/2025,234,Emmanuel Philadelpho De Araújo,Rosimeri Lisboa Philadelpho,202.64,202.64,Boleto,2025-11-20 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0065/2025,266,Renata Pinheiro da Silva do Nascimento,Renata Pinheiro da Silva do Nascimento,123.26,123.26,Boleto,2025-11-20 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0065/2025,360,Maria Eduarda Santos Do Nascimento Araujo,Maria Eduarda Santos Do Nascimento Araujo,112.45,112.45,Boleto,2025-11-20 00:00:00,2025-12-04 00:00:00.000,2025-12-05 00:00:00
+0101/2025,484,Thaís Da Silva Costa,Thaís Da Silva Costa,349.54,349.54,Boleto,2025-11-20 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0066/2025,423,Matheus De Oliveira Brito,Regina Almeida de Oliveira Brito,229.4,229.4,PIX SGPay,2025-11-20 00:00:00,2025-12-25 14:25:58.000,2025-12-26 00:00:00
+0090/2025,419,Antonio Carlos Gomes da Silva,Antonio Carlos Gomes da Silva,500.0,500.0,PIX,2025-11-20 00:00:00,2025-12-23 00:00:00.000,2025-12-23 00:00:00
+0049/2025,354,Gustavo Freitas Teixeira Da Silva,Andrea Freitas da Silva,251.55,251.55,Boleto,2025-11-20 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0173/2025,735,Juliana Santos Mazula Da Costa,Juliana Santos Mazula Da Costa,97.44,97.44,Boleto,2025-11-20 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0173/2025,774,Andreia Cristiane Da Silva Conceição,Andreia Cristiane Da Silva Conceição,97.29,97.29,Boleto,2025-11-20 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0173/2025,750,Michele Magalhães Da Motta,Michele Magalhães Da Motta,128.78,128.78,Boleto,2025-11-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0185/2025,797,Maria Aline Araujo do Monte Monteiro,Maria Aline Araujo do Monte Monteiro,1195.0,1195.0,PIX,2025-11-21 00:00:00,2025-12-21 00:00:00.000,2025-12-21 00:00:00
+0059/2025,183,Theo Fernandes Barrozo,Daniel Gomes Barrozo,172.3,172.3,Boleto,2025-11-22 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0049/2025,70,Kauan Souza Brum,Rafaela Souza dos Santos,1156.49,1156.49,Boleto,2025-11-24 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0023/2025,25,CRISTIANE SANTOS MORAES,CRISTIANE SANTOS MORAES,2916.0,2916.0,PIX,2025-11-25 00:00:00,2025-12-21 00:00:00.000,2025-12-21 00:00:00
+0156/2025,612,Kariny Rodrigues Parreira Nascimento,Ricardo Nascimento,178.43,178.43,Boleto,2025-11-25 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0156/2025,617,Tais Monara Da Silva Barbosa,Tais Monara Da Silva Barbosa,168.28,168.28,Boleto,2025-11-25 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0162/2025,622,Talita Oliveira Rodrigues,Talita Oliveira Rodrigues,281.28,281.28,Boleto,2025-11-25 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0162/2025,651,CAMILLA IVENS REBELLO GOMES,CAMILLA IVENS REBELLO GOMES,140.58,140.58,Boleto,2025-11-25 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0161/2025,631,Maria Luiza Peral Andrade,Maria Luiza Peral Andrade,140.18,140.18,Boleto,2025-11-25 00:00:00,2025-12-04 00:00:00.000,2025-12-05 00:00:00
+0161/2025,643,Nykkole Victoria Bartolette Paes,Nykkole Victoria Bartolette Paes,199.06,199.06,Boleto,2025-11-25 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0162/2025,646,Luiz Eduardo Cerveira Santos,Luiz Eduardo Cerveira Santos,249.5,249.5,Boleto,2025-11-25 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0072/2025,245,Maria Eduarda Gomes Pereira Maia,Maria Eduarda Gomes Pereira Maia,3000.0,3000.0,PIX SGPay,2025-11-28 00:00:00,2025-12-03 14:19:32.000,2025-12-04 00:00:00
+0073/2025,250,Viviane Fernandes Lima,Viviane Fernandes Lima,5000.0,5000.0,PIX,2025-12-01 00:00:00,2025-12-01 00:00:00.000,2025-12-01 00:00:00
+0052/2025,61,Larah Campos Gonçalves,Larah Campos Gonçalves,540.0,540.0,PIX SGPay,2025-12-01 00:00:00,2025-12-01 16:57:39.000,2025-12-02 00:00:00
+0049/2025,354,Gustavo Freitas Teixeira Da Silva,Andrea Freitas da Silva,258.91,258.91,Boleto,2025-12-01 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0137/2025,556,Cássia de Andrade Soares Caldas,Cássia de Andrade Soares Caldas,850.0,850.0,PIX,2025-12-01 00:00:00,2025-12-01 00:00:00.000,2025-12-01 00:00:00
+0189/2025,805,Andyara Passos Rocha,Andyara Passos Rocha,1795.0,1795.0,PIX,2025-12-01 00:00:00,2025-12-05 00:00:00.000,2025-12-05 00:00:00
+0193/2025,822,SIMONE PAZ OLIVEIRA GARCIA,SIMONE PAZ OLIVEIRA GARCIA,250.0,250.0,PIX,2025-12-02 00:00:00,2025-12-03 00:00:00.000,2025-12-03 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,4640.0,4640.0,PIX,2025-12-02 00:00:00,2025-12-02 00:00:00.000,2025-12-02 00:00:00
+0116/2025,522,Ana Paula Oliveira Sá Motta,Ana Paula Oliveira Sá Motta,1000.0,1000.0,Boleto,2025-12-02 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0049/2025,64,ERIC MATEUS CLEMENTINO DA SILVA,ERIC MATEUS CLEMENTINO DA SILVA,219.0,219.0,C. Débito,2025-12-02 00:00:00,2025-12-02 11:46:14.457,2025-12-02 00:00:00
+0049/2025,70,Kauan Souza Brum,Kauan Souza Brum,219.0,219.0,PIX SGPay,2025-12-02 00:00:00,2025-12-02 11:40:20.000,2025-12-03 00:00:00
+0049/2025,52,Maria Victoria Peixoto Dos Santos,Odilia Peixoto pinheiro,597.67,597.67,C. Crédito,2025-12-02 00:00:00,2025-12-02 11:11:13.203,2025-12-02 00:00:00
+0058/2025,144,Geane Luz Alves de Souza,Geane Luz Alves de Souza,500.0,500.0,PIX,2025-12-02 00:00:00,2025-12-02 00:00:00.000,2025-12-02 00:00:00
+0049/2025,93,Flávia Da Silva Chagas,Bruno Leonardo Figueiredo das Chagas,863.4,863.4,PIX SGPay,2025-12-02 00:00:00,2025-12-02 09:50:46.000,2025-12-03 00:00:00
+0049/2025,93,Flávia Da Silva Chagas,Flávia Da Silva Chagas,219.0,219.0,PIX SGPay,2025-12-02 00:00:00,2025-12-02 09:58:52.000,2025-12-03 00:00:00
+0028/2025,30,NADJA SIMONE SANTOS DE PAULA,NADJA SIMONE SANTOS DE PAULA,1000.0,1000.0,PIX,2025-12-02 00:00:00,2025-12-02 00:00:00.000,2025-12-02 00:00:00
+0059/2025,165,Mateus Galvão Gallo Sodre Pereira,Roberta Galvão Gallo de Freitas,173.5,173.5,Boleto,2025-12-02 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0059/2025,163,Matheus Guimarães Oliveira,Daniele Guimarães  de Oliveira,600.0,600.0,PIX SGPay,2025-12-02 00:00:00,2025-12-02 09:16:30.000,2025-12-03 00:00:00
+0059/2025,188,Davi Pluvie Silva,Cynthia Pluvie Sant Anna de Mello,209.94,209.94,C. Crédito,2025-12-02 00:00:00,2025-12-02 13:50:02.517,2025-12-02 00:00:00
+0059/2025,190,Gabriela Pereira Monteiro,Paula da Silva Pereira,400.0,400.0,C. Crédito,2025-12-02 00:00:00,2025-12-02 09:44:06.583,2025-12-02 00:00:00
+0059/2025,194,Isaac Leonardo Nogueira,Leonardo Nogueira,200.0,200.0,C. Débito,2025-12-02 00:00:00,2025-12-02 09:36:21.737,2025-12-02 00:00:00
+0064/2025,226,Davi Melo Amaral Gonçalves Pinto,Davi Melo Amaral Gonçalves Pinto,270.0,270.0,PIX SGPay,2025-12-03 00:00:00,2025-12-03 14:57:33.000,2025-12-04 00:00:00
+0064/2025,226,Davi Melo Amaral Gonçalves Pinto,Davi Melo Amaral Gonçalves Pinto,270.0,270.0,PIX SGPay,2025-12-03 00:00:00,2025-12-03 15:07:25.000,2025-12-04 00:00:00
+0059/2025,186,Davi Figueiredo da Horta,Adriana Mesquita de Figueiredo Cordeiro,200.0,200.0,C. Débito,2025-12-03 00:00:00,2025-12-03 15:52:26.173,2025-12-03 00:00:00
+0059/2025,182,Mateus De Freitas Gouvêa,Aline Rocha de Freitas,600.0,600.0,PIX SGPay,2025-12-03 00:00:00,2025-12-03 09:23:57.000,2025-12-04 00:00:00
+0024/2025,26,PAULA DIAS AZEVEDO,PAULA DIAS AZEVEDO,1500.0,1500.0,PIX,2025-12-03 00:00:00,2025-12-03 00:00:00.000,2025-12-03 00:00:00
+0049/2025,98,Luiz Phelipe Moraes Da Silva,Marcos Luiz da Silva,800.0,800.0,PIX,2025-12-03 00:00:00,2025-12-03 00:00:00.000,2025-12-03 00:00:00
+0049/2025,98,Luiz Phelipe Moraes Da Silva,Marcos Luiz da Silva,300.0,300.0,PIX,2025-12-03 00:00:00,2025-12-03 00:00:00.000,2025-12-03 00:00:00
+0094/2025,462,Miguel Borges Da Mota Corrêa Lima,Rafaelle Borges da Mota Corrêa,250.0,250.0,C. Débito,2025-12-03 00:00:00,2025-12-03 17:21:25.003,2025-12-03 00:00:00
+0094/2025,462,Miguel Borges Da Mota Corrêa Lima,Rafaelle Borges da Mota Corrêa,250.0,250.0,C. Crédito,2025-12-03 00:00:00,2025-12-03 17:23:00.950,2025-12-03 00:00:00
+0094/2025,464,Ana Carolina Lopes de Souza,Julio César Fonseca de Souza,250.0,250.0,C. Débito,2025-12-03 00:00:00,2025-12-03 15:34:58.287,2025-12-03 00:00:00
+0094/2025,469,Anna Clara Campos,Adriana dos Santos Campos,232.17,232.17,C. Crédito,2025-12-03 00:00:00,2025-12-03 15:28:04.430,2025-12-03 00:00:00
+0064/2025,332,Miguel Martinez Lima,Milena Rodrigues Martinez,1080.0,1080.0,C. Crédito,2025-12-03 00:00:00,2025-12-03 10:30:41.407,2025-12-03 00:00:00
+0064/2025,332,Miguel Martinez Lima,Milena Rodrigues Martinez,810.0,810.0,PIX,2025-12-03 00:00:00,2025-12-03 10:41:16.030,2025-12-03 10:41:16.030000
+0064/2025,334,Yasmin Reguengo Muniz,Yasmin Reguengo Muniz,1080.0,1080.0,PIX SGPay,2025-12-03 00:00:00,2025-12-03 14:51:02.000,2025-12-04 00:00:00
+0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,3000.0,3000.0,PIX,2025-12-04 00:00:00,2025-12-04 00:00:00.000,2025-12-04 00:00:00
+0064/2025,235,Beatriz Miranda Costa,Beatriz Miranda Costa,540.0,540.0,PIX SGPay,2025-12-04 00:00:00,2025-12-04 13:35:29.000,2025-12-05 00:00:00
+0064/2025,235,Beatriz Miranda Costa,Beatriz Miranda Costa,540.0,540.0,C. Crédito,2025-12-04 00:00:00,2025-12-04 13:45:09.447,2025-12-04 00:00:00
+0182/2025,779,MARCELO ALVES DA COSTA,MARCELO ALVES DA COSTA,1960.0,1960.0,Boleto,2025-12-04 00:00:00,2025-12-04 00:00:00.000,2025-12-05 00:00:00
+0155/2025,594,Vânia de Almeida Fragoso,Vânia de Almeida Fragoso,530.0,530.0,Boleto,2025-12-05 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0064/2025,229,Maria Eduarda Costa Das Neves,Viviane Costa zaluba,270.0,270.0,Cartão SGPay,2025-12-05 00:00:00,2025-12-05 21:22:23.480,2026-01-05 21:22:23.480000
+0064/2025,229,Maria Eduarda Costa Das Neves,Maria Eduarda Costa Das Neves,810.0,810.0,C. Débito,2025-12-05 00:00:00,2025-12-05 13:56:10.777,2025-12-05 00:00:00
+0059/2025,183,Theo Fernandes Barrozo,Daniel Gomes Barrozo,600.0,600.0,PIX,2025-12-05 00:00:00,2025-12-05 10:53:36.093,2025-12-05 10:53:36.093000
+0059/2025,184,Alicia Stellet Marques Barbosa,Amanda Stellet Marques,400.0,400.0,PIX SGPay,2025-12-05 00:00:00,2025-12-05 13:58:44.000,2025-12-08 00:00:00
+0094/2025,428,Ana Clara Rodrigues Vieira Lyra,Glauce Rodrigues vieira,250.0,250.0,PIX SGPay,2025-12-05 00:00:00,2025-12-05 10:34:29.000,2025-12-08 00:00:00
+0094/2025,428,Ana Clara Rodrigues Vieira Lyra,Glauce Rodrigues vieira,133.16,133.16,C. Crédito,2025-12-05 00:00:00,2025-12-05 13:47:21.693,2025-12-05 00:00:00
+0094/2025,452,Pietro Ferreira Mota,Kelly Ferreira R. Mota,250.0,250.0,PIX SGPay,2025-12-08 00:00:00,2025-12-08 15:39:57.000,2025-12-09 00:00:00
+0094/2025,435,Laura De Oliveira Dias,Elaine de Oliveira Barbosa,250.0,250.0,Dinheiro,2025-12-08 00:00:00,2025-12-08 10:01:10.560,2025-12-08 10:01:10.600000
+0075/2025,310,Maria Eduarda De Souza Aguiar,Aretha de Souza Aguiar,595.67,595.67,C. Crédito,2025-12-08 00:00:00,2025-12-08 16:05:43.887,2025-12-08 00:00:00
+0059/2025,182,Mateus De Freitas Gouvêa,Júlio Cesar Pereira da Silva Gouvêa,200.0,200.0,Dinheiro,2025-12-08 00:00:00,2025-12-08 17:01:32.633,2025-12-08 17:01:32.663000
+0059/2025,213,Mariana De Souza Moreira,Ismael de Almeida Moreira,600.0,600.0,PIX SGPay,2025-12-08 00:00:00,2025-12-08 13:46:27.000,2025-12-09 00:00:00
+0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,5000.0,5000.0,PIX,2025-12-08 00:00:00,2025-12-08 00:00:00.000,2025-12-08 00:00:00
+0070/2025,242,Juliana Arca Miranda,Juliana Arca Miranda,1500.0,1500.0,Boleto,2025-12-08 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0059/2025,249,Davi Machado Carvalho,Debora machado,200.0,200.0,C. Crédito,2025-12-08 00:00:00,2025-12-08 14:53:27.740,2025-12-08 00:00:00
+0094/2025,448,Nicolas Rodrigues Almeida,Jacqueline Rodrigues Almeida,250.0,250.0,PIX SGPay,2025-12-09 00:00:00,2025-12-09 14:27:48.000,2025-12-10 00:00:00
+0094/2025,456,Marcos Paulo Antunes De Oliveira Júnior,Fabiana Constantino de Carvalho,250.0,250.0,PIX SGPay,2025-12-09 00:00:00,2025-12-09 15:01:42.000,2025-12-10 00:00:00
+0148/2025,569,Kelly Borges Dias Pitta Neves,Kelly Borges Dias Pitta Neves,648.6,648.6,Boleto,2025-12-10 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0133/2025,552,Fabio Oliveira da Silva,Fabio Oliveira da Silva,500.0,500.0,PIX SGPay,2025-12-10 00:00:00,2025-12-10 11:18:53.000,2025-12-11 00:00:00
+0075/2025,307,Julia Anastácio Da Silva,Hosana Anastácio da silva,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-02 19:29:56.000,2025-12-03 00:00:00
+0075/2025,328,Kaiky José Areias Ribeiro,Jaqueline francelino areias ribeiro,136.72,136.72,Boleto,2025-12-10 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0075/2025,322,Letícia Torres Ferreira,Rosângela dos Santos Torres Ferreira,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0075/2025,312,Emanuelle Soares Balbino,Hellen Naan Santos Soares,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0075/2025,317,Laura Kauany Guimarães Silva,Valdilea da rosa Guimarães Silva,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-04 10:51:21.000,2025-12-05 00:00:00
+0075/2025,319,Sarah de Jesus Souza,Maria Alice Santos de Jesus,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0075/2025,309,Isabelle Avilez Nogueira,Alice Avilez Ferreira Nogueira,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0075/2025,308,Nicolas Da Silveira Barbosa Knuppe De Azevedo,Deiselane da Silveira Barbosa,134.0,134.0,C. Débito,2025-12-10 00:00:00,2025-12-09 14:07:49.817,2025-12-09 00:00:00
+0075/2025,335,Mylena Marques Candido,Ana Paula Jose Marques Miranda,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-02 18:05:23.000,2025-12-03 00:00:00
+0075/2025,333,Anna Clara Lima Rodrigues,Fernanda Lima,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0075/2025,338,Laís Sabina De Sousa Passeri,Bruna Sabina Braga de sousa,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-04 00:00:00.000,2025-12-05 00:00:00
+0075/2025,339,Daniela Maria Rocha Valença,Fabiana Rocha da Silva,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0075/2025,341,Guilherme Ferreira Gomes da Silva,Guilherme Ferreira Gomes da Silva,134.0,134.0,PIX SGPay,2025-12-10 00:00:00,2025-12-09 08:54:09.000,2025-12-10 00:00:00
+0075/2025,342,Lairyane Berçot Chermauth Cardoso,Carine Berçot Chermauth Cardoso,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0075/2025,343,Ellieny Souza Da Silva,Alcirlene Francisca da Silva Souza,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0075/2025,344,Kamilli Teodoro Marques,Lucilene Gama Teodoro,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-08 18:32:52.000,2025-12-09 00:00:00
+0075/2025,345,Laryssa Da Silva Wyatt Rodrigues,Dayane christine correia da silva,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0075/2025,346,Júlia Contildes Crisóstomo,Márcio Carvalho Crisóstomo,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-07 09:44:14.000,2025-12-08 00:00:00
+0075/2025,347,Nicolly Cintra da Silva,Jéssica Barros Cintra,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0075/2025,348,Rebeca Buiati De Abreu,Carlos Augusto Antunes de Abreu,134.0,134.0,PIX SGPay,2025-12-10 00:00:00,2025-12-04 11:37:18.000,2025-12-05 00:00:00
+0075/2025,351,Manuela Rodrigues,Verônica da motta rodrigues,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-06 02:58:23.000,2025-12-08 00:00:00
+0075/2025,358,Ana Clara Teixeira De Lima,Daiane Kelly Teixeira de Lima,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0075/2025,364,Ana Victoria Ferreira Campos Da Silva,Aline ferreira Maria,191.88,191.88,C. Débito,2025-12-10 00:00:00,2025-12-12 12:46:54.200,2025-12-12 00:00:00
+0075/2025,365,Myllena Sarah Barros Feitoza,Leandro Luiz Coutinho Feitoza,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0075/2025,367,Pamella Correia do Nascimento,Teresa Correia de Melo,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-04 11:40:20.000,2025-12-05 00:00:00
+0075/2025,368,Ana Clara Pereira Dias,Rebeca Mello Pereira,191.82,191.82,PIX SGPay,2025-12-10 00:00:00,2025-12-11 16:18:09.000,2025-12-12 00:00:00
+0075/2025,363,Ana Carolina Da Silva Santos,Wagno Souza Santos,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0073/2025,250,Viviane Fernandes Lima,Viviane Fernandes Lima,5576.0,5576.0,PIX,2025-12-10 00:00:00,2025-12-10 00:00:00.000,2025-12-10 00:00:00
+0056/2025,172,Débora Cristina Abrantes Serpa,Sônia Cristina de Sousa Abrantes,194.97,194.97,Boleto,2025-12-10 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0075/2025,273,Roberta Garcia Rodrigues Carriço,Roberta Garcia Rodrigues Carriço,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0075/2025,275,Luís Roberto Freitas Da Silva Labier Nolasco,Rosa e Freitas da Silva Labier Nolasco,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-10 11:08:53.000,2025-12-11 00:00:00
+0075/2025,279,Anna Victória dos Santos de Oliveira,Tamirys Alves de Oliveira,191.88,191.88,PIX SGPay,2025-12-10 00:00:00,2025-12-12 07:38:42.000,2025-12-15 00:00:00
+0075/2025,282,Cauã Camelo da Silva,Carlos Augusto Camelo,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-01 15:19:22.000,2025-12-02 00:00:00
+0075/2025,283,Maria Eduarda Martins Da Silva,Ruth Martins dos Santos Cobra,134.0,134.0,PIX SGPay,2025-12-10 00:00:00,2025-12-04 20:08:14.000,2025-12-05 00:00:00
+0075/2025,284,Giovanna da Silva Raso,Maria Gabriela da Silva Ferreira Raso,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0075/2025,285,Elisa Karyn Gama de Almeida,Marieta Carla Lessa Gama,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0075/2025,287,Giovana Chaves Reis,Edson De Carvalho Reis,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0075/2025,289,Alexia Dos Santos Lessa Freire,Alexandre Lessa Freire,134.0,134.0,Boleto,2025-12-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0075/2025,302,Alice Dos Santos Pimentel,Bruna cavalcante dos santos pimentel,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0075/2025,301,Leandro Frazão Bernardino,Munique Frazão de Lima Vidal,191.94,191.94,PIX SGPay,2025-12-10 00:00:00,2025-12-13 14:10:08.000,2025-12-15 00:00:00
+0075/2025,299,Brenda Alice Ribeiro Teodorio,Brenda Alice Ribeiro Teodorio,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0075/2025,300,Júlia Machado Braga Barcelos,Lígia Machado Braga Barcelos,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0075/2025,290,Wallace De Souza Rafael,Wallace De Souza Rafael,134.0,134.0,PIX SGPay,2025-12-10 00:00:00,2025-12-10 07:40:51.000,2025-12-11 00:00:00
+0075/2025,293,Maria Eduarda Almeida Silva,Fabio Silva,191.82,191.82,C. Débito,2025-12-10 00:00:00,2025-12-11 15:03:04.057,2025-12-11 00:00:00
+0075/2025,278,João Vitor Rosa Santos,João Vitor Rosa Santos,188.0,188.0,PIX SGPay,2025-12-10 00:00:00,2025-12-10 11:11:58.000,2025-12-11 00:00:00
+0075/2025,297,Leticia Balbino De Oliveira,Juçara Balbino Dos Santos,188.0,188.0,Boleto,2025-12-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0056/2025,147,Mayara Moura do Nascimento,Maria de Fatima de Moura Silva,163.5,163.5,Boleto,2025-12-10 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0056/2025,141,Maria Eduarda Lima Martins,Tatiane Lima Eduardo,145.64,145.64,Boleto,2025-12-10 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,2500.0,2500.0,PIX,2025-12-10 00:00:00,2025-12-10 00:00:00.000,2025-12-10 00:00:00
+0033/2025,35,JAYME SAUL EPELBOIM,JAYME SAUL EPELBOIM,4500.0,4500.0,PIX,2025-12-10 00:00:00,2025-12-10 00:00:00.000,2025-12-10 00:00:00
+0036/2025,38,CRISTIANE GOMES DE SOUZA CUNTO,CRISTIANE GOMES DE SOUZA CUNTO,1237.5,1237.5,PIX,2025-12-10 00:00:00,2025-12-07 00:00:00.000,2025-12-07 00:00:00
+0037/2025,39,DIOGO DA SILVA AURHEIMER,DIOGO DA SILVA AURHEIMER,6305.0,6305.0,Cartão SGPay,2025-12-10 00:00:00,2025-12-10 15:15:53.643,2026-01-12 15:15:53.643000
+0059/2025,197,Júlia Silveira Malheiros,Luis Felipe Mesquita Malheiros,400.0,400.0,PIX,2025-12-10 00:00:00,2025-12-10 16:06:28.717,2025-12-10 16:06:28.717000
+0056/2025,199,Maria Clara Corrêa Aguirre Da Silva,Rose Lúcia Corrêa Aguirre da Silva,145.64,145.64,Boleto,2025-12-10 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0059/2025,201,THEO ROBERTO AZEREDO SANTOS,TATIANA DE SIQUEIRA AZEREDO,400.0,400.0,C. Débito,2025-12-10 00:00:00,2025-12-10 16:02:45.020,2025-12-10 00:00:00
+0059/2025,203,Thiago Paulino Santos,Thiago Paulino Santos,600.0,600.0,PIX SGPay,2025-12-10 00:00:00,2025-12-10 09:53:30.000,2025-12-11 00:00:00
+0056/2025,187,Arthur Miguel Garcia Baeta,Eudna Maria de Abreu Garcia,218.44,218.44,Boleto,2025-12-10 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0056/2025,154,Gabriela Erthal Fernandes,Patricia Erthal Vianna da Silva,145.64,145.64,PIX SGPay,2025-12-10 00:00:00,2025-12-03 07:28:47.000,2025-12-04 00:00:00
+0056/2025,153,Analua Poubel Morse,Luana Alves Costa Poubel,23.21,23.21,Boleto,2025-12-10 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0056/2025,170,Júlia De Lima Silva,Achilles Theodoro da Silva Júnior,168.36,168.36,Boleto,2025-12-10 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0157/2025,596,REINALDO DANTAS HENRIQUE,REINALDO DANTAS HENRIQUE,2162.0,2162.0,Boleto,2025-12-10 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0145/2025,565,Aline Goulart Colodette Lopes,Aline Goulart Colodette Lopes,2350.0,2350.0,Boleto,2025-12-10 00:00:00,2025-12-04 00:00:00.000,2025-12-05 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2025-12-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1392.0,1392.0,CARTÃO DE CRÉDITO,2025-12-11 00:00:00,2025-12-11 15:37:06.543,2026-01-10 00:00:00
+0059/2025,222,Manuela Martins Terra,Luisa de Siqueira Martins,1000.0,1000.0,PIX SGPay,2025-12-11 00:00:00,2025-12-11 16:09:41.000,2025-12-12 00:00:00
+0059/2025,414,Eloá Da Cunha Cândido,Sylvana Kimberly da Silva Cândido,1748.04,1748.04,PIX SGPay,2025-12-11 00:00:00,2025-12-11 13:54:50.000,2025-12-12 00:00:00
+0059/2025,414,Eloá Da Cunha Cândido,Sylvana Kimberly da Silva Cândido,200.0,200.0,PIX SGPay,2025-12-11 00:00:00,2025-12-11 13:56:02.000,2025-12-12 00:00:00
+0112/2025,513,Anna Beatriz Nunes Barroso,Natalia Ferraz Simoes Nunes,3000.0,3000.0,PIX,2025-12-11 00:00:00,2025-12-11 00:00:00.000,2025-12-11 00:00:00
+0097/2025,459,Anna Clara Monteiro Ghellere,Anna Clara Monteiro Ghellere,1159.0,1159.0,PIX,2025-12-11 00:00:00,2025-12-11 00:00:00.000,2025-12-11 00:00:00
+0126/2025,545,Nathália da Cruz Kale dos Santos,Nathália da Cruz Kale dos Santos,5000.0,5000.0,Boleto,2025-12-12 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0075/2025,359,Caio Barcellos Tavares,Suellen da C Barcellos,100.0,100.0,Dinheiro,2025-12-12 00:00:00,2025-12-12 00:00:00.000,2025-12-12 00:00:00
+0075/2025,359,Caio Barcellos Tavares,Suellen da C Barcellos,786.28,786.28,PIX SGPay,2025-12-12 00:00:00,2025-12-12 15:08:45.000,2025-12-15 00:00:00
+0075/2025,296,Sophia Alves De Melo,Luciana Alves da Silva,385.56,385.56,PIX SGPay,2025-12-12 00:00:00,2025-12-12 09:17:22.000,2025-12-15 00:00:00
+0024/2025,26,PAULA DIAS AZEVEDO,PAULA DIAS AZEVEDO,1890.0,1890.0,PIX,2025-12-12 00:00:00,2025-12-12 00:00:00.000,2025-12-12 00:00:00
+0188/2025,804,Amanda Santos Carvalhal,Amanda Santos Carvalhal,7700.0,7700.0,Dinheiro,2025-12-12 00:00:00,2025-12-12 00:00:00.000,2025-12-12 00:00:00
+0167/2025,686,Fernanda Costa Cruz de Almeida,Fernanda Costa Cruz de Almeida,1500.0,1500.0,PIX,2025-12-12 00:00:00,2025-12-12 00:00:00.000,2025-12-12 00:00:00
+0084/2025,405,José Luciano Macedo Soares,José Luciano Macedo Soares,1000.0,1000.0,PIX,2025-12-14 00:00:00,2025-12-14 00:00:00.000,2025-12-14 00:00:00
+0082/2025,403,Keflem Bruna Pires Da Fonseca,Keflem Bruna Pires Da Fonseca,137.74,137.74,Boleto,2025-12-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0061/2025,377,Thaysa Gabriella Ribeiro Barbosa,Ana Gabriela Ribeiro Duarte,133.0,133.0,PIX SGPay,2025-12-15 00:00:00,2025-12-12 12:30:16.000,2025-12-15 00:00:00
+0061/2025,377,Thaysa Gabriella Ribeiro Barbosa,Ana Gabriela Ribeiro Duarte,90.0,90.0,Boleto,2025-12-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0082/2025,379,Monique Batista Lopes De Miranda,Monique Batista Lopes De Miranda,214.26,214.26,Boleto,2025-12-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0082/2025,415,PRISCILA ALEXANDRE MELO,PRISCILA ALEXANDRE MELO,135.0,135.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0082/2025,409,Larissa Quintino De Lima,Larissa Quintino De Lima,135.0,135.0,Boleto,2025-12-15 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0082/2025,412,Laís Fidelis Gabriel,Laís Fidelis Gabriel,138.14,138.14,Boleto,2025-12-15 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0082/2025,413,Caroline Santos Curi Gomes e Souza,Caroline Santos Curi Gomes e Souza,153.09,153.09,Boleto,2025-12-15 00:00:00,2025-12-17 00:00:00.000,2025-12-18 00:00:00
+0075/2025,359,Caio Barcellos Tavares,Suellen da C Barcellos,700.0,700.0,PIX SGPay,2025-12-15 00:00:00,2025-12-15 17:00:36.000,2025-12-16 00:00:00
+0082/2025,382,Elisangela Fausto Dorighetti,Elisangela Fausto Dorighetti,150.0,150.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0082/2025,383,Priscila De Paula Marcante,Priscila De Paula Marcante,135.0,135.0,Boleto,2025-12-15 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0082/2025,385,Leonardo Sodré Da Costa,Leonardo Sodré Da Costa,135.0,135.0,Boleto,2025-12-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0082/2025,386,Suellen De Oliveira Pereira Caetano,Suellen De Oliveira Pereira Caetano,135.0,135.0,Boleto,2025-12-15 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0082/2025,388,Priscila Silva Das Neves Frotté,Priscila Silva Das Neves Frotté,158.82,158.82,Boleto,2025-12-15 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0082/2025,389,Amanda Chaves Da Costa,Amanda Chaves Da Costa,183.83,183.83,Boleto,2025-12-15 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00
+0082/2025,390,Alciene Andrade da Silva Vieira,Alciene Andrade da Silva Vieira,180.0,180.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0082/2025,391,Estephani Leal De Andrade,Estephani Leal De Andrade,137.74,137.74,PIX SGPay,2025-12-15 00:00:00,2025-12-16 04:43:06.000,2025-12-17 00:00:00
+0082/2025,393,Beatriz Cordeiro Borges,Beatriz Cordeiro Borges,137.78,137.78,PIX SGPay,2025-12-15 00:00:00,2025-12-17 00:32:07.000,2025-12-18 00:00:00
+0082/2025,395,Isabel Donna Silva Dos Santos,Isabel Donna Silva Dos Santos,225.0,225.0,Boleto,2025-12-15 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0126/2025,545,Nathália da Cruz Kale dos Santos,Nathália da Cruz Kale dos Santos,1040.0,1040.0,PIX,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-15 00:00:00
+0127/2025,546,Luana Roberta de Jesus Machado Ribeiro,Luana Roberta de Jesus Machado Ribeiro,500.0,500.0,Boleto,2025-12-15 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0150/2025,572,Viviane Nogueira Werneck Rodrigues,Viviane Nogueira Werneck Rodrigues,299.0,299.0,Boleto,2025-12-15 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0150/2025,573,Júlia De Oliveira Navega,Júlia De Oliveira Navega,299.0,299.0,Boleto,2025-12-15 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0150/2025,576,Vanessa Gomes Ramos Sanches,Vanessa Gomes Ramos Sanches,198.34,198.34,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0150/2025,577,Amanda Ferreirinha Couto,Amanda Ferreirinha Couto,317.69,317.69,Boleto,2025-12-15 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0150/2025,578,Ana Beatriz Tupini Boaretto,Ana Beatriz Tupini Boaretto,471.77,471.77,Boleto,2025-12-15 00:00:00,2025-12-18 00:00:00.000,2025-12-19 00:00:00
+0140/2025,559,Patricia Cristina de Castro,Patricia Cristina de Castro,470.0,470.0,Boleto,2025-12-15 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0107/2025,515,Alexia Mota Vieira,Alexia Mota Vieira,160.0,160.0,PIX SGPay,2025-12-15 00:00:00,2025-12-05 15:51:25.000,2025-12-08 00:00:00
+0107/2025,517,Karynne Muniz de Carvalho,Karynne Muniz de Carvalho,160.0,160.0,Boleto,2025-12-15 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0120/2025,526,Ariana Da Silva Sodré,Wagner Alves Sodré,267.33,267.33,PIX SGPay,2025-12-15 00:00:00,2025-12-16 13:06:02.000,2025-12-17 00:00:00
+0120/2025,527,Laura De Souza Santos Roque,Camile de Souza Santos,185.0,185.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0120/2025,531,Luiza Santos de Souza Oliveira,Karina Santos de Souza,185.0,185.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0120/2025,532,Estevão Isaías de Oliveira,Vania Ferreira Isaías,393.12,393.12,PIX SGPay,2025-12-15 00:00:00,2025-12-07 07:29:15.000,2025-12-08 00:00:00
+0120/2025,533,Ana Luiza Soares de Oliveira,Marcelo Costa de Oliveira,262.0,262.0,Boleto,2025-12-15 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0120/2025,534,Karina Jeronimo Rodrigues,Eliane Jeronimo Rodrigues,204.41,204.41,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0120/2025,536,Iago Da Silva Souza,João Luiza Da Silva Junior,185.0,185.0,PIX SGPay,2025-12-15 00:00:00,2025-12-15 18:35:59.000,2025-12-16 00:00:00
+0120/2025,537,Joaquim Da Costa Gonçalves Gouvea,Ana Andrea da Silva Gonçalves Gouvea,185.0,185.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0120/2025,538,Ana Julia Bacellar Sargentini,Barbara dos Reis Bacellar Sargentini,262.0,262.0,Boleto,2025-12-15 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0094/2025,470,CHRISTIAN COUTINHO FERREIRA,Liana Ferreira,250.0,250.0,PIX SGPay,2025-12-15 00:00:00,2025-12-15 08:58:34.000,2025-12-16 00:00:00
+0094/2025,470,CHRISTIAN COUTINHO FERREIRA,Liana Ferreira,500.0,500.0,PIX SGPay,2025-12-15 00:00:00,2025-12-15 09:04:04.000,2025-12-16 00:00:00
+0082/2025,471,Sonia Da Silva Pereira,Sonia Da Silva Pereira,135.0,135.0,Boleto,2025-12-15 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0107/2025,499,Beatriz dos Santos Vila de Andrade,Carlos Henrique de Andrade,158.35,158.35,PIX SGPay,2025-12-15 00:00:00,2025-12-20 17:24:07.000,2025-12-22 00:00:00
+0107/2025,501,Dayane Santos Cavalcante,Dayane Santos Cavalcante,131.12,131.12,Boleto,2025-12-15 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0107/2025,503,Amanda Reis Packness,Amanda Reis Packness,160.0,160.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0107/2025,504,Mayrla D'Awila Fernandes dos Santos,Mayrla D'Awila Fernandes dos Santos,158.3,158.3,PIX SGPay,2025-12-15 00:00:00,2025-12-19 21:34:48.000,2025-12-22 00:00:00
+0107/2025,506,Ester Neves Rodrigues,Ester Neves Rodrigues,155.0,155.0,Boleto,2025-12-15 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0061/2025,208,Giovanna de Martins Teverao,Juliana Barbosa de Martins,133.0,133.0,Boleto,2025-12-15 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0061/2025,208,Giovanna de Martins Teverao,Juliana Barbosa de Martins,30.0,30.0,Boleto,2025-12-15 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0061/2025,210,Cecília Dos Santos Da Costa,Rosilene dos Santos do Nascimento,133.0,133.0,PIX SGPay,2025-12-15 00:00:00,2025-12-15 15:02:43.000,2025-12-16 00:00:00
+0061/2025,211,Sabriny Araujo Dos santos,Severina araújo de lima santos,223.0,223.0,Boleto,2025-12-15 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0061/2025,214,Ana Julia Moreira De Carvalho,Nathalie Mendes Moreira,135.74,135.74,PIX SGPay,2025-12-15 00:00:00,2025-12-17 09:22:20.000,2025-12-18 00:00:00
+0061/2025,215,Maria Clara Bastos Batista Raposo,Aline bastos batista,258.22,258.22,Boleto,2025-12-15 00:00:00,2025-12-17 00:00:00.000,2025-12-18 00:00:00
+0061/2025,218,Guilherme Soares Cardoso,Solange Pereira Soares,133.0,133.0,PIX SGPay,2025-12-15 00:00:00,2025-12-12 12:28:00.000,2025-12-15 00:00:00
+0061/2025,192,Maria Clara Abreu Ramos,ubiraci azevedo ramos,133.0,133.0,PIX SGPay,2025-12-15 00:00:00,2025-12-15 19:29:29.000,2025-12-16 00:00:00
+0061/2025,195,Caroline Carvalho Cabral Da Silva,Géssica Carvalho da Silva,433.0,433.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0071/2025,244,Marcos Francisco Linhares,Marcos Francisco Linhares,500.0,500.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0070/2025,242,Juliana Arca Miranda,Juliana Arca Miranda,1960.0,1960.0,Boleto,2025-12-15 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0169/2025,691,Ana Clara Oliveira Do Nascimento,Ana Célia Carvalho de Oliveira,190.0,190.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0169/2025,692,Lara Martins Dos Santos Garcia,Denise Martins dos Santos garcia,190.0,190.0,PIX SGPay,2025-12-15 00:00:00,2025-12-15 14:33:50.000,2025-12-16 00:00:00
+0169/2025,695,Lanna Castro De Farias,Mario Rafael Pinto de Farias,190.0,190.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0169/2025,704,Miguel Matsumoto Costa,Luana matsumoto costa,255.0,255.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0169/2025,706,Thalyta Ferreira Braga,Josiane Ferreira Braga,190.0,190.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0169/2025,708,Miguel Freires dos Reis,Débora Gonçalves Freires dos Reis,367.0,367.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0169/2025,709,Miguel Soares Barros,Alexandre da Silva barros,190.0,190.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0169/2025,711,Pedro Santos Fernandes,Pedro Santos Fernandes,190.0,190.0,PIX SGPay,2025-12-15 00:00:00,2025-12-06 11:56:58.000,2025-12-08 00:00:00
+0163/2025,652,lucas da silva ramos,lucas da silva ramos,61.5,61.5,PIX SGPay,2025-12-15 00:00:00,2025-12-30 20:17:06.000,2026-01-02 00:00:00
+0163/2025,654,Ane Vitória De Oliveira Alcântara,Marley de oliveira marinho Alcântara,71.43,71.43,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0163/2025,655,Isabela Lampes Ramos Lopes,Isabela Lampes Ramos Lopes,60.0,60.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0163/2025,656,Ana Cristina Sales Gonçalves,Ana Cristina Sales Gonçalves,60.0,60.0,Boleto,2025-12-15 00:00:00,2025-12-04 00:00:00.000,2025-12-05 00:00:00
+0163/2025,658,Manuelly Dos Santos Alves,Gracieli Ferreira Gomes dos Santos,129.35,129.35,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0163/2025,659,Luana da Silva Vianna,Ana Paula Barbosa da Silva,60.0,60.0,Boleto,2025-12-15 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0163/2025,660,Maria Clara Nobre Schneeweiss,Adriana da Silva Nobre Schneeweiss,97.0,97.0,PIX SGPay,2025-12-15 00:00:00,2025-12-14 12:47:29.000,2025-12-15 00:00:00
+0163/2025,661,Davi da Silva Paulo,Davi da Silva Paulo,70.42,70.42,Boleto,2025-12-15 00:00:00,2025-12-17 00:00:00.000,2025-12-18 00:00:00
+0163/2025,662,Rafaela Sant' Ana Batista da Silva,Nilza da Dilava Santana,119.0,119.0,PIX SGPay,2025-12-15 00:00:00,2025-12-04 10:32:26.000,2025-12-05 00:00:00
+0163/2025,663,Rafaelle Cristina Silva Ferreira,Rafaelle Cristina Silva Ferreira,61.22,61.22,Boleto,2025-12-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0163/2025,664,Bárbara Fernandes Vieira Pires,Bárbara Fernandes Vieira Pires,60.0,60.0,PIX SGPay,2025-12-15 00:00:00,2025-12-15 19:54:11.000,2025-12-16 00:00:00
+0163/2025,665,ANNY HELLEN SOUZA DOS SANTOS,ANNY HELLEN SOUZA DOS SANTOS,200.0,200.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0163/2025,667,André Luiz Ramos De Farias,André Luiz Ramos De Farias,75.0,75.0,Boleto,2025-12-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0163/2025,668,Marcos Vinicius Da Silva Muniz,Marcos Vinicius Da Silva Muniz,61.21,61.21,Boleto,2025-12-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0163/2025,669,Tamiris Rodrigues Ferreira Ribeiro,Tamiris Rodrigues Ferreira Ribeiro,121.5,121.5,Boleto,2025-12-15 00:00:00,2025-12-18 00:00:00.000,2025-12-19 00:00:00
+0163/2025,671,Jennifer Jhully Da Rocha Nunes,Jennifer Jhully Da Rocha Nunes,98.97,98.97,Boleto,2025-12-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0163/2025,672,Melanni Felicio Soares,Jorge Do Nascimento Soares,100.0,100.0,Boleto,2025-12-15 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0163/2025,673,Gessica Santos Pinheiro,Gessica Santos Pinheiro,61.47,61.47,Boleto,2025-12-15 00:00:00,2025-12-29 00:00:00.000,2025-12-30 00:00:00
+0163/2025,675,Jorge Luiz Almeida De Souza,Jorge Luiz Almeida De Souza,76.52,76.52,Boleto,2025-12-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0163/2025,678,Mariana Rosa Quintanilha,Mariana Rosa Quintanilha,119.0,119.0,Boleto,2025-12-15 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0163/2025,679,Haiana De Carvalho Rodrigues,Haiana De Carvalho Rodrigues,60.0,60.0,Boleto,2025-12-15 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0150/2025,580,Ivine Santos Perazoli,Ivine Santos Perazoli,299.0,299.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0150/2025,586,Matheus Lopes Pereira Gomes,Matheus Lopes Pereira Gomes,299.0,299.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0150/2025,587,Nathalia Cristina Ribeiro Da Silva,Nathalia Cristina Ribeiro Da Silva,305.07,305.07,Boleto,2025-12-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0150/2025,588,Caio Jotha Drumond,Rubia Cristina Santos Jotha Drumond,198.34,198.34,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0107/2025,567,Talita Araújo Dos Santos,Talita Araújo Dos Santos,248.0,248.0,PIX SGPay,2025-12-15 00:00:00,2025-12-15 19:30:13.000,2025-12-16 00:00:00
+0179/2025,824,Yuri Henrici Da Silveira,Yuri Henrici Da Silveira,154.06,154.06,Boleto,2025-12-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0179/2025,808,ALEXANDRE RODRIGUES MELONI,ALEXANDRE RODRIGUES MELONI,151.0,151.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0179/2025,810,Diego Azeredo Fernandes,Diego Azeredo Fernandes,117.34,117.34,PIX SGPay,2025-12-15 00:00:00,2025-12-16 07:48:09.000,2025-12-17 00:00:00
+0179/2025,812,Bruno Cesar Leite Koch,Bruno Cesar Leite Koch,151.0,151.0,Boleto,2025-12-15 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0179/2025,815,Antônio Cesar Araújo Dos Santos,Antônio Cesar Araújo Dos Santos,155.5,155.5,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0179/2025,816,André Victor do Prado Araújo,André Victor do Prado Araújo,124.4,124.4,PIX SGPay,2025-12-15 00:00:00,2025-12-14 21:25:20.000,2025-12-15 00:00:00
+0179/2025,817,Caua Henriques Amorim,Caua Henriques Amorim,115.0,115.0,Boleto,2025-12-15 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0179/2025,818,Sergio Augusto Pereira Dos Santos,Sergio Augusto Pereira Dos Santos,90.0,90.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0179/2025,821,Alex Sandro Da Costa,Alex Sandro Da Costa,99.4,99.4,Boleto,2025-12-15 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0179/2025,799,Gabriel Fernandes Brito De Abreu,Sidnei Monteiro de Abreu,422.72,422.72,Boleto,2025-12-15 00:00:00,2025-12-17 00:00:00.000,2025-12-18 00:00:00
+0179/2025,782,Lívia Ferreira Pinho De Almeida,Lívia Ferreira Pinho De Almeida,90.0,90.0,Boleto,2025-12-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0184/2025,793,LEONARDO TELLES SILVA,LEONARDO TELLES SILVA,2940.0,2940.0,Boleto,2025-12-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0172/2025,788,Rosiléa Marinho Madureira Martins,Rosiléa Marinho Madureira Martins,148.0,148.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0169/2025,790,Sarah De Souza Oliveira,Marcus Vinicius Lima de Oliveira,190.0,190.0,PIX SGPay,2025-12-15 00:00:00,2025-12-08 15:33:56.000,2025-12-09 00:00:00
+0179/2025,791,Vitória Barbosa de Azevedo,Vitória Barbosa de Azevedo,115.0,115.0,Boleto,2025-12-15 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0172/2025,778,Renata De Jesus Alves Pinho,Renata De Jesus Alves Pinho,148.0,148.0,Boleto,2025-12-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0172/2025,741,Maria Isabel Santos Amaral,Maria Isabel Santos Amaral,148.0,148.0,Boleto,2025-12-15 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0172/2025,744,Luciane Alves Dos Santos Carvalho,Luciane Alves Dos Santos Carvalho,148.0,148.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0172/2025,745,Roberta Cristina Silva Januário,Roberta Cristina Silva Januário,151.1,151.1,Boleto,2025-12-15 00:00:00,2025-12-18 00:00:00.000,2025-12-19 00:00:00
+0172/2025,747,Cintia Carioly Gomes,Cintia Carioly Gomes,164.73,164.73,Boleto,2025-12-15 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0175/2025,722,Renato Contreiras de Oliveira Vinagre,Renato Contreiras de Oliveira Vinagre,1001.1,1001.1,Boleto,2025-12-15 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0172/2025,723,Cláudia Nazaré Manhães Ferreira,Cláudia Nazaré Manhães Ferreira,148.0,148.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0172/2025,725,Priscilla Barboza De Sousa Morais,Priscilla Barboza De Sousa Morais,151.05,151.05,Boleto,2025-12-15 00:00:00,2025-12-17 00:00:00.000,2025-12-18 00:00:00
+0172/2025,727,Silvia Costa Silva Bayer,Silvia Costa Silva Bayer,148.0,148.0,Boleto,2025-12-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0172/2025,728,Elaine Cruz da Silva Conrado,Elaine Cruz da Silva Conrado,222.0,222.0,Boleto,2025-12-15 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0163/2025,680,Thaina Macedo Almeida,Thaina Macedo Almeida,60.0,60.0,Boleto,2025-12-15 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0163/2025,681,Isaque Meirelles Matta,Isaque Meirelles Matta,119.0,119.0,PIX SGPay,2025-12-15 00:00:00,2025-12-06 19:31:49.000,2025-12-08 00:00:00
+0179/2025,754,Bruna Santos Pereira,Bruna Santos Pereira,90.0,90.0,Boleto,2025-12-15 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0172/2025,756,PRISCILLA DE JESUS ALVES SANTOS,PRISCILLA DE JESUS ALVES SANTOS,148.0,148.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0179/2025,757,Alessandro De Abreu Teixeira,Alessandro De Abreu Teixeira,115.0,115.0,Boleto,2025-12-15 00:00:00,2025-12-11 00:00:00.000,2025-12-12 00:00:00
+0179/2025,760,Maria Eduarda Domingos de Carvalho,Maria Eduarda Domingos de Carvalho,90.0,90.0,Boleto,2025-12-15 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0179/2025,763,Vivian Damasio Araujo,Vivian Damasio Araujo,90.0,90.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0179/2025,769,Rafaelle Peres Fonseca,Rafaelle Peres Fonseca,115.0,115.0,Boleto,2025-12-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0179/2025,770,Paulo Victor Freire Da Silva,Paulo Victor Freire Da Silva,151.0,151.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0179/2025,771,Luiz Eduardo da Silva Dias de Almeida,Luiz Eduardo da Silva Dias de Almeida,151.0,151.0,Boleto,2025-12-15 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0179/2025,773,Lindomar Costa Antunes,Lindomar Costa Antunes,117.41,117.41,Boleto,2025-12-15 00:00:00,2025-12-18 00:00:00.000,2025-12-19 00:00:00
+0075/2025,355,Livia Ribeiro da Silva,Leandro Machado da Silva,590.96,590.96,PIX,2025-12-16 00:00:00,2025-12-04 00:00:00.000,2025-12-04 00:00:00
+0099/2025,473,Luiz Carlos Martins,Luiz Carlos Martins,11250.0,11250.0,PIX,2025-12-19 00:00:00,2025-12-18 00:00:00.000,2025-12-18 00:00:00
+0099/2025,473,Luiz Carlos Martins,Luiz Carlos Martins,11250.0,11250.0,PIX,2025-12-19 00:00:00,2025-12-18 00:00:00.000,2025-12-18 00:00:00
+0099/2025,473,Luiz Carlos Martins,Luiz Carlos Martins,1500.0,1500.0,PIX,2025-12-19 00:00:00,2025-12-18 00:00:00.000,2025-12-18 00:00:00
+0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,10000.0,10000.0,PIX,2025-12-19 00:00:00,2025-12-19 00:00:00.000,2025-12-19 00:00:00
+0043/2025,44,Elenice Martins da Silva Bom,Elenice Martins da Silva Bom,350.0,350.0,PIX SGPay,2025-12-20 00:00:00,2025-12-08 10:50:07.000,2025-12-09 00:00:00
+0063/2025,176,Andréia Rosa França do Valle,Andréia Rosa França do Valle,1500.0,1500.0,Boleto,2025-12-20 00:00:00,2025-12-03 00:00:00.000,2025-12-04 00:00:00
+0065/2025,243,Isabella Fernandes Madeira,Isabella Fernandes Madeira,141.34,141.34,Boleto,2025-12-20 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0066/2025,246,Gabrielly Gomes Leite,Uilian Jeime Lopes Leite,197.78,197.78,Boleto,2025-12-20 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0066/2025,251,João Gabriel Cruz Rodrigues,Ana Luisa Souza Cruz Rodrigues,338.38,338.38,Boleto,2025-12-20 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0065/2025,252,Michael Da Silva Barreto,Michael Da Silva Barreto,109.71,109.71,Boleto,2025-12-20 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0066/2025,253,RUAN CARLOS BONAFÉ COSTA,Grasielly Teixeira bonafé Costa,231.1,231.1,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0065/2025,254,Maria Eduarda Bernardo De Souza,Maria Eduarda Bernardo De Souza,167.31,167.31,Boleto,2025-12-20 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00
+0066/2025,228,José David Prudente Escudeiro Paixão,Mirian Prudente Escudeiro,364.44,364.44,Boleto,2025-12-20 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0066/2025,231,Jayme Costa De Oliveira,Jair Soares de Oliveira,231.1,231.1,Boleto,2025-12-20 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00
+0066/2025,233,Agatha Vitoria De Souza Da Silva,Vanessa de Souza Silva Baltazar,197.78,197.78,Boleto,2025-12-20 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0066/2025,236,Jennifer Laís Leite Alexandrino,Tayse Fernanda leite silva,264.44,264.44,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0066/2025,237,João Victor De Souza Alonso,Andrea Batista De Souza,264.44,264.44,Boleto,2025-12-20 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0065/2025,238,Leonardo Da Silva Andrade,Leonardo Da Silva Andrade,109.71,109.71,PIX SGPay,2025-12-20 00:00:00,2025-12-18 21:19:02.000,2025-12-19 00:00:00
+0066/2025,305,Rafaela Alexandra Macedo Pereira,Luciene Macedo Ferreira Pereira,476.0,476.0,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0066/2025,306,Nathaly Gama da Fonseca,Gisele de Araujo Gama da Fonseca,197.78,197.78,Boleto,2025-12-20 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0065/2025,276,Flávio De Assis Nogueira Junior,Flávio De Assis Nogueira Junior,167.31,167.31,Boleto,2025-12-20 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0065/2025,274,Silvia Leticia Da Silva Rodrigues Coelho De Faria,Silvia Leticia Da Silva Rodrigues Coelho De Faria,130.8,130.8,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0065/2025,263,Eduarda De Souza Pereira,Eduarda De Souza Pereira,171.02,171.02,PIX SGPay,2025-12-20 00:00:00,2025-12-26 10:04:28.000,2025-12-29 00:00:00
+0065/2025,264,Sabrina De Carvalho Jardim,Sabrina De Carvalho Jardim,167.31,167.31,Boleto,2025-12-20 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0098/2025,460,Lisliane Paixão Macedo,Lisliane Paixão Macedo,500.0,500.0,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0066/2025,423,Matheus De Oliveira Brito,Regina Almeida de Oliveira Brito,227.3,227.3,PIX SGPay,2025-12-20 00:00:00,2025-12-25 14:27:13.000,2025-12-26 00:00:00
+0101/2025,486,Luciana Francisca De Araujo,Luciana Francisca De Araujo,200.0,200.0,Boleto,2025-12-20 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0101/2025,490,Arlete Suzana Florentino Sarzedas,Arlete Suzana Florentino Sarzedas,200.0,200.0,Boleto,2025-12-20 00:00:00,2025-12-18 00:00:00.000,2025-12-19 00:00:00
+0101/2025,492,Rodrigo Silveira Xavier,Rodrigo Silveira Xavier,200.0,200.0,Boleto,2025-12-20 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0101/2025,493,Juliana Toledo de Mesquita,Juliana Toledo de Mesquita,200.0,200.0,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0101/2025,496,Caroline De Oliveira Dos Anjos Vargas,Caroline De Oliveira Dos Anjos Vargas,200.0,200.0,PIX SGPay,2025-12-20 00:00:00,2025-12-03 19:38:14.000,2025-12-04 00:00:00
+0100/2025,474,IGHOR DANIEL DE MELLO PINHO,IGHOR DANIEL DE MELLO PINHO,500.0,500.0,Boleto,2025-12-20 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0101/2025,481,Lyvia Ignacio de Lima Peçanha,Lyvia Ignacio de Lima Peçanha,200.0,200.0,Boleto,2025-12-20 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00
+0101/2025,482,Lilian Mendonça Moura Vitorino,Lilian Mendonça Moura Vitorino,226.67,226.67,Boleto,2025-12-20 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0101/2025,477,Morgana Bruna Rodrigues Tenório,Morgana Bruna Rodrigues Tenório,200.0,200.0,Boleto,2025-12-20 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0101/2025,478,Michelle Felici de Andrade,Michelle Felici de Andrade,200.0,200.0,PIX SGPay,2025-12-20 00:00:00,2025-12-10 17:03:54.000,2025-12-11 00:00:00
+0101/2025,479,Matheus Ribeiro Santos Sales,Matheus Ribeiro Santos Sales,200.0,200.0,PIX SGPay,2025-12-20 00:00:00,2025-12-01 14:45:30.000,2025-12-02 00:00:00
+0125/2025,544,Gessika Dias,Gessika Dias,500.0,500.0,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0122/2025,529,Andréa de Melo Basilio,Andréa de Melo Basilio,500.0,500.0,Boleto,2025-12-20 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0142/2025,561,Gustavo Fernandes de Carvalho,Gustavo Fernandes de Carvalho,648.6,648.6,Boleto,2025-12-20 00:00:00,2025-12-02 00:00:00.000,2025-12-03 00:00:00
+0138/2025,557,Doris da Silva Machado,Doris da Silva Machado,470.0,470.0,Boleto,2025-12-20 00:00:00,2025-12-16 00:00:00.000,2025-12-17 00:00:00
+0139/2025,558,Luana Salgado de Menezes Viturino,Luana Salgado de Menezes Viturino,648.6,648.6,Boleto,2025-12-20 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0131/2025,550,Viviane Machado Monteiro Fernandes,Viviane Machado Monteiro Fernandes,500.0,500.0,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0065/2025,337,Patricia Dos Santos Silva Soares,Patricia Dos Santos Silva Soares,109.71,109.71,Boleto,2025-12-20 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0065/2025,321,Ester Freitas Costa,Ester Freitas Costa,167.31,167.31,Boleto,2025-12-20 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00
+0075/2025,326,João Eduardo Costa Sousa,Lucia Maria da Silva Costa,226.0,226.0,Boleto,2025-12-20 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0065/2025,327,Marcus Vinícius Lima Da Cunha,Marcus Vinícius Lima Da Cunha,109.71,109.71,Boleto,2025-12-20 00:00:00,2025-12-05 00:00:00.000,2025-12-08 00:00:00
+0079/2025,373,Caroline Rangel dos Santos,Caroline Rangel dos Santos,500.0,500.0,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0093/2025,422,Ricardo Ferreira Boucinhas,Ricardo Ferreira Boucinhas,500.0,500.0,Boleto,2025-12-20 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00
+0085/2025,406,Andréa Vidal Luciano,Andréa Vidal Luciano,500.0,500.0,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0173/2025,733,Vitor Ferreira Dos Reis,Vitor Ferreira Dos Reis,96.99,96.99,Boleto,2025-12-20 00:00:00,2025-12-23 00:00:00.000,2025-12-24 00:00:00
+0173/2025,734,Larissa Galdino Ferreira Coutinho,Larissa Galdino Ferreira Coutinho,95.0,95.0,PIX SGPay,2025-12-20 00:00:00,2025-12-20 04:50:58.000,2025-12-22 00:00:00
+0173/2025,731,Sabrina Evellyn Ramos Ferreira,Sabrina Evellyn Ramos Ferreira,95.0,95.0,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0173/2025,792,Jayne Braga De Souza,Jayne Braga De Souza,95.0,95.0,PIX SGPay,2025-12-20 00:00:00,2025-12-20 20:17:34.000,2025-12-22 00:00:00
+0065/2025,781,Cristiana Barbosa Lopes,Cristiana Barbosa Lopes,334.24,334.24,Boleto,2025-12-20 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0173/2025,752,Perla De Andrade Farias,Perla De Andrade Farias,122.14,122.14,Boleto,2025-12-20 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0173/2025,795,Fernanda De Souza Da Silva,Fernanda De Souza Da Silva,97.02,97.02,Boleto,2025-12-20 00:00:00,2025-12-24 00:00:00.000,2025-12-26 00:00:00
+0173/2025,784,Renata Leonardo Gomes,Renata Leonardo Gomes,95.0,95.0,Boleto,2025-12-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0152/2025,591,Matheus de Vargas Felipe da Silva,Matheus de Vargas Felipe da Silva,658.0,658.0,Boleto,2025-12-20 00:00:00,2025-12-17 00:00:00.000,2025-12-18 00:00:00
+0153/2025,592,Fernanda Meirim Pessurno Xavier,Fernanda Meirim Pessurno Xavier,470.0,470.0,Boleto,2025-12-20 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0154/2025,593,Mariana Barros Machado da Silva,Mariana Barros Machado da Silva,658.0,658.0,Boleto,2025-12-20 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0174/2025,721,Carolina Ribeiro Cosendey,Carolina Ribeiro Cosendey,648.6,648.6,Boleto,2025-12-20 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0126/2025,545,Nathália da Cruz Kale dos Santos,Nathália da Cruz Kale dos Santos,300.0,300.0,PIX,2025-12-21 00:00:00,2025-12-21 00:00:00.000,2025-12-21 00:00:00
+0025/2025,27,MILA HONORATO NEVES ZUZARTE,MILA HONORATO NEVES ZUZARTE,2150.0,2150.0,PIX,2025-12-21 00:00:00,2025-12-21 00:00:00.000,2025-12-21 00:00:00
+0112/2025,513,Anna Beatriz Nunes Barroso,Natalia Ferraz Simoes Nunes,3000.0,3000.0,PIX,2025-12-22 00:00:00,2025-12-22 00:00:00.000,2025-12-22 00:00:00
+0158/2025,597,. Fênix Plataforma de Crédito,. Fênix Plataforma de Crédito,6369.44,6369.44,Boleto,2025-12-23 00:00:00,2025-12-23 00:00:00.000,2025-12-24 00:00:00
+0126/2025,545,Nathália da Cruz Kale dos Santos,Nathália da Cruz Kale dos Santos,12775.0,12775.0,Boleto,2025-12-24 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00
+0132/2025,551,Eliana Miranda Leripio,Eliana Miranda Leripio,500.0,500.0,Boleto,2025-12-25 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0023/2025,25,CRISTIANE SANTOS MORAES,CRISTIANE SANTOS MORAES,2924.0,2924.0,PIX,2025-12-25 00:00:00,2025-12-23 00:00:00.000,2025-12-23 00:00:00
+0156/2025,601,Alessandra Coelho Gomes Da Fonseca,Alessandra Coelho Gomes Da Fonseca,155.83,155.83,PIX SGPay,2025-12-25 00:00:00,2025-12-29 14:35:46.000,2025-12-30 00:00:00
+0161/2025,605,Natália Freitas de Barros,Natália Freitas de Barros,191.0,191.0,Boleto,2025-12-25 00:00:00,2025-12-24 00:00:00.000,2025-12-26 00:00:00
+0161/2025,606,Evelyn de Castro Silveira da Silva,Evelyn de Castro Silveira da Silva,279.84,279.84,Boleto,2025-12-25 00:00:00,2025-12-29 00:00:00.000,2025-12-30 00:00:00
+0162/2025,621,Renata Faria Alves,Renata Faria Alves,479.5,479.5,Boleto,2025-12-25 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0161/2025,626,Giovana Pinto Martins,Giovana Pinto Martins,191.0,191.0,PIX SGPay,2025-12-25 00:00:00,2025-12-17 11:56:14.000,2025-12-18 00:00:00
+0161/2025,634,Maria Eduarda Braga Alves,Maria Eduarda Braga Alves,685.0,685.0,Boleto,2025-12-25 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0162/2025,635,Cristiana Gama Cardoso,Cristiana Gama Cardoso,274.0,274.0,Boleto,2025-12-25 00:00:00,2025-12-18 00:00:00.000,2025-12-19 00:00:00
+0162/2025,637,Yasmin Cristina Da Silva Pereira,Teresa cristina da Silva,279.84,279.84,Boleto,2025-12-25 00:00:00,2025-12-29 00:00:00.000,2025-12-30 00:00:00
+0161/2025,639,Maria Eduarda Duarte Fraga,Welder Silva Fraga,274.0,274.0,Boleto,2025-12-25 00:00:00,2025-12-24 00:00:00.000,2025-12-26 00:00:00
+0161/2025,640,Amanda Franco Barbosa Da Silva,Amanda Franco Barbosa Da Silva,209.8,209.8,Boleto,2025-12-25 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0162/2025,641,Clarice Dos Santos Souza Class,Clarice Dos Santos Souza Class,137.0,137.0,Boleto,2025-12-25 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0161/2025,642,Larissa dos Santos Rangel Ferrete,Larissa dos Santos Rangel Ferrete,233.49,233.49,PIX SGPay,2025-12-25 00:00:00,2025-12-29 10:14:57.000,2025-12-30 00:00:00
+0162/2025,622,Talita Oliveira Rodrigues,Talita Oliveira Rodrigues,274.0,274.0,Boleto,2025-12-25 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0162/2025,623,Paula da Rocha Vaz Dos Santos Duarte,Paula da Rocha Vaz Dos Santos Duarte,158.43,158.43,Boleto,2025-12-25 00:00:00,2025-12-08 00:00:00.000,2025-12-09 00:00:00
+0156/2025,616,Giovanna de Araújo Costa,Giovanna de Araújo Costa,118.0,118.0,PIX SGPay,2025-12-25 00:00:00,2025-12-13 11:09:02.000,2025-12-15 00:00:00
+0162/2025,647,Bernardo Corrêa Lima Dos Santos,Wagner VILS Ribeiro dos Santos,274.0,274.0,Boleto,2025-12-25 00:00:00,2025-12-17 00:00:00.000,2025-12-18 00:00:00
+0161/2025,644,Ana Lorena Lins de Sousa,Ana Lorena Lins de Sousa,139.93,139.93,Boleto,2025-12-25 00:00:00,2025-12-29 00:00:00.000,2025-12-30 00:00:00
+0161/2025,630,LETICIA DA COSTA MOREIRA,EDMILSON MOREIRA DA SILVA,341.07,341.07,Boleto,2025-12-25 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0185/2025,797,Maria Aline Araujo do Monte Monteiro,Maria Aline Araujo do Monte Monteiro,686.0,686.0,Boleto,2025-12-25 00:00:00,2025-12-10 00:00:00.000,2025-12-11 00:00:00
+0072/2025,245,Maria Eduarda Gomes Pereira Maia,Maria Eduarda Gomes Pereira Maia,5000.0,5000.0,PIX SGPay,2025-12-26 00:00:00,2025-12-26 14:34:01.000,2025-12-29 00:00:00
+0137/2025,556,Cássia de Andrade Soares Caldas,Cássia de Andrade Soares Caldas,837.4,837.4,Boleto,2025-12-26 00:00:00,2025-12-29 00:00:00.000,2025-12-30 00:00:00
+0099/2025,473,Luiz Carlos Martins,Luiz Carlos Martins,300.0,300.0,PIX,2025-12-28 00:00:00,2025-12-28 00:00:00.000,2025-12-28 00:00:00
+0116/2025,522,Ana Paula Oliveira Sá Motta,Ana Paula Oliveira Sá Motta,2000.0,2000.0,Boleto,2025-12-30 00:00:00,2025-12-30 00:00:00.000,2025-12-31 00:00:00
+0038/2025,40,Maria candida pereira da costa,Maria candida pereira da costa,600.0,600.0,PIX SGPay,2025-12-30 00:00:00,2025-12-29 09:25:57.000,2025-12-30 00:00:00
+0028/2025,30,NADJA SIMONE SANTOS DE PAULA,NADJA SIMONE SANTOS DE PAULA,1000.0,1000.0,PIX,2025-12-30 00:00:00,2025-12-30 00:00:00.000,2025-12-30 00:00:00
+0028/2025,30,NADJA SIMONE SANTOS DE PAULA,NADJA SIMONE SANTOS DE PAULA,1000.0,1000.0,PIX,2025-12-30 00:00:00,2025-12-30 00:00:00.000,2025-12-30 00:00:00
+0146/2025,566,Isabelle Rangel de Oliveira,Isabelle Rangel de Oliveira,10046.25,10046.25,Boleto,2025-12-30 00:00:00,2025-12-23 00:00:00.000,2025-12-24 00:00:00
+0032/2025,34,MILENA ALVES CRESPO AZEVEDO,MILENA ALVES CRESPO AZEVEDO,5000.0,5000.0,PIX,2025-12-31 00:00:00,2025-12-31 00:00:00.000,2025-12-31 00:00:00
+0059/2025,188,Davi Pluvie Silva,Cynthia Pluvie Sant Anna de Mello,210.06,210.06,C. Crédito,2026-01-02 00:00:00,2025-12-02 13:50:02.517,2025-12-02 00:00:00
+0094/2025,469,Anna Clara Campos,Adriana dos Santos Campos,232.17,232.17,C. Crédito,2026-01-03 00:00:00,2025-12-03 15:28:04.430,2025-12-03 00:00:00
+0094/2025,428,Ana Clara Rodrigues Vieira Lyra,Glauce Rodrigues vieira,132.84,132.84,C. Crédito,2026-01-05 00:00:00,2025-12-05 13:47:21.693,2025-12-05 00:00:00
+0155/2025,594,Vânia de Almeida Fragoso,Vânia de Almeida Fragoso,470.0,470.0,Boleto,2026-01-05 00:00:00,2025-12-30 00:00:00.000,2025-12-31 00:00:00
+0075/2025,310,Maria Eduarda De Souza Aguiar,Aretha de Souza Aguiar,595.66,595.66,C. Crédito,2026-01-08 00:00:00,2025-12-08 16:05:43.887,2025-12-08 00:00:00
+0059/2025,249,Davi Machado Carvalho,Debora machado,200.0,200.0,C. Crédito,2026-01-08 00:00:00,2025-12-08 14:53:27.740,2025-12-08 00:00:00
+0056/2025,170,Júlia De Lima Silva,Achilles Theodoro da Silva Júnior,168.36,168.36,Boleto,2026-01-10 00:00:00,2025-12-09 00:00:00.000,2025-12-10 00:00:00
+0056/2025,153,Analua Poubel Morse,Luana Alves Costa Poubel,22.72,22.72,Boleto,2026-01-10 00:00:00,2025-12-15 00:00:00.000,2025-12-16 00:00:00
+0056/2025,151,Victor Reis Porto,Elizabeth Gadelha Reis,25.0,25.0,Boleto,2026-01-10 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1392.0,1392.0,CARTÃO DE CRÉDITO,2026-01-11 00:00:00,2025-12-11 15:37:06.543,2026-02-09 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-01-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0160/2025,599,Bianca Machado Cardoso,Bianca Machado Cardoso,940.0,940.0,Boleto,2026-01-15 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0163/2025,633,Ana Júlia De Lima Fernandes,Ana Júlia De Lima Fernandes,106.0,106.0,Boleto,2026-01-15 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0163/2025,679,Haiana De Carvalho Rodrigues,Haiana De Carvalho Rodrigues,60.0,60.0,Boleto,2026-01-15 00:00:00,2025-12-30 00:00:00.000,2025-12-31 00:00:00
+0087/2025,408,Alace Luiz Saraiva,Alace Luiz Saraiva,500.0,500.0,Boleto,2026-01-15 00:00:00,2025-12-30 00:00:00.000,2025-12-31 00:00:00
+0093/2025,422,Ricardo Ferreira Boucinhas,Ricardo Ferreira Boucinhas,500.0,500.0,Boleto,2026-01-20 00:00:00,2025-12-29 00:00:00.000,2025-12-30 00:00:00
+0065/2025,262,Camila Macedo Nascimento,Maria Cristina Conceição de Macedo Nascimento,167.31,167.31,Boleto,2026-01-20 00:00:00,2025-12-22 00:00:00.000,2025-12-23 00:00:00
+0182/2025,779,MARCELO ALVES DA COSTA,MARCELO ALVES DA COSTA,1470.0,1470.0,Boleto,2026-01-20 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00
+0173/2025,732,Gabriella Caputo Da Costa Moreira De Souza,Gabriella Caputo Da Costa Moreira De Souza,178.0,178.0,Boleto,2026-01-20 00:00:00,2025-12-30 00:00:00.000,2025-12-31 00:00:00
+0162/2025,648,Barbara De Sá Ribeiro Kossatz,Barbara De Sá Ribeiro Kossatz,209.0,209.0,Boleto,2026-01-25 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0162/2025,649,Pedro Ivo Valença Pereira,Luiz Claudio Pereira,137.0,137.0,Boleto,2026-01-25 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0162/2025,650,Rebeca Cabral Tavares Pontes,José Maria Rodrigues Tavares Pontes,137.0,137.0,Boleto,2026-01-25 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0156/2025,617,Tais Monara Da Silva Barbosa,Tais Monara Da Silva Barbosa,164.16,164.16,Boleto,2026-01-25 00:00:00,2025-12-26 00:00:00.000,2025-12-29 00:00:00
+0162/2025,623,Paula da Rocha Vaz Dos Santos Duarte,Paula da Rocha Vaz Dos Santos Duarte,158.43,158.43,Boleto,2026-01-25 00:00:00,2025-12-29 00:00:00.000,2025-12-30 00:00:00
+0161/2025,626,Giovana Pinto Martins,Giovana Pinto Martins,191.0,191.0,PIX SGPay,2026-01-25 00:00:00,2025-12-30 16:12:50.000,2026-01-02 00:00:00
+0094/2025,469,Anna Clara Campos,Adriana dos Santos Campos,232.17,232.17,C. Crédito,2026-02-03 00:00:00,2025-12-03 15:28:04.430,2025-12-03 00:00:00
+0075/2025,310,Maria Eduarda De Souza Aguiar,Aretha de Souza Aguiar,595.67,595.67,C. Crédito,2026-02-08 00:00:00,2025-12-08 16:05:43.887,2025-12-08 00:00:00
+0059/2025,249,Davi Machado Carvalho,Debora machado,200.0,200.0,C. Crédito,2026-02-08 00:00:00,2025-12-08 14:53:27.740,2025-12-08 00:00:00
+0056/2025,170,Júlia De Lima Silva,Achilles Theodoro da Silva Júnior,168.36,168.36,Boleto,2026-02-10 00:00:00,2025-12-12 00:00:00.000,2025-12-15 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-02-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1392.0,1392.0,CARTÃO DE CRÉDITO,2026-02-11 00:00:00,2025-12-11 15:37:06.543,2026-03-11 00:00:00
+0160/2025,599,Bianca Machado Cardoso,Bianca Machado Cardoso,940.0,940.0,Boleto,2026-02-15 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0182/2025,779,MARCELO ALVES DA COSTA,MARCELO ALVES DA COSTA,1470.0,1470.0,Boleto,2026-02-20 00:00:00,2025-12-24 00:00:00.000,2025-12-26 00:00:00
+0093/2025,422,Ricardo Ferreira Boucinhas,Ricardo Ferreira Boucinhas,500.0,500.0,Boleto,2026-02-20 00:00:00,2025-12-29 00:00:00.000,2025-12-30 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1392.0,1392.0,CARTÃO DE CRÉDITO,2026-03-11 00:00:00,2025-12-11 15:37:06.543,2026-04-10 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-03-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0160/2025,599,Bianca Machado Cardoso,Bianca Machado Cardoso,940.0,940.0,Boleto,2026-03-15 00:00:00,2025-12-01 00:00:00.000,2025-12-02 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-04-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1392.0,1392.0,CARTÃO DE CRÉDITO,2026-04-11 00:00:00,2025-12-11 15:37:06.543,2026-05-10 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-05-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-06-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-07-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-08-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0194/2025,823,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,COLEGIO ATUAÇÃO BILINGUE S/S LTDA,1856.0,1856.0,C. Crédito,2026-09-11 00:00:00,2025-12-11 15:35:21.710,2025-12-11 00:00:00
+0102/2025,475,Kátia Lúcia Teixeira Miranda Gomes,Kátia Lúcia Teixeira Miranda Gomes,2500.0,2500.0,Boleto,2026-12-20 00:00:00,2025-12-19 00:00:00.000,2025-12-22 00:00:00

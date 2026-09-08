@@ -22,3 +22,8 @@ data,mes,conta,tipo,valor,ativo,obs
 2026-06-12,06/2026,Route,Aporte,70000.00,,Aporte novo Soul 12/06 (2o Daycoval) - extrato Route XPerformance 08/07
 2026-07-07,07/2026,Route,Resgate,-1943.99,,Taxa FEE FIXO ref Jun26 07/07 - extrato Route
 2026-07-08,07/2026,Route,Aporte,100000.00,,Aporte novo Soul 08/07 via TED (em caixa aguardando aplicacao) - extrato Route
+2026-07-10,07/2026,Route,Resgate,-10000.00,,Retirada Henrique 10/07 (distribuicao ao socio - debita da Route/pai) - extrato Route XPerformance 03/09
+2026-07-30,07/2026,Route,Aporte,150000.00,,Aporte novo Soul 30/07 (aplicado no fundo SulAmerica Credito Ativo) - extrato Route XPerformance 03/09
+2026-08-04,08/2026,Route,Resgate,-10000.00,,Retirada Henrique 04/08 (distribuicao ao socio - debita da Route/pai) - extrato Route XPerformance 03/09
+2026-08-07,08/2026,Route,Resgate,-2237.15,,Taxa FEE FIXO ref Jul26 07/08 - extrato Route XPerformance 03/09
+2026-08-17,08/2026,Route,Aporte,60000.00,,Aporte novo Soul 17/08 - extrato Route XPerformance 03/09

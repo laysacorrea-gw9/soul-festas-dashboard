@@ -302,12 +302,12 @@ def load_meta():
     return {}
 
 
-@st.cache_data
+@st.cache_data(ttl=60)  # cache curto pra pegar atualizações rápido
 def load_investimentos():
     """Le os CSVs manuais de investimentos (XP Soul + Route) de data_seed/.
 
     Sao mantidos a mao (vem do extrato da XP, nao do SGE). Retorna DataFrames
-    vazios se ainda nao existirem.
+    vazios se ainda nao existirem. TTL curto: 60s pra atualizações refletirem rápido.
     """
     mov_path = SEED / "investimentos_movimentos.csv"
     cart_path = SEED / "investimentos_carteira.csv"

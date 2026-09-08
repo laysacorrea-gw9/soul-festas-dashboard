@@ -390,15 +390,20 @@ with hdr_c:
                       "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
         mes_sel = st.selectbox("Mês", meses_opts, index=0)
 with hdr_r:
+    # Última atualização = MAX entre meta.json (transform SGE) e mtime dos CSVs
+    # de dados que podem mudar sem rodar o transform (investimentos, seeds).
     _meta = load_meta()
+    _candidatos = []
     _geradoem = _meta.get("gerado_em", "")
     if _geradoem:
         try:
-            _data_upd = pd.to_datetime(_geradoem).strftime("%d/%m/%Y %H:%M")
+            _candidatos.append(pd.to_datetime(_geradoem))
         except Exception:
-            _data_upd = _geradoem
-    else:
-        _data_upd = "—"
+            pass
+    for _p in (SEED / "investimentos_carteira.csv", SEED / "investimentos_movimentos.csv"):
+        if _p.exists():
+            _candidatos.append(pd.Timestamp.fromtimestamp(_p.stat().st_mtime))
+    _data_upd = max(_candidatos).strftime("%d/%m/%Y %H:%M") if _candidatos else "—"
     st.markdown(
         "<div style='text-align:right; padding-top: 28px;'>"
         "<div style='color: hsl(215, 20%, 65%); font-size: 12px;'>Última atualização</div>"

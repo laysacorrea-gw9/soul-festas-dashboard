@@ -1418,6 +1418,69 @@ with tab_inad:
                 st.plotly_chart(fig2, use_container_width=True)
             st.divider()
 
+            # ====== NOVO: Top Projetos com inadimplência (últimos 12 meses) ======
+            from datetime import timedelta
+            _hoje = pd.Timestamp.today().normalize()
+            _12m_atras = _hoje - pd.DateOffset(months=12)
+            df_12m = df_view.copy()
+            df_12m["Vencimento_dt"] = pd.to_datetime(df_12m["Vencimento"], errors="coerce")
+            df_12m = df_12m[
+                (df_12m["Vencimento_dt"] >= _12m_atras) &
+                (df_12m["Vencimento_dt"] <= _hoje)
+            ]
+
+            colA, colB = st.columns([3, 2])
+
+            with colA:
+                st.markdown(f"#### 🏆 Top 15 Projetos com maior inadimplência — últimos 12 meses")
+                st.caption(f"Parcelas vencidas entre {_12m_atras.strftime('%d/%m/%Y')} e {_hoje.strftime('%d/%m/%Y')}")
+                if df_12m.empty:
+                    st.info("Sem parcelas vencidas nesse período.")
+                else:
+                    top_proj = df_12m.groupby("Projeto").agg(
+                        valor=("Valor Atualizado", "sum"),
+                        qtd=("Valor Atualizado", "count"),
+                        cliente=("Cliente", "first"),
+                        tipo=("Tipo Projeto", "first"),
+                    ).reset_index().sort_values("valor", ascending=False).head(15)
+                    top_proj_show = top_proj.rename(columns={
+                        "Projeto": "Projeto",
+                        "cliente": "Cliente",
+                        "tipo": "Tipo",
+                        "valor": "Valor atrasado",
+                        "qtd": "Parcelas",
+                    }).copy()
+                    top_proj_show["Valor atrasado"] = top_proj_show["Valor atrasado"].apply(brl)
+                    st.dataframe(top_proj_show, use_container_width=True, hide_index=True, height=560)
+
+            with colB:
+                st.markdown(f"#### 🎪 Totais por Tipo de Evento — últimos 12 meses")
+                st.caption("Ranking do que gera mais inadimplência por categoria")
+                if df_12m.empty:
+                    st.info("Sem dados nesse período.")
+                else:
+                    por_tipo_12m = df_12m.groupby("Tipo Projeto").agg(
+                        valor=("Valor Atualizado", "sum"),
+                        qtd=("Valor Atualizado", "count"),
+                        projetos=("Projeto", "nunique"),
+                    ).reset_index().sort_values("valor", ascending=False)
+                    total_12m = por_tipo_12m["valor"].sum()
+                    por_tipo_12m["%"] = (por_tipo_12m["valor"] / total_12m * 100).round(1)
+                    por_tipo_12m_show = por_tipo_12m.rename(columns={
+                        "Tipo Projeto": "Tipo",
+                        "valor": "Total atrasado",
+                        "qtd": "Parcelas",
+                        "projetos": "Projetos",
+                        "%": "% do total",
+                    }).copy()
+                    por_tipo_12m_show["Total atrasado"] = por_tipo_12m_show["Total atrasado"].apply(brl)
+                    por_tipo_12m_show["% do total"] = por_tipo_12m_show["% do total"].apply(lambda x: f"{x}%")
+                    st.dataframe(por_tipo_12m_show, use_container_width=True, hide_index=True, height=560)
+
+            st.caption(f"📊 Base 12m: {df_12m['Projeto'].nunique()} projetos · "
+                       f"{len(df_12m)} parcelas · {brl(df_12m['Valor Atualizado'].sum())} totais")
+            st.divider()
+
         # ====== Tabela de devedores ======
         if modo_leticia:
             st.markdown(f"#### 📲 Lista de cobrança — {total_pagadores} clientes · {brl(total_valor)}")

@@ -735,6 +735,14 @@ with tab1:
     GRUPO_ORDER = ["DESPESAS COM EVENTOS", "DESPESAS OPERACIONAIS"]
     SUB_ORDER = ["DESPESAS FIXAS", "DESPESAS VARIÁVEIS", "DESPESAS TERCEIROS"]
 
+    # Toggle: ordenar subgrupos e categorias por VALOR (maior → menor) ou por ORDEM PADRÃO
+    ordenar_por_valor = st.checkbox(
+        "🔽 Ordenar despesas do maior pro menor (por valor total)",
+        value=False,
+        key="dre_ord_valor",
+        help="Se marcado, os subgrupos e as categorias aparecem ordenados do que gastou mais pro que gastou menos."
+    )
+
     grupos_existentes = [g for g in GRUPO_ORDER if g in df["grupo"].dropna().unique()]
     for grupo in grupos_existentes:
         dfg = df[df["grupo"] == grupo]
@@ -756,7 +764,11 @@ with tab1:
             if grupo == "DESPESAS COM EVENTOS":
                 # Grupo EVENTOS: pula nivel 2, vai direto pras Categorias do SGE
                 dfc = dfg.dropna(subset=["Categoria"])
-                cats = sorted(dfc["Categoria"].unique())
+                if ordenar_por_valor:
+                    # Ordena categorias do maior pro menor total no ano
+                    cats = dfc.groupby("Categoria")["valor_ref"].sum().sort_values(ascending=False).index.tolist()
+                else:
+                    cats = sorted(dfc["Categoria"].unique())
                 for cat in cats:
                     dfi = dfc[dfc["Categoria"] == cat]
                     tot_c_mes = dfi.groupby("mes")["valor_ref"].sum().reindex(meses, fill_value=0)
@@ -778,7 +790,15 @@ with tab1:
                     html += f"<td>{_lnk(brl(tot_c), 'DESPESAS COM EVENTOS', grupo, 'Todos', cat)}</td></tr>"
             else:
                 # Grupo OPERACIONAIS: Subgrupo > Categoria (3 niveis)
-                subs_existentes = [s for s in SUB_ORDER if s in dfg["subgrupo"].dropna().unique()]
+                if ordenar_por_valor:
+                    # Ordena subgrupos do maior pro menor total no ano
+                    subs_existentes = (
+                        dfg.dropna(subset=["subgrupo"])
+                           .groupby("subgrupo")["valor_ref"].sum()
+                           .sort_values(ascending=False).index.tolist()
+                    )
+                else:
+                    subs_existentes = [s for s in SUB_ORDER if s in dfg["subgrupo"].dropna().unique()]
                 for sub in subs_existentes:
                     dfs = dfg[dfg["subgrupo"] == sub]
                     tot_s_mes = dfs.groupby("mes")["valor_ref"].sum().reindex(meses, fill_value=0)
@@ -791,7 +811,10 @@ with tab1:
                     html += f"<td>{_lnk(brl(tot_s), sub, grupo, 'Todos')}</td></tr>"
 
                     dfc = dfs.dropna(subset=["Categoria"])
-                    cats = sorted(dfc["Categoria"].unique())
+                    if ordenar_por_valor:
+                        cats = dfc.groupby("Categoria")["valor_ref"].sum().sort_values(ascending=False).index.tolist()
+                    else:
+                        cats = sorted(dfc["Categoria"].unique())
                     for cat in cats:
                         dfi = dfc[dfc["Categoria"] == cat]
                         tot_c_mes = dfi.groupby("mes")["valor_ref"].sum().reindex(meses, fill_value=0)

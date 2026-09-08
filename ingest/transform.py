@@ -144,7 +144,8 @@ def load_custo_projeto() -> dict:
 def load_contas_pagar() -> pd.DataFrame:
     files = list(RAW.glob("Contas_a_Pagar_*.xlsx"))
     assert files, "Contas_a_Pagar nao encontrado"
-    df = pd.read_excel(files[0])
+    # Concatenar TODOS os arquivos (4 semestres separados ou 1 combined)
+    df = pd.concat([pd.read_excel(f) for f in files], ignore_index=True)
     # O export do SGE traz linhas 100% duplicadas (mesma parcela repetida no
     # arquivo). Remove duplicatas exatas antes de classificar pra nao inflar despesa.
     antes = len(df)
@@ -160,7 +161,8 @@ def load_contas_pagar() -> pd.DataFrame:
 def load_contas_receber() -> pd.DataFrame:
     files = list(RAW.glob("Contas a Receber_*.xlsx"))
     assert files, "Contas a Receber nao encontrado"
-    df = pd.read_excel(files[0])
+    # Concatenar TODOS os arquivos (NÃO PAGAS + PAGAS 2025 + PAGAS 2026, etc)
+    df = pd.concat([pd.read_excel(f) for f in files], ignore_index=True)
     antes = len(df)
     df = df.drop_duplicates()
     if antes != len(df):

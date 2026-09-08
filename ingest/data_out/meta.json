@@ -1,29 +1,29 @@
 {
-  "gerado_em": "2026-08-20T16:54:29.269938",
+  "gerado_em": "2026-09-08T15:03:19.403869",
   "fontes": {
-    "pagar_xlsx": "Contas_a_Pagar_20260806_combined.xlsx",
-    "receber_xlsx": "Contas a Receber_20260820_combined.xlsx",
-    "projetos_xlsx": "BalancoPorProjetoResumido_20260806.xlsx"
+    "pagar_xlsx": "Contas_a_Pagar_1SEM2025-Contas_a_Pagar_20260908_145136_10463.xlsx",
+    "receber_xlsx": "Contas a Receber_20260908_143734_10463_1311.xlsx",
+    "projetos_xlsx": "BalancoPorProjetoResumido20260908_145345_10463.xlsx"
   },
   "contagens": {
-    "contas_pagar": 6052,
-    "contas_receber": 8130,
-    "projetos": 305,
+    "contas_pagar": 6021,
+    "contas_receber": 10402,
+    "projetos": 327,
     "cobertura_classificacao_pct": 100.0,
-    "nao_classificados": 78
+    "nao_classificados": 84
   },
   "totais_2026": {
-    "despesas": 2440867.22,
-    "despesas_em_aberto": 685235.65,
-    "faturamento": 3113153.99,
-    "despesa_casa": 1691076.67,
-    "despesa_eventos": 749790.55
+    "despesas": 2739364.4699999997,
+    "despesas_em_aberto": 0.0,
+    "faturamento": 3627090.5599999996,
+    "despesa_casa": 1892871.72,
+    "despesa_eventos": 846492.75
   },
   "inadimplencia": {
-    "parcelas": 1612,
-    "pagadores_unicos": 567,
-    "valor_nominal": 550722.57,
-    "valor_atualizado": 550722.57,
-    "fonte": "fallback_contas_nao_recebidas"
+    "parcelas": 889,
+    "pagadores_unicos": 263,
+    "valor_nominal": 236480.22,
+    "valor_atualizado": 256275.28999999998,
+    "fonte": "planilha_sge"
   }
 }

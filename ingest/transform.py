@@ -73,6 +73,33 @@ SERVICO_OVERRIDE = {
     "STORYMAKER": "EVENTO",
 }
 
+# Overrides por CATEGORIA do SGE (prioridade MÁXIMA, sobrescreve subgrupo e serviço).
+# Resolve o problema de uma Categoria aparecer em grupos diferentes.
+# Confirmado com Laysa 13/10/2026.
+CATEGORIA_OVERRIDE = {
+    "010 - DESPESAS DE EVENTO": "EVENTO",
+    "035 - Bebidas e Alimentos em geral": "EVENTO",
+    "005 - COMISSÃO DE VENDAS": "VARIÁVEL",
+    "008 - IMPOSTOS": "VARIÁVEL",
+    "008 - ASSESSORIA EMPRESARIAL": "FIXA",
+    "001 - DESPESAS FIXAS": "FIXA",
+    "100 - DESPESAS COM PESSOAL": "FIXA",
+    "004 - MANUTENÇÃO E CONSERVAÇÃO": "EVENTUAL",
+    "007 - MARKETING": "VARIÁVEL",
+    "009 - EQUIPAMENTOS": "EVENTUAL",
+    "009 - Aparelhos elétricos em geral": "VARIÁVEL",
+    "038 - Serviços diversos": "VARIÁVEL",
+    "003 - DIVERSOS": "VARIÁVEL",
+    "003 - GRÁFICA E PAPELARIA": "VARIÁVEL",
+    "002 - USO INTERNO": "VARIÁVEL",
+}
+
+# Categorias com regra CONDICIONAL (dependem de outra variável, não cabem em CATEGORIA_OVERRIDE direto).
+# 005 - EQUIPE: se tem projeto -> EVENTO | se nao tem -> VARIÁVEL
+CATEGORIA_CONDICIONAL_PROJETO = {
+    "005 - EQUIPE": {"com_projeto": "EVENTO", "sem_projeto": "VARIÁVEL"},
+}
+
 # Centros de Custo que sao da CASA (operacional, nao do evento)
 CC_CASA = ["Administrativo", "DP", "Comercial"]
 # Centros de Custo que sao de EVENTOS
@@ -502,6 +529,19 @@ def processar_contas_pagar(pagar: pd.DataFrame, dp_sub: pd.DataFrame,
     for servico_up, sub_novo in SERVICO_OVERRIDE.items():
         mask = df["Serviço_norm"] == servico_up
         df.loc[mask, "subgrupo"] = sub_novo
+
+    # === REGRA 5B (NOVA): overrides por CATEGORIA (prioridade máxima) ===
+    # Resolve problema de mesma categoria aparecer em múltiplos grupos.
+    for cat_nome, sub_novo in CATEGORIA_OVERRIDE.items():
+        mask = df["Categoria"] == cat_nome
+        df.loc[mask, "subgrupo"] = sub_novo
+
+    # === REGRA 5C (NOVA): regras CONDICIONAIS (depende se tem projeto) ===
+    # 005 - EQUIPE: com projeto -> EVENTO | sem projeto -> VARIÁVEL
+    for cat_nome, regras in CATEGORIA_CONDICIONAL_PROJETO.items():
+        mask_cat = df["Categoria"] == cat_nome
+        df.loc[mask_cat & tem_proj, "subgrupo"] = regras["com_projeto"]
+        df.loc[mask_cat & ~tem_proj, "subgrupo"] = regras["sem_projeto"]
 
     # === REGRA 6: Grupo nível 1 — nos 4 grupos novos, grupo == subgrupo ===
     # (eliminada hierarquia "DESPESAS OPERACIONAIS" / "DESPESAS COM EVENTOS")

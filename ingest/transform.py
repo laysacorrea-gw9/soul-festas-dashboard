@@ -36,21 +36,41 @@ SUBGRUPO_NORM = {
     "DESPESA FIXA": "DESPESAS FIXAS",
 }
 
-# Remap dos subgrupos do de-para original para os 4 subgrupos padrao Nibo
+# Remap dos subgrupos do de-para original para os 4 NOVOS grupos (reorganização Laysa 13/10/2026)
+# EVENTO (tem projeto), FIXA (recorrente mensal), VARIÁVEL (fornecedor sem projeto / impostos / taxas), EVENTUAL (pontual)
 SUBGRUPO_NIBO = {
-    # FIXAS
-    "DESPESAS FIXAS": "DESPESAS FIXAS",
-    "PESSOAL": "DESPESAS FIXAS",
-    # VARIAVEIS
-    "DESPESAS ADMINISTRATIVAS": "DESPESAS VARIÁVEIS",
-    "DESPESAS GERAIS": "DESPESAS VARIÁVEIS",
-    "MANUTENÇÃO CONSERVAÇÃO": "DESPESAS VARIÁVEIS",
-    "OBRIGAÇÕES / IMPOSTOS": "DESPESAS VARIÁVEIS",
-    "OUTROS": "DESPESAS VARIÁVEIS",
-    "DESPESAS FINANCEIRAS": "DESPESAS VARIÁVEIS",
-    # EVENTOS / TERCEIROS
-    "DESPESAS COM EVENTOS": "DESPESAS COM EVENTOS",
-    "DESPESAS COM TERCEIROS": "DESPESAS TERCEIROS",
+    # EVENTO
+    "DESPESAS COM EVENTOS": "EVENTO",
+    # FIXA (recorrente mensal: aluguel, salário, pró-labore, contador, software, assessoria)
+    "DESPESAS FIXAS": "FIXA",
+    "PESSOAL": "FIXA",
+    "DESPESAS ADMINISTRATIVAS": "FIXA",
+    # VARIÁVEL (fornecedor sem projeto, impostos, taxas, mobiliário, marketing)
+    "DESPESAS GERAIS": "VARIÁVEL",
+    "OBRIGAÇÕES / IMPOSTOS": "VARIÁVEL",
+    "DESPESAS FINANCEIRAS": "VARIÁVEL",
+    "DESPESAS COM TERCEIROS": "VARIÁVEL",
+    "OUTROS": "VARIÁVEL",
+    # EVENTUAL (pontual: consertos, reformas, equipamentos)
+    "MANUTENÇÃO CONSERVAÇÃO": "EVENTUAL",
+}
+
+# Overrides específicos: serviços que forçam uma classificação diferente do subgrupo-origem
+# Case-insensitive match no nome do Serviço. Define o SUBGRUPO final direto.
+SERVICO_OVERRIDE = {
+    "MENTORIA": "EVENTUAL",            # Contrato temporário, não recorrente estrutural
+    "PLACA SOLAR": "EVENTUAL",          # Instalação única
+    "DEDETIZAÇÃO": "FIXA",              # Recorrente mensal (R$ 336 / mês)
+    "DEDETIZACAO": "FIXA",
+    "INTELIGÊNCIA ARTIFICIAL": "FIXA",  # Assinatura
+    "INTELIGENCIA ARTIFICIAL": "FIXA",
+    "FÉRIAS": "FIXA",
+    "FERIAS": "FIXA",
+    "COMPLEMENTO SALARIAL": "FIXA",
+    "VALET E SEGURANÇA": "EVENTO",
+    "ATRAÇÃO": "EVENTO",
+    "ATRACAO": "EVENTO",
+    "STORYMAKER": "EVENTO",
 }
 
 # Centros de Custo que sao da CASA (operacional, nao do evento)
@@ -448,7 +468,7 @@ def processar_contas_pagar(pagar: pd.DataFrame, dp_sub: pd.DataFrame,
     # === REGRA 1: Normalizacao de subgrupos ===
     df["subgrupo"] = df["subgrupo"].replace(SUBGRUPO_NORM)
 
-    # === REGRA 2: Remap para 4 subgrupos Nibo ===
+    # === REGRA 2: Remap para 4 NOVOS grupos (EVENTO / FIXA / VARIÁVEL / EVENTUAL) ===
     df["subgrupo"] = df["subgrupo"].map(SUBGRUPO_NIBO).fillna(df["subgrupo"])
 
     # === REGRA 3 (NOVA): natureza do servico (EVENTO x CASA) ===
@@ -456,38 +476,44 @@ def processar_contas_pagar(pagar: pd.DataFrame, dp_sub: pd.DataFrame,
     is_evento = natureza == "EVENTO"
 
     # Excecao: itens "estocaveis" (decoracao) so contam como evento se houver projeto
-    # vinculado. Sem projeto sao compras genericas (cartao) -> Casa.
+    # vinculado. Sem projeto sao compras genericas (cartao) -> Variável.
     # Decisao Laysa+Leticia 16/06/2026.
     tem_proj = df["Projeto"].notna() & (df["Projeto"].astype(str).str.strip() != "") & (df["Projeto"].astype(str) != "nan")
     ESPECIAL_SE_PROJETO = ("DECORAÇÃO", "EXTRAS DE DECORAÇÃO")
     is_especial = df["Serviço_norm"].isin(ESPECIAL_SE_PROJETO)
     is_evento = is_evento.where(~is_especial, tem_proj)
 
-    # Evento -> subgrupo DESPESAS COM EVENTOS
-    df.loc[is_evento, "subgrupo"] = "DESPESAS COM EVENTOS"
+    # Evento -> subgrupo EVENTO
+    df.loc[is_evento, "subgrupo"] = "EVENTO"
 
-    # === REGRA 4: Casa -> subgrupo de casa (FIXAS / VARIAVEIS / TERCEIROS) ===
-    # Servico de casa nunca pode ficar como "DESPESAS COM EVENTOS".
+    # === REGRA 4: Casa -> subgrupo da casa (FIXA / VARIÁVEL / EVENTUAL) ===
+    # Serviço de casa nunca pode ficar como "EVENTO".
     cat_str = df["Categoria"].astype(str).fillna("")
-    is_fixa = cat_str.str.startswith(CATEGORIA_FIXA_PREFIXES)
-    subgrupos_casa = ["DESPESAS FIXAS", "DESPESAS VARIÁVEIS", "DESPESAS TERCEIROS"]
-    precisa_sub = (~is_evento) & (~df["subgrupo"].isin(subgrupos_casa))
-    df.loc[precisa_sub & is_fixa, "subgrupo"] = "DESPESAS FIXAS"
-    df.loc[precisa_sub & ~is_fixa, "subgrupo"] = "DESPESAS VARIÁVEIS"
+    is_fixa_cat = cat_str.str.startswith(CATEGORIA_FIXA_PREFIXES)
+    subgrupos_validos = ["EVENTO", "FIXA", "VARIÁVEL", "EVENTUAL"]
+    precisa_sub = (~is_evento) & (~df["subgrupo"].isin(subgrupos_validos))
+    # Categoria 001/100/110 do SGE indica despesa fixa estrutural
+    df.loc[precisa_sub & is_fixa_cat, "subgrupo"] = "FIXA"
+    # Default: fornecedor sem projeto -> VARIÁVEL (regra Laysa 13/10/2026)
+    df.loc[precisa_sub & ~is_fixa_cat, "subgrupo"] = "VARIÁVEL"
 
-    # === REGRA 5: Grupos de nivel 1 (EVENTOS vs OPERACIONAIS) ===
-    df["grupo"] = df["subgrupo"].apply(
-        lambda s: "DESPESAS COM EVENTOS" if s == "DESPESAS COM EVENTOS" else "DESPESAS OPERACIONAIS"
-    )
+    # === REGRA 5 (NOVA): overrides específicos de serviço ===
+    # MENTORIA, PLACA SOLAR -> EVENTUAL | DEDETIZAÇÃO -> FIXA | etc.
+    for servico_up, sub_novo in SERVICO_OVERRIDE.items():
+        mask = df["Serviço_norm"] == servico_up
+        df.loc[mask, "subgrupo"] = sub_novo
 
-    # === REGRA 6: RETIRADA da socia (MAB2 HOLDING) ===
-    # No SGE aparece disfarcada como "Locacao de Imoveis" (para os funcionarios
-    # nao verem quanto a Monique retira). No dashboard dos donos vira a rubrica
-    # RETIRADA, dentro de Despesas Fixas; fornecedor/servico/descricao sao
-    # mascarados para "RETIRADA" para nao expor a MAB2/holding ao abrir o detalhe.
+    # === REGRA 6: Grupo nível 1 — nos 4 grupos novos, grupo == subgrupo ===
+    # (eliminada hierarquia "DESPESAS OPERACIONAIS" / "DESPESAS COM EVENTOS")
+    df["grupo"] = df["subgrupo"]
+
+    # === REGRA 7: RETIRADA da sócia (MAB2 HOLDING) ===
+    # No SGE aparece disfarçada como "Locação de Imóveis" (para os funcionários
+    # não verem quanto a Monique retira). No dashboard dos donos vira RETIRADA
+    # dentro de FIXA; fornecedor/serviço/descrição são mascarados.
     is_retirada = df["Fornecedor"].astype(str).str.upper().str.contains("MAB2", na=False)
-    df.loc[is_retirada, "grupo"] = "DESPESAS OPERACIONAIS"
-    df.loc[is_retirada, "subgrupo"] = "DESPESAS FIXAS"
+    df.loc[is_retirada, "grupo"] = "FIXA"
+    df.loc[is_retirada, "subgrupo"] = "FIXA"
     df.loc[is_retirada, "Categoria"] = "RETIRADA"
     for _col in ("Fornecedor", "Descrição", "Serviço", "Serviço_norm"):
         if _col in df.columns:
@@ -657,8 +683,10 @@ def main():
         "despesas": float(pg_2026["valor_ref"].sum()),
         "despesas_em_aberto": float(pg_2026_aberto["valor_ref"].sum()),
         "faturamento": float(rc_2026["Valor Pago"].sum()),
-        "despesa_casa": float(pg_2026[pg_2026["C. Custo"].isin(CC_CASA)]["valor_ref"].sum()),
-        "despesa_eventos": float(pg_2026[pg_2026["C. Custo"].isin(CC_EVENTOS)]["valor_ref"].sum()),
+        "despesa_evento": float(pg_2026[pg_2026["grupo"] == "EVENTO"]["valor_ref"].sum()),
+        "despesa_fixa": float(pg_2026[pg_2026["grupo"] == "FIXA"]["valor_ref"].sum()),
+        "despesa_variavel": float(pg_2026[pg_2026["grupo"] == "VARIÁVEL"]["valor_ref"].sum()),
+        "despesa_eventual": float(pg_2026[pg_2026["grupo"] == "EVENTUAL"]["valor_ref"].sum()),
     }
     if not inadimplentes.empty:
         meta["inadimplencia"] = {
@@ -681,8 +709,10 @@ def main():
     print(f"\n📊 Totais 2026:")
     print(f"   Faturamento:       R$ {meta['totais_2026']['faturamento']:>13,.2f}")
     print(f"   Despesas:          R$ {meta['totais_2026']['despesas']:>13,.2f}")
-    print(f"     Casa:            R$ {meta['totais_2026']['despesa_casa']:>13,.2f}")
-    print(f"     Eventos:         R$ {meta['totais_2026']['despesa_eventos']:>13,.2f}")
+    print(f"     EVENTO:          R$ {meta['totais_2026']['despesa_evento']:>13,.2f}")
+    print(f"     FIXA:            R$ {meta['totais_2026']['despesa_fixa']:>13,.2f}")
+    print(f"     VARIÁVEL:        R$ {meta['totais_2026']['despesa_variavel']:>13,.2f}")
+    print(f"     EVENTUAL:        R$ {meta['totais_2026']['despesa_eventual']:>13,.2f}")
     lucro = meta['totais_2026']['faturamento'] - meta['totais_2026']['despesas']
     print(f"   Lucro Real:        R$ {lucro:>13,.2f}")
 

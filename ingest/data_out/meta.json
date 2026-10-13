@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-13T16:20:59.936288",
+  "gerado_em": "2026-10-13T16:51:04.153877",
   "fontes": {
     "pagar_xlsx": "Contas_a_Pagar_1SEM2025.xlsx",
     "receber_xlsx": "Contas a Receber_FUTURAS_2027.xlsx",
@@ -16,8 +16,10 @@
     "despesas": 3132144.2,
     "despesas_em_aberto": 0.0,
     "faturamento": 4213994.6,
-    "despesa_casa": 2127186.37,
-    "despesa_eventos": 948797.28
+    "despesa_evento": 1073043.89,
+    "despesa_fixa": 1199862.9300000002,
+    "despesa_variavel": 465855.69999999995,
+    "despesa_eventual": 393381.68
   },
   "inadimplencia": {
     "parcelas": 301,

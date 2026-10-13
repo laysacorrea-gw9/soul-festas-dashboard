@@ -429,9 +429,9 @@ faturamento = receber_ano["Valor Pago"].sum()
 pagar_ano_pago = pagar_ano[pagar_ano["Pagamento"].notna()]
 despesas_total = pagar_ano_pago["valor_ref"].dropna().sum()
 
-# Despesa Casa vs Evento via GRUPO (mesmo criterio do DRE) — só pago
-desp_eventos = pagar_ano_pago[pagar_ano_pago["grupo"] == "DESPESAS COM EVENTOS"]["valor_ref"].dropna().sum()
-desp_soul = pagar_ano_pago[pagar_ano_pago["grupo"] == "DESPESAS OPERACIONAIS"]["valor_ref"].dropna().sum()
+# Despesa Evento vs Casa (Fixa+Variável+Eventual) via GRUPO novo — só pago
+desp_eventos = pagar_ano_pago[pagar_ano_pago["grupo"] == "EVENTO"]["valor_ref"].dropna().sum()
+desp_soul = pagar_ano_pago[pagar_ano_pago["grupo"].isin(["FIXA", "VARIÁVEL", "EVENTUAL"])]["valor_ref"].dropna().sum()
 
 lucro_real = faturamento - despesas_total
 
@@ -737,15 +737,16 @@ with tab1:
         return f"<a href='?{qs}' target='_self'>{texto}</a>"
 
     # Ordem dos grupos de nivel 1 (Eventos primeiro, depois Operacionais)
-    GRUPO_ORDER = ["DESPESAS COM EVENTOS", "DESPESAS OPERACIONAIS"]
-    SUB_ORDER = ["DESPESAS FIXAS", "DESPESAS VARIÁVEIS", "DESPESAS TERCEIROS"]
+    # NOVA ESTRUTURA (Laysa 13/10/2026): 4 grupos no mesmo nível
+    GRUPO_ORDER = ["EVENTO", "FIXA", "VARIÁVEL", "EVENTUAL"]
+    GRUPO_EMOJI = {"EVENTO": "🎉", "FIXA": "📌", "VARIÁVEL": "🔄", "EVENTUAL": "⚡"}
 
-    # Toggle: ordenar subgrupos e categorias por VALOR (maior → menor) ou por ORDEM PADRÃO
+    # Toggle: ordenar categorias por VALOR (maior → menor) ou alfabético
     ordenar_por_valor = st.checkbox(
         "🔽 Ordenar despesas do maior pro menor (por valor total)",
         value=False,
         key="dre_ord_valor",
-        help="Se marcado, os subgrupos e as categorias aparecem ordenados do que gastou mais pro que gastou menos."
+        help="Se marcado, as categorias dentro de cada grupo aparecem do maior pro menor."
     )
 
     grupos_existentes = [g for g in GRUPO_ORDER if g in df["grupo"].dropna().unique()]
@@ -753,91 +754,44 @@ with tab1:
         dfg = df[df["grupo"] == grupo]
         tot_g_mes = dfg.groupby("mes")["valor_ref"].sum().reindex(meses, fill_value=0)
         tot_g = tot_g_mes.sum()
+        _emoji = GRUPO_EMOJI.get(grupo, "📂")
 
-        with st.expander(f"📂 **{grupo}**  —  {brl(tot_g)}", expanded=True):
+        with st.expander(f"{_emoji} **DESPESA {grupo}**  —  {brl(tot_g)}", expanded=True):
             html = "<table class='dre-table'><thead><tr><th></th>"
             for m in meses:
                 html += f"<th>{m}</th>"
             html += "<th>TOTAL</th></tr></thead><tbody>"
 
             # linha grupo (nivel 1)
-            html += f"<tr class='group-row'><td>{grupo}</td>"
+            html += f"<tr class='group-row'><td>DESPESA {grupo}</td>"
             for m in meses:
                 html += f"<td>{brl(tot_g_mes[m])}</td>"
             html += f"<td>{brl(tot_g)}</td></tr>"
 
-            if grupo == "DESPESAS COM EVENTOS":
-                # Grupo EVENTOS: pula nivel 2, vai direto pras Categorias do SGE
-                dfc = dfg.dropna(subset=["Categoria"])
-                if ordenar_por_valor:
-                    # Ordena categorias do maior pro menor total no ano
-                    cats = dfc.groupby("Categoria")["valor_ref"].sum().sort_values(ascending=False).index.tolist()
-                else:
-                    cats = sorted(dfc["Categoria"].unique())
-                for cat in cats:
-                    dfi = dfc[dfc["Categoria"] == cat]
-                    tot_c_mes = dfi.groupby("mes")["valor_ref"].sum().reindex(meses, fill_value=0)
-                    tot_c = tot_c_mes.sum()
-                    if tot_c == 0:
-                        continue
-                    cat_short = cat if len(cat) <= 45 else cat[:42] + "..."
-                    # usa a classe sub-row pq aqui eh nivel 2 visualmente
-                    html += f"<tr class='sub-row'><td>{_lnk(cat_short, 'DESPESAS COM EVENTOS', grupo, 'Todos', cat)}</td>"
-                    for m in meses:
-                        v = tot_c_mes[m]
-                        txt = brl(v) if v != 0 else "-"
-                        if v != 0:
-                            mm = int(m.split("/")[0])
-                            mes_label = meses_opts[mm]
-                            html += f"<td>{_lnk(txt, 'DESPESAS COM EVENTOS', grupo, mes_label, cat)}</td>"
-                        else:
-                            html += f"<td>{txt}</td>"
-                    html += f"<td>{_lnk(brl(tot_c), 'DESPESAS COM EVENTOS', grupo, 'Todos', cat)}</td></tr>"
+            # Categorias (nivel 2 direto, sem subgrupo intermediário)
+            dfc = dfg.dropna(subset=["Categoria"])
+            if ordenar_por_valor:
+                cats = dfc.groupby("Categoria")["valor_ref"].sum().sort_values(ascending=False).index.tolist()
             else:
-                # Grupo OPERACIONAIS: Subgrupo > Categoria (3 niveis)
-                if ordenar_por_valor:
-                    # Ordena subgrupos do maior pro menor total no ano
-                    subs_existentes = (
-                        dfg.dropna(subset=["subgrupo"])
-                           .groupby("subgrupo")["valor_ref"].sum()
-                           .sort_values(ascending=False).index.tolist()
-                    )
-                else:
-                    subs_existentes = [s for s in SUB_ORDER if s in dfg["subgrupo"].dropna().unique()]
-                for sub in subs_existentes:
-                    dfs = dfg[dfg["subgrupo"] == sub]
-                    tot_s_mes = dfs.groupby("mes")["valor_ref"].sum().reindex(meses, fill_value=0)
-                    tot_s = tot_s_mes.sum()
-                    html += f"<tr class='sub-row'><td>{_lnk(sub, sub, grupo, 'Todos')}</td>"
-                    for m in meses:
-                        mm = int(m.split('/')[0])
+                cats = sorted(dfc["Categoria"].unique())
+            for cat in cats:
+                dfi = dfc[dfc["Categoria"] == cat]
+                tot_c_mes = dfi.groupby("mes")["valor_ref"].sum().reindex(meses, fill_value=0)
+                tot_c = tot_c_mes.sum()
+                if tot_c == 0:
+                    continue
+                cat_short = cat if len(cat) <= 45 else cat[:42] + "..."
+                html += f"<tr class='sub-row'><td>{_lnk(cat_short, grupo, grupo, 'Todos', cat)}</td>"
+                for m in meses:
+                    v = tot_c_mes[m]
+                    txt = brl(v) if v != 0 else "-"
+                    if v != 0:
+                        mm = int(m.split("/")[0])
                         mes_label = meses_opts[mm]
-                        html += f"<td>{_lnk(brl(tot_s_mes[m]), sub, grupo, mes_label)}</td>"
-                    html += f"<td>{_lnk(brl(tot_s), sub, grupo, 'Todos')}</td></tr>"
-
-                    dfc = dfs.dropna(subset=["Categoria"])
-                    if ordenar_por_valor:
-                        cats = dfc.groupby("Categoria")["valor_ref"].sum().sort_values(ascending=False).index.tolist()
+                        html += f"<td>{_lnk(txt, grupo, grupo, mes_label, cat)}</td>"
                     else:
-                        cats = sorted(dfc["Categoria"].unique())
-                    for cat in cats:
-                        dfi = dfc[dfc["Categoria"] == cat]
-                        tot_c_mes = dfi.groupby("mes")["valor_ref"].sum().reindex(meses, fill_value=0)
-                        tot_c = tot_c_mes.sum()
-                        if tot_c == 0:
-                            continue
-                        cat_short = cat if len(cat) <= 38 else cat[:35] + "..."
-                        html += f"<tr class='cat-row'><td>{_lnk(f'↓ {cat_short}', sub, grupo, 'Todos', cat)}</td>"
-                        for m in meses:
-                            v = tot_c_mes[m]
-                            txt = brl(v) if v != 0 else "-"
-                            if v != 0:
-                                mm = int(m.split("/")[0])
-                                mes_label = meses_opts[mm]
-                                html += f"<td>{_lnk(txt, sub, grupo, mes_label, cat)}</td>"
-                            else:
-                                html += f"<td>{txt}</td>"
-                        html += f"<td>{_lnk(brl(tot_c), sub, grupo, 'Todos', cat)}</td></tr>"
+                        html += f"<td>{txt}</td>"
+                html += f"<td>{_lnk(brl(tot_c), grupo, grupo, 'Todos', cat)}</td></tr>"
 
             html += "</tbody></table>"
             st.markdown(html, unsafe_allow_html=True)

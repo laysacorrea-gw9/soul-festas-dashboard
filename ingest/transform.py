@@ -193,15 +193,61 @@ def load_planilha_inadimplentes() -> pd.DataFrame:
 
     Procura recursivo porque a Laysa salva em subpastas datadas (ex: 08.05.2026/).
     Pega o arquivo mais recente por mtime.
+
+    Suporta DOIS formatos:
+    - ANTIGO (uma linha por parcela): colunas `Vencimento`, `Valor Nominal`, `Valor Atualizado`, `Dias Atraso` etc
+    - NOVO (uma linha por pagador, 10/2026+): `Total em Atraso`, `Total sem Multa/Juros`, `Tel. Pagador`, sem Vencimento
     """
     files = list(RAW.rglob("PlanilhaClientesInadimplentes*.xlsx"))
     if not files:
         return pd.DataFrame()
     files.sort(key=lambda p: p.stat().st_mtime, reverse=True)
     df = pd.read_excel(files[0])
-    for c in ("Vencimento", "Data Emissão", "Data Compra"):
-        if c in df.columns:
-            df[c] = pd.to_datetime(df[c], errors="coerce", dayfirst=True)
+
+    # Detectar formato novo: tem 'Total em Atraso' e NÃO tem 'Valor Atualizado'
+    if "Total em Atraso" in df.columns and "Valor Atualizado" not in df.columns:
+        # Mapear colunas do formato novo pro antigo
+        def _parse_brl(v):
+            if pd.isna(v):
+                return 0.0
+            s = str(v).strip().replace(".", "").replace(",", ".")
+            try:
+                return float(s)
+            except ValueError:
+                return 0.0
+
+        df["Valor Atualizado"] = df["Total em Atraso"].apply(_parse_brl)
+        df["Valor Nominal"] = df["Total sem Multa/Juros"].apply(_parse_brl)
+        df["Multa"] = 0.0
+        df["Juros"] = (df["Valor Atualizado"] - df["Valor Nominal"]).clip(lower=0)
+        # Tel. Pagador (com ponto) → Tel Pagador (sem ponto, pro padrão antigo)
+        if "Tel. Pagador" in df.columns and "Tel Pagador" not in df.columns:
+            df["Tel Pagador"] = df["Tel. Pagador"]
+        # Vencimento: formato novo não tem — fica NaT
+        df["Vencimento"] = pd.NaT
+        # Dias Atraso: tentar inferir cruzando com Contas Não Recebidas (max por pagador)
+        try:
+            nr_files = list(RAW.glob("Contas nao recebida*.xlsx"))
+            if nr_files:
+                nr = pd.read_excel(nr_files[0])
+                nr["Data Vencimento"] = pd.to_datetime(nr["Data Vencimento"], errors="coerce")
+                hoje = pd.Timestamp.now().normalize()
+                nr_venc = nr[nr["Data Vencimento"] < hoje].copy()
+                nr_venc["dias"] = (hoje - nr_venc["Data Vencimento"]).dt.days
+                if "Pagador" in nr_venc.columns:
+                    dias_max = nr_venc.groupby("Pagador")["dias"].max().to_dict()
+                    df["Dias Atraso"] = df["Pagador"].map(dias_max).fillna(0).astype(int)
+                else:
+                    df["Dias Atraso"] = 0
+            else:
+                df["Dias Atraso"] = 0
+        except Exception:
+            df["Dias Atraso"] = 0
+    else:
+        # Formato antigo
+        for c in ("Vencimento", "Data Emissão", "Data Compra"):
+            if c in df.columns:
+                df[c] = pd.to_datetime(df[c], errors="coerce", dayfirst=True)
     return df
 
 

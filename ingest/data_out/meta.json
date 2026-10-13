@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-13T15:55:24.991075",
+  "gerado_em": "2026-10-13T16:07:39.958747",
   "fontes": {
     "pagar_xlsx": "Contas_a_Pagar_1SEM2025.xlsx",
     "receber_xlsx": "Contas a Receber_FUTURAS_2027.xlsx",
@@ -20,10 +20,10 @@
     "despesa_eventos": 948797.28
   },
   "inadimplencia": {
-    "parcelas": 1463,
-    "pagadores_unicos": 316,
-    "valor_nominal": 454897.82999999996,
-    "valor_atualizado": 454897.82999999996,
-    "fonte": "fallback_contas_nao_recebidas"
+    "parcelas": 301,
+    "pagadores_unicos": 300,
+    "valor_nominal": 395953.43000000005,
+    "valor_atualizado": 443610.85,
+    "fonte": "planilha_sge"
   }
 }

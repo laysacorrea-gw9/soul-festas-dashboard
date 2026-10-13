@@ -1108,7 +1108,7 @@ with tab4:
     if tipo == "Contas a Pagar":
         # pagar_ano ja filtrado por ano+mes no topo
         df = pagar_ano.copy()
-        fc1, fc2, fc3, fc4 = st.columns(4)
+        fc1, fc2, fc3, fc4, fc5 = st.columns(5)
         with fc1:
             grupos = ["Todos"] + sorted(df["grupo"].dropna().unique().tolist())
             g_sel = st.selectbox("Grupo", grupos)
@@ -1118,6 +1118,8 @@ with tab4:
         with fc3:
             forn = st.text_input("Fornecedor contém", "")
         with fc4:
+            desc = st.text_input("Descrição contém", "")
+        with fc5:
             status = st.selectbox("Status", ["Todos", "Pagos", "Em aberto"])
 
         if g_sel != "Todos":
@@ -1126,6 +1128,8 @@ with tab4:
             df = df[df["subgrupo"] == s_sel]
         if forn:
             df = df[df["Fornecedor"].astype(str).str.contains(forn, case=False, na=False)]
+        if desc:
+            df = df[df["Descrição"].astype(str).str.contains(desc, case=False, na=False)]
         if status == "Pagos":
             df = df[df["Pagamento"].notna()]
         elif status == "Em aberto":

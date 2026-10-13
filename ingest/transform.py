@@ -120,7 +120,28 @@ def load_agenda() -> dict:
 
 
 def load_balanco_projeto() -> pd.DataFrame:
-    """Balanco por projeto: Entrada/Saida Prevista vs Realizada."""
+    """Balanco por projeto: Entrada/Saida Prevista vs Realizada.
+
+    Prioriza o NOVO relatorio do SGE (PainelFinanceiro_ResumoProjetos), que
+    substituiu o BalancoPorProjetoResumido. Mapeia 'Despesa' -> 'Saída' pra
+    manter o mesmo contrato de colunas que o dashboard espera (não muda o dash).
+    Fallback: arquivo antigo BalancoPorProjetoResumido se o novo não existir.
+    """
+    # Tenta o NOVO (ResumoProjetos) primeiro
+    files_novo = list(RAW.rglob("PainelFinanceiro_ResumoProjetos*.xlsx"))
+    if files_novo:
+        files_novo.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+        df = pd.read_excel(files_novo[0])
+        df["Projeto"] = df["Projeto"].astype(str).str.strip()
+        # Renomeia pra formato esperado (Despesa -> Saída)
+        df = df.rename(columns={
+            "Despesa Prevista": "Saída Prevista",
+            "Despesa Realizada": "Saída Realizada",
+        })
+        return df[["Projeto", "Entrada Prevista", "Entrada Realizada",
+                   "Saída Prevista", "Saída Realizada", "Saldo Previsto", "Saldo Realizado"]]
+
+    # Fallback: arquivo antigo
     files = list(RAW.glob("BalancoPorProjetoResumido*.xlsx"))
     if not files:
         return pd.DataFrame()
@@ -372,9 +393,26 @@ def load_projetos_from_balanco() -> pd.DataFrame:
 
     O ProjetoComValoresResumido foi descontinuado da pipeline porque ficava
     desatualizado entre semanas (precisava re-export manual). Agora derivamos
-    tudo do Balanço (atualizado a cada export do SGE) + Agenda (data + tipo)."""
+    tudo do Balanço (atualizado a cada export do SGE) + Agenda (data + tipo).
+
+    Suporta o NOVO relatorio (PainelFinanceiro_ResumoProjetos) com fallback
+    pro antigo BalancoPorProjetoResumido. O novo não tem coluna 'Curso', só
+    'Cursos' — ambos sao mapeados pra 'Cursos'.
+    """
+    # NOVO: PainelFinanceiro_ResumoProjetos
+    bal_files = list(RAW.rglob("PainelFinanceiro_ResumoProjetos*.xlsx"))
+    if bal_files:
+        bal_files.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+        bal = pd.read_excel(bal_files[0])
+        bal["Projeto"] = bal["Projeto"].astype(str).str.strip()
+        bal = bal[bal["Projeto"].notna() & (bal["Projeto"] != "nan") & (bal["Projeto"] != "")]
+        # Novo tem 'Cursos' (plural), antigo tinha 'Curso'
+        col_cursos = "Cursos" if "Cursos" in bal.columns else "Curso"
+        return bal[["Projeto", "Instituição", col_cursos]].rename(columns={col_cursos: "Cursos"})
+
+    # Fallback: arquivo antigo
     bal_files = list(RAW.glob("BalancoPorProjetoResumido*.xlsx"))
-    assert bal_files, "BalancoPorProjetoResumido nao encontrado"
+    assert bal_files, "Nenhum arquivo de balanço de projeto encontrado (nem ResumoProjetos novo nem BalancoPorProjetoResumido antigo)"
     bal = pd.read_excel(bal_files[0])
     bal["Projeto"] = bal["Projeto"].astype(str).str.strip()
     bal = bal[bal["Projeto"].notna() & (bal["Projeto"] != "nan") & (bal["Projeto"] != "")]
@@ -588,12 +626,17 @@ def main():
         salvar_snapshot_inadimplentes(inadimplentes)
 
     # Meta
+    # projetos_xlsx: usa ResumoProjetos novo se existir, senao BalancoPorProjetoResumido antigo
+    _proj_files = list(RAW.rglob("PainelFinanceiro_ResumoProjetos*.xlsx"))
+    if not _proj_files:
+        _proj_files = list(RAW.glob("BalancoPorProjetoResumido*.xlsx"))
+    _proj_xlsx_name = _proj_files[0].name if _proj_files else "nenhum"
     meta = {
         "gerado_em": inicio.isoformat(),
         "fontes": {
             "pagar_xlsx": str(next(RAW.glob("Contas_a_Pagar_*.xlsx")).name),
             "receber_xlsx": str(next(RAW.glob("Contas a Receber_*.xlsx")).name),
-            "projetos_xlsx": str(next(RAW.glob("BalancoPorProjetoResumido*.xlsx")).name),
+            "projetos_xlsx": _proj_xlsx_name,
         },
         "contagens": {
             "contas_pagar": len(pagar_final),

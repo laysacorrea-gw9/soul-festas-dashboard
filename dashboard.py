@@ -227,9 +227,9 @@ def fmt(v):
 # Dashboard so LE os CSVs finais — zero reclassificacao em runtime
 
 
-@st.cache_data
+@st.cache_data(ttl=60)
 def load_data():
-    """Le os CSVs ja processados pelo transform.py."""
+    """Le os CSVs ja processados pelo transform.py. TTL curto pra refletir atualizações."""
     pagar = pd.read_csv(OUT / "contas_pagar_final.csv")
     receber = pd.read_csv(OUT / "contas_receber_final.csv")
     projetos = pd.read_csv(OUT / "projetos_final.csv")

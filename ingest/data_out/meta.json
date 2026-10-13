@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-13T17:07:14.700502",
+  "gerado_em": "2026-10-13T17:10:43.219799",
   "fontes": {
     "pagar_xlsx": "Contas_a_Pagar_1SEM2025.xlsx",
     "receber_xlsx": "Contas a Receber_FUTURAS_2027.xlsx",
@@ -7,7 +7,7 @@
   },
   "contagens": {
     "contas_pagar": 6593,
-    "contas_receber": 15034,
+    "contas_receber": 17026,
     "projetos": 337,
     "cobertura_classificacao_pct": 100.0,
     "nao_classificados": 158
@@ -15,7 +15,7 @@
   "totais_2026": {
     "despesas": 3132144.2,
     "despesas_em_aberto": 0.0,
-    "faturamento": 4213994.6,
+    "faturamento": 4133630.4699999997,
     "despesa_evento": 956696.51,
     "despesa_fixa": 1033659.0900000001,
     "despesa_variavel": 736615.02,

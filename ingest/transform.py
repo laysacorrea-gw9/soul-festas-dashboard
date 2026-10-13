@@ -241,14 +241,22 @@ def load_contas_receber() -> pd.DataFrame:
 
 
 def load_contas_nao_recebidas() -> pd.DataFrame:
-    """Parcelas em aberto (não pagas). Export SGE: Status = Não Pagas."""
-    files = list(RAW.glob("Contas nao recebida*"))
+    """Parcelas em aberto (não pagas). Concatena TODOS os arquivos 'Contas a Receber'
+    + 'Contas nao recebida' e filtra as parcelas sem pagamento (Valor Pago vazio ou 0).
+
+    Antes: lia só 'Contas nao recebida_*.xlsx' (um único arquivo).
+    Mudou pra pegar também futuras 2027 que vêm no arquivo 'Contas a Receber_FUTURAS_2027.xlsx'.
+    """
+    files = list(RAW.glob("Contas nao recebida*")) + list(RAW.glob("Contas a Receber_*.xlsx"))
     if not files:
         return pd.DataFrame()
-    df = pd.read_excel(files[0])
+    df = pd.concat([pd.read_excel(f) for f in files], ignore_index=True).drop_duplicates()
     for c in ("Data Vencimento", "Data Pagamento", "Data Crédito"):
         if c in df.columns:
             df[c] = pd.to_datetime(df[c], errors="coerce")
+    # Filtra somente parcelas EM ABERTO (sem Valor Pago ou Valor Pago = 0)
+    df["Valor Pago"] = pd.to_numeric(df.get("Valor Pago"), errors="coerce").fillna(0)
+    df = df[df["Valor Pago"] == 0].copy()
     return df
 
 

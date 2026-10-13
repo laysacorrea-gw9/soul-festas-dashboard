@@ -1717,13 +1717,14 @@ with tab_futuro:
 
     # ============ Saldo inicial (editável) ============
     st.markdown("#### 💳 Saldo bancário atual (edite se precisar)")
-    sc = st.columns(5)
+    sc = st.columns(6)
     s_rede = sc[0].number_input("Rede", value=5000.0, step=1000.0, key="s_rede", format="%.2f")
     s_brad = sc[1].number_input("Bradesco", value=164192.0, step=1000.0, key="s_brad", format="%.2f")
     s_itau = sc[2].number_input("Itaú", value=10000.0, step=1000.0, key="s_itau", format="%.2f")
     s_val = sc[3].number_input("Valore", value=21469.0, step=1000.0, key="s_val", format="%.2f")
     s_sgp = sc[4].number_input("SGP", value=13360.32, step=1000.0, key="s_sgp", format="%.2f")
-    saldo_bancos = s_rede + s_brad + s_itau + s_val + s_sgp
+    s_dominion = sc[5].number_input("Dominion (offshore)", value=445985.49, step=1000.0, key="s_dominion", format="%.2f")
+    saldo_bancos = s_rede + s_brad + s_itau + s_val + s_sgp + s_dominion
 
     st.markdown("#### 💼 Saldo Conta Investimentos XP atual (edite se precisar)")
     st.caption("Padrão vem da carteira cadastrada na aba **Ativos XP** (XP Soul foi esvaziada e migrou pra Route).")

@@ -1758,8 +1758,9 @@ with tab_futuro:
 
     # ============ Entradas Previstas (PIPELINE REAL: parcelas em aberto por vencimento + Data Crédito futura) ============
     hoje = pd.Timestamp.today().normalize()
-    _meses_restantes = 12 - hoje.month + 1
-    fim_horizonte = pd.Timestamp(hoje.year, 12, 31)
+    # 12 meses rolantes a partir de hoje (não limita ao ano calendário)
+    _meses_restantes = 12
+    fim_horizonte = (hoje + pd.DateOffset(months=12)) - pd.Timedelta(days=1)
     meses_fut_pr = pd.period_range(hoje, periods=_meses_restantes, freq="M").astype(str).tolist()
 
     # Premissas
